@@ -104,7 +104,7 @@
 <br><br><br><br><br>
 <div class="colorlib-trainers">
 <div class="container">
-<form class="form-horizontal" id="form1" action="" ng-app="">
+<form class="form-horizontal" id="form1" action="" ng-app="myApp" ng-controller="myCtrl">
 <div class="col-md-12 animate-box">
   <fieldset>
     
@@ -185,7 +185,7 @@
 	<div class="row">
 	<div class="col-md-8">
 	<div class="form-group">
-	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;" ng-init="carValuRange=20000">{{carValuRange}}</span>
+	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;">{{carValuRange}}</span>
 	<div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;color:black;border-color:#302a39;">
          <input type="range" min="0" id="valueOfCar" name="valueOfCar" max="55000" ng-model="carValuRange"class="form-control input-md" placeholder="What's the value of your car?*" >
         </div>
@@ -357,7 +357,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/carInfoValidation.js"></script>
 <script>
-
+var a=40000;
+var app = angular.module("myApp", []);  
+app.controller("myCtrl", function($scope) {  
+    $scope.carValuRange =a;  
+     
+});  
 
 </script>
 	</body>
