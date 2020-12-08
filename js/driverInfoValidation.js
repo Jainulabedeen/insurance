@@ -27,8 +27,8 @@ $(function() {
 		},
 	mobile : {
 		required: true,
-		mobile:true,
-		maxlength=12
+		mobile:true
+		
 		},
 		nationality:{
 			required:true,
