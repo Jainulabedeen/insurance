@@ -27,9 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<script src="js/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
 	</head>
 	<body>
 		
@@ -47,7 +47,7 @@
 							<ul>
 							
 								<li class="has-dropdown">
-									<a href="courses.html">Personal Insurance<span class="caret"></span></a>
+									<a href="#">Personal Insurance<span class="caret"></span></a>
 									<ul class="dropdown">
 										<li><a href="carInfo.html">Motor</a></li>
 										<li><a href="travel.html">Travel</a></li>
@@ -83,71 +83,46 @@
 									</ul>
 								</li>
 								
-								
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
-		<br><br><br>
+		
+	<br><br>
+	
 
-	<div class="colorlib-trainers">
+	<div class="colorlib-trainers" id="motor">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
-						
-						<h2>Upload Documents</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-sm-3 animate-box">
-						<div class="trainers-entry">
-						<div class="trainer-img" id="setImage"></div>
-							<h4 style="width:100%;height:50%;color:white;">
-							<input type="file" id="getImage" name="getImage" class="form-control">
-							</h4>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-3 animate-box">
-						<div class="trainers-entry">
-						<div class="trainer-img" id="setImage2"></div>
-							<h4 style="width:100%;height:50%;color:white;">
-							<input type="file" id="getImage2" name="getImage2" class="form-control">
-							</h4>
-						</div>
-					</div>
-					
-					<div class="col-md-3 col-sm-3 animate-box">
-						<div class="trainers-entry">
-						<div class="trainer-img" id="setImage3"></div>
-							<h4 style="width:100%;height:50%;color:white;">
-							<input type="file" id="getImage3" name="getImage3" class="form-control">
-							</h4>
-						</div>
-					</div>
-					
-					<div class="col-md-3 col-sm-3 animate-box">
-						<div class="trainers-entry">
-						<div class="trainer-img" id="setImage4"></div>
-							<h4 style="width:100%;height:50%;color:white;">
-							<input type="file" id="getImage4" name="getImage4" class="form-control">
-							</h4>
-						</div>
-					</div>
-
-				</div>
-<br>				
-	<a href="additionalDetails.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Step</a>
-<a href="finalReview.html" class="btn btn-info" style="float:right;">Next Step <i class="fa fa-arrow-right" aria-hidden="true"></i></a>     	
-
-			</div>
-		</div>
-	<br>	
+				<div class="row">	
+				<h1 style="text-align:center;padding:5px;background-color:#302a39;color:white;border-radius:5px;margin-top:17px;"><b>Annual Report</b></h1>
+				
+				
+				
+				<div class="well" style="height:500px;margin-top:-20px;">
+				<h3><b>Annual Report</b></h3>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<p>Annual Report 2017 Arabic <a href="#" style="float:right;"><i class="fa fa-download"></i> Download</a></p>
+				<br><br>
+                </div>
+                </div>
+				
+				
+</div>
+</div>
+</div>
+	
+	
+	
+	
 		
 		
-		
+	
 		<footer id="colorlib-footer">
 			<div class="container">
 				<div class="row row-pb-md">
@@ -232,7 +207,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -252,66 +226,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contactValidation.js"></script>
 <script>
-document.getElementById('getImage').addEventListener('change', readURL, true);
-function readURL(){
-   var file = document.getElementById("getImage").files[0];
-   var reader = new FileReader();
-   reader.onloadend = function(){
-      document.getElementById('setImage').style.backgroundImage = "url(" + reader.result + ")";        
-	  
-   }
-   if(file){
-      reader.readAsDataURL(file);
-    }else{
-    }
-}
-
-document.getElementById('getImage2').addEventListener('change', readURL2, true);
-function readURL2(){
-   var file2 = document.getElementById("getImage2").files[0];
-   var reader2 = new FileReader();
-   reader2.onloadend = function(){
-      document.getElementById('setImage2').style.backgroundImage = "url(" + reader2.result + ")";        
-	  
-   }
-   if(file2){
-      reader2.readAsDataURL(file2);
-    }else{
-    }
-}
-
-document.getElementById('getImage3').addEventListener('change', readURL3, true);
-function readURL3(){
-   var file3 = document.getElementById("getImage3").files[0];
-   var reader3 = new FileReader();
-   reader3.onloadend = function(){
-      document.getElementById('setImage3').style.backgroundImage = "url(" + reader3.result + ")";        
-	  
-   }
-   if(file3){
-      reader3.readAsDataURL(file3);
-    }else{
-    }
-}
-
-document.getElementById('getImage4').addEventListener('change', readURL4, true);
-function readURL4(){
-   var file4 = document.getElementById("getImage4").files[0];
-   var reader4 = new FileReader();
-   reader4.onloadend = function(){
-      document.getElementById('setImage4').style.backgroundImage = "url(" + reader4.result + ")";        
-	  
-   }
-   if(file4){
-      reader4.readAsDataURL(file4);
-    }else{
-    }
-}
-
+$("#personalMotor").click(function(){  
+	
+  $("#motor").show();
+    });
 </script>
 	</body>
 </html>

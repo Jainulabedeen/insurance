@@ -30,7 +30,98 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 10px;
+  padding: 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color:#302a39;
+  margin-top:15px;
+}
 
+
+/*Chrome thumb*/
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 5px;
+  /*16x16px adjusted to be same as 14x14px on moz*/
+  height: 25px;
+  width: 15px;
+  border-radius: 5px;
+  background: #302a39;
+  border: 1px solid white;
+}
+
+
+/*Mozilla thumb*/
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-border-radius: 5px;
+  height: 25px;
+  width: 15px;
+  border-radius: 5px;
+  background: #302a39;
+  border: 1px solid white;
+}
+
+
+/*IE & Edge input*/
+
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 6px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 2px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+
+/*IE & Edge thumb*/
+
+input[type=range]::-ms-thumb {
+  height: 25px;
+  width: 15px;
+  border-radius: 5px;
+  background: #302a39;
+  border: 1px solid white;}
+
+
+/*IE & Edge left side*/
+
+input[type=range]::-ms-fill-lower {
+  background: #919e4b;
+  border-radius: 2px;
+}
+
+
+/*IE & Edge right side*/
+
+input[type=range]::-ms-fill-upper {
+  background: #c5c5c5;
+  border-radius: 2px;
+}
+
+
+/*IE disable tooltip*/
+
+input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+</style>
 	
 	</head>
 	<body>
@@ -51,7 +142,7 @@
 								<li class="has-dropdown">
 									<a href="#">Personal Insurance<span class="caret"></span></a>
 									<ul class="dropdown">
-										<li><a href="motor.html">Motor</a></li>
+										<li><a href="carInfo.html">Motor</a></li>
 										<li><a href="travel.html">Travel</a></li>
 										<li><a href="#">Family Medical</a></li>
 										<li><a href="#">Home</a></li>
@@ -187,7 +278,7 @@
 	<div class="form-group">
 	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;">{{carValuRange}}</span>
 	<div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;color:black;border-color:#302a39;">
-         <input type="range" min="0" id="valueOfCar" name="valueOfCar" max="55000" ng-model="carValuRange"class="form-control input-md" placeholder="What's the value of your car?*" >
+         <input type="range" min="0" id="valueOfCar" name="valueOfCar" max="55000" ng-model="carValuRange" class="form-control input-md" placeholder="What's the value of your car?*" >
         </div>
       </div>
     </div>
@@ -265,22 +356,15 @@
 					<div class="col-md-3 colorlib-widget">
 						<h4><a href="aboutUs.html" style="color:white;">About Us</a></h4>
 						<p>
-							<ul class="colorlib-footer-links">
-								<li><a href="missionVision.html"><i class="icon-check"></i>Mission & Vision</a></li>
-								<li><a href="#"><i class="icon-check"></i>Financials</a></li>
-								<li><a href="#"><i class="icon-check"></i>Board Members</a></li>
-								<li><a href="#"><i class="icon-check"></i>Senior Staff</a></li>
-								<li><a href="#"><i class="icon-check"></i>Strategic Partnership</a></li>
-								<li><a href="#"><i class="icon-check"></i>Financial Market Listing</a></li>
-								<li><a href="#"><i class="icon-check"></i>Annual Reports</a></li>
-								
-							</ul>
+							Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 						</p>
 					</div>
 					<div class="col-md-3 colorlib-widget">
 						<h4>Quick Links</h4>
 						<p>
 							<ul class="colorlib-footer-links">
+								<li><a href="careers.html"><i class="icon-check"></i>Career</a></li>
+								<li><a href="listingBlog.html"><i class="icon-check"></i>Blogs</a></li>
 								<li><a href="corporateResponsibility.html"><i class="icon-check"></i>Corporate Responsibility</a></li>
 								<li><a href="complaints.html"><i class="icon-check"></i>Complaints</a></li>
 								<li><a href="investors.html"><i class="icon-check"></i>Investor Relations</a></li>
@@ -289,12 +373,33 @@
 						</p>
 					</div>
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="careers.html" style="color:white;">Career</a></h4>
-						
+					
+					
+						<h4><b>Important Links</b></h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="missionVision.html"><i class="icon-check"></i>Mission & Vision</a></li>
+								<li><a href="financial.html"><i class="icon-check"></i>Financials</a></li>
+								<li><a href="boardMembers.html"><i class="icon-check"></i>Board Members</a></li>
+								<li><a href="seniorStaff.html"><i class="icon-check"></i>Senior Staff</a></li>
+								<li><a href="partnership.html"><i class="icon-check"></i>Strategic Partnership</a></li>
+								<li><a href="marketListing.html"><i class="icon-check"></i>Financial Market Listing</a></li>
+								<li><a href="annualReports.html"><i class="icon-check"></i>Annual Reports</a></li>
+								
+							</ul>
+						</p>	
 					</div>
 
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="listingBlog.html" style="color:white;">Blogs</a></h4>
+						<h4><a href="listingBlog.html" style="color:white;">Address</a></h4>
+						<p>
+						<ul class="colorlib-footer-links">
+							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
+							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
+							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
+							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+						</ul>
+						</p>
 						
 					</div>
 
@@ -358,12 +463,73 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/carInfoValidation.js"></script>
 <script>
 var a=40000;
+document.getElementById("valueOfCar").value =a;
 var app = angular.module("myApp", []);  
 app.controller("myCtrl", function($scope) {  
     $scope.carValuRange =a;  
      
 });  
+function isOlderEdgeOrIE() {
+  return (
+    window.navigator.userAgent.indexOf("MSIE ") > -1 ||
+    !!navigator.userAgent.match(/Trident.*rv\:11\./) ||
+    window.navigator.userAgent.indexOf("Edge") > -1
+  );
+}
 
+function valueTotalRatio(value, min, max) {
+//alert(value);
+  return ((value - min) / (max - min)).toFixed(2);
+}
+
+function getLinearGradientCSS(ratio, leftColor, rightColor) {
+  return [
+    '-webkit-gradient(',
+    'linear, ',
+    'left top, ',
+    'right top, ',
+    'color-stop(' + ratio + ', ' + leftColor + '), ',
+    'color-stop(' + ratio + ', ' + rightColor + ')',
+    ')'
+  ].join('');
+}
+
+function updateRangeEl(rangeEl) {
+  var ratio = valueTotalRatio(rangeEl.value, rangeEl.min, rangeEl.max);
+  rangeEl.style.backgroundImage = getLinearGradientCSS(ratio, '#302a39', '#c5c5c5');
+}
+
+function initRangeEl() {
+  var rangeEl = document.querySelector('input[type=range]');
+  var textEl = document.querySelector('input[type=text]');
+
+  /**
+   * IE/Older Edge FIX
+   * On IE/Older Edge the height of the <input type="range" />
+   * is the whole element as oposed to Chrome/Moz
+   * where the height is applied to the track.
+   *
+   */
+  if (isOlderEdgeOrIE()) {
+    rangeEl.style.height = "20px";
+    // IE 11/10 fires change instead of input
+    // https://stackoverflow.com/a/50887531/3528132
+    rangeEl.addEventListener("change", function(e) {
+      textEl.value = e.target.value;
+    });
+    rangeEl.addEventListener("input", function(e) {
+      textEl.value = e.target.value;
+    });
+  } else {
+    updateRangeEl(rangeEl);
+    rangeEl.addEventListener("input", function(e) {
+      updateRangeEl(e.target);
+      textEl.value = e.target.value;
+    });
+  }
+}
+
+initRangeEl();
 </script>
 	</body>
 </html>
