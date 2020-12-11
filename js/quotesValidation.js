@@ -58,7 +58,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	    window.location= "premium.html";
+	    window.location= "travelQuote.html";
     }
   });
   /*

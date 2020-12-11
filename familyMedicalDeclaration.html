@@ -30,7 +30,71 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* The container */
+.container2 {
+  display: online;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default radio button */
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+  background-color: #302a39 ;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container2 .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
 	
 	</head>
 	<body>
@@ -91,166 +155,328 @@
 				</div>
 			</div>
 		</nav>
-	<br><br><br><br>
+<br><br><br>
 <div class="colorlib-trainers">
-<div class="container">	
-<div class="col-md-12 text-center animate-box">
-
-		<center>
+<div class="container">
+<center>
 		<h1><b>Declaration</b></h1>
 		<h4><b>Please note that you must answer all questions, and answer them truthfully.
 				Failure to do so may result in your policy being cancelled without notice.</b></h4>
 				<p>Have you ever been diagnosed or received any treatment (including hospital or surgery) or felt any disorder or pain or had any symptoms indicating:</p>
 		</center>
-
-</div>
-</div>
-</div>
-
-<br><br><br><br><br>
-<div class="colorlib-trainers">
-<div class="container">
+<br><br>
 <form class="form-horizontal" id="form1" action="">
 <div class="col-md-12 animate-box">
   <fieldset>
     
     <!-- Form Name -->
 	<div class="row">
-	<div class="col-md-4">
-	<div class="form-group">
-	<label for="cover">Diseases of digestive system</label>  
-     <div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" name="brand" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
-		</div>
-       </div>
-		</div>
-	  
-	  <div class="col-md-4">
-	<div class="form-group">
-	<label for="cover">Diseases of the respiratory system</label>  
-     <div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;margin-left:5px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" name="brand" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
-		</div>
-       </div>
-	  </div>
-	  
 	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases1">Diseases of the cardiovascular system incl. hypertension </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases1" id="diseases1"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases1" id="diseases1"><span class="checkmark"></span>
+	</label>
 	</div>
-	
-    <div class="row">
-	<div class="col-md-4">
+    </div>
+	 
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="fullName">What's your full name?</label>  
-       <input type="text" name="fullName" id="fullName" class="form-control input-md" style="border-color:#302a39;height:41px;" placeholder="Full Name *" required>
+	<label for="diseases2">Diseases of the respiratory system </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases2" id="diseases2"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases2" id="diseases2"><span class="checkmark"></span>
+	</label>
+		</div>
        </div>
+	   
 	  </div>
 	  
-	  <div class="col-md-4">
-	<div class="form-group">
-      <label for="visa">Which emirates is your visa issued from?</label>  
-       <select name="visa" id="visa" class="form-control input-md" style="margin-left:5px;border-color:#302a39;height:41px;" required>
-			<option value="">City</option>
-			<option value="AUDI">dubai</option>
-			<option value="MBW">Sharjah</option>
-			</select>
-	  </div>
-	  </div>
-	</div>
+	  <div class="row">
 	
-	<div class="row">
-	<div class="col-md-4">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="phone">What's your phone number?</label>  
-       <input type="text" name="phone" id="phone" class="form-control input-md" style="border-color:#302a39;height:41px;" maxlength="12" placeholder="Mobile No. *" required>
-       </div>
-	  </div>
-	  <div class="col-md-4">
-	<div class="form-group">
-	<label for="email">What's your email address?</label>  
-       <input type="email" name="email" id="email" class="form-control input-md" style="border-color:#302a39;height:41px;margin-left:5px;" placeholder="Email *" required>
-       </div>
-	  </div>
+	<label for="diseases3">Diseases of digestive system </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases3" id="diseases3"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases3" id="diseases3"><span class="checkmark"></span>
+	</label>
 	</div>
-	
-	<div class="row">
-	<div class="col-md-4">
+    </div>
+	 
+	<div class="col-md-6">
 	<div class="form-group">
-    <label for="salary">Is your salary more than AED 4,000 per month?</label>  <br>
-	<div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;" required>
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="salary" name="salary" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="salary" name="salary" value="no" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-
-	<div class="col-md-4">
-	<div class="form-group">
-		<label for="dob">Please select member's date of birth?</label>  
-       <input type="date" name="dob" id="dob" class="form-control input-md" style="margin-left:5px;border-color:#302a39;height:41px;">
-       </div>
-	  </div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-8">
-	<div class="form-group">
-	<label for="cover">What type of cover are you looking for?</label>  
-     <div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;" required>
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" type="radio"  required>&nbsp;&nbsp;I just want the minimum legal cover<br>
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;&nbsp;I want more than just the minimum cover<br>
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="everything" type="radio">&nbsp;&nbsp;I'm not sure, just show me everything
+	<label for="diseases4">Diseases of genitourinary system, kidney diseases and breast disorders </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases4" id="diseases4"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases4" id="diseases4"><span class="checkmark"></span>
+	</label>
 		</div>
        </div>
+	   
 	  </div>
-	</div>
+	  
+	  <div class="row">
 	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases5">Osteoarticular & Muscular Diseases or Transplants or Disease of the<br> skin and subcutaneous tissue</label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases5" id="diseases5"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases5" id="diseases5"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases6">Diseases of the nervous system and sense organs (ears, eyes, nose) </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases6" id="diseases6"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases6" id="diseases6"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases7">Diseases of the endocrine system, nutritional-, metabolic diseases<br> and immunity disorders, diabetes </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases7" id="diseases7"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases7" id="diseases7"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases8">Neoplasms/Cancer (benign or malignant) </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases8" id="diseases8"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases8" id="diseases8"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases9">Sexually Transmitted Diseases & AIDs</label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases9" id="diseases9"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases9" id="diseases9"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases10">Congenital anomalies, hereditary/genetic diseases </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases10" id="diseases10"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases10" id="diseases10"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases11">Other Diseases, Accidents, Previous or Future operations<br> you already know about </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases11" id="diseases11"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases11" id="diseases11"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases12">Is the adherent following or has ever followed any medical<br> treatment? Did or is he taking medication? </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases12" id="diseases12"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases12" id="diseases12"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases13">Does the adherent have any allergy against any Drug, Food or other? </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases13" id="diseases13"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases13" id="diseases13"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases14">Pregnant or trying to get pregnant, or any previous complications in pregnancy, childbirth or abortion </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases14" id="diseases14"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases14" id="diseases14"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases15">Infectious and parasitic diseases </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases15" id="diseases15"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases15" id="diseases15"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases16">Diseases of blood and blood forming organs </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases16" id="diseases16"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases16" id="diseases16"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	<div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases17">Mental-/psychiatric disorders </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases17" id="diseases17"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases17" id="diseases17"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases18">Diseases of the musculoskeletal system and connective tissue </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases18" id="diseases18"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases18" id="diseases18"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases19">Certain conditions originating in the perinatal period </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases19" id="diseases19"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases19" id="diseases19"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases20">Injury and poisoning </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases20" id="diseases20"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases20" id="diseases20"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
+	  
+	  <div class="row">
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases21">Previous medical/surgical hospitalisations, procedures and operations </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases21" id="diseases21"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases21" id="diseases21"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases22">Any (chronic) disease(s), symptoms and complaints not mentioned above </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio"  name="diseases22" id="diseases22"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases22" id="diseases22"><span class="checkmark"></span>
+	</label>
+		</div>
+       </div>
+	   
+	  </div>
 	 <div class="row">
-	<div class="col-md-4">
-	<div class="form-group">
-	<label for="gender">What's your gender?</label>      
-	<select name="gender" id="gender" class="form-control input-md" style="border-color:#302a39;height:41px;" required>
-			<option value="">Gender</option>
-			<option value="AUDI">Male</option>
-			<option value="MBW">Female(Married)</option>
-			<option value="MBW">Female(Single)</option>
-			
-			</select>
-			</div>
-	  </div>
-	  
-	  <div class="col-md-4">
-	<div class="form-group">
-      <label for="nationality">What's your nationality?</label>  
-     <select name="nationality" id="nationality" class="form-control input-md" style="border-color:#302a39;height:41px;margin-left:5px;" required>
-			<option value="">nationality</option>
-			<option value="AUDI">Dubai</option>
-			<option value="MBW">India</option>
-			<option value="MBW">Arab</option>
-			
-			</select>
-	  </div>
-	  </div>
-	</div>
 	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="diseases23">Previous medical/surgical hospitalisations, procedures and operations </label><br>
+	<label class="container2">Yes&nbsp;
+	<input type="radio" name="diseases23" id="diseases23"><span class="checkmark"></span></label>
+	<label class="container2">No&nbsp;
+	<input type="radio" checked="checked" name="diseases23" id="diseases23"><span class="checkmark"></span>
+	</label>
+	</div>
+    </div>
+	   
+	  </div>
 	<div class="row">
-	<div class="col-md-8">
-	<div class="form-group">
-
-	<div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;">
-		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
-         <span style="font-size:15px;">I am happy to receive email and/or sms communications regarding updates to my quotes and policies</span>
-                    </div>
-     </div>
-	  </div>
-	
+	<p>I hereby declare and agree, with respect to both, myself and to my Dependants, that I am aware of the general terms of this insurance and I accept them. With the above, I authorise my doctor, health institution or other organisation or person that has any information about my health and/or activities (and those of my Dependants) to provide the Insurer with the said information. This shall include hospital and any other records pertaining to medical advice, diagnosis, treatment or disturbances. A photocopy of this authorisation has the same validity as the original.</p>
+	<p>I understand and acknowledge any pregnancy not declared at the time of this application’s coverage will be at the sole discretion of the insurer. The insurer has the right to not cover any maternity claims to any undeclared pregnancy. I also acknowledge and understand that for any pregnancy, which arises within forty calendar days from the date of this application; coverage will also be at the discretion of the insurer.</p>
 	</div>
-   <div class="row">
-   <div class="col-md-8">
-   <div class="form-group" style="display:inline;">
-   <a href="familyMedical.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
-      <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+	
+   <div class="row" >
+   <div class="col-md-12">
+   <div style="text-align:center;">
+      <button class="btn btn-info" type="submit">I agree, Get Quotes!</button>
       </div>
     </div>
 
@@ -266,7 +492,7 @@
 
 </div>
 </div>
-
+<br><br>
 
 
 
@@ -381,7 +607,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/familyQuoteValidation.js"></script>
+	<script src="js/familyMedicalDeclarationValidation.js"></script>
 <script>
 
 </script>
