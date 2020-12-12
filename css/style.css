@@ -1699,19 +1699,21 @@ input[type="text"] {
       color: #fff; }
 
 .btn-info {
-  background:white;
-  color:black;
+  background:red;
+  color:white;
   border: 1px solid red; }
   .btn-info:hover, .btn-info:focus, .btn-info:active {
-    background: red !important;
-    border-color: white !important; }
+    background: white !important;
+    border-color: red !important; 
+	color:black !important; 
+	}
   .btn-info.btn-outline {
     background: transparent;
     color: #5bc0de;
     border: 1px solid #5bc0de; }
     .btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
-      background: red;
-      color:white; }
+      background: white;
+      color:black; }
 
 .btn-warning {
   background: #f0ad4e;
