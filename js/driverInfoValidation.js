@@ -24,6 +24,7 @@ $(function() {
 	dob : {
 		required: true,
 		dob:true
+	
 		},
 	mobile : {
 		required: true,
