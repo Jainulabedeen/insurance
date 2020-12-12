@@ -11,11 +11,11 @@
 *
 * ======================================================= */
 body {
-  font-family: "Rubik", Arial, sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 17px;
   line-height: 1.5;
-  color: #555555;
+  color: black;
   background: #fff; }
 
 #page {
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .colorlib-nav .upper-menu {
     width: 100%;
     padding: 15px 0;
-    background: #f5f5f5;
+    background: white;
     -webkit-box-shadow: 0px 15px 16px -6px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0px 15px 16px -6px rgba(0, 0, 0, 0.16);
     box-shadow: 0px 15px 16px -6px rgba(0, 0, 0, 0.16); }
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6, figure {
           box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
           z-index: 1002;
           visibility: hidden;
-          opacity: 0;
+          opacity: 9;
           position: absolute;
           top: 40px;
           left: 0;
@@ -216,15 +216,15 @@ h1, h2, h3, h4, h5, h6, figure {
             .colorlib-nav ul li.has-dropdown .dropdown li a {
               padding: 2px 0;
               display: block;
-              color: #999999;
+              color:black;
               line-height: 1.2;
               text-transform: none;
               font-size: 13px;
               letter-spacing: 0; }
               .colorlib-nav ul li.has-dropdown .dropdown li a:hover {
-                color: black; }
+                color: red; }
         .colorlib-nav ul li.has-dropdown:hover a, .colorlib-nav ul li.has-dropdown:focus a {
-          color: black; }
+          color: red; }
       .colorlib-nav ul li.btn-cta a {
         padding: 30px 0px !important;
         color: #fff; }
@@ -1412,6 +1412,10 @@ input[type="text"] {
       #colorlib-footer .colorlib-footer-links li a {
         color:black;
         text-decoration: none; }
+		 #colorlib-footer .colorlib-footer-links li a:hover {
+        color:red;
+        text-decoration: none; }
+		
         #colorlib-footer .colorlib-footer-links li a i {
           padding-right: 10px; }
   #colorlib-footer .colorlib-social-icons li a {
