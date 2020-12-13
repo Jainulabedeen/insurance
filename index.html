@@ -35,7 +35,80 @@
       width: 100%;  
       margin: auto;  
   }  
-</style>
+
+.insuranceLink{
+ background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+  border-radius:5px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  transition: 0.3s;
+  font-size: 17px;
+  margin-left:5px;
+  font-weight:bold;
+color:white;
+  height:50px;
+ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.insuranceLink:hover {
+ 
+  color:black;
+  box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* Create an active/current tablink class */
+.insuranceLink.active {
+  background-color: #55cbcf;
+  color:white;
+  border-bottom:5px solid #203252;
+  border-radius:5px;
+  height:50px;
+ 
+}
+#personalBusinessInsurance{
+	height:100%;
+	
+	}
+	#personalBusinessInsuranceImages{
+	height:100%;
+	}
+#personal{
+
+padding:5px;
+border-radius:10px;
+}	
+#business{
+padding:5px;
+border-radius:10px;
+
+}
+#personalBusinessInsuranceLink{
+height:100%;
+
+
+}	
+.iconImageInsurance{
+
+}
+.setNameOfInsurance{
+font-size:15px;
+margin-top:-24px;
+margin-left:11px;
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+.setNameOfInsurance{
+font-size:15px;
+margin-top:-24px;
+margin-left:124px;
+}
+
+}
+
+	</style>
 	</head>
 	<body>
 		
@@ -58,6 +131,7 @@
 								<li class="has-dropdown">
 									<a href="#">Personal Insurance<span class="caret"></span></a>
 									<ul class="dropdown">
+									<li><img src="images/personal3.svg" style="width:50px;height:50px;"></li>
 										<li><a href="carInfo.html">Motor</a></li>
 										<li><a href="travel.html">Travel</a></li>
 										<li><a href="familyMedical.html">Family Medical</a></li>
@@ -69,6 +143,8 @@
 								<li class="has-dropdown">
 									<a href="#">Business Insurance <span class="caret"></span></a>
 									<ul class="dropdown">
+										<li><img src="images/business2.svg" style="width:50px;height:50px;"></li>
+																		
 										<li><a href="#">Property</a></li>
 										<li><a href="#">Engineering</a></li>
 										<li><a href="#">Group Medical</a></li>
@@ -86,6 +162,8 @@
 								<li class="has-dropdown">
 									<a href="#">Contact Us <span class="caret"></span></a>
 									<ul class="dropdown">
+									<li><img src="images/contact.svg" style="width:50px;height:50px;"></li>
+										
 										<li><a href="contact.html">Head Office</a></li>
 										<li><a href="contact.html">Branches </a></li>
 										<li><a href="enquiry.html">Enquiry</a></li>
@@ -109,11 +187,229 @@
 				</div>
 			</div>
 		</nav>
+		<br><br><br><br>
 		
-			<aside id="colorlib-hero" style="height:450px;">
+		<div id="colorlib-services">
+			<div class="container">
+			<div class="col-md-12">
+			<div class="row">
+			
+			<div class="col-md-6" id="personalBusinessInsuranceLink">
+			<h2 style="color:#203252;padding:10px;"><b>Let’s Get You An Awesome Price</b></h2>
+			<div class="row" id="insuranceLink">
+			<div class="col-md-3"><button id="personalBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Personal</span></button></div>
+			<div class="col-md-3"><button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')">Business</button></div>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<div class="personalBusinessInsuranceDesign">
+			<br>
+			<div class="summary" id="personal">
+			
+			<div class="row">
+			<div class="col-md-4">
+			<a href="carInfo.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg" class="iconImageInsurance">
+									</span>
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Motor</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="travel.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Travel</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="familyMedical.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Family Medical</p>
+			</div>	
+			
+			</div>
+			
+			<div class="row">
+			<div class="col-md-4">
+			<a href="carInfo.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Home</p>
+			</div>	
+			<div class="col-md-4">
+			<a href="carInfo.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Yacht</p>
+			</div>	
+			<div class="col-md-4">
+			<a href="carInfo.html" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Jet Ski</p>
+			</div>
+		</div>			
+			
+			</div>
+			<div class="summary" id="business" style="display:none;">
+			<div class="row">
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg" class="iconImageInsurance">
+									</span>
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Property</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Engineering</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Group Medical</p>
+			</div>	
+			
+			</div>
+			<div class="row">
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg" class="iconImageInsurance">
+									</span>
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Group Life</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Marine</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Aviation</p>
+			</div>	
+			
+			</div>
+			<div class="row">
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg" class="iconImageInsurance">
+									</span>
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Miscellaneous</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Motor Fleet</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+			<p style="text-align:center;margin-top:-24px;font-size:13px;">Liability</p>
+			</div>	
+			
+			</div>
+			<div class="row">
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg" class="iconImageInsurance">
+									</span>
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Energy</p>
+			
+			</div>	
+			<div class="col-md-4">
+			<a href="#" style="height:70px;" class="services text-center ">
+									<span class="icon">
+									<img src="images/car.svg">
+									</span>
+									
+								</a>
+								<p style="text-align:center;margin-top:-24px;font-size:13px;">Other</p>
+			
+			</div>	
+			
+			
+			</div>
+			
+			
+			</div>
+			
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			<div class="col-md-6" id="personalBusinessInsuranceImages" >
+			
+			<img src="images/personal2.svg" style="height:100%;width:100%;">
+			</div>
+			
+		</div>
+			</div>
+			</div>
+	</div>
+		
+			<!--<aside id="colorlib-hero" style="height:600px;">
+			
+			<h1>Slider</h1>
 			<div class="flexslider">
-				<ul class="slides" style="height:450px;">
+				<ul class="slides" style="height:600px;">
 			   	<li style="background-image: url(images/home3.jpeg);height:50px;">
+				<h2 style="background-color:red;background-attachment:fixed;">We are the insurer of choice for over 830,000 customers</h2>
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -386,12 +682,10 @@
 					</div>
 				</div>
 			</div>
-		</div>	
-	<style>
-	
-	</style>
+		</div>-->	
 	
 	
+	<br><br><br><br><br>
 		<div class="colorlib-trainers">
 			<div class="container">
 			
@@ -405,7 +699,7 @@
 					<div class="col-md-4 col-sm-3 animate-box">
 						<div class="trainers-entry">
 							<div class="trainer-img">
-							<img src="images/choose.jfif" style="border-radius:50%;" width="80%" height="80%">
+							<img src="images/choose.png" style="border-radius:20px;" width="80%" height="80%">
 							</div>
 							<div class="desc">
 								<h3>Super-Simple claims</h3>
@@ -425,21 +719,21 @@
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal">×</button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">Super simple claims</h4>  
 								</div>  
-								<div class="modal-body">  
-								<ul type="circle">
-								<li>For claims, just call on 1800-258-5956. No forms to be filled</li>
-								<li>Get a link for Self-Inspection on your registered mobile number</li>
-								<li>Shoot the damages from your smartphone through a guided step by step process</li>
-								<li>Our team will then assess the damages and get back with an estimate</li>
-								<li>Visit any of our 1400+ authorised garages for cashless repairs!</li>
+								<div class="modal-body" style="font-size:14px;">  
+								<ul style="list-style:none;">
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; For claims, just call on 1800-258-5956. No forms to be filled</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Get a link for Self-Inspection on your registered mobile number</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Shoot the damages from your smartphone through a guided step by step process</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Our team will then assess the damages and get back with an estimate</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Visit any of our 1400+ authorised garages for cashless repairs!</li>
 								
 								</ul>
 								</div>  
 								<div class="modal-footer">  
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+								<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>  
 								</div>  
 							</div>  
 								
@@ -449,7 +743,7 @@
 					<div class="col-md-4 col-sm-3 animate-box">
 						<div class="trainers-entry">
 							<div class="trainer-img">
-							<img src="images/choose.jfif" style="border-radius:50%;" width="80%" height="80%">
+							<img src="images/choose.png" style="border-radius:20px;" width="80%" height="80%">
 							</div>
 							
 							
@@ -471,18 +765,18 @@
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal">×</button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">Loved by Customers</h4>  
 								</div>  
-								<div class="modal-body">  
-								<ul type="circle">
-								<li>A growing base of customers; 50 Lakhs and counting</li>
-								<li>Facebook rating of 4.9/5, highest for an Indian insurance industry</li>
+								<div class="modal-body" style="font-size:14px;">  
+								<ul style="list-style:none;">
+								<li> <i class="fa fa-check-circle" style="color:red"></i> &nbsp; A growing base of customers; 50 Lakhs and counting</li>
+								<li> <i class="fa fa-check-circle" style="color:red"></i> &nbsp; Facebook rating of 4.9/5, highest for an Indian insurance industry</li>
 								
 								</ul>
 								</div>  
 								<div class="modal-footer">  
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+								<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>  
 								</div>  
 							</div>  
 								
@@ -492,7 +786,7 @@
 					<div class="col-md-4 col-sm-3 animate-box">
 						<div class="trainers-entry">
 							<div class="trainer-img">
-							<img src="images/choose.jfif" style="border-radius:50%;" width="80%" height="80%">
+							<img src="images/choose.png" style="border-radius:20px;" width="80%" height="80%">
 							</div>
 							<div class="desc">
 								<h3>More TLC, Less T&C</h3>
@@ -511,19 +805,19 @@
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal">×</button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">More TLC, Less T&C</h4>  
 								</div>  
-								<div class="modal-body">  
-								<ul type="circle">
-								<li>Simple and easy products, that matter to you</li>
-								<li>Documents so simple, even 15-year olds can understand</li>
-								<li>Audio Claim processes</li>
+								<div class="modal-body" style="font-size:14px;">  
+								<ul style="list-style:none;">
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Simple and easy products, that matter to you</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Documents so simple, even 15-year olds can understand</li>
+								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Audio Claim processes</li>
 								
 								</ul>
 								</div>  
 								<div class="modal-footer">  
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+								<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>  
 								</div>  
 							</div>  
 								
@@ -537,7 +831,18 @@
 
 
 <br><br>
-	 <div class="container-fluid" style="height:200px;background-color:#f5f5f5;">  
+<style>
+.carousel-inner{
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+background:white;
+background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+color:white; 
+border-radius:20px;
+ }
+
+</style>
+	 <div class="container" style="height:200px;">  
   <h1 style="color:black;text-align:center;">What our customers think</h1>  
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">  
@@ -551,48 +856,115 @@
     <!-- Wrapper for slides -->  
 <div class="carousel-inner" role="listbox">  
 <div class="item active container" style="height:100px;">  
-  <p style="color:black;padding:10px;">"We are globally recognized for our customer-centric approach
+
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-1">
+<br>
+<img src="images/man.svg">
+</div>
+<div class="col-md-2">
+<br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ali<br>
+ <span>
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/halfRating.png" style="width:20px;height:20px;">
+
+</span>
+
+</div>
+<div class="col-md-7">
+<br><br>
+ <p style="color:white;font-size:15px;">
+"We are globally recognized for our customer-centric approach
 Overall Insurer of the Year
 MENA Insurance Awards 2020
 Best Insurance Company UAE
 Global Brand Awards 2020
 Best Motor Insurance Company UAE
-Global Brand Awards 2020" <br><span style="color:black;"><i>Ali</i></span></p>
-<br>
-      </div>  
-  
-      <div class="item container" style="height:100px;">  
-        <p style="color:black;padding:10px;">"We are globally recognized for our customer-centric approach
-Overall Insurer of the Year
-MENA Insurance Awards 2020
-Best Insurance Company UAE
-Global Brand Awards 2020
-Best Motor Insurance Company UAE
-Global Brand Awards 2020" <br><span style="color:black;"><i>Ali</i></span></p>
-<br>
+Global Brand Awards 2020"</p>
+</div>
+</div>
+</div>
 </div>  
-      
+  
       <div class="item container" style="height:100px;">  
-     <p style="color:black;padding:10px;">"We are globally recognized for our customer-centric approach
+
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-1">
+<br>
+<img src="images/man.svg">
+</div>
+<div class="col-md-2">
+<br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ali<br>
+ <span>
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/halfRating.png" style="width:20px;height:20px;">
+
+</span>
+
+</div>
+<div class="col-md-7">
+<br><br>
+ <p style="color:white;font-size:15px;">
+"We are globally recognized for our customer-centric approach
 Overall Insurer of the Year
 MENA Insurance Awards 2020
 Best Insurance Company UAE
 Global Brand Awards 2020
 Best Motor Insurance Company UAE
-Global Brand Awards 2020" <br><span style="color:black;"><i>Ali</i></span></p>
+Global Brand Awards 2020"</p>
+</div>
+</div>
+</div>
+</div>
+      
+     <div class="item container" style="height:100px;">  
+
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-1">
 <br>
-      </div>  
-    </div>  
-  
+<img src="images/women.svg">
+</div>
+<div class="col-md-2">
+<br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abc<br>
+ <span>
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/rating.png" style="width:20px;height:20px;">
+<img src="images/halfRating.png" style="width:20px;height:20px;">
+
+</span>
+
+</div>
+<div class="col-md-7">
+<br><br>
+ <p style="color:white;font-size:15px;">
+"We are globally recognized for our customer-centric approach
+Overall Insurer of the Year
+MENA Insurance Awards 2020
+Best Insurance Company UAE
+Global Brand Awards 2020
+Best Motor Insurance Company UAE
+Global Brand Awards 2020"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
     <!-- Left and right controls -->  
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">  
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  
-      <span class="sr-only">Previous</span>  
-    </a>  
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">  
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>  
-      <span class="sr-only">Next</span>  
-    </a>  
+ 
 </div><!-- corousel end -->  
   
 </div>  
@@ -652,6 +1024,15 @@ Global Brand Awards 2020" <br><span style="color:black;"><i>Ali</i></span></p>
 							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
 							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
 							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li></li><br>
+							<li><h5>Follow Us</b></li>
+							<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
+							<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
+							<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
+
+							
 						</ul>
 						</p>
 						
@@ -660,22 +1041,15 @@ Global Brand Awards 2020" <br><span style="color:black;"><i>Ali</i></span></p>
 				
 				</div>
 			</div>
-			<div class="copy">
+			<div>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | 
-<a href="termsAndCondition.html">Terms & Conditions</a> | 
-<a href="privacyPolicy.html">Privacy Policy </a> | 
-<a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small><br> 
+<small class="block">&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved &nbsp; | 
+<a style="padding-left:10px;text-decoration:none;color:black;" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
+<a style="padding-left:10px;text-decoration:none;color:black;" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
+</small><br> 
 								
 							</p>
 						</div>
@@ -712,6 +1086,32 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
+	
+	<script>
+function openSummary(evt, insuranceName) {
+  var i, summary,insuranceLink;
+  summary = document.getElementsByClassName("summary");
+  for (i = 0; i < summary.length; i++) {
+    summary[i].style.display = "none";
+  }
+  insuranceLink = document.getElementsByClassName("insuranceLink");
+  for (i = 0; i < insuranceLink.length; i++) {
+    insuranceLink[i].className = insuranceLink[i].className.replace(" active", "");
+  }
+  document.getElementById(insuranceName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+}
+$(document).ready(function(){
+$("#personalBtn").click(function(){
+$("#personalBusinessInsuranceImages").html("<img src='images/personal2.svg' style='height:100%;width:100%;'>");
+});
+$("#businessBtn").click(function(){
+$("#personalBusinessInsuranceImages").html("<img src='images/business.svg' style='height:100%;width:100%;'>");
+});
+});
+
+</script>
 	</body>
 </html>
 

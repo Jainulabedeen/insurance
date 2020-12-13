@@ -101,7 +101,8 @@
 
 <br>
 <div class="colorlib-trainers">
-<div class="container">
+<div class="container" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;padding:30px;border-radius:20px;">
+<!--
 <div class="row">
 <h3 style="color:#302a39;">Car Information</h3>
 <div class="col-sm-4" style="background-color:#302a39;color:white;">Car Make</div>
@@ -124,10 +125,32 @@
 <h3 style="color:#302a39;">Documents</h3>
 <div class="col-sm-4" style="background-color:#302a39;color:white;">Document</div>
 <div class="col-sm-4" style="background-color:#302a39;color:white;">abc.jpg</div>
-</div>
+</div>-->
 <br><br>
+<style>
+.mytable{
+box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff;
+background:white;
+background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+color:white; 
+}
+</style>
+<table class="table mytable" style="width:70%;border-radius:10px;">
+<tr><th colspan="2">Car Information</th></tr>
+<tr><th>Car Make</td><td>BMW</td></tr>
 
-<a href="uploadDocuments.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i>Previous Step</a>     
+<tr><th colspan="2">Driver Information</th></tr>
+<tr><td>First Name</td><td>abc</td></tr>
+
+<tr><th colspan="2">Additional Information</th></tr>
+<tr><td>Policy Price</td><td>100</td></tr>
+
+<tr><th colspan="2">Documents</th></tr>
+<tr><td>Document</td><td>abc.jpg</td></tr>
+
+</table>
+<a href="uploadDocuments.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp; Previous Step</a>     
 <button type="submit" id="submitbtn" class="btn btn-info">Finish &nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></button>     
 
 

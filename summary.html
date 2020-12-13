@@ -95,50 +95,61 @@
 
 
 	.summaryLink{
-  background-color: inherit;
+  background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ border-radius:5px;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 10px;
   transition: 0.3s;
   font-size: 17px;
+  margin-left:5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+color:white;
 }
 .summaryLink:hover {
-  background-color: red;
-  color:white;
+ color:white;
+  box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 /* Create an active/current tablink class */
 .summaryLink.active {
-  background-color: red;
+  background-color: #55cbcf;
   color:white;
+  border-bottom:5px solid #203252;
+  border-radius:5px;
+  height:50px;
 }
 	</style>
 
 		<div class="colorlib-contact">
-			<div class="container">
+			<div class="container" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:20px;">
+			<br><br>
 			<center><h4><b>test, have a look at our policy benefits and cover</b></h4></center>
 				<div class="row row-pb-md">
 				
 				
-					<div class="col-md-8 animate-box">
+					<div class="col-md-8 animate-box" >
 					<button class="summaryLink active" onclick="openSummary(event, 'thirdParty')">Third Party</button>
 					<button class="summaryLink" onclick="openSummary(event, 'premiumRepair')">Premium Repair</button>
 					<button class="summaryLink" onclick="openSummary(event, 'agencyRepair')">Agency Repair</button>
-					<hr>
+					<br><br><br><br>
+					
 					<div class="summary" id="thirdParty">
 					
 					
-					<ul style="list-style:none;"><br>
-						<li><h4><b>Benefits</b></h4><br></li>
+					<ul style="list-style:none;">
+						<li><h4><b>Benefits</b></h4></li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 700 hala coins on signup</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; Access to 40+ retail discounts</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 2,500+ AED of rewards per month</li>
 					</ul>
 					
 					<ul style="list-style:none;"><br>
-						<li><h4><b>Policy Coverage</b></h4><br></li>
+						<li><h4><b>Policy Coverage</b></h4></li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; 24/7 Roadside Service</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Third party property damage</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Battery Boost Service</li>
@@ -156,14 +167,14 @@
 					
 					
 					<ul style="list-style:none;"><br>
-						<li><h4><b>Benefits</b></h4><br></li>
+						<li><h4><b>Benefits</b></h4></li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 700 hala coins on signup</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; Access to 40+ retail discounts</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 2,500+ AED of rewards per month</li>
 					</ul>
 					
 					<ul style="list-style:none;"><br>
-						<li><h4><b>Policy Coverage</b></h4><br></li>
+						<li><h4><b>Policy Coverage</b></h4></li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Loss or damage to your car</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Replacement car</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; 24/7 Roadside Service</li>
@@ -191,14 +202,14 @@
 				<div class="summary" id="agencyRepair" style="display:none;">
 					
 					<ul style="list-style:none;"><br>
-						<li><h4><b>Benefits</b></h4><br></li>
+						<li><h4><b>Benefits</b></h4></li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 700 hala coins on signup</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; Access to 40+ retail discounts</li>
 						<li><i class="fa fa-arrow-circle-right" style="color:red"></i> &nbsp; 2,500+ AED of rewards per month</li>
 					</ul>
 					
 					<ul style="list-style:none;"><br>
-						<li><h4><b>Policy Coverage</b></h4><br></li>
+						<li><h4><b>Policy Coverage</b></h4></li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Agency Repair</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Third party property damage</li>
 						<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Replacement car</li>
@@ -225,7 +236,7 @@
 				
 				</div>
 					</div>
-				<div class="col-md-4">
+				<div class="col-md-4" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:20px;">
 				<br><br><br>
 				<style>
 				th,td{
@@ -233,32 +244,32 @@
 				}
 				</style>
 				<table class="table table-condensed">
-				<tr><th style="border-top:0px;">Summary</th><th style="border-top:0px;">HQM/2020/16370</th></tr>
+				<tr><th style="border-top:0px;">Summary</th><th style="border-top:0px;text-align:right;">HQM/2020/16370</th></tr>
 				<tr><td style="border-top:0px;">Driver Info</td>
-				<td style="border-top:0px;text-align:center;">
-				<button data-toggle="modal" data-target="#myModal" style="height:41px;width:20%;background-color:white;border-radius:5px;border:1px solid white;"><i class="fa fa-edit" style="font-size:20px;color:red"></i></button></td></tr>
-				<tr><td style="border-top:0px;">First Name</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;">Last Name</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;">Email</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;">Mobile</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;font-weight:bold;" colspan="2"><hr></td></tr>
+				<td style="border-top:0px;text-align:right;">
+				<button data-toggle="modal" data-target="#myModal" style="height:41px;width:25%;background-color:white;border-radius:5px;border:1px solid white;float:right;"><i class="fa fa-edit" style="font-size:20px;color:red"></i></button></td></tr>
+				<tr><td style="border-top:0px;">First Name</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;">Last Name</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;">Email</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;">Mobile</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;font-weight:bold;" colspan="2"><hr style="border-top: 1px solid black;"></td></tr>
 				<tr><th style="border-top:0px;" colspan="2">Vehicle Info</th></tr>
-				<tr><td style="border-top:0px;">Car Make</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;">Car Model</td><td style="border-top:0px;text-align:center;">Test</td></tr>
-				<tr><td style="border-top:0px;col" colspan="2"><hr style="color:black;"></td></tr>
-				<tr><th style="border-top:0px;" colspan="2">Promo code</th></tr>
-				<tr><td style="border-top:0px;" colspan="2">
-				<input type="text" style="border:1px solid black;border-radius:5px;height:41px;width:70%;" placeholder="YOUR CODE HERE">
-				<input type="submit" style="height:41px;width:20%;background-color:white;border-radius:5px;border:1px solid black;" value="Apply">
-				</td></tr>
-				<tr><td style="border-top:0px;">Gross Premium</td><td style="border-top:0px;text-align:center;">AED 750.00</td></tr>
-				<tr><td style="border-top:0px;color:green;"><b>Discount</b></td><td style="border-top:0px;text-align:center;color:green;"><b>-AED 150.00</b></td></tr>
+				<tr><td style="border-top:0px;">Car Make</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;">Car Model</td><td style="border-top:0px;text-align:right;">Test</td></tr>
+				<tr><td style="border-top:0px;" colspan="2"><hr style="border-top: 1px solid black;"></td></tr>
+				<tr><th style="border-top:1px;" colspan="2">Promo code</th></tr>
+				<tr>
+				<td style="border-top:1px;"><input type="text" class="form-control" style="border-radius:5px;height:41px;width:100%;" placeholder=" &nbsp;YOUR CODE HERE"></td>
+				<td style="border-top:0px;"><input type="submit" class="btn btn-info" style="height:41px;width:100%;border-radius:5px;" value="Apply"></td>
+				</tr>
+				<tr><td style="border-top:0px;">Gross Premium</td><td style="border-top:0px;text-align:right;">AED 750.00</td></tr>
+				<tr><td style="border-top:0px;color:green;"><b>Discount</b></td><td style="border-top:0px;text-align:right;color:green;"><b>-AED 150.00</b></td></tr>
 				
-				<tr><td style="border-top:0px;">Net Premium</td><td style="border-top:0px;text-align:center;">AED 600.00</td></tr>
-				<tr><td style="border-top:0px;">VAT (5%)</td><td style="border-top:0px;text-align:center;">+AED 30.00</td></tr>
-				<tr><td style="border-top:0px;"><b>To be Paid</b></td><td style="border-top:0px;text-align:center;"><b>AED 630.00</b></td></tr>
+				<tr><td style="border-top:0px;">Net Premium</td><td style="border-top:0px;text-align:right;">AED 600.00</td></tr>
+				<tr><td style="border-top:0px;">VAT (5%)</td><td style="border-top:0px;text-align:right;">+AED 30.00</td></tr>
+				<tr><td style="border-top:0px;"><b>To be Paid</b></td><td style="border-top:0px;text-align:right;"><b>AED 630.00</b></td></tr>
 				<tr><td style="border-top:0px;text-align:center;" colspan="2">
-				<input type="submit" onclick="window.location.href='additionalDetails.html'"style="height:41px;width:50%;background-color:red;color:white;border-radius:5px;border:1px solid white;" value="Pay AED 630.00 ">
+				<input type="submit" class="btn btn-info" onclick="window.location.href='additionalDetails.html'"style="height:41px;width:50%;background-color:red;color:white;border-radius:5px;border:1px solid white;" value="Pay AED 630.00 ">
 				</td></tr>
 				
 				</table>
@@ -269,7 +280,7 @@
       <!-- Modal content-->  
       <div class="modal-content">  
         <div class="modal-header">  
-          <button type="button" class="close" data-dismiss="modal">×</button>  
+          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
           <h4 class="modal-title">Driver Info</h4>  
         </div>  
         <div class="modal-body">  
@@ -278,14 +289,14 @@
   <div class="col-md-4">
 	<div class="form-group">
 	<label for="fname">First Name *</label>  
-	  <input type="text" id ="fname" name="fname" style="border-color:#302a39;height:41px;" value="" class="form-control input-md" placeholder="First Name *" required>  
+	  <input type="text" id ="fname" name="fname" style="height:41px;" value="" class="form-control input-md" placeholder="First Name *" required>  
 		  </div>
 		  </div>
 		  
 		<div class="col-md-4">  
 	  <div class="form-group">
 	  <label for="lname">Last Name *</label>  
-	   <input type="text" id ="lname" name="lname" style="border-color:#302a39;height:41px;margin-left:5px;" class="form-control input-md" placeholder="Last Name *" required>  
+	   <input type="text" id ="lname" name="lname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Last Name *" required>  
 			 </div>
 		 </div>
 	</div>
@@ -294,14 +305,14 @@
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" style="border-color:#302a39;height:41px;" placeholder="Email *" class="form-control input-md" required>
+	<input id="email" name="email" type="email" style="height:41px;" placeholder="Email *" class="form-control input-md" required>
 	</div>
 	</div>
 	 
 	 <div class="col-md-4">
 	<div class="form-group">
       <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" style="border-color:#302a39;height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+       <input type="text" id ="mobile" name="mobile" style="height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
         </div>
 	 </div>
 	</div>
@@ -325,7 +336,7 @@
 
 
         <div class="modal-footer">  
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>  
         </div>  
       </div>  
         
