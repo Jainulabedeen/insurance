@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Insurance</title>
+	<title>Family Medical</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -42,26 +42,29 @@
 			<div class="upper-menu">
 				<div class="container">
 					<div class="row">
-								<div class="col-md-2">
+						<div class="col-md-2">
 							<div id="colorlib-logo"><a href="index.html">Insurance</a></div>
 						</div>
-						<div class="col-md-6 text-right menu-1">
+						<div class="col-md-7 text-right menu-1">
 							<ul>
 							
 								<li class="has-dropdown">
-									<a href="#">Personal Insurance<span class="caret"></span></a>
+									<a href="#" style="font-size:15px;">Personal Insurance <span class="caret"></span></a>
 									<ul class="dropdown">
+									<li><img src="images/personal3.svg" style="width:50px;height:50px;"></li>
 										<li><a href="carInfo.html">Motor</a></li>
 										<li><a href="travel.html">Travel</a></li>
-										<li><a href="#">Family Medical</a></li>
-										<li><a href="#">Home</a></li>
+										<li><a href="familyMedical.html">Family Medical</a></li>
+										<li><a href="home.html">Home</a></li>
 										<li><a href="#">Yacht</a></li>
 										<li><a href="#">Jet ski</a></li>
 									</ul>
 								</li>
 								<li class="has-dropdown">
-									<a href="#">Business Insurance <span class="caret"></span></a>
+									<a href="#" style="font-size:15px;">Business Insurance <span class="caret"></span></a>
 									<ul class="dropdown">
+										<li><img src="images/business2.svg" style="width:50px;height:50px;"></li>
+																		
 										<li><a href="#">Property</a></li>
 										<li><a href="#">Engineering</a></li>
 										<li><a href="#">Group Medical</a></li>
@@ -77,13 +80,26 @@
 								</li>
 								
 								<li class="has-dropdown">
-									<a href="#">Contact Us <span class="caret"></span></a>
+									<a href="#" style="font-size:15px;">Contact Us <span class="caret"></span></a>
 									<ul class="dropdown">
+									<li><img src="images/contact.svg" style="width:50px;height:50px;"></li>
+										
 										<li><a href="contact.html">Head Office</a></li>
 										<li><a href="contact.html">Branches </a></li>
-										<li><a href="enquiry.html">Enquiry</a></li>										
+										<li><a href="enquiry.html">Enquiry</a></li>
 									</ul>
 								</li>
+								
+								<li class="has-dropdown">
+									<a href="tel:+7078681119"style="color:black;font-size:15px;"><i class="fa fa-phone"></i></a>
+			
+								</li>
+								<li class="has-dropdown">
+									<a href="https://wa.me/9520818888" style="color:black;font-size:15px;"><i class="fa fa-whatsapp"></i></a>
+			
+								</li>
+								<li class="has-dropdown"><a href="mailto:info@yoursite.com" style="color:black;font-size:15px;"><i class="fa fa-envelope"></i></a></li>
+
 								
 							</ul>
 						</div>
@@ -112,14 +128,14 @@
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="fullName">What's your full name?</label>  
-       <input type="text" name="fullName" id="fullName" class="form-control input-md" style="border-color:#302a39;height:41px;" placeholder="Full Name *" required>
+       <input type="text" name="fullName" id="fullName" class="form-control input-md" style="height:41px;" placeholder="Full Name *" required>
        </div>
 	  </div>
 	  
 	  <div class="col-md-4">
 	<div class="form-group">
       <label for="visa">Which emirates is your visa issued from?</label>  
-       <select name="visa" id="visa" class="form-control input-md" style="margin-left:5px;border-color:#302a39;height:41px;" required>
+       <select name="visa" id="visa" class="form-control input-md" style="margin-left:5px;height:41px;" required>
 			<option value="">City</option>
 			<option value="AUDI">dubai</option>
 			<option value="MBW">Sharjah</option>
@@ -132,13 +148,13 @@
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="phone">What's your phone number?</label>  
-       <input type="text" name="phone" id="phone" class="form-control input-md" style="border-color:#302a39;height:41px;" maxlength="12" placeholder="Mobile No. *" required>
+       <input type="text" name="phone" id="phone" class="form-control input-md" style="height:41px;" maxlength="12" placeholder="Mobile No. *" required>
        </div>
 	  </div>
 	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="email">What's your email address?</label>  
-       <input type="email" name="email" id="email" class="form-control input-md" style="border-color:#302a39;height:41px;margin-left:5px;" placeholder="Email *" required>
+       <input type="email" name="email" id="email" class="form-control input-md" style="height:41px;margin-left:5px;" placeholder="Email *" required>
        </div>
 	  </div>
 	</div>
@@ -147,8 +163,8 @@
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="salary">Is your salary more than AED 4,000 per month?</label>  <br>
-	<div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;" required>
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="salary" name="salary" value="yes" type="radio"  required>&nbsp;Yes
+	<div class="form-control" style="width:100%;height:41px;">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="salary" checked="checked" name="salary" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="salary" name="salary" value="no" type="radio">&nbsp;No
 		</div>
      </div>
@@ -157,7 +173,7 @@
 	<div class="col-md-4">
 	<div class="form-group">
 		<label for="dob">Please select member's date of birth?</label>  
-       <input type="date" name="dob" id="dob" class="form-control input-md" style="margin-left:5px;border-color:#302a39;height:41px;">
+       <input type="date" name="dob" id="dob" class="form-control input-md" min="1900-01-01" max="2999-12-31" style="margin-left:5px;height:41px;">
        </div>
 	  </div>
 	</div>
@@ -166,11 +182,16 @@
 	<div class="col-md-8">
 	<div class="form-group">
 	<label for="cover">What type of cover are you looking for?</label>  
-     <div class="input-group" style="border:1px solid #eeeeee;border-radius:5px;width:100%;height:41px;border-color:#302a39;" required>
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" type="radio"  required>&nbsp;&nbsp;I just want the minimum legal cover<br>
+     <div class="form-control" style="width:100%;height:41px;">
+		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" checked="checked" type="radio"  required>&nbsp;&nbsp;I just want the minimum legal cover<br>
+		</div>
+		<div class="form-control" style="width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;&nbsp;I want more than just the minimum cover<br>
+		</div>
+		<div class="form-control" style="width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="everything" type="radio">&nbsp;&nbsp;I'm not sure, just show me everything
 		</div>
+		
        </div>
 	  </div>
 	</div>
@@ -179,7 +200,7 @@
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="gender">What's your gender?</label>      
-	<select name="gender" id="gender" class="form-control input-md" style="border-color:#302a39;height:41px;" required>
+	<select name="gender" id="gender" class="form-control input-md" style="height:41px;" required>
 			<option value="">Gender</option>
 			<option value="AUDI">Male</option>
 			<option value="MBW">Female(Married)</option>
@@ -192,7 +213,7 @@
 	  <div class="col-md-4">
 	<div class="form-group">
       <label for="nationality">What's your nationality?</label>  
-     <select name="nationality" id="nationality" class="form-control input-md" style="border-color:#302a39;height:41px;margin-left:5px;" required>
+     <select name="nationality" id="nationality" class="form-control input-md" style="height:41px;margin-left:5px;" required>
 			<option value="">nationality</option>
 			<option value="AUDI">Dubai</option>
 			<option value="MBW">India</option>
@@ -239,10 +260,19 @@
 
 	
 		<footer id="colorlib-footer">
+		<style>
+		.NewLink:hover{
+		color:#2E9AC5;
+		}
+		.NewLink{
+		color:black;
+		}
+		
+		</style>
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="aboutUs.html" style="color:white;">About Us</a></h4>
+						<h4><a class="NewLink" href="aboutUs.html">About Us</a></h4>
 						<p>
 							Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 						</p>
@@ -263,7 +293,7 @@
 					<div class="col-md-3 colorlib-widget">
 					
 					
-						<h4><b>Important Links</b></h4>
+						<h4>Important Links</h4>
 						<p>
 							<ul class="colorlib-footer-links">
 								<li><a href="missionVision.html"><i class="icon-check"></i>Mission & Vision</a></li>
@@ -279,13 +309,22 @@
 					</div>
 
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="listingBlog.html" style="color:white;">Address</a></h4>
+						<h4><a class="NewLink" href="listingBlog.html">Address</a></h4>
 						<p>
 						<ul class="colorlib-footer-links">
 							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
 							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
 							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
 							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li></li><br>
+							<li><h5>Follow Us</b></li>
+							<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
+							<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
+							<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
+
+							
 						</ul>
 						</p>
 						
@@ -294,22 +333,15 @@
 				
 				</div>
 			</div>
-			<div class="copy">
+			<div>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | 
-<a href="termsAndCondition.html">Terms & Conditions</a> | 
-<a href="privacyPolicy.html">Privacy Policy </a> | 
-<a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small><br> 
+<small class="block">&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved &nbsp; | 
+<a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
+<a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
+</small><br> 
 								
 							</p>
 						</div>
@@ -322,6 +354,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
+	
 	
 	<!-- jQuery -->
 

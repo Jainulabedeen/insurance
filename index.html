@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+	<title id="headOfInsurance">Insurance</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Insurance</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -44,7 +45,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 30px;
+  padding: 5px 15px;
   transition: 0.3s;
   font-size: 17px;
   margin-left:5px;
@@ -54,9 +55,8 @@ color:white;
  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 .insuranceLink:hover {
- 
-  color:black;
-  box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+ color:black;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 /* Create an active/current tablink class */
@@ -129,7 +129,7 @@ margin-left:124px;
 							<ul>
 							
 								<li class="has-dropdown">
-									<a href="#" style="font-size:15px;">Personal Insurance<span class="caret"></span></a>
+									<a href="#" style="font-size:15px;">Personal Insurance <span class="caret"></span></a>
 									<ul class="dropdown">
 									<li><img src="images/personal3.svg" style="width:50px;height:50px;"></li>
 										<li><a href="carInfo.html">Motor</a></li>
@@ -198,7 +198,7 @@ margin-left:124px;
 			<h2 style="color:#203252;padding:10px;"><b>Let’s Get You An Awesome Price</b></h2>
 			<div class="row" id="insuranceLink">
 			<div class="col-md-3"><button id="personalBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Personal</span></button></div>
-			<div class="col-md-3"><button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')">Business</button></div>
+			<div class="col-md-3"><button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')"><span>Business</span></button></div>
 			</div>
 			<div class="row">
 			<div class="col-md-6">
@@ -206,15 +206,14 @@ margin-left:124px;
 			<br>
 			<div class="summary" id="personal">
 			
-			<div class="row">
+			<div class="row" style="">
 			<div class="col-md-4">
 			<a href="carInfo.html" style="height:60px;" class="services text-center ">
 									<span class="icon">
 									<img src="images/car.svg" class="iconImageInsurance">
 									</span>
 								</a>
-								<p name="pb[]" style="text-align:center;margin-top:-24px;font-size:13px;">Motor</p>
-			
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Motor</p>
 			</div>	
 			<div class="col-md-4">
 			<a href="travel.html" style="height:60px;" class="services text-center ">
@@ -223,7 +222,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-								<p name="pb[]" style="text-align:center;margin-top:-24px;font-size:13px;">Travel</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Travel</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -233,7 +232,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Family Medical</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Family Medical</p>
 			</div>	
 			
 			</div>
@@ -245,7 +244,7 @@ margin-left:124px;
 									<img src="images/car.svg">
 									</span>
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Home</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Home</p>
 			</div>	
 			<div class="col-md-4">
 			<a href="carInfo.html" style="height:60px;" class="services text-center ">
@@ -254,7 +253,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Yacht</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Yacht</p>
 			</div>	
 			<div class="col-md-4">
 			<a href="carInfo.html" style="height:60px;" class="services text-center ">
@@ -262,7 +261,7 @@ margin-left:124px;
 									<img src="images/car.svg">
 									</span>
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Jet Ski</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Jet Ski</p>
 			</div>
 		</div>			
 			
@@ -275,7 +274,7 @@ margin-left:124px;
 									<img src="images/car.svg" class="iconImageInsurance">
 									</span>
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Property</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Property</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -285,7 +284,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Engineering</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Engineering</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -295,7 +294,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Group Medical</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Group Medical</p>
 			</div>	
 			
 			</div>
@@ -306,7 +305,7 @@ margin-left:124px;
 									<img src="images/car.svg" class="iconImageInsurance">
 									</span>
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Group Life</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Group Life</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -316,7 +315,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Marine</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Marine</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -326,7 +325,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Aviation</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Aviation</p>
 			</div>	
 			
 			</div>
@@ -337,7 +336,7 @@ margin-left:124px;
 									<img src="images/car.svg" class="iconImageInsurance">
 									</span>
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Miscellaneous</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Miscellaneous</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -347,7 +346,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Motor Fleet</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Motor Fleet</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -357,7 +356,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-			<p style="text-align:center;margin-top:-24px;font-size:13px;">Liability</p>
+			<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Liability</p>
 			</div>	
 			
 			</div>
@@ -368,7 +367,7 @@ margin-left:124px;
 									<img src="images/car.svg" class="iconImageInsurance">
 									</span>
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Energy</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Energy</p>
 			
 			</div>	
 			<div class="col-md-4">
@@ -378,7 +377,7 @@ margin-left:124px;
 									</span>
 									
 								</a>
-								<p style="text-align:center;margin-top:-24px;font-size:13px;">Other</p>
+								<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Other</p>
 			
 			</div>	
 			
@@ -403,286 +402,7 @@ margin-left:124px;
 			</div>
 	</div>
 		
-			<!--<aside id="colorlib-hero" style="height:600px;">
 			
-			<h1>Slider</h1>
-			<div class="flexslider">
-				<ul class="slides" style="height:600px;">
-			   	<li style="background-image: url(images/home3.jpeg);height:50px;">
-				<h2 style="background-color:red;background-attachment:fixed;">We are the insurer of choice for over 830,000 customers</h2>
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>We are the insurer of choice for over 830,000 customers</h2>
-					   					<h1>Largest insurer in the UAE</h1>
-					   					
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_1.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>We are the insurer of choice for over 830,000 customers</h2>
-					   					<h1>Largest insurer in the UAE</h1>
-					   					
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_1.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>We are the insurer of choice for over 830,000 customers</h2>
-					   					<h1>Largest insurer in the UAE</h1>
-					   					
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_1.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>We are the insurer of choice for over 830,000 customers</h2>
-					   					<h1>Largest insurer in the UAE</h1>
-					   					
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>	
-			  	</ul>
-		  	</div>
-		</aside>
-
-
-		<div id="colorlib-services">
-			<div class="container">
-			<h3>Personal Insurance</h3>
-				<div class="row">
-					<div class="col-md-12 services-wrap">
-						<div class="row">
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="carInfo.html" class="services">
-									<span class="icon">
-										<i class="flaticon-desktop"></i>
-									</span>
-									<div class="desc">
-										<h4>Motor</h4>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="travel.html" class="services">
-									<span class="icon">
-										<i class="flaticon-smartphone"></i>
-									</span>
-									<div class="desc">
-										<h3>Travel</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="familyMedical.html" class="services">
-									<span class="icon">
-										<i class="flaticon-laboratory"></i>
-									</span>
-									<div class="desc">
-										<h3>Family Medical</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-computer-graphic"></i>
-									</span>
-									<div class="desc">
-										<h3>Home</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-video-player"></i>
-									</span>
-									<div class="desc">
-										<h3>Yacht</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Jet ski</h3>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-			<div id="colorlib-services">
-			<div class="container">
-			<h3>Business Insurance</h3>
-				<div class="row">
-					<div class="col-md-12 services-wrap">
-						<div class="row">
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-desktop"></i>
-									</span>
-									<div class="desc">
-										<h4>Property</h4>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-smartphone"></i>
-									</span>
-									<div class="desc">
-										<h3>Engineering</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-laboratory"></i>
-									</span>
-									<div class="desc">
-										<h3>Group Medical</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-computer-graphic"></i>
-									</span>
-									<div class="desc">
-										<h3>Group Life</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-video-player"></i>
-									</span>
-									<div class="desc">
-										<h3>Marine</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Aviation</h3>
-									</div>
-								</a>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>	
-		
-	<div id="colorlib-services">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 services-wrap">
-						<div class="row">
-								<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Miscellaneous</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Motor Fleet</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Liability</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Energy</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2 col-sm-12 text-center animate-box">
-								<a href="#" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
-									<div class="desc">
-										<h3>Other</h3>
-									</div>
-								</a>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>-->	
 	
 	
 	<br><br><br><br><br>
@@ -719,16 +439,16 @@ margin-left:124px;
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:#2E9AC5;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">Super simple claims</h4>  
 								</div>  
 								<div class="modal-body" style="font-size:14px;">  
 								<ul style="list-style:none;">
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; For claims, just call on 1800-258-5956. No forms to be filled</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Get a link for Self-Inspection on your registered mobile number</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Shoot the damages from your smartphone through a guided step by step process</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Our team will then assess the damages and get back with an estimate</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Visit any of our 1400+ authorised garages for cashless repairs!</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; For claims, just call on 1800-258-5956. No forms to be filled</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Get a link for Self-Inspection on your registered mobile number</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Shoot the damages from your smartphone through a guided step by step process</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Our team will then assess the damages and get back with an estimate</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Visit any of our 1400+ authorised garages for cashless repairs!</li>
 								
 								</ul>
 								</div>  
@@ -765,13 +485,13 @@ margin-left:124px;
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:#2E9AC5;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">Loved by Customers</h4>  
 								</div>  
 								<div class="modal-body" style="font-size:14px;">  
 								<ul style="list-style:none;">
-								<li> <i class="fa fa-check-circle" style="color:red"></i> &nbsp; A growing base of customers; 50 Lakhs and counting</li>
-								<li> <i class="fa fa-check-circle" style="color:red"></i> &nbsp; Facebook rating of 4.9/5, highest for an Indian insurance industry</li>
+								<li> <i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; A growing base of customers; 50 Lakhs and counting</li>
+								<li> <i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Facebook rating of 4.9/5, highest for an Indian insurance industry</li>
 								
 								</ul>
 								</div>  
@@ -805,14 +525,14 @@ margin-left:124px;
 							<!-- Modal content-->  
 							<div class="modal-content">  
 								<div class="modal-header">  
-								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i></button>  
+								<button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:#2E9AC5;" aria-hidden="true"></i></button>  
 								<h4 class="modal-title">More TLC, Less T&C</h4>  
 								</div>  
 								<div class="modal-body" style="font-size:14px;">  
 								<ul style="list-style:none;">
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Simple and easy products, that matter to you</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Documents so simple, even 15-year olds can understand</li>
-								<li><i class="fa fa-check-circle" style="color:red"></i> &nbsp; Audio Claim processes</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Simple and easy products, that matter to you</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Documents so simple, even 15-year olds can understand</li>
+								<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Audio Claim processes</li>
 								
 								</ul>
 								</div>  
@@ -838,7 +558,7 @@ background:white;
 background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
 background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
 color:white; 
-border-radius:20px;
+border-radius:5px;
  }
 
 </style>
@@ -968,36 +688,22 @@ Global Brand Awards 2020"</p>
 </div><!-- corousel end -->  
   
 </div>
-<style>
-.modal-dialog {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  
-  padding: 0;
-}
 
-.modal-content {
-  height: auto;
-  min-height: 100%;
-  border-radius: 0;
-}
-
-</style>  
 <div class="modal fade" id="myCustomer" role="dialog" style="margin-right:-20px;">  
-    <div class="modal-dialog">  
+    <div class="modal-dialog" style="width:100%;height:100%;margin:0px;padding:0;border-radius: 0;">  
       
       <!-- Modal content-->  
-      <div class="modal-content" style="background-color:#EFF0F3;">  
-          <button style="float:right;" type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:red;padding:10px;" aria-hidden="true"></i></button>  
+      <div class="modal-content" style="background-color:#EFF0F3;height: 100%;">  
+          <button style="float:right;" type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close" style="color:#2E9AC5;padding:10px;" aria-hidden="true"></i></button>  
 		<br><br> 
         <div class="modal-body" style="padding:0px;">  
+		<div class="container">
           <div class="col-md-12">
 		  <div class="row">
 		
 
 <div class="col-md-6" style="height:400px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;padding:30px;border-radius:20px;">
-<br><br><br>
+<br><br>
 <div class="row">
 <div class="col-md-2">
 <br>
@@ -1027,7 +733,7 @@ MENA Insurance Awards 2020 Best Insurance Company UAE"
 </div>
 </div>
   
-		  <div class="col-md-5" style="overflow:auto;height:400px;margin-left:5px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;padding:30px;border-radius:20px;">
+<div class="col-md-5" style="margin-left:5px;overflow:auto;height:400px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;padding:30px;border-radius:20px;">
 <div>
 Ali
 <p style="float:right;">
@@ -1125,7 +831,7 @@ MENA Insurance Awards 2020 Best Insurance Company UAE"
         </div>  
          
       </div>  
-        
+       </div> 
     </div>  
   </div>  
   </div>
@@ -1138,10 +844,19 @@ MENA Insurance Awards 2020 Best Insurance Company UAE"
 	
 
 		<footer id="colorlib-footer">
+		<style>
+		.NewLink:hover{
+		color:#2E9AC5;
+		}
+		.NewLink{
+		color:black;
+		}
+		
+		</style>
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="aboutUs.html" style="color:black;">About Us</a></h4>
+						<h4><a class="NewLink" href="aboutUs.html">About Us</a></h4>
 						<p>
 							Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 						</p>
@@ -1178,7 +893,7 @@ MENA Insurance Awards 2020 Best Insurance Company UAE"
 					</div>
 
 					<div class="col-md-3 colorlib-widget">
-						<h4><a href="listingBlog.html" style="color:black;">Address</a></h4>
+						<h4><a class="NewLink" href="listingBlog.html">Address</a></h4>
 						<p>
 						<ul class="colorlib-footer-links">
 							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
@@ -1208,8 +923,8 @@ MENA Insurance Awards 2020 Best Insurance Company UAE"
 						<div class="col-md-12 text-center">
 							<p>
 <small class="block">&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved &nbsp; | 
-<a style="padding-left:10px;text-decoration:none;color:black;" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
-<a style="padding-left:10px;text-decoration:none;color:black;" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
+<a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
+<a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
 </small><br> 
 								
 							</p>
@@ -1272,15 +987,14 @@ $("#personalBusinessInsuranceImages").html("<img src='images/business.svg' style
 });
 });
 
-$(document).ready(function(){
-alert($("p").text());
+/*
 
-});
-
-function myfunction(ctrl) {
-  var TextInsideLi = ctrl.getElementsByTagName('p')[0].innerHTML;
-}
-
+$('.col-md-4,.textOfInsurance').click(function(e) {
+  var txt = $(this).text();
+  //alert(txt.trim());
+  //$("#headOfInsurance").text(txt);
+  
+});*/
 </script>
 	</body>
 </html>
