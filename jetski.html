@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home</title>
+	<title>Jet Ski</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -114,8 +114,7 @@
 <div class="col-md-12 text-center animate-box">
 
 		<center>
-		<h1><b>We just need a few bits of information.</b></h1>
-		<h3><b>Then we will generate custom quotes just for you.It's that easy!</b></h4>
+		<h1><b>Jet Ski Insurance</b></h1>
 		</center>
 
 </div>
@@ -130,56 +129,64 @@
     <div class="row">
   <div class="col-md-4">
 	<div class="form-group">
-	<label for="policyDate">Policy start date *</label>  
-	  <input type="date" id ="policyDate" name="policyDate" style="height:41px;" class="form-control input-md" required>  
+	<label for="fname">First Name *</label>  
+	  <input type="text" id ="fname" name="fname" style="height:41px;" class="form-control input-md" placeholder="First Name " required>  
 		  </div>
 		  </div>
 		  
 		<div class="col-md-4">  
 	  <div class="form-group">
-	  <label for="fname">Full Name *</label>  
-	   <input type="text" id ="fname" name="fname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Full Name *" required>  
+	  <label for="lname">Last Name *</label>  
+	   <input type="text" id ="lname" name="lname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Last Name *" required>  
 			 </div>
 		 </div>
 	</div>
+	
 	<div class="row">
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" style="height:41px;" placeholder="Email *" class="form-control input-md" required>
+	<input id="email" name="email" type="email" style="height:41px;" placeholder="Email *" class="form-control input-md" placeholder="Email " required>
 	</div>
 	</div>
 	
 	 <div class="col-md-4">
 	<div class="form-group">
       <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" style="height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+       <input type="text" id ="mobile" name="mobile" style="height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" placeholder="Mobile No." required>  
         </div>
 	 </div>
 	
 	</div>
-	<div class="row">
-	<div class="col-md-8">
+	 <div class="row">
+  <div class="col-md-4">
 	<div class="form-group">
-
-		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
-         <span style="font-size:15px;">I am happy to receive email and/or sms communications regarding updates to my quotes and policies</span>
-     </div>
-	  </div>
+	<label for="make">Make *</label>  
+	  <input type="text" id ="make" name="make" style="height:41px;" class="form-control input-md" placeholder="Specify your Jet ski's manufacturer" required>  
+		  </div>
+		  </div>
+		  
+		<div class="col-md-4">  
+	  <div class="form-group">
+	  <label for="model">Model *</label>  
+	   <input type="text" id ="model" name="model" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Specify your Jet ski's model." required>  
+			 </div>
+		 </div>
 	</div>
-
- 
+	 
+	
+	
     <!-- Button -->
 	<div class="row">
 	  <div class="col-md-4">
 	<div class="form-group">
-    <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+    <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
 	
 	 </div>
     </div>
 	<div class="col-md-4">
 	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+	<button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
 	 </div>
     </div>
 	</div>
@@ -332,7 +339,7 @@
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/homeValidation.js"></script>
+	<script src="js/jetskiValidation.js"></script>
 <script>
 
 </script>

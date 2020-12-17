@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home</title>
+	<title>Yacht</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -114,8 +114,7 @@
 <div class="col-md-12 text-center animate-box">
 
 		<center>
-		<h1><b>We just need a few bits of information.</b></h1>
-		<h3><b>Then we will generate custom quotes just for you.It's that easy!</b></h4>
+		<h1><b>Yacht Insurance</b></h1>
 		</center>
 
 </div>
@@ -130,18 +129,19 @@
     <div class="row">
   <div class="col-md-4">
 	<div class="form-group">
-	<label for="policyDate">Policy start date *</label>  
-	  <input type="date" id ="policyDate" name="policyDate" style="height:41px;" class="form-control input-md" required>  
+	<label for="fname">First Name *</label>  
+	  <input type="text" id ="fname" name="fname" style="height:41px;" class="form-control input-md" placeholder="First Name " required>  
 		  </div>
 		  </div>
 		  
 		<div class="col-md-4">  
 	  <div class="form-group">
-	  <label for="fname">Full Name *</label>  
-	   <input type="text" id ="fname" name="fname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Full Name *" required>  
+	  <label for="lname">Last Name *</label>  
+	   <input type="text" id ="lname" name="lname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Last Name" required>  
 			 </div>
 		 </div>
 	</div>
+	
 	<div class="row">
 	<div class="col-md-4">
 	<div class="form-group">
@@ -158,28 +158,67 @@
 	 </div>
 	
 	</div>
-	<div class="row">
-	<div class="col-md-8">
+	 <div class="row">
+  <div class="col-md-4">
 	<div class="form-group">
-
-		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
-         <span style="font-size:15px;">I am happy to receive email and/or sms communications regarding updates to my quotes and policies</span>
-     </div>
-	  </div>
+	<label for="sumInsured">Sum Insured *</label>  
+	  <input type="text" id ="sumInsured" name="sumInsured" style="height:41px;" class="form-control input-md" placeholder="The sum you wish the vessel to be insured" required>  
+		  </div>
+		  </div>
+		  
+		<div class="col-md-4">  
+	  <div class="form-group">
+	  <label for="use">Use *</label>  
+	   <input type="text" id ="use" name="use" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Craft used just for private and pleasure purposes" required>  
+			 </div>
+		 </div>
 	</div>
-
- 
+	 <div class="row">
+  <div class="col-md-4">
+	<div class="form-group">
+	<label for="opExperience">Operator's experience *</label>  
+	  <input type="text" id ="opExperience" name="opExperience" style="height:41px;" class="form-control input-md" placeholder="How many years experience with such vessels" required>  
+		  </div>
+		  </div>
+		  
+		<div class="col-md-4">  
+	  <div class="form-group">
+	  <label for="boatDetails">Boat details *</label>  
+	   <input type="text" id ="boatDetails" name="boatDetails" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Tell us about the boat" required>  
+			 </div>
+		 </div>
+	</div>
+	<div class="row">
+  <div class="col-md-8">
+	<div class="form-group">
+	<label for="engineDetails">Engine details *</label>  
+	  <input type="text" id ="engineDetails" name="engineDetails" style="height:41px;" class="form-control input-md" placeholder="Make, year, horsepower, max. speed, serial number and whether it's an inboard or an outboard motor." required>  
+		  </div>
+		  </div>
+		  
+	</div>
+	
+	<div class="row">
+  <div class="col-md-8">
+	<div class="form-group">
+	<label for="claimExperience">Claims experience *</label>  
+	  <textarea id ="claimExperience" name="claimExperience" cols="20" rows="5" class="form-control input-md" placeholder="Please describe details of losses over the past 5 years" required></textarea>  
+		  </div>
+		  </div>
+		  
+	</div>
+	
     <!-- Button -->
 	<div class="row">
 	  <div class="col-md-4">
 	<div class="form-group">
-    <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+    <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>Previous Step</a>     
 	
 	 </div>
     </div>
 	<div class="col-md-4">
 	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+	<button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Compare Yacht Insurance &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
 	 </div>
     </div>
 	</div>
@@ -332,7 +371,7 @@
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/homeValidation.js"></script>
+	<script src="js/yachtValidation.js"></script>
 <script>
 
 </script>
