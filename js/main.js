@@ -45,7 +45,7 @@
 
 	var offcanvasMenu = function() {
 
-		$('#page').prepend('<div id="colorlib-offcanvas" />');
+		$('#page').prepend('<div id="colorlib-offcanvas"/>');
 		$('#page').prepend('<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle colorlib-nav-white"><i></i></a>');
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#colorlib-offcanvas').append(clone1);
