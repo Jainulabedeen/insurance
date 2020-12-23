@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .colorlib-nav .top-menu {
      width: 100%;
 	height:80px;
-    padding: 25px 0;
+    padding: 11px 0;
     background: white;
     -webkit-box-shadow: 0px 15px 16px -6px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0px 15px 16px -6px rgba(0, 0, 0, 0.16);
@@ -147,10 +147,26 @@ h1, h2, h3, h4, h5, h6, figure {
   
 	
 	}
+	.logo{
+		width:150%;
+		height:100%;
+		
+		
+	}
     @media screen and (max-width: 768px) {
       .colorlib-nav .top-menu {
         padding: 28px 1em;
-        background: #fff; } }
+        background: #fff; }
+	.logo{
+		width:80%;
+		height:80%;
+	}
+	.colorlib-nav .top-menu {
+		 width: 100%;
+	height:100px;
+		
+	}
+		}
   .colorlib-nav #colorlib-logo {
     font-size: 24px;
     margin: 0;
