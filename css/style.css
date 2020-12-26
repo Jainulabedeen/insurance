@@ -153,14 +153,21 @@ h1, h2, h3, h4, h5, h6, figure {
 		
 		
 	}
-    @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
       .colorlib-nav .top-menu {
         padding: 28px 1em;
         background: #fff; }
 	.logo{
-		width:105%;
+		width:60%;
 		height:100%;
 	}
+	
+}  
+
+
+	
+	
+	
 	.colorlib-nav .top-menu {
 		 width: 100%;
 	height:120px;
