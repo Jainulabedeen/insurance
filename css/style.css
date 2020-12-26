@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6, figure {
         font-size: 12px;
         padding: 30px 12px;
         font-weight: 400;
-        color: black;
+        color: #004a8f;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s; }
@@ -1878,10 +1878,10 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0; }
  .myNew{
-	 width:25%;
+	 width:20%;
 	 height:85px;
 	 display:inline-block;
-	 margin:5px;
+	 margin:10px;
 	 
  } 
   
