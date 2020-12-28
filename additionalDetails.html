@@ -132,7 +132,7 @@
 <div class="colorlib-trainers">
 <div class="container">
 <form class="form-horizontal" id="form1" action="">
-<div class="col-md-12 animate-box">
+<div class="col-md-12 animate-box" id="app">
 
  
     
@@ -173,7 +173,47 @@
 		</div>
     </div>
  </div>	  
-	  <div class="row">
+ 
+ <div class="row">
+	  <div class="col-md-4">
+	<div class="form-group">
+	<label for="chassisNo">Repair Location *</label>  
+		<select id="repair" name="repair" style="height:41px;" class="form-control input-md" required>
+		  <option value="">Select Repair Location</option>
+		 <option  v-bind:value="carRepaire.slug" v-for="carRepaire in carRepaires">
+			{{carRepaire.name}}
+			</option>
+		  </select>		
+         </div>
+	  </div>
+	   <div class="col-md-4">
+  <div class="form-group">
+	<label for="engineNo">Car Cylinders *</label>
+       <select id="cylinder" name="cylinder" style="height:41px;" class="form-control input-md" required>
+		  <option value="">Select Car Cylinder</option>
+		 <option  v-bind:value="carCylindere.slug" v-for="carCylindere in carCylinderes">
+			{{carCylindere.name}}
+			</option>
+		  </select>	
+		</div>
+    </div>
+ </div>
+  <div class="row">
+	
+	   <div class="col-md-8">
+  <div class="form-group">
+	<label for="engineNo">Manufcturing Country *</label>
+       <select id="mcountry" name="mcountry" style="height:41px;" class="form-control input-md" required>
+		  <option value="">Select Manufcturing Country</option>
+		  <option  v-bind:value="carManufacturingCoutnry.slug" v-for="carManufacturingCoutnry in carManufacturingCoutnries">
+			{{carManufacturingCoutnry.name}}
+			</option>
+		  </select>	
+		</div>
+    </div>
+ </div>
+ 
+	<div class="row">
 	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="carColor">Car Color *</label>  
@@ -449,6 +489,10 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/additionalDetails.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppMotor.js"></script>  
+	 
 
 	</body>
 </html>

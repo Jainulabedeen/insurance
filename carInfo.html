@@ -213,8 +213,8 @@ input[type=range]::-ms-tooltip {
 <br><br><br><br><br>
 <div class="colorlib-trainers">
 <div class="container">
-<form class="form-horizontal" id="form1" action="" ng-app="myApp" ng-controller="myCtrl">
-<div class="col-md-12 animate-box">
+<form class="form-horizontal" id="form1" action="">
+<div class="col-md-12 animate-box" id="app">
   <fieldset>
     
     <!-- Form Name -->
@@ -223,9 +223,10 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
 	<label for="car">Car Make</label>  
        <select name="car" id="car" class="form-control input-md" style="height:41px;">
-			<option value="">Car Make</option>
-			<option value="AUDI">AUDI</option>
-			<option value="MBW">BMW</option>
+	   <option value="0">Car Make</option>
+			<option  v-bind:value="carMake.slug" v-for="carMake in carMakes">
+			{{carMake.name}}
+			</option>
 			</select>
        </div>
 	  </div>
@@ -235,8 +236,9 @@ input[type=range]::-ms-tooltip {
       <label for="cartype">Car Type</label>  
        <select name="cartype" id="cartype" class="form-control input-md" style="margin-left:5px;height:41px;">
 			<option value="">Car Type</option>
-			<option value="AUDI">Private Vehicle</option>
-			<option value="MBW">Commercial Vehicle</option>
+			<option  v-bind:value="carType.slug" v-for="carType in carTypes">
+			{{carType.name}}
+			</option>
 			</select>
 	  </div>
 	  </div>
@@ -248,8 +250,9 @@ input[type=range]::-ms-tooltip {
 	<label for="carmodel">Car Model</label>  
        <select name="carmodel" id="carmodel" class="form-control input-md" style="height:41px;">
 			<option value="">Car Model</option>
-			<option value="AUDI">AUDI</option>
-			<option value="MBW">BMW</option>
+			<option  v-bind:value="carModel.slug" v-for="carModel in carModels">
+			{{carModel.name}}
+			</option>
 			</select>
        </div>
 	  </div>
@@ -259,7 +262,7 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="brand">Is your car brand New?*</label>  <br>
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
 		</div>
@@ -284,8 +287,9 @@ input[type=range]::-ms-tooltip {
 	<label for="claim">When Did You Last File Claim?</label>  
        <select name="claim" id="claim" class="form-control input-md" style="height:41px;">
 			<option value="">When Did You Last File Claim?</option>
-			<option value="AUDI">Never</option>
-			<option value="MBW">Within 12 Months</option>
+			<option  v-bind:value="carClaim.slug" v-for="carClaim in carClaims">
+			{{carClaim.name}}
+			</option>
 			</select>
        </div>
 	  </div>
@@ -294,9 +298,9 @@ input[type=range]::-ms-tooltip {
 	<div class="row">
 	<div class="col-md-8">
 	<div class="form-group">
-	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;">{{carValuRange}}</span>
+	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;" id="valueOfCarFromJS"></span>
 	<div class="input-group" style="border-radius:20px;width:100%;color:#55cbcf;height:41px;">
-         <input type="range" min="0" id="valueOfCar" name="valueOfCar" max="55000" ng-model="carValuRange" class="form-control input-md" placeholder="What's the value of your car?*" >
+         <input type="range" min="0" id="valueOfCar" value="40000" name="valueOfCar" max="55000" onchange="showVal(this.value)" class="form-control input-md" placeholder="What's the value of your car?*" >
         </div>
       </div>
     </div>
@@ -317,7 +321,7 @@ input[type=range]::-ms-tooltip {
 	  <div class="col-md-4">
 	<div class="form-group">
       <label for="yearofregister">When Did You First Register Your Car</label>  
-     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1900-01-01" max="2999-12-31" style="height:41px;" required>  
+     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1900-01-01" max="2999-12-31" style="height:41px;margin-left:5px;" required>  
 	  </div>
 	  </div>
 	</div>
@@ -326,7 +330,7 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="customer">Are you an existing AWNIC customer? *</label>  <br>
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="customer" name="customer" value="no" type="radio">&nbsp;No
 		</div>
@@ -335,7 +339,7 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="license">Has your previous policy expired?*</label>  <br>
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;margin-left:5px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;margin-left:5px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="license" name="license" value="no" type="radio">&nbsp;No
 		</div>
@@ -491,14 +495,18 @@ input[type=range]::-ms-tooltip {
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/carInfoValidation.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppMotor.js"></script>  
+	 
+
 <script>
 var a=40000;
 document.getElementById("valueOfCar").value =a;
-var app = angular.module("myApp", []);  
-app.controller("myCtrl", function($scope) {  
-    $scope.carValuRange =a;  
-     
-});  
+document.getElementById("valueOfCarFromJS").innerHTML=a;  
+function showVal(newVal){
+    document.getElementById("valueOfCarFromJS").innerHTML=newVal;
+}
 function isOlderEdgeOrIE() {
   return (
     window.navigator.userAgent.indexOf("MSIE ") > -1 ||
@@ -553,8 +561,8 @@ function initRangeEl() {
   } else {
     updateRangeEl(rangeEl);
     rangeEl.addEventListener("input", function(e) {
-      updateRangeEl(e.target);
-      textEl.value = e.target.value;
+     updateRangeEl(e.target);
+      //textEl.value = e.target.value;
     });
   }
 }

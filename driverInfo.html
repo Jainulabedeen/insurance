@@ -127,7 +127,7 @@
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post" action="">
-<div class="col-md-12 animate-box">
+<div class="col-md-12 animate-box" id="app">
 
     <div class="row">
   <div class="col-md-4">
@@ -174,8 +174,10 @@
 	<div class="form-group">
 	<select name="nationality" id="nationality" style="height:41px;" class="form-control input-md" required>
 			<option value="">Nationality</option>
-			<option>India</option>
-			<option>UAE</option>
+			<option  v-bind:value="country.nationality" v-for="country in nationality">
+			{{country.country}}
+			</option>
+		
 				</select>
        </div>
     </div>	
@@ -347,17 +349,10 @@
 	
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/driverInfoValidation.js"></script>
-<script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppMotor.js"></script>  
 
- function checkFilled() {
-    
-	$(document).ready(function(){
-	$("fname").css("background-color","#302a39");
-
-	});
-	
-}
-</script>
 	</body>
 </html>
 

@@ -45,7 +45,7 @@
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-8 text-right menu-1"><br>
+						<div class="col-md-10 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -133,11 +133,12 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
 
 /* Create an active/current tablink class */
 .insuranceLink.active {
-  background-color: #55cbcf;
+  background-color: #CAA42F;
   color:white;
   border-bottom:5px solid #203252;
   border-radius:5px;
   height:50px;
+  
  
 }
 #personalBusinessInsurance{
@@ -201,13 +202,81 @@ margin-left:124px;
 			<div class="col-md-6">
 			
 			<div class="row" id="insuranceLink">
-			<button id="personalBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Personal</span></button>
-			<button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')"><span>Business</span></button>
+			<button id="contactBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Head Office</span></button>
+			<button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')"><span>Our Branches</span></button>
+			</div>
+			<div id="personal">
+			Hello personal
+			</div>
+			
+			
+			<div>
+			  
+			
+			</div>
 			</div>
 			
 			</div>
+			<div class="row">
+			<div class="col-md-12" style="height:100px;">
+			<div id="business" style="display:none;">
+				<ul class="nav nav-tabs">  
+				<li class="active"><a data-toggle="tab" href="#AlHosn" class="insuranceLink">Al-Hosn</a></li>  
+				<li><a data-toggle="tab" class="insuranceLink" href="#dubai" class="insuranceLink">Dubai</a></li>  
+				<li><a data-toggle="tab" class="insuranceLink" href="#burDubai">Bur Dubai</a></li>  
+				<li><a data-toggle="tab" class="insuranceLink" href="#abuDhabi">Abu Dhabi</a></li> 
+				<li><a data-toggle="tab" class="insuranceLink" href="#alain">Alain</a></li> 
+				<li><a data-toggle="tab" class="insuranceLink" href="#ajman">Ajman</a></li> 
+				<li><a data-toggle="tab" class="insuranceLink" href="#fujairah">Fujairah</a></li> 
+				<li><a data-toggle="tab" class="insuranceLink" href="#khorfakkan">Khorfakkan</a></li> 
+				
+				
+				</ul> 	
+				
+			</div>
+			</div>
+			</div>
+				<div class="row">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="margin-right:10px;margin-top:20px;height:100%;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+									<ul style="list-style:none;">
+									<li><h3>Get in Touch with Us</h3></li>
+									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>
+									<li><i class="icon-envelope"></i> &nbsp;Email : abnicho@albuhaira.com</li>
+									<li><hr style="border-top: 1px solid black;"></li>
+									<h5><b>Dedicated help- line numbers </b></h5>
+									<li>Motor Insurance : 600 535357            </li>
+									<li>Motor Claims : 600 545457               </li>
+									<li>Life & Medical Insurance : 600 532229   </li>
+									<li>Life & Medical Claims : 600 545459      </li>
+									<li>Home & Travel Insurance : 600 548283    </li>
+									<li>Marine Insurance : +971 6 517 4487      </li>
+									<li>Marine Claims : +971 6 517 4486			</li>
+									<li><hr style="border-top: 1px solid black;"></li>
+									<h5><b>Office Timings</b></h5>
+									<li>8:00 am to 1:30 pm, 
+									<br>2:30 am to 5:00 pm    </li>
+									<li>(Sunday to Thursday)				</li>
+									</ul>
+									
+									</div>
 			
 			</div>
+			
+			<div class="col-md-8" style="height:620px;float:right;margin-top:20px;width:75%;background-color:red;">
+			
+			<div id="myMap">  
+			
+			</div>
+			</div>
+			 
+		 
+			</div>
+			</div>
+			
 			</div>
 			</div>
 		</div>
@@ -451,7 +520,23 @@ margin-left:124px;
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/contactValidation.js"></script>
+<script>
+function openSummary(evt, insuranceName) {
+  var i, summary,insuranceLink;
+  summary = document.getElementsByClassName("summary");
+  for (i = 0; i < summary.length; i++) {
+    summary[i].style.display = "none";
+  }
+  insuranceLink = document.getElementsByClassName("insuranceLink");
+  for (i = 0; i < insuranceLink.length; i++) {
+    insuranceLink[i].className = insuranceLink[i].className.replace(" active", "");
+  }
+  document.getElementById(insuranceName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+}
 
+</script>
 	</body>
 </html>
 
