@@ -46,7 +46,7 @@
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-8 text-right menu-1"><br>
+						<div class="col-md-10 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -131,54 +131,61 @@
 <br><br><br><br><br>
 <div class="colorlib-trainers">
 <div class="container">
-<form class="form-horizontal" id="form1" action="">
+<form class="form-horizontal" id="form1" action="" style="text-align:center;margin-left:auto;margin-right:auto;">
 <div class="col-md-12 animate-box" id="app">
 
  
     
     <!-- Form Name -->
 	<div class="row">
+	<div class="col-sm-1"></div>
   <div class="col-md-4">
 	<div class="form-group">
 	<label for="carRegistrationNo">Car Registration No. *</label>  
-        <input type="text" name="carRegistrationNo" style="height:41px;" id="carRegistrationNo" class="form-control input-md" placeholder="Car Registration No. *" required>  
+        <input type="text" name="carRegistrationNo" id="carRegistrationNo" class="form-control input-md" placeholder="Car Registration No. *" required>  
          </div>
 	  </div>
-	 
+	 <div class="col-md-1"></div>
 	  <div class="col-md-4">
 	  <div class="form-group">
       <label for="registration">Registration Emirates *</label> 
         
-          <select id="registration" name="registration" style="margin-left:5px;" class="form-control input-md" required>
+          <select id="registration" name="registration" class="form-control input-md" required>
 		  <option value="">Select Registration Emirates</option>
 		  <option>UAE</option>
 		  </select>
         
       </div>
+	  <div class="col-sm-1"></div>
 	  </div>
 	  
  </div>	
  
 <div class="row">
+<div class="col-md-1"></div>
 	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="chassisNo">Chassis No.*</label>  
-        <input type="text" name="chassisNo" style="height:41px;" id="chassisNo" class="form-control input-md" placeholder="Car Registration No. *" required>  
+        <input type="text" name="chassisNo" id="chassisNo" class="form-control input-md" placeholder="Car Registration No. *" required>  
          </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	   <div class="col-md-4">
   <div class="form-group">
 	<label for="engineNo">Engine No. *</label>
-        <input type="text" name="engineNo" id="engineNo" style="margin-left:5px;height:41px;" class="form-control input-md" placeholder="Engine No. *" required>  
+        <input type="text" name="engineNo" id="engineNo" class="form-control input-md" placeholder="Engine No. *" required>  
 		</div>
     </div>
+<div class="col-md-1"></div>
  </div>	  
  
  <div class="row">
+<div class="col-md-1"></div>
 	  <div class="col-md-4">
+
 	<div class="form-group">
 	<label for="chassisNo">Repair Location *</label>  
-		<select id="repair" name="repair" style="height:41px;" class="form-control input-md" required>
+		<select id="repair" name="repair" class="form-control input-md" required>
 		  <option value="">Select Repair Location</option>
 		 <option  v-bind:value="carRepaire.slug" v-for="carRepaire in carRepaires">
 			{{carRepaire.name}}
@@ -186,10 +193,11 @@
 		  </select>		
          </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	   <div class="col-md-4">
   <div class="form-group">
 	<label for="engineNo">Car Cylinders *</label>
-       <select id="cylinder" name="cylinder" style="height:41px;" class="form-control input-md" required>
+       <select id="cylinder" name="cylinder" class="form-control input-md" required>
 		  <option value="">Select Car Cylinder</option>
 		 <option  v-bind:value="carCylindere.slug" v-for="carCylindere in carCylinderes">
 			{{carCylindere.name}}
@@ -197,13 +205,14 @@
 		  </select>	
 		</div>
     </div>
+	<div class="col-md-1"></div>
  </div>
   <div class="row">
-	
-	   <div class="col-md-8">
+	<div class="col-md-1"></div>
+	   <div class="col-md-9">
   <div class="form-group">
 	<label for="engineNo">Manufcturing Country *</label>
-       <select id="mcountry" name="mcountry" style="height:41px;" class="form-control input-md" required>
+       <select id="mcountry" name="mcountry" class="form-control input-md" required>
 		  <option value="">Select Manufcturing Country</option>
 		  <option  v-bind:value="carManufacturingCoutnry.slug" v-for="carManufacturingCoutnry in carManufacturingCoutnries">
 			{{carManufacturingCoutnry.name}}
@@ -211,72 +220,79 @@
 		  </select>	
 		</div>
     </div>
+	<div class="col-md-1"></div>
  </div>
  
 	<div class="row">
+	 <div class="col-md-1"></div>
 	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="carColor">Car Color *</label>  
-      <select id="carColor" name="carColor" style="height:41px;" class="form-control input-md" required>
+      <select id="carColor" name="carColor"  class="form-control input-md" required>
 		  <option value="">Select Color</option>
 		  <option>White</option>
 		  </select>
       
       </div>
 	  </div>
+	   <div class="col-md-1"></div>
 	  <div class="col-md-4">
 	<div class="form-group">
     <label for="bankLoan">Bank Loan *</label><br>
-	<div class="form-control" style="width:100%;height:41px;margin-left:5px;">
+	<div class="form-control" style="width:100%;height:41px;margin:5px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="bankLoan" checked="checked" name="bankLoan" value="yes" type="radio">&nbsp;Yes
 		<input id="bankLoan" name="bankLoan" value="no" type="radio">&nbsp;No
 		</div>
      </div>
 	  </div>
-	
+	 <div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-	
+	 <div class="col-md-1"></div>
 	   <div class="col-md-4">
 	<div class="form-group">
 	<label for="bankList">Bank List *</label>  
-     <select id="bankList" name="bankList" style="height:41px;" class="form-control input-md" required>
+     <select id="bankList" name="bankList"  class="form-control input-md" required>
 		  <option value="">Select Bank</option>
 		  <option>SBI</option>
 		  </select>
     </div>
 	  </div>
+	   <div class="col-md-1"></div>
 	<div class="col-md-4">
 <div class="form-group">
 <label for="carPlate">Car Plate *</label>
- <input type="text" name="carPlate" id="carPlate" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Car Plate *" required>  
+ <input type="text" name="carPlate" id="carPlate"  class="form-control input-md" placeholder="Car Plate *" required>  
 	</div>
       </div>  
-	  
+	  <div class="col-md-1"></div>
 	</div>
 	
 	
 	
 	<div class="row">
+	 <div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="carSeries">Car Series *</label>  
-	<input type="text" name="carSeries" style="height:41px;" id="carSeries" list="claim" class="form-control input-md" placeholder="Car Series *" required>  
+	<input type="text" name="carSeries"  id="carSeries" list="claim" class="form-control input-md" placeholder="Car Series *" required>  
         </div>
       </div>
+	   <div class="col-md-1"></div>
 	   <div class="col-md-4">
 	  <div class="form-group">
 	  <label for="dateOfInsurance">Start Date of Insurance *</label>
-            <input type="date" name="dateOfInsurance" style="height:41px;margin-left:5px;" id="dateOfInsurance" min="1955-01-01" max="2999-12-31" class="form-control input-md" required>  
+            <input type="date" name="dateOfInsurance"  id="dateOfInsurance" min="1955-01-01" max="2999-12-31" class="form-control input-md" required>  
 			 </div>
       </div>
 
-	  
+	  <div class="col-md-1"></div>
     </div>
 	
 	
 	<div class="row">
+	 <div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="gender">Gender *</label><br>
@@ -289,51 +305,55 @@
      </div>
 	  </div>
 	  
-	
+	 <div class="col-md-1"></div>
 	 <div class="col-md-4">
 	<div class="form-group">
 		<label for="trafficNo">Traffic No.(TC No.) *</label>
         
-          <input type="text" name="trafficNo" id="trafficNo" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Traffic No.(TC No.) *" required>  
+          <input type="text" name="trafficNo" id="trafficNo"  class="form-control input-md" placeholder="Traffic No.(TC No.) *" required>  
 		 </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	   </div>
 	   
 	   <div class="row">
-	   	 
+	  <div class="col-md-1"></div>
 	  <div class="col-md-4">
+	  
 	  <div class="form-group">
       <label for="drivingLicense">Driving License Emirates *</label> 
         
-          <select id="drivingLicense" name="drivingLicense" style="height:41px;" class="form-control input-md" required>
+          <select id="drivingLicense" name="drivingLicense"  class="form-control input-md" required>
 		  <option value="">Select Registration Emirates</option>
 		  <option>UAE</option>
 		  </select>
         
       </div>
 	  </div>
-	   
+	    <div class="col-md-1"></div>
 	   
 	   <div class="col-md-4">
 	  <div class="form-group">
 		<label for="drivingLicenseNo">Driving License No. *</label>
         
-          <select id="drivingLicenseNo" name="drivingLicenseNo" style="height:41px;margin-left:5px;" class="form-control input-md" required>
+          <select id="drivingLicenseNo" name="drivingLicenseNo" class="form-control input-md" required>
 		  <option value="">Select Registration Emirates</option>
 		  <option>UK-423</option>
 		  </select>
 		</div>
 	  </div>
-	   
+	    <div class="col-md-1"></div>
 	   </div>
 	   <div class="row">
-	   <div class="col-md-8">
+	     <div class="col-md-1"></div>
+	   <div class="col-md-9">
 	   <div class="form-group" style="display:inline;">
       
         <a href="premium.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
 		<button class="btn btn-info" type="submit" style="float:right;">Next &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
+	 <div class="col-md-1"></div>
 	   </div>
  
 	  
