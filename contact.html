@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
 	<body>
@@ -109,7 +110,7 @@
 		</nav>
 		<br><br><br><br><br><br><br>
 <style>
-.insuranceLink{
+.contactLink{
  background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
  background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
   border-radius:5px;
@@ -126,60 +127,74 @@ color:white;
   height:50px;
  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
-.insuranceLink:hover {
+.contactLink:hover {
  color:black;
+ background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ 
 box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 /* Create an active/current tablink class */
-.insuranceLink.active {
-  background-color: #CAA42F;
-  color:white;
-  border-bottom:5px solid #203252;
+.contactLink.active {
+ background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ 
+  color:black;
+  border-bottom:5px solid white;
   border-radius:5px;
   height:50px;
-  
+
  
 }
-#personalBusinessInsurance{
-	height:100%;
+.tabLink{
+ background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+  border-radius:5px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  transition: 0.3s;
+  font-size: 17px;
+  margin-left:5px;
+  font-weight:bold;
+color:white;
+  height:50px;
+ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+
+}
+.tabLink:hover {
+color:black;
+ background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ 
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
 	
-	}
-	#personalBusinessInsuranceImages{
-	height:100%;
-	}
-#personal{
-
-padding:5px;
-border-radius:10px;
-}	
-#business{
-padding:5px;
-border-radius:10px;
-
+.tabLink.active {
+  background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ 
+  color:black;
+  border-bottom:5px solid white;
+  border-radius:5px;
+  height:50px;
+ 
 }
-#personalBusinessInsuranceLink{
-height:100%;
-
-
-}	
-.iconImageInsurance{
-
-}
-.setNameOfInsurance{
-font-size:15px;
-margin-top:-24px;
-margin-left:11px;
+.showMap{
+border-radius:5px;height:625px;width:75%;
 }
 
-@media(min-width: 768px) and (max-width: 991px){
-.setNameOfInsurance{
-font-size:15px;
-margin-top:-24px;
-margin-left:124px;
+@media(min-width: 400px) and (max-width: 991px){
+.showMap{
+width:100%;
 }
 
 }
+
 
 
 </style>	
@@ -189,6 +204,7 @@ margin-left:124px;
 			<div class="col-md-12 animate-box">
 			
 			<h1><b>Contact Us</b></h1>
+			<h3><b>Head office and Branches</b></h3>
 			<p>Keep in touch around the hour, throughout the week.</p>
 			<p>All our branches are open from 8 am to 5 pm (Sunday – Thursday). Due to the ongoing Covid-19 situation, you are requested to avoid visiting our branches and stay at home. We suggest that you use our various digital services for all transactional needs during this time.</p>
 			</div>
@@ -201,13 +217,11 @@ margin-left:124px;
 			<div class="row">
 			<div class="col-md-6">
 			
-			<div class="row" id="insuranceLink">
-			<button id="contactBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Head Office</span></button>
-			<button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')"><span>Our Branches</span></button>
+			<div class="row">
+			<button id="headOfficeBtn" class="contactLink active" onclick="openContact(event, 'headOffice')"><span>Head Office</span></button>
+			<button id="branchesBtn" class="contactLink" onclick="openContact(event, 'branches')"><span>Our Branches</span></button>
 			</div>
-			<div id="personal">
-			Hello personal
-			</div>
+			
 			
 			
 			<div>
@@ -217,129 +231,343 @@ margin-left:124px;
 			</div>
 			
 			</div>
+			
+			<div class="row contactMe" id="headOffice">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="margin-top:20px;height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									
+									
+				<ul style="list-style:none;">
+				<br>
+				<li><h3>Head Office</h3></li>
+				<li><a href="tel://065174444"><i class="fa fa-phone"></i>&nbsp;Call : +06 517 4444</a></li><br>
+				<li><a href="mailto:abnicho@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :abnicho@albuhaira.com</a></li><br>
+				
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Sharjah
+					Al Buhaira Tower, Khalid Lagoon,
+					Buhaira Corniche.</li><br>
+				<li>P.O. Box – 6000          </li><br>
+				
+				<li>Fax: 06 574 8855 </li>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			<br>
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1063557896855!2d55.38675611744385!3d25.334211899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bc3a094b321%3A0x80b10ff4850856e2!2sAl%20Buhaira%20National%20Insurance%20Company%20(ABNIC)%20-%20Car%2C%20Medical%20%26%20Other%20Insurance%20-%20HO%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sin!4v1609215902265!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+			<div class="row contactMe" id="branches" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
 			<div class="row">
-			<div class="col-md-12" style="height:100px;">
-			<div id="business" style="display:none;">
+			
+			
 				<ul class="nav nav-tabs">  
-				<li class="active"><a data-toggle="tab" href="#AlHosn" class="insuranceLink">Al-Hosn</a></li>  
-				<li><a data-toggle="tab" class="insuranceLink" href="#dubai" class="insuranceLink">Dubai</a></li>  
-				<li><a data-toggle="tab" class="insuranceLink" href="#burDubai">Bur Dubai</a></li>  
-				<li><a data-toggle="tab" class="insuranceLink" href="#abuDhabi">Abu Dhabi</a></li> 
-				<li><a data-toggle="tab" class="insuranceLink" href="#alain">Alain</a></li> 
-				<li><a data-toggle="tab" class="insuranceLink" href="#ajman">Ajman</a></li> 
-				<li><a data-toggle="tab" class="insuranceLink" href="#fujairah">Fujairah</a></li> 
-				<li><a data-toggle="tab" class="insuranceLink" href="#khorfakkan">Khorfakkan</a></li> 
+				<li class="active"><a data-toggle="tab" href="#AlHosn" class="tabLink" onclick="openBranches(event, 'alhosn')">Al-Hosn</a></li>  
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'dubai')" href="#dubai">Dubai</a></li>  
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'burDubai')" href="#burDubai">Bur Dubai</a></li>  
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'abuDhabi')" href="#abuDhabi">Abu Dhabi</a></li> 
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'alain')" href="#alain">Alain</a></li> 
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'ajman')" href="#ajman">Ajman</a></li> 
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'fujairah')" href="#fujairah">Fujairah</a></li> 
+				<li><a data-toggle="tab" class="tabLink" onclick="openBranches(event, 'khorfakkan')" href="#khorfakkan">Khorfakkan</a></li> 
 				
 				
 				</ul> 	
 				
+			
+			
 			</div>
 			</div>
 			</div>
-				<div class="row">
+			
+			
+			<div class="row meBranch" id="alhosn" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-12">
+			
 			<div class="col-md-3">
-			<div class="row" style="margin-right:10px;margin-top:20px;height:100%;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
 									<br>
 									
-									<ul style="list-style:none;">
-									<li><h3>Get in Touch with Us</h3></li>
-									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>
-									<li><i class="icon-envelope"></i> &nbsp;Email : abnicho@albuhaira.com</li>
-									<li><hr style="border-top: 1px solid black;"></li>
-									<h5><b>Dedicated help- line numbers </b></h5>
-									<li>Motor Insurance : 600 535357            </li>
-									<li>Motor Claims : 600 545457               </li>
-									<li>Life & Medical Insurance : 600 532229   </li>
-									<li>Life & Medical Claims : 600 545459      </li>
-									<li>Home & Travel Insurance : 600 548283    </li>
-									<li>Marine Insurance : +971 6 517 4487      </li>
-									<li>Marine Claims : +971 6 517 4486			</li>
-									<li><hr style="border-top: 1px solid black;"></li>
-									<h5><b>Office Timings</b></h5>
-									<li>8:00 am to 1:30 pm, 
-									<br>2:30 am to 5:00 pm    </li>
-									<li>(Sunday to Thursday)				</li>
-									</ul>
-									
-									</div>
+				<ul style="list-style:none;">
+				<li><h3>Al-Hosn (Rolla – Life, Medical & Motor Claims )</h3></li>
+				<li><a href="tel://065684000"><i class="fa fa-phone"></i>&nbsp;Call : +06 568 4000</a></li><br>
+				<li><a href="mailto:dxbbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :dxbbranch@albuhaira.com</a></li><br>
+				
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Al-Hosn (Rolla – Life, Medical & Motor Claims )
+					Al Buhaira Insurance Building,
+					Bank Street, Rolla.</li><br>
+				<li>P.O. Box – 6000          </li><br>
+				<li>Fax: 06 568 5000 </li><br>
+				<li>Motor Claims & Medical Approval – 2nd Floor
+					Life & Medical (Underwriting & Claims) – 3rd Floor
+					Motor Underwriting & Recovery – 4th Floor</li>
+				</ul>
+					
+				
+			</div>
 			
 			</div>
 			
-			<div class="col-md-8" style="height:620px;float:right;margin-top:20px;width:75%;background-color:red;">
+			<div class="col-md-8 showMap">
 			
 			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1063557896855!2d55.38675611744385!3d25.334211899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bc3a094b321%3A0x80b10ff4850856e2!2sAl%20Buhaira%20National%20Insurance%20Company%20(ABNIC)%20-%20Car%2C%20Medical%20%26%20Other%20Insurance%20-%20HO%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sin!4v1609215902265!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			
 			</div>
 			</div>
-			 
-		 
+			 </div>
+			</div>
+			
+			<div class="row meBranch" id="dubai" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Dubai</h3></li>
+				<li><a href="tel://042319444"><i class="fa fa-phone"></i>&nbsp;Call : +04 231 9444</a></li><br>
+				<li><a href="mailto:dxbbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :dxbbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Deira
+					Mohamed Abdullah Al Gaz Building, Nr. Clock Tower, Deira.</li><br>
+				<li>P.O. Box – 1619. </li><br>
+				<li>Fax: 04 294 2650 </li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.349542672119!2d55.32520551437943!3d25.25882443539732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5cda468280a3%3A0xe62ff1fc2d9f004d!2sAl%20Buhaira%20National%20Insurance%20Company%20(ABNIC)%20-%20Car%2C%20Medical%20%26%20Other%20Insurance%20-%20Deira%2C%20Dubai%2C%20UAE!5e0!3m2!1sen!2sin!4v1609221687963!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 			</div>
+			 </div>
+			</div>
+			
+			<div class="row meBranch" id="burDubai" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+						<br>	
+									
+				<ul style="list-style:none;">
+				<li><h3>Bur Dubai</h3></li>
+				<li><a href="tel://043435995"><i class="fa fa-phone"></i>&nbsp; Call : +04 343 5995</a></li><br>
+				<li><a href="mailto:zrbbranch@albuhaira.com"><i class="icon-envelope"></i> &nbsp;Email :zrbbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Al-Wadi Building, Near Mazaya Centre, Shk. Zayed Rd.</li><br>
+				<li>P.O. Box – 74251</li><br>
+				<li>Fax: 04 343 5334</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8" >
+			
+			<div id="myMap showMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1318869542265!2d55.26150541437827!3d25.19877443782165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4279588ff1e3%3A0x629ee4697db838f9!2sAl-Wadi%20Building%2C%20Near%20Mazaya%20Centre!5e0!3m2!1sen!2sin!4v1609224576895!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+			<div class="row meBranch" id="abuDhabi" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Abu Dhabi</h3></li>
+				<li><a href="tel://026226200"><i class="fa fa-phone"></i>&nbsp;Call : +02 622 6200</a></li><br>
+				<li><a href="mailto:adbbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :adbbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Corniche Road
+					Flat Number 401 (4th Floor), Sheikha Mariam BintHamdan,
+					Al Corniche Road, Above First Gulf Bank.</li><br>
+				<li>P.O. BOX – 46275</li><br>
+				<li>Fax: 02 622 0600</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29049.78328289665!2d54.339210292265754!3d24.477732199730863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6679548cb481%3A0x48f070f4126eaa79!2sFirst%20Gulf%20Bank!5e0!3m2!1sen!2sin!4v1609224503725!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+		
+				<div class="row meBranch" id="alain" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Alain</h3></li>
+				<li><a href="tel://037641960"><i class="fa fa-phone"></i>&nbsp;Call : +03 764 1960</a></li><br>
+				<li><a href="mailto:alnbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :alnbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Abdullah Bin Hilal Al Kuwait Building, General Street.</li><br>
+				<li>P.O.Box – 1595</li><br>
+				<li>Fax: 03 765 8487</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.228089273465!2d55.31703885670744!3d25.26291153795237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4afa68a4be6e0226!2sAl%20Kuwaiti%20Building!5e0!3m2!1sen!2sin!4v1609225030205!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+				<div class="row meBranch" id="ajman" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Ajman</h3></li>
+				<li><a href="tel://067467777"><i class="fa fa-phone"></i>&nbsp;Call : +06 746 7777</a></li><br>
+				<li><a href="mailto:ajmbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :ajmbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Ajman, Ground Floor, City Towers,
+					Sheikh Khalifa Bin Zayed Street.</li><br>
+				
+				<li>Fax: 06 746 0666</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.4181237561006!2d55.43917891438228!3d25.3908109300503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f59c9569fef25%3A0x12ae92732b913084!2sCity%20Towers%20-%20Sheikh%20Khalifa%20Bin%20Zayed%20St%20-%203%20Al%20Nuaimia%20-%20Ajman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1609225193668!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+				<div class="row meBranch" id="fujairah" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Fujairah</h3></li>
+				<li><a href="tel://092227288"><i class="fa fa-phone"></i>&nbsp;Call : +09 222 7288</a></li><br>
+				<li><a href="mailto:fujbranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :fujbranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Hamad Bin Abdulla Road, Sixteen Building,
+					Building no. 3.</li><br>
+				<li>P.O. Box: 970</li><br>
+				<li>Fax: 09 222 5221</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3897182288233!2d56.33029971437658!3d25.122511940892814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef4f88b78a6568d%3A0x500c3807fbbd18b9!2s16%20Building%20Bld%20No%3A3!5e0!3m2!1sen!2sin!4v1609225295654!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+				<div class="row meBranch" id="khorfakkan" style="display:none;height:100px;margin-top:20px;">
+			<div class="col-md-12">
+			<div class="col-md-3">
+			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+				<ul style="list-style:none;">
+				<li><h3>Khorfakkan</h3></li>
+				<li><a href="tel://092386089"><i class="fa fa-phone"></i>&nbsp;Call : +09 238 6089</a></li><br>
+				<li><a href="mailto:khobranch@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :khobranch@albuhaira.com</a></li><br>
+				<li><hr style="border-top: 1px solid black;"></li>
+				<li>Shaikh Sagr Building,Corniche Road.</li><br>
+				<li>Fax: 09 – 238 2066</li><br>
+				
+				</ul>
+					
+				
+			</div>
+			
+			</div>
+			
+			<div class="col-md-8 showMap">
+			
+			<div id="myMap">  
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.771181603771!2d54.31959331436282!3d24.458722867265855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6593af750357%3A0x5dcb1ae54858b26!2sEtihad%20Towers!5e0!3m2!1sen!2sin!4v1609225677108!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			</div>
+			 </div>
+			</div>
+			
+			
+			
+			
+			
+			
 			
 			</div>
 			</div>
 		</div>
-
+<br><br>
 		<div class="colorlib-contact">
 			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-12 animate-box">
-						<h2>Contact Information</h2>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="contact-info-wrap-flex">
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-location-2" style="color:black;"></i></span> Sharjah Al Buhaira Tower, Khalid Lagoon,Buhaira Corniche.<br> P.O. Box – 6000</p>
-									</div>
-									<div class="con-info">
-										<p><span><i class="icon-phone3" style="color:black;"></i></span> <a href="tel://65174444" style="color:black;"> 06 517 4444</a></p>
-									</div>
-									<div class="con-info">
-										<p><span><i class="icon-paperplane" style="color:black;"></i></span> <a href="mailto:abnicho@albuhaira.com" style="color:black;">abnicho@albuhaira.com</a></p>
-									</div>
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-globe" style="color:black;"></i></span> <a href="#" style="color:black;">Fax: 06 574 8855</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				
-				<div class="row row-pb-md">
-					<div class="col-md-12 animate-box">
-						<h2>Insurance Assistance</h2>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="contact-info-wrap-flex">
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-location-2" style="color:black;"></i></span> For Motor Insurance</p>
-									<p><span><i class="icon-phone3" style="color:black;"></i></span> <a href="tel://600535357" style="color:black;">600 535357</a></p>
-									<p><span><i class="icon-paperplane" style="color:black;"></i></span> <a href="mailto:abnicho@albuhaira.com" style="color:black;">abnicho@albuhaira.com</a></p>
-									</div>
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-location-2" style="color:black;"></i></span> For Life & Medical Insurance</p>
-									<p><span><i class="icon-phone3" style="color:black;"></i></span> <a href="tel://600532229" style="color:black;">600 532229</a></p>
-									<p><span><i class="icon-paperplane" style="color:black;"></i></span> <a href="mailto:abnicho@albuhaira.com" style="color:black;">abnicho@albuhaira.com</a></p>
-									</div>
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-location-2" style="color:black;"></i></span> For Marine Insurance</p>
-									<p><span><i class="icon-phone3" style="color:black;"></i></span> <a href="tel://97165174487" style="color:black;">971 6 517 4487</a></p>
-									<p><span><i class="icon-paperplane" style="color:black;"></i></span> <a href="mailto:abnicho@albuhaira.com" style="color:black;">abnicho@albuhaira.com</a></p>
-									</div>
-									<div class="con-info">
-										<p style="color:black;font-size:15px;"><span><i class="icon-location-2" style="color:black;"></i></span> For Home & Travel Insurance</p>
-									<p><span><i class="icon-phone3" style="color:black;"></i></span> <a href="tel://600548283" style="color:black;">600 548283</a></p>
-									<p><span><i class="icon-paperplane" style="color:black;"></i></span> <a href="mailto:abnicho@albuhaira.com" style="color:black;">abnicho@albuhaira.com</a></p>
-									</div>
-									
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
+				
+				
 				
 				
 				
@@ -386,7 +614,30 @@ margin-left:124px;
 						</form>		
 					</div>
 					<div class="col-md-6">
-						<div id="map" class="colorlib-map"></div>
+						<div class="row" style="text-align:center;height:100%;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+									<br>
+									
+									<ul style="list-style:none;">
+									<li><h3>Get in Touch with Us</h3></li>
+									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>
+									<li><i class="icon-envelope"></i> &nbsp;Email : abnicho@albuhaira.com</li>
+									<li><hr style="border-top: 1px solid black;"></li>
+									<h5><b>Dedicated help- line numbers </b></h5>
+									<li>Motor Insurance : 600 535357            </li>
+									<li>Motor Claims : 600 545457               </li>
+									<li>Life & Medical Insurance : 600 532229   </li>
+									<li>Life & Medical Claims : 600 545459      </li>
+									<li>Home & Travel Insurance : 600 548283    </li>
+									<li>Marine Insurance : +971 6 517 4487      </li>
+									<li>Marine Claims : +971 6 517 4486			</li>
+									<li><hr style="border-top: 1px solid black;"></li>
+									<h5><b>Office Timings</b></h5>
+									<li>8:00 am to 1:30 pm, 
+									<br>2:30 am to 5:00 pm    </li>
+									<li>(Sunday to Thursday)				</li>
+									</ul>
+									
+									</div>
 					</div>
 				</div>
 			</div>
@@ -513,29 +764,48 @@ margin-left:124px;
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/contactValidation.js"></script>
+	<script> 
+     
+        
+    </script> 
+   
 <script>
-function openSummary(evt, insuranceName) {
-  var i, summary,insuranceLink;
-  summary = document.getElementsByClassName("summary");
-  for (i = 0; i < summary.length; i++) {
-    summary[i].style.display = "none";
+function openContact(evt, contactName) {
+  var i, contactMe,contactLink;
+  contactMe = document.getElementsByClassName("contactMe");
+  
+  for (i = 0; i < contactMe.length; i++) {
+    contactMe[i].style.display = "none";
+	
   }
-  insuranceLink = document.getElementsByClassName("insuranceLink");
-  for (i = 0; i < insuranceLink.length; i++) {
-    insuranceLink[i].className = insuranceLink[i].className.replace(" active", "");
+  contactLink = document.getElementsByClassName("contactLink");
+  for (i = 0; i < contactLink.length; i++) {
+    contactLink[i].className = contactLink[i].className.replace(" active", "");
   }
-  document.getElementById(insuranceName).style.display = "block";
+  document.getElementById(contactName).style.display = "block";
   evt.currentTarget.className += " active";
   
 }
-
+function openBranches(evt, branchName){
+var i, meBranch,tabLink;
+  meBranch = document.getElementsByClassName("meBranch");
+  
+  for (i = 0; i < meBranch.length; i++) {
+    meBranch[i].style.display = "none";
+	
+  }
+  tabLink = document.getElementsByClassName("tabLink");
+  for (i = 0; i < tabLink.length; i++) {
+    tabLink[i].className = tabLink[i].className.replace(" active", "");
+  }
+  document.getElementById(branchName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
 	</body>
 </html>

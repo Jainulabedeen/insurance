@@ -1782,10 +1782,10 @@ input[type="text"] {
   .btn-info:hover, .btn-info:focus, .btn-info:active {
    
     border-color: white !important; 
-	color:white !important;
-	background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box ! important;
-    background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box ! important;
-    border-radius:5px;
+	color:black !important;
+	 background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+ background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+border-radius:5px;
 }	
 	}
   .btn-info.btn-outline {
