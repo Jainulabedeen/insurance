@@ -50,7 +50,7 @@
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-8 text-right menu-1"><br>
+						<div class="col-md-10 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -117,7 +117,7 @@
 
 		<center>
 		<h1>Driver Info</h1>
-		<h4>You're about to sign up for the UAE's only car insurance that rewards you for driving safe. First, let's get to know each other better.</h4>
+		<h4>You're about to sign up for the UAE's only car insurance <br>that rewards you for driving safe. First, let's get to know each other better.</h4>
 		</center>
 
 </div>
@@ -130,74 +130,91 @@
 <div class="col-md-12 animate-box" id="app">
 
     <div class="row">
+	<div class="col-md-1"></div>
   <div class="col-md-4">
 	<div class="form-group">
 	<label for="fname">First Name *</label>  
-	  <input type="text" id ="fname" name="fname" style="height:41px;" value="" class="form-control input-md" placeholder="First Name *" required>  
+	  <input type="text" id ="fname" name="fname" value="" class="form-control input-md" placeholder="First Name *" required>  
 		  </div>
 		  </div>
-		  
+		  <div class="col-md-2"></div>
 		<div class="col-md-4">  
 	  <div class="form-group">
 	  <label for="lname">Last Name *</label>  
-	   <input type="text" id ="lname" name="lname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Last Name *" required>  
+	   <input type="text" id ="lname" name="lname"  class="form-control input-md" placeholder="Last Name *" required>  
 			 </div>
 		 </div>
+		 <div class="col-md-1"></div>
 	</div>
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
 	<div class="form-group">
 	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" style="height:41px;" placeholder="Email *" class="form-control input-md" required>
+	<input id="email" name="email" type="email" placeholder="Email *" class="form-control input-md" required>
 	</div>
 	</div>
-	</div>
-	
-	<div class="row">
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
       <label for="dob">Date of Birth *</label> 
-       <input placeholder="Date of Birth *" style="height:41px;" class="form-control input-md" min="1955-01-01" max="2999-12-31" type="date" id="dob" name="dob" title="Age must be above 18 years old" required>	
+       <input placeholder="Date of Birth *" class="form-control input-md" min="1955-01-01" max="2999-12-31" type="date" id="dob" name="dob" title="Age must be above 18 years old" required>	
         </div>
 	 </div>
-	 
-	 <div class="col-md-4">
-	<div class="form-group">
-      <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" style="height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
-        </div>
-	 </div>
+	
+	<div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-		<div class="col-md-8">
+	
+	 <div class="col-md-1"></div>
+	 <div class="col-md-4">
 	<div class="form-group">
-	<select name="nationality" id="nationality" style="height:41px;" class="form-control input-md" required>
-			<option value="">Nationality</option>
+      <label for="mobile">Mobile No. *</label> 
+       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+        </div>
+	 </div>
+	 <div class="col-md-2"></div>
+	 <div class="col-md-4">
+	<div class="form-group">
+	<label for="mobile">Nationality</label> 
+	<select name="nationality" id="nationality" class="form-control input-md" required>
+			<option value="">Select Nationality</option>
 			<option  v-bind:value="country.nationality" v-for="country in nationality">
 			{{country.country}}
 			</option>
 		
 				</select>
        </div>
-    </div>	
+    </div>
+	 
+	 
+	 <div class="col-md-1"></div>
+	</div>
+	<div class="col-md-2"></div>
+	<div class="row">
+		
+<div class="col-md-1"></div>	
 	</div>
 
 
  
     <!-- Button -->
 	<div class="row">
+	<div class="col-md-1"></div>	
 	  <div class="col-md-4">
 	<div class="form-group">
     <a href="carInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
 	
 	 </div>
     </div>
+	<div class="col-md-2"></div>	
 	<div class="col-md-4">
 	<div class="form-group">
   <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
 	 </div>
     </div>
+	<div class="col-md-1"></div>	
 	</div>
 	
 </div>

@@ -213,7 +213,7 @@ input[type=range]::-ms-tooltip {
 
 <div class="colorlib-trainers">
 <div class="container">
-<form class="form-horizontal" id="form1" action="">
+<form class="form-horizontal" id="form1" name="form1" autocomplete="on" action="">
 <div class="col-md-12 animate-box" id="app">
   <fieldset>
     
@@ -224,7 +224,7 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
 	<label for="car">Car Make</label>  
        <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" v-on:change="getModel(carMakeSelected)" required>
-	   <option value="0">Car Make</option>
+	   <option disabled value="">Select Car Make</option>
 			<option  v-bind:value="carMake.id" v-for="carMake in carMakes">
 			{{carMake.name}}
 			</option>
@@ -235,8 +235,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="carmodel">Car Model</label>  
-       <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md">
-			<option value="0">Car Model</option>
+       <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md" required>
+			 <option disabled value="">Select Car Model</option>
 			<option v-for="carModel in carModels"  v-bind:value="carModel.id" >
 			{{carModel.name}}
 			</option>
@@ -362,7 +362,7 @@ input[type=range]::-ms-tooltip {
 	 <div class="col-md-2"></div> 
 	 <div class="col-md-4">
    <div class="form-group" style="display:inline;">
-   <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
+   <a href="motorInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
       <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
@@ -579,6 +579,49 @@ function initRangeEl() {
 }
 
 initRangeEl();
+/*
+
+window.onload = function() {
+  if (sessionStorage.car && sessionStorage.carModel) {
+      document.getElementById("car").value = sessionStorage.car;
+      document.getElementById("carModel").value = sessionStorage.carModel;
+    }
+};
+
+function storedata() {
+  if(typeof(Storage) !== "undefined") {
+    var car = document.getElementById("car").value;
+    var carModel = document.getElementById("carModel").value;
+
+    sessionStorage.car = car;
+    sessionStorage.carModel = carModel;
+alert("Values set");
+   
+  } 
+}
+
+window.onbeforeunload = function() {
+    localStorage.setItem("car", $('#car').val());
+    localStorage.setItem("carModel", $('#carModel').val());
+   
+}
+
+ function setCookieValues(form)  
+  {
+    setCookie("car", form1.c.value);
+    setCookie("field2", form.field2.value);
+    setCookie("field3", form.field3.value);
+    setCookie("field4", form.field4.value);
+    return true;
+  }
+  function getCookieValues(){
+  
+ if(field1 = getCookie("field1")) document.myForm.field1.value = field1;
+  if(field2 = getCookie("field2")) document.myForm.field2.value = field2;
+  if(field3 = getCookie("field3")) document.myForm.field3.value = field3;
+  if(field4 = getCookie("field4")) document.myForm.field4.value = field4;  
+  }*/
+  
 </script>
 	</body>
 </html>

@@ -28,8 +28,8 @@ const vm = new Vue({
 		   max:0,
 		   min:0,
 		  registeredDate:null,
-		  carMakeSelected:null,
-		  carModelSelected:null,
+		  carMakeSelected:'',
+		  carModelSelected:'',
 		 
 		 
         },
@@ -43,7 +43,7 @@ const vm = new Vue({
 		getModel:function(carModelId){
 	 axios.get(urlCarModel+""+carModelId).then(response => {
 			 this.carModels = response.data
-		//alert(this.carModels);
+	
 	this.value=0;
           });
   },
@@ -58,10 +58,8 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
 	this.max=this.carValues.maxcost;
 	this.min=this.carValues.mincost;
 	this.value=this.carValues.carcost;
-//alert(registeredDate+" "+carMakesId+" "+carModelsId);
-//alert(this.carValues.maxCost);
-	//return carModelId;
-  }
+
+  },
   
 		
 	},
