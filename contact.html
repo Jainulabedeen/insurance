@@ -185,14 +185,19 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
  
 }
 .showMap{
-border-radius:5px;height:625px;width:75%;
+border-radius:5px;
+height:625px;
+width:75%;
 }
 
-@media(min-width: 400px) and (max-width: 991px){
+@media(min-width: 200px) and (max-width: 991px){
 .showMap{
 width:100%;
-}
 
+}
+#showMeBlow{
+margin-top:600px;
+}
 }
 
 
@@ -211,16 +216,19 @@ width:100%;
 			</div>
 			</div>
 		</div>
-		<div id="colorlib-services">
+		<div class="colorlib-contact" style="height:500px;">
 			<div class="container">
-			<div class="col-md-12">
-			<div class="row">
-			<div class="col-md-6">
 			
-			<div class="row">
+			<div class="row row-pb-md">
+			
+			<div class="col-md-2">
 			<button id="headOfficeBtn" class="contactLink active" onclick="openContact(event, 'headOffice')"><span>Head Office</span></button>
-			<button id="branchesBtn" class="contactLink" onclick="openContact(event, 'branches')"><span>Our Branches</span></button>
 			</div>
+			
+			<div class="col-md-2">
+			<button id="branchesBtn" class="contactLink" onclick="openContact(event, 'branches')" style="margin-top:5px;"><span>Our Branches</span></button>
+			</div>
+			<div class="col-md-2"></div>
 			
 			
 			
@@ -230,15 +238,11 @@ width:100%;
 			</div>
 			</div>
 			
-			</div>
+		
 			
-			<div class="row contactMe" id="headOffice">
-			<div class="col-md-12">
-			<div class="col-md-3">
-			<div class="row" style="margin-top:20px;height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
-									
-									
-				<ul style="list-style:none;">
+			<div class="row row-pb-md contactMe" id="headOffice">
+			<div class="col-md-3" style="margin-top:20px;margin-left:-25px;">
+			<ul style="list-style:none;">
 				<br>
 				<li><h3>Head Office</h3></li>
 				<li><a href="tel://065174444"><i class="fa fa-phone"></i>&nbsp;Call : +06 517 4444</a></li><br>
@@ -251,27 +255,19 @@ width:100%;
 				<li>P.O. Box – 6000          </li><br>
 				
 				<li>Fax: 06 574 8855 </li>
-				
 				</ul>
-					
-				
 			</div>
 			
-			</div>
-			
-			<div class="col-md-8 showMap">
+			<div class="col-md-9 showMap" id="myMap">
 			<br>
-			<div id="myMap">  
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1063557896855!2d55.38675611744385!3d25.334211899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bc3a094b321%3A0x80b10ff4850856e2!2sAl%20Buhaira%20National%20Insurance%20Company%20(ABNIC)%20-%20Car%2C%20Medical%20%26%20Other%20Insurance%20-%20HO%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sin!4v1609215902265!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			
 			</div>
-			</div>
-			 </div>
+			
 			</div>
 			
 			<div class="row contactMe" id="branches" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-12">
-			<div class="row">
 			
 			
 				<ul class="nav nav-tabs">  
@@ -286,21 +282,14 @@ width:100%;
 				
 				
 				</ul> 	
-				
-			
-			
-			</div>
+
 			</div>
 			</div>
 			
 			
 			<div class="row meBranch" id="alhosn" style="display:none;height:100px;margin-top:20px;">
-			<div class="col-md-12">
-			
-			<div class="col-md-3">
-			<div class="row" style="height:625px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
-									<br>
-									
+			<div class="col-md-3" style="height:625px;padding:10px;">
+			<br>						
 				<ul style="list-style:none;">
 				<li><h3>Al-Hosn (Rolla – Life, Medical & Motor Claims )</h3></li>
 				<li><a href="tel://065684000"><i class="fa fa-phone"></i>&nbsp;Call : +06 568 4000</a></li><br>
@@ -316,20 +305,15 @@ width:100%;
 					Life & Medical (Underwriting & Claims) – 3rd Floor
 					Motor Underwriting & Recovery – 4th Floor</li>
 				</ul>
-					
-				
-			</div>
 			
 			</div>
 			
-			<div class="col-md-8 showMap">
+			<div class="col-md-8 showMap" id="myMap">
 			
-			<div id="myMap">  
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1063557896855!2d55.38675611744385!3d25.334211899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bc3a094b321%3A0x80b10ff4850856e2!2sAl%20Buhaira%20National%20Insurance%20Company%20(ABNIC)%20-%20Car%2C%20Medical%20%26%20Other%20Insurance%20-%20HO%20Sharjah%2C%20UAE!5e0!3m2!1sen!2sin!4v1609215902265!5m2!1sen!2sin" width="100%" height="625" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		
+			</div>
 			
-			</div>
-			</div>
-			 </div>
 			</div>
 			
 			<div class="row meBranch" id="dubai" style="display:none;height:100px;margin-top:20px;">
@@ -371,6 +355,7 @@ width:100%;
 						<br>	
 									
 				<ul style="list-style:none;">
+				
 				<li><h3>Bur Dubai</h3></li>
 				<li><a href="tel://043435995"><i class="fa fa-phone"></i>&nbsp; Call : +04 343 5995</a></li><br>
 				<li><a href="mailto:zrbbranch@albuhaira.com"><i class="icon-envelope"></i> &nbsp;Email :zrbbranch@albuhaira.com</a></li><br>
@@ -559,20 +544,15 @@ width:100%;
 			
 			
 			
-			</div>
+		
 			</div>
 		</div>
-<br><br>
-		<div class="colorlib-contact">
+
+		<div class="colorlib-contact" id="showMeBlow">
 			<div class="container">
-				
-				
-				
-				
-				
-				
 				<div class="row">
 					<div class="col-md-12">
+					<br>
 						<h2>Message Us</h2>
 					</div>
 					<div class="col-md-6">
@@ -589,14 +569,11 @@ width:100%;
 							</div>
 
 							<div class="row form-group">
-								<div class="col-md-12">
+								<div class="col-md-6">
 									<!-- <label for="email">Email</label> -->
 									<input type="text" id="email" name="email" class="form-control" placeholder="Your email address" required>
 								</div>
-							</div>
-
-							<div class="row form-group">
-								<div class="col-md-12">
+								<div class="col-md-6">
 									<!-- <label for="subject">Subject</label> -->
 									<input type="text" id="subject" name="subject" class="form-control" placeholder="Your subject of this message" required>
 								</div>
@@ -614,14 +591,19 @@ width:100%;
 						</form>		
 					</div>
 					<div class="col-md-6">
-						<div class="row" style="text-align:center;height:100%;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;padding-right:20px;">
+						<div class="row" style="text-align:left;height:100%;border-radius:5px;padding-right:20px;">
 									<br>
-									
+									<div class="col-md-6">
 									<ul style="list-style:none;">
-									<li><h3>Get in Touch with Us</h3></li>
+									<li><h5><b>Get in Touch with Us</b></h5></li>
 									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>
 									<li><i class="icon-envelope"></i> &nbsp;Email : abnicho@albuhaira.com</li>
-									<li><hr style="border-top: 1px solid black;"></li>
+									
+									
+									</ul>
+									</div>
+									<div class="col-md-6">
+									<ul style="list-style:none;">
 									<h5><b>Dedicated help- line numbers </b></h5>
 									<li>Motor Insurance : 600 535357            </li>
 									<li>Motor Claims : 600 545457               </li>
@@ -630,13 +612,9 @@ width:100%;
 									<li>Home & Travel Insurance : 600 548283    </li>
 									<li>Marine Insurance : +971 6 517 4487      </li>
 									<li>Marine Claims : +971 6 517 4486			</li>
-									<li><hr style="border-top: 1px solid black;"></li>
-									<h5><b>Office Timings</b></h5>
-									<li>8:00 am to 1:30 pm, 
-									<br>2:30 am to 5:00 pm    </li>
-									<li>(Sunday to Thursday)				</li>
-									</ul>
 									
+									</ul>
+									</div>
 									</div>
 					</div>
 				</div>

@@ -1238,12 +1238,8 @@ h1, h2, h3, h4, h5, h6, figure {
       color: #000; }
 
 .form-control {
-  -webkit-box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #fff;
-  -moz-box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #fff;
-  -ms-box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #fff;
-  -o-box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #fff;
-  box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #fff;
-  border: 1px solid #e6e6e6;
+ 
+  border: 1px solid black;
   font-size: 16px !important;
   font-weight: 300;
   -webkit-border-radius: 20px;
@@ -1260,6 +1256,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 input[type="text"] {
   height: 41px;
+  
 
   }
 

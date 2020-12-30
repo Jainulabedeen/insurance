@@ -7,7 +7,7 @@ $(function() {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
-      car: "required",
+     
       cartype: "required",
 	  carmodel:"required",
 	  brand:"required",

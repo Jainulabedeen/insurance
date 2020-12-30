@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Motor</title>
+	<title>Aviation</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -30,99 +30,11 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-input[type="range"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 100%;
-  height: 10px;
-  padding: 0;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  background-color:#2E9AC5;
-  margin-top:15px;
-}
-
-
-/*Chrome thumb*/
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-border-radius: 5px;
-  /*16x16px adjusted to be same as 14x14px on moz*/
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;
-}
-
-
-/*Mozilla thumb*/
-
-input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -moz-border-radius: 5px;
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;
-}
-
-
-/*IE & Edge input*/
-
-input[type=range]::-ms-track {
-  width: 300px;
-  height: 6px;
-  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-  background: transparent;
-  /*leave room for the larger thumb to overflow with a transparent border */
-  border-color: transparent;
-  border-width: 2px 0;
-  /*remove default tick marks*/
-  color: transparent;
-}
-
-
-/*IE & Edge thumb*/
-
-input[type=range]::-ms-thumb {
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;}
-
-
-/*IE & Edge left side*/
-
-input[type=range]::-ms-fill-lower {
-  background: #2E9AC5;
-  border-radius: 2px;
-}
-
-
-/*IE & Edge right side*/
-
-input[type=range]::-ms-fill-upper {
-  background: #2E9AC5;
-  border-radius: 2px;
-}
-
-
-/*IE disable tooltip*/
-
-input[type=range]::-ms-tooltip {
-  display: none;
-}
 
 </style>
-	
+
 	</head>
 	<body>
 		
@@ -138,7 +50,7 @@ input[type=range]::-ms-tooltip {
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-10 text-right menu-1"><br>
+						<div class="col-md-8 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -201,180 +113,111 @@ input[type=range]::-ms-tooltip {
 			</div>
 		</nav>
 		<br><br><br><br><br><br>
-<div class="col-md-12 text-center animate-box">
-
-		<center >
-		<h3><b>Car Info</b></h3>
-		<h5>Next up, we need your car's details. Filling the right details ensures we get you the best quote in the shortest time.</h5>
-		</center>
-
-</div>
 
 
 <div class="colorlib-trainers">
 <div class="container">
-<form class="form-horizontal" id="form1" action="">
-<div class="col-md-12 animate-box" id="app">
-  <fieldset>
-    
-    <!-- Form Name -->
+<div class="col-md-12">
+<center>
+		<h3><b>Call me back</b></h3>
+		
+		<p>If you require more information on Insurance products or services, <br>please complete our helpful call back service and one of our customer service representatives will contact you shortly.</p>
+		</center>
+</div>
+
+<form class="form-horizontal" id="form1" method="post" action="">
+<div class="col-md-12 animate-box">
+
     <div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+  <div class="col-md-4">
 	<div class="form-group">
-	<label for="car">Car Make</label>  
-       <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" v-on:change="getModel(carMakeSelected)" required>
-	   <option value="0">Car Make</option>
-			<option  v-bind:value="carMake.id" v-for="carMake in carMakes">
-			{{carMake.name}}
-			</option>
-			</select>
-       </div>
-	  </div>
-	  <div class="col-md-2"></div>
-	<div class="col-md-4">
-	<div class="form-group">
-	<label for="carmodel">Car Model</label>  
-       <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md">
-			<option value="0">Car Model</option>
-			<option v-for="carModel in carModels"  v-bind:value="carModel.id" >
-			{{carModel.name}}
-			</option>
-			</select>
-       </div>
-	  </div>
-	<div class="col-md-1"></div>
+	<label for="companyName">Company Name *</label>  
+	  <input type="text" id ="companyName" name="companyName" class="form-control input-md" placeholder="First Name *" required>  
+		  </div>
+		  </div>
+		  <div class="col-md-2"></div>
+		<div class="col-md-4">  
+	  <div class="form-group">
+	  <label for="cname">Contact Name *</label>  
+	   <input type="text" id ="cname" name="cname" class="form-control input-md" placeholder="Last Name *" required>  
+			 </div>
+		 </div>
+		 <div class="col-md-1"></div>
 	</div>
-	
-	 <div class="row">
-	  <div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="row">
+	<div class="col-md-1"></div>
+			 <div class="col-md-4">
 	<div class="form-group">
-      <label for="yearofregister">When Did You First Register Your Car</label>  
-     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1900-01-01" max="2099-01-01" v-model="registeredDate" v-on:change="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
-	  </div>
-	  </div>
-	   <div class="col-md-2"></div>
-	   <div class="col-md-4">
-	<div class="form-group">
-	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;" v-text="total"></span>
-	<div class="input-group" style="border-radius:20px;width:100%;color:#55cbcf;height:41px;">
-         <input type="range" min="0" max="0" id="valueOfCar" v-model="value"  name="valueOfCar"  class="form-control input-md" >
+      <label for="mobile">Mobile No. *</label> 
+       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
         </div>
-      </div>
-    </div>
-	  <div class="col-md-1"></div> 
-	</div>
-	
-	<div class="row">
-	<div class="col-md-1"></div>
-	
-	<div class="col-md-4">
-	<div class="form-group">
-      <label for="cartype">Car Type</label>  
-       <select name="cartype" id="cartype" class="form-control input-md">
-			<option value="">Car Type</option>
-			<option v-for="carType in carTypes"  v-bind:value="carType.id" >
-			{{carType.name}}
-			</option>
-			</select>
-	  </div>
-	  </div>  
-	  <div class="col-md-2"></div>
-	<div class="col-md-4">
-	<div class="form-group">
-    <label for="brand">Is your car brand New?*</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-	  <div class="col-md-1"></div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4">
-	<div class="form-group">
-		<label for="yearofmanufacture">Year of Manufacture *</label>  
-       <select name="yearofmanufacture" id="yearofmanufacture" class="form-control input-md">
-			<option value="">Year of Manufacture</option>
-			<option value="2020">2020</option>
-			<option value="2019">2019</option>
-			</select>
-       </div>
-	  </div>
-	
+	 </div>
 	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
-	<label for="claim">When Did You Last File Claim?</label>  
-       <select name="claim" id="claim" class="form-control input-md" >
-			<option value="">When Did You Last File Claim?</option>
-			<option v-for="carClaim in carClaims" v-bind:value="carClaim.id">
-			{{carClaim.name}}
-			</option>
-			</select>
-       </div>
-	  </div>
+	<label for="email">Email *</label> 
+	<input id="email" name="email" type="email" placeholder="Email *" class="form-control input-md" required>
+	</div>
+	</div>
 	<div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
 	<div class="col-md-1"></div>
-	 <div class="col-md-4">
-	<div class="form-group">
-    <label for="customer">Are you an existing AWNIC customer? *</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="customer" name="customer" value="no" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-	
-	  <div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
-	<label for="carlicense">UAE License Held for?</label>      
-	<select name="carlicense" id="carlicense" class="form-control input-md">
-			<option value="">UAE License Held for?</option>
-			<option value="AUDI">13-24 Months</option>
-			<option value="MBW">13-24 Months</option>
-			</select>
-			</div>
-	  </div>
+      <label for="companyType">Company type</label> 
+      <select name="companyType" id="companyType" class="form-control input-md" required>
+			<option value="">Select</option>
+			<option>SME (less than 100 employees)</option>
+			<option>Large Corporate (more than 100 employees)</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-4">
+	<div class="form-group">
+      <label for="country">Country</label> 
+      <select name="country" id="country" class="form-control input-md" required>
+			<option value="">Select Country</option>
+			<option>India</option>
+			<option>UAE</option>
+				</select>
+       </div>  
+	   </div>
 	   <div class="col-md-1"></div>
-	</div>
+	 </div>
 	
-	<div class="row">
-	 <div class="col-md-1"></div> 
-	<div class="col-md-4">
-	
-	<div class="form-group">
-    <label for="license">Has your previous policy expired?*</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;margin-left:5px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="license" name="license" value="no" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-	 <div class="col-md-2"></div> 
-	 <div class="col-md-4">
-   <div class="form-group" style="display:inline;">
-   <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
-      <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-      </div>
-    </div>
-	 <div class="col-md-1"></div> 
-	</div>
- 
-	  
-	 
 
+
+ 
     <!-- Button -->
+	<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+      <label for="products">You can select multiple products</label> 
+	  <br>
+	  <div id="location"></div>
+      <select name="products" id="products" class="form-control input-md" required>
+			<option value="">Select products</option>
+			<option value="Corporate Art Insurance">Corporate Art Insurance</option>
+			<option value="Cyber Insurance">Cyber Insurance</option>
+			<option value="Engineering Insurance">Engineering Insurance</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-2"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<br>
+  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Submit</button>     
+	 </div>
+    </div>
+	<div class="col-md-1"></div>
+	</div>
 	
-  </fieldset>
 </div>
 </form>
 
@@ -382,9 +225,23 @@ input[type=range]::-ms-tooltip {
 </div>
 
 
+<br><br><br><br><br><br>
 
 
+
+
+
+		
 	
+
+
+
+
+
+		
+	
+
+		
 		<footer id="colorlib-footer">
 		<style>
 		.NewLink:hover{
@@ -506,79 +363,17 @@ input[type=range]::-ms-tooltip {
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/carInfoValidation.js"></script>
-	<script src = "js/axios.min.js"></script> 
-	<script src = "js/vue.js"></script>  
-	<script src = "js/vueAppMotor.js"></script>  
-	 
-
+	<script src="js/engineeringCallBackValidation.js"></script>
 <script>
-//var a=40000;
-//document.getElementById("valueOfCar").value =a;
-//document.getElementById("valueOfCarFromJS").innerHTML=a;  
-
-function isOlderEdgeOrIE() {
-  return (
-    window.navigator.userAgent.indexOf("MSIE ") > -1 ||
-    !!navigator.userAgent.match(/Trident.*rv\:11\./) ||
-    window.navigator.userAgent.indexOf("Edge") > -1
-  );
-}
-
-function valueTotalRatio(value, min, max) {
-//alert(value);
-  return ((value - min) / (max - min)).toFixed(2);
-}
-
-function getLinearGradientCSS(ratio, leftColor, rightColor) {
-  return [
-    '-webkit-gradient(',
-    'linear, ',
-    'left top, ',
-    'right top, ',
-    'color-stop(' + ratio + ', ' + leftColor + '), ',
-    'color-stop(' + ratio + ', ' + rightColor + ')',
-    ')'
-  ].join('');
-}
-
-function updateRangeEl(rangeEl) {
-  var ratio = valueTotalRatio(rangeEl.value, rangeEl.min, rangeEl.max);
-  rangeEl.style.backgroundImage = getLinearGradientCSS(ratio, '#2E9AC5', 'white');
-}
-
-function initRangeEl() {
-  var rangeEl = document.querySelector('input[type=range]');
-  var textEl = document.querySelector('input[type=text]');
-
-  /**
-   * IE/Older Edge FIX
-   * On IE/Older Edge the height of the <input type="range" />
-   * is the whole element as oposed to Chrome/Moz
-   * where the height is applied to the track.
-   *
-   */
-  if (isOlderEdgeOrIE()) {
-    rangeEl.style.height = "20px";
-    // IE 11/10 fires change instead of input
-    // https://stackoverflow.com/a/50887531/3528132
-    rangeEl.addEventListener("change", function(e) {
-      textEl.value = e.target.value;
+$("#products").change(function(){ // bind a function to the change event
+var value = $('#products').val();
+$("#location").append("<p style='width:300px;background-color:#2E9AC5;display:inline-block;margin-left:5px;' class='alert alert-primary alert-dismissable'><button class='close' data-dismiss='alert'><i class='fa fa-window-close' style='color:black;' aria-hidden='true'></i></button><span style='color:white;'>"+value+"</span> </p>");
     });
-    rangeEl.addEventListener("input", function(e) {
-      textEl.value = e.target.value;
-    });
-  } else {
-    updateRangeEl(rangeEl);
-    rangeEl.addEventListener("input", function(e) {
-     updateRangeEl(e.target);
-      //textEl.value = e.target.value;
-    });
-  }
-}
 
-initRangeEl();
+
 </script>
 	</body>
 </html>
