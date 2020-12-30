@@ -251,7 +251,7 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
       <label for="yearofregister">When Did You First Register Your Car</label>  
-     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1900-01-01" max="2099-01-01" v-model="registeredDate" v-on:change="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
+     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1990-01-01" max="2030-01-01" v-model="registeredDate" v-on:change="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
 	  </div>
 	  </div>
 	   <div class="col-md-2"></div>
@@ -272,8 +272,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
       <label for="cartype">Car Type</label>  
-       <select name="cartype" id="cartype" class="form-control input-md">
-			<option value="">Car Type</option>
+       <select name="cartype" id="cartype" class="form-control input-md" v-model="carTypeSelected">
+			<option disabled value="">Select Car Type</option>
 			<option v-for="carType in carTypes"  v-bind:value="carType.id" >
 			{{carType.name}}
 			</option>
@@ -285,8 +285,8 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
     <label for="brand">Is your car brand New?*</label>  <br>
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio" v-model="brandChecked" required>&nbsp;Yes
+		<input id="brand" name="brand" value="no" v-model="brandChecked" type="radio">&nbsp;No
 		</div>
      </div>
 	  </div>
@@ -298,8 +298,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
 		<label for="yearofmanufacture">Year of Manufacture *</label>  
-       <select name="yearofmanufacture" id="yearofmanufacture" class="form-control input-md">
-			<option value="">Year of Manufacture</option>
+       <select name="yearofmanufacture" id="yearofmanufacture" class="form-control input-md" v-model="yearofmanufactureSelected">
+			<option disabled value="">Year of Manufacture</option>
 			<option value="2020">2020</option>
 			<option value="2019">2019</option>
 			</select>
@@ -310,8 +310,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="claim">When Did You Last File Claim?</label>  
-       <select name="claim" id="claim" class="form-control input-md" >
-			<option value="">When Did You Last File Claim?</option>
+       <select name="claim" id="claim" class="form-control input-md" v-model="claimSelected">
+			<option disabled value="">When Did You Last File Claim?</option>
 			<option v-for="carClaim in carClaims" v-bind:value="carClaim.id">
 			{{carClaim.name}}
 			</option>
@@ -327,8 +327,8 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
     <label for="customer">Are you an existing AWNIC customer? *</label>  <br>
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="customer" name="customer" value="no" type="radio">&nbsp;No
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio" v-model="existingUserChecked" required>&nbsp;Yes
+		<input id="customer" name="customer" value="no" v-model="existingUserChecked" type="radio">&nbsp;No
 		</div>
      </div>
 	  </div>
@@ -337,8 +337,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="carlicense">UAE License Held for?</label>      
-	<select name="carlicense" id="carlicense" class="form-control input-md">
-			<option value="">UAE License Held for?</option>
+	<select name="carlicense" id="carlicense" class="form-control input-md" v-model="uaeLicensedSelected">
+			<option disabled value="">UAE License Held for?</option>
 			<option value="AUDI">13-24 Months</option>
 			<option value="MBW">13-24 Months</option>
 			</select>
@@ -354,8 +354,8 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
     <label for="license">Has your previous policy expired?*</label>  <br>
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;margin-left:5px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio"  required>&nbsp;Yes
-		<input id="license" name="license" value="no" type="radio">&nbsp;No
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio" v-model="plicyExpireChecked"  required>&nbsp;Yes
+		<input id="license" name="license" value="no" v-model="plicyExpireChecked" type="radio">&nbsp;No
 		</div>
      </div>
 	  </div>

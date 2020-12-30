@@ -27,9 +27,16 @@ const vm = new Vue({
 		   carValues:[],
 		   max:0,
 		   min:0,
-		  registeredDate:null,
+		  registeredDate:'',
 		  carMakeSelected:'',
 		  carModelSelected:'',
+		 carTypeSelected:'',
+		 brandChecked:'',
+		 yearofmanufactureSelected:'',
+		 claimSelected:'',
+		 existingUserChecked:'',
+		 uaeLicensedSelected:'',
+		 plicyExpireChecked:''
 		 
 		 
         },
@@ -65,6 +72,34 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
 	},
 	
         mounted() {
+			 if(localStorage.carMakeSelected) {
+				 this.carMakeSelected = localStorage.carMakeSelected;
+			 }
+			if(localStorage.registeredDate) {
+				  this.registeredDate = localStorage.registeredDate;
+			  }
+			if(localStorage.carTypeSelected) {
+				  this.carTypeSelected = localStorage.carTypeSelected;
+			  }
+			if(localStorage.brandChecked) {
+				  this.brandChecked = localStorage.brandChecked;
+			  }
+			if(localStorage.yearofmanufactureSelected) {
+				  this.yearofmanufactureSelected = localStorage.yearofmanufactureSelected;
+			  }	
+			if(localStorage.claimSelected) {
+				  this.claimSelected = localStorage.claimSelected;
+			  }
+			if(localStorage.existingUserChecked) {
+				  this.existingUserChecked = localStorage.existingUserChecked;
+			  }
+			if(localStorage.uaeLicensedSelected) {
+				  this.uaeLicensedSelected = localStorage.uaeLicensedSelected;
+			  }	
+			if(localStorage.plicyExpireChecked) {
+				  this.plicyExpireChecked = localStorage.plicyExpireChecked;
+			  }
+			  
           axios.get(urlCarMake).then(response => {
             this.carMakes = response.data
           }),
@@ -88,7 +123,37 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
 		   axios.get(urlNationality).then(response => {
             this.nationality = response.data
           })
+		 
 		  
 		  
-        }
+        },
+	watch:{
+    carMakeSelected(NewcarMakeSelected) {
+      localStorage.carMakeSelected = NewcarMakeSelected;
+    },
+	 registeredDate(NewregisteredDate) {
+      localStorage.registeredDate = NewregisteredDate;
+    },
+	 carTypeSelected(NewcarTypeSelected) {
+      localStorage.carTypeSelected = NewcarTypeSelected;
+    },
+	 brandChecked(NewbrandChecked) {
+      localStorage.brandChecked = NewbrandChecked;
+    },
+	 yearofmanufactureSelected(NewyearofmanufactureSelected) {
+      localStorage.yearofmanufactureSelected = NewyearofmanufactureSelected;
+    },
+	 claimSelected(NewclaimSelected) {
+      localStorage.claimSelected = NewclaimSelected;
+    },
+	 existingUserChecked(NewexistingUserChecked) {
+      localStorage.existingUserChecked = NewexistingUserChecked;
+    },
+	 uaeLicensedSelected(NewuaeLicensedSelected) {
+      localStorage.uaeLicensedSelected = NewuaeLicensedSelected;
+    },
+	 plicyExpireChecked(NewplicyExpireChecked) {
+      localStorage.plicyExpireChecked = NewplicyExpireChecked;
+    }
+  }	
       });
