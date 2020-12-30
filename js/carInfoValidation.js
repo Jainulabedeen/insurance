@@ -14,7 +14,10 @@ $(function() {
 	  yearofmanufacture:"required",
 	  claim:"required",
 	  carlicense:"required",
-	  yearofregister:"required",
+	  yearofregister:{
+		  required:true,
+		  yearofregister:true
+		  },
 	  customer:"required",
 	  license:"required"
      
@@ -46,4 +49,17 @@ $(function() {
 	    window.location= "driverInfo.html";
     }
   });
+  $.validator.addMethod("yearofregister", function (date_of_registered, element) {
+      //date_of_birth = date_of_birth.replace(/\s+/g, "");
+	   var data = date_of_registered.split("-");
+	   var today=new Date();
+	   var years=today.getFullYear();
+	   var totalYears=years-Number.parseInt(data[0]);
+	  // alert(totalYears);
+	   var age=(Number.parseInt(today.getFullYear())-Number.parseInt(data[0]));
+	 // alert("Hello"+data[0]+" "+Number.parseInt(data[0])+" "+today.getFullYear()+" "+today.getMonth()+" "+today.getDay()+" "+data);
+//alert(Number.parseInt(today.getFullYear())-Number.parseInt(data[0]));     
+	 return this.optional(element) || (totalYears<=30);//&& (date_of_birth.match(/^\(?([9]{1}[7]{1}[1]{1})\)?([0-9]{9})$/));
+  }, "Please specify a valid registered date last 30 years");
+  
 });
