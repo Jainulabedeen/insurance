@@ -9,7 +9,7 @@ const urlNationality = "http://mrinsurance.ae/public/api/nationality";
 const urlCarModel = "http://mrinsurance.ae/public/api/getcarmodel/";
 //const urlCarValue = "http://mrinsurance.ae/public/api/getcardepvalue/1/1/01-01-2029";
 const urlCarValue = "http://mrinsurance.ae/public/api/getcardepvalue/";
-alert("Hello I am vueapp");
+
 const vm = new Vue({
         el: '#app',
         data: {
