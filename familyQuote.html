@@ -47,7 +47,7 @@
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-8 text-right menu-1"><br>
+						<div class="col-md-10 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -113,7 +113,7 @@
 <div class="col-md-12 text-center animate-box">
 
 		<center>
-		<h1><b>Need health insurance for yourself? Great! Let's get started</b></h1>
+		<h3><b>Need health insurance for yourself? Great! Let's get started</b></h3>
 		</center>
 
 </div>
@@ -127,41 +127,47 @@
     
     <!-- Form Name -->
     <div class="row">
+	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="fullName">What's your full name?</label>  
-       <input type="text" name="fullName" id="fullName" class="form-control input-md" style="height:41px;" placeholder="Full Name *" required>
+       <input type="text" name="fullName" id="fullName" class="form-control input-md" placeholder="Full Name " required>
        </div>
 	  </div>
-	  
+	  <div class="col-md-2"></div>
 	  <div class="col-md-4">
 	<div class="form-group">
       <label for="visa">Which emirates is your visa issued from?</label>  
-       <select name="visa" id="visa" class="form-control input-md" style="margin-left:5px;height:41px;" required>
+       <select name="visa" id="visa" class="form-control input-md" required>
 			<option value="">City</option>
 			<option value="AUDI">dubai</option>
 			<option value="MBW">Sharjah</option>
 			</select>
 	  </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
+	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="phone">What's your phone number?</label>  
-       <input type="text" name="phone" id="phone" class="form-control input-md" style="height:41px;" maxlength="12" placeholder="Mobile No. *" required>
+       <input type="text" name="phone" id="phone" class="form-control input-md"  maxlength="12" placeholder="Mobile No. " required>
        </div>
 	  </div>
+	  <div class="col-md-2"></div>
 	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="email">What's your email address?</label>  
-       <input type="email" name="email" id="email" class="form-control input-md" style="height:41px;margin-left:5px;" placeholder="Email *" required>
+       <input type="email" name="email" id="email" class="form-control input-md" placeholder="Email " required>
        </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
+	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
     <label for="salary">Is your salary more than AED 4,000 per month?</label>  <br>
@@ -171,38 +177,33 @@
 		</div>
      </div>
 	  </div>
-
+<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 		<label for="dob">Please select member's date of birth?</label>  
-       <input type="date" name="dob" id="dob" class="form-control input-md" min="1900-01-01" max="2999-12-31" style="margin-left:5px;height:41px;">
+       <input type="date" name="dob" id="dob" class="form-control input-md" min="1900-01-01" max="2999-12-31">
        </div>
 	  </div>
+	  <div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
 	<div class="form-group">
 	<label for="cover">What type of cover are you looking for?</label>  
      <div class="form-control" style="width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" checked="checked" type="radio"  required>&nbsp;&nbsp;I just want the minimum legal cover<br>
+		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" checked="checked" type="radio"  required>&nbsp;&nbsp;legal
+		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;&nbsp;minimum
+		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="everything" type="radio">&nbsp;&nbsp;everything
 		</div>
-		<div class="form-control" style="width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;&nbsp;I want more than just the minimum cover<br>
 		</div>
-		<div class="form-control" style="width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="everything" type="radio">&nbsp;&nbsp;I'm not sure, just show me everything
-		</div>
-		
-       </div>
 	  </div>
-	</div>
-	
-	 <div class="row">
-	<div class="col-md-4">
+	  <div class="col-md-2"></div>
+	  <div class="col-md-4">
 	<div class="form-group">
 	<label for="gender">What's your gender?</label>      
-	<select name="gender" id="gender" class="form-control input-md" style="height:41px;" required>
+	<select name="gender" id="gender" class="form-control input-md" required>
 			<option value="">Gender</option>
 			<option value="AUDI">Male</option>
 			<option value="MBW">Female(Married)</option>
@@ -211,11 +212,17 @@
 			</select>
 			</div>
 	  </div>
+	  <div class="col-md-1"></div>
+	</div>
+	
+	 <div class="row">
+	 <div class="col-md-1"></div>
+	
 	  
 	  <div class="col-md-4">
 	<div class="form-group">
       <label for="nationality">What's your nationality?</label>  
-     <select name="nationality" id="nationality" class="form-control input-md" style="height:41px;margin-left:5px;" required>
+     <select name="nationality" id="nationality" class="form-control input-md" required>
 			<option value="">nationality</option>
 			<option value="AUDI">Dubai</option>
 			<option value="MBW">India</option>
@@ -224,26 +231,26 @@
 			</select>
 	  </div>
 	  </div>
-	</div>
-	
-	<div class="row">
-	<div class="col-md-8">
+	  <div class="col-md-2"></div>
+	  <div class="col-md-4">
 	<div class="form-group">
 
 		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
          <span style="font-size:15px;">I am happy to receive email and/or sms communications regarding updates to my quotes and policies</span>
      </div>
-	  </div>
-	
+	  </div>  
+	  <div class="col-md-1"></div>
 	</div>
+	
    <div class="row">
-   <div class="col-md-8">
+    <div class="col-md-1"></div>
+   <div class="col-md-10">
    <div class="form-group" style="display:inline;">
    <a href="familyMedical.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
       <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
-
+ <div class="col-md-1"></div>
    </div>
 	  
 	 
@@ -276,8 +283,9 @@
 					<div class="col-md-3 colorlib-widget">
 						<h4><a class="NewLink" href="aboutUs.html">About Us</a></h4>
 						<p>
-							Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+							To be the insurance company of your choice. To provide you with the right product coupled with prompt service. All supported by our financial strength and dedication of our staff.
 						</p>
+						<p>To deliver innovative insurance solutions whilst achieving customer satisfaction.</p>
 					</div>
 					<div class="col-md-3 colorlib-widget">
 						<h4>Quick Links</h4>
@@ -314,17 +322,17 @@
 						<h4><a class="NewLink" href="listingBlog.html">Address</a></h4>
 						<p>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
-							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li>Sharjah Al Buhaira Tower, Khalid Lagoon,<br> Buhaira Corniche., P.O. Box – 6000</li>
+							<li><a href="tel://065174444"><i class="icon-phone"></i>06 517 4444</a></li>
+							<li><a href="mailto:abnicho@albuhaira.com"><i class="icon-envelope"></i> abnicho@albuhaira.com</a></li>
+							<li><a href="javascript:void(0);"><i class="icon-location4"></i>Fax: 06 574 8855</a></li>
 							<li></li><br>
 							<li><h5>Follow Us</b></li>
-							<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
-							<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
-							<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
+							<li><a href="https://www.facebook.com/Al-Buhaira-National-Insurance-Company-105668041161302/?ref=nf&hc_ref=ARSvOhz974ovDZXQmN5IW03TNRewcmZ12o7GAU-KTZsQWki65BS2QRrs0n3ASMlCB20"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
+							<a href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
+							<a href="https://www.instagram.com/albuhaira_insurance/"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
+							<a href="https://www.linkedin.com/company/al-buhaira-national-insurance-co./?viewAsMember=true"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
+							<a href="javascript:void(0);"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
 
 							
 						</ul>
@@ -340,7 +348,7 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-<small class="block">&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved &nbsp; | 
+<small class="block">&copy; 2017 Albuhaira National Insurance Company. All Rights Reserved. &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
 </small><br> 
@@ -356,7 +364,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
 	
 	<!-- jQuery -->
 
