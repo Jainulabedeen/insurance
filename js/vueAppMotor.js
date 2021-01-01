@@ -1,14 +1,14 @@
-const urlCarMake = "http://mrinsurance.ae/public/api/car-make";
-const urlCarType = "http://mrinsurance.ae/public/api/car-road-type";
-//const urlCarModel = "http://mrinsurance.ae/public/api/car-model";
-const urlCarClaim = "http://mrinsurance.ae/public/api/claim";
-const urlCarRepair = "http://mrinsurance.ae/public/api/repair";
-const urlCarCylinder = "http://mrinsurance.ae/public/api/cylinder";
-const urlCarManufacturingCountry = "http://mrinsurance.ae/public/api/mfg-country";
-const urlNationality = "http://mrinsurance.ae/public/api/nationality";
-const urlCarModel = "http://mrinsurance.ae/public/api/getcarmodel/";
-//const urlCarValue = "http://mrinsurance.ae/public/api/getcardepvalue/1/1/01-01-2029";
-const urlCarValue = "http://mrinsurance.ae/public/api/getcardepvalue/";
+const urlCarMake = "https://buhaira.herokuapp.com/api/car-make";
+const urlCarType = "https://buhaira.herokuapp.com/api/car-road-type";
+//const urlCarModel = "https://buhaira.herokuapp.com/api/car-model";
+const urlCarClaim = "https://buhaira.herokuapp.com/api/claim";
+const urlCarRepair = "https://buhaira.herokuapp.com/api/repair";
+const urlCarCylinder = "https://buhaira.herokuapp.com/api/cylinder";
+const urlCarManufacturingCountry = "https://buhaira.herokuapp.com/api/mfg-country";
+const urlNationality = "https://buhaira.herokuapp.com/api/nationality";
+const urlCarModel = "https://buhaira.herokuapp.com/api/getcarmodel/";
+//const urlCarValue = "https://buhaira.herokuapp.com/api/getcardepvalue/1/1/01-01-2029";
+const urlCarValue = "https://buhaira.herokuapp.com/api/getcardepvalue/";
 
 const vm = new Vue({
         el: '#app',
