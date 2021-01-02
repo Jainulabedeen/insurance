@@ -45,7 +45,11 @@ const vm = new Vue({
 		 plicyExpireChecked:'',
 		 UaeLicenes:[],
 		 nationalitySelected:'',
-		 QuoteValues:[]
+		 QuoteValues:[],
+		 quotationPrice:0,
+		 policyPrice:[],
+		 j:[0,1,2]
+		 
 		 
 		 
         },
@@ -66,7 +70,8 @@ const vm = new Vue({
   getValue:function(carMakesId,carModelsId,registeredDate){
 	 axios.get(urlCarValue+""+carMakesId+"/"+carModelsId+"/"+registeredDate).then(response => {
             this.carValues = response.data
-          });	
+          });
+		  
 document.getElementById("valueOfCar").max=this.carValues.maxcost;
 document.getElementById("valueOfCar").min=this.carValues.mincost;
 document.getElementById("valueOfCar").carValue=this.carValues.carcost;
@@ -83,7 +88,30 @@ document.getElementById("valueOfCar").carValue=this.carValues.carcost;
           });
 		  
 //alert(this.QuoteValues[0]+""+urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected);		  
+//$quotationPrice = (($sessionItem->car_value * $list->base_rate) / 100);
+for(i=0;i<this.QuoteValues.length;i++){
+quotationPrice=(this.carValue*this.QuoteValues[i].base_rate)/100;
 
+
+if(quotationPrice>this.QuoteValues[i].minimum_premium){
+
+	this.policyPrice[i]=Math.round(quotationPrice);
+//alert(policyPrice);		
+}
+else{
+	this.policyPrice[i]=Math.round(this.QuoteValues[i].minimum_premium);
+	//alert(policyPrice);		
+}
+}
+/*
+if($quotationPrice > $list->minimum_premium)
+{
+    $policy_price = $quotationPrice;
+}
+else
+{
+    $policy_price = $list->minimum_premium;
+}*/
   }
 	
 	},

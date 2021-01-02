@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -252,15 +252,16 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
       <label for="yearofregister">When Did You First Register Your Car</label>  
-     <input type="date" name="yearofregister" id="yearofregister" class="form-control input-md" min="1990-01-01" max="2030-01-01" v-model="registeredDate" v-on:change="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
+     <input type="text" name="yearofregister" id="yearofregister" class="form-control input-md" min="1990-01-01" max="2030-01-01" v-model="registeredDate" v-on:change="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
+	
 	  </div>
 	  </div>
 	   <div class="col-md-2"></div>
 	   <div class="col-md-4">
 	<div class="form-group">
-	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;" v-text="total"></span>
+	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;">{{carValue}}</span>
 	<div class="input-group" style="border-radius:20px;width:100%;color:#55cbcf;height:41px;">
-         <input type="range" id="valueOfCar" v-model="carValue"  name="valueOfCar"  class="form-control input-md" >
+         <input type="range" id="valueOfCar" min="0" max="0" v-model="carValue"  name="valueOfCar"  class="form-control input-md" >
         </div>
       </div>
     </div>
@@ -507,6 +508,8 @@ input[type=range]::-ms-tooltip {
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
@@ -625,6 +628,13 @@ window.onbeforeunload = function() {
   if(field4 = getCookie("field4")) document.myForm.field4.value = field4;  
   }*/
   
+</script>
+<script>
+$(function() {
+	$('#yearofregister').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+
+
 </script>
 	</body>
 </html>
