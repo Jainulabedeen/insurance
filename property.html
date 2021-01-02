@@ -50,7 +50,7 @@
 							<img src="images/logo.png" class="logo">
 							</a></div>
 						</div>
-						<div class="col-md-8 text-right menu-1"><br>
+						<div class="col-md-10 text-right menu-1"><br>
 							<ul>
 							
 								<li class="has-dropdown">
@@ -116,7 +116,7 @@
 <div class="col-md-12 text-center animate-box">
 
 		<center>
-		<h1>Property Insurance</h1>
+		<h3>Property Insurance</h3>
 		<p>Property insurance comes in different shapes and sizes.
 Safeguard your property, contents or both.</p>
 		</center>
@@ -131,10 +131,11 @@ Safeguard your property, contents or both.</p>
 <div class="col-md-12 animate-box" id="propertyInsurance">
 
     <div class="row">
+	<div class="col-md-1"></div>
   <div class="col-md-4">
 	<div class="form-group">
 	<label for="ownershipStatus">Your Ownership Status</label>  
-		<select name="ownershipStatus" id="ownershipStatus" style="height:41px;" class="form-control input-md" required>
+		<select name="ownershipStatus" id="ownershipStatus" class="form-control input-md" required>
 		<option value="">Select Ownership Status</option>
 		<option value="Owner">Owner</option>
 		<option value="Tenent">Tenent</option>
@@ -142,11 +143,11 @@ Safeguard your property, contents or both.</p>
 		</select>  
 		  </div>
 		  </div>
-		  
+	<div class="col-md-2"></div>	  
 		<div class="col-md-4">
 	<div class="form-group">
       <label for="typeOfHome">Select Type of Home</label> 
-       <select name="typeOfHome" id="typeOfHome" style="height:41px;margin-left:5px;" class="form-control input-md" required>
+       <select name="typeOfHome" id="typeOfHome" class="form-control input-md" required>
 		<option value="">Select Type of Home</option>
 		<option value="Apartment">Apartment</option>
 		<option value="Building/Villa">Building/Villa</option>
@@ -154,13 +155,15 @@ Safeguard your property, contents or both.</p>
 		</select>  
 		 </div>
 	 </div>
+	 <div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
 	<div class="form-group">
 	<label for="plan">Share your Plan</label> 
-	 <select name="plan" id="plan" style="height:41px;" class="form-control input-md" required>
+	 <select name="plan" id="plan" class="form-control input-md" required>
 		<option value="">Share your Plan</option>
 		<option value="Silver (Content Values Upto AED: 50,000)">Silver (Content Values Upto AED: 50,000)</option>
 		<option value="Gold (Content Values Upto AED: 150,000)">Gold (Content Values Upto AED: 150,000)</option>
@@ -169,12 +172,22 @@ Safeguard your property, contents or both.</p>
 		</select>  
 	</div>
 	</div>
+	<div class="col-md-2"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<label for="empMale">Building Value in AED (Allowed only 0-50,000,000)</label> 
+	<input id="buildingValue" name="buildingValue" type="number" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
 	</div>
+	</div>
+	<div class="col-md-1"></div>
+	</div>
+	
 	<div class="row">
+	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="constructionType">Construction Type</label> 
-	<select name="constructionType" id="constructionType" style="height:41px;" class="form-control input-md" required>
+	<select name="constructionType" id="constructionType" class="form-control input-md" required>
 		<option value="">Select</option>
 		<option value="Fully Reinforced Cement Concrete">Fully Reinforced Cement Concrete</option>
 		<option value="Others">Others</option>
@@ -183,102 +196,102 @@ Safeguard your property, contents or both.</p>
 	
 	</div>
 	</div>
-	
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="itemValue">Building Age (Allowed only 0-15)</label> 
-	<input id="itemValue" name="itemValue" type="number" style="height:41px;margin-left:5px;" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
+	<input id="itemValue" name="itemValue" type="number" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
 	</div>
 	</div>
+	<div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-	<div class="col-md-8">
-	<div class="form-group">
-	<label for="empMale">Building Value in AED (Allowed only 0-50,000,000)</label> 
-	<input id="buildingValue" name="buildingValue" type="number" style="height:41px;margin-left:5px;" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
-	</div>
-	</div>
 	</div>
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
 	<div class="form-group">
 	<label for="empMale">Do you have any individual personal belonging item value of AED 1,000 and above<br>
 	Your personal belonging limit is AED 5,000
 	</label> 
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="itemValueNeed" class="itemValueNeed" name="itemValueNeed" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="itemValueNeed" name="itemValueNeed" checked="checked" class="itemValueNeed" chec value="no" type="radio">&nbsp;No
 		</div></div>
 	</div>
-	</div>
-	
-	<div class="row" style="display:none;" id="personalBelongingItem">
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
-	<label for="itemName">Item Name</label> 
-	<input id="itemName" name="itemName" type="text" style="height:41px;" placeholder="Enter Item Name" class="form-control input-md" required>
-	</div>
-	</div>
-	
-	<div class="col-md-4">
-	<div class="form-group">
-	<label for="itemValue">Item Value in (AED)</label> 
-	<input id="itemValue" name="itemValue" type="number" style="height:41px;margin-left:5px;" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
-	</div>
-	</div>
-	</div>
-	<div class="row">
-	<div class="col-md-8">
-	<div class="form-group">
-	<label for="empMale">Domestic Helper (Free Cover)</label> 
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;">
+	<label for="empMale"><br><br>Domestic Helper (Free Cover)</label> 
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="cover" class="cover" name="cover"  value="yes" type="radio"  required>&nbsp;Yes
 		<input id="cover" name="cover" value="no" class="cover" checked="checked" type="radio">&nbsp;No
 		</div></div>
 	</div>
+	
+	</div>
+	
+	<div class="row" style="display:none;" id="personalBelongingItem">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<label for="itemName">Item Name</label> 
+	<input id="itemName" name="itemName" type="text" placeholder="Enter Item Name" class="form-control input-md" required>
+	</div>
+	</div>
+	<div class="col-md-2"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<label for="itemValue">Item Value in (AED)</label> 
+	<input id="itemValue" name="itemValue" type="number" placeholder="Enter Item Value in (AED)" class="form-control input-md" required>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-1"></div>
+	
+	<div class="col-md-2"></div>
+	
+	
 	</div>
 	<div class="row" style="display:none;" id="domesticHelper">
+	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="helperName">Enter Domestic Helper Name same in the passport</label> 
-	<input id="helperName" name="helperName" type="text" style="height:41px;" placeholder="Enter Domestic Helper Name" class="form-control input-md" required>
+	<input id="helperName" name="helperName" type="text" placeholder="Enter Domestic Helper Name" class="form-control input-md" required>
 	</div>
 	</div>
-	
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
 	<label for="passportNumber">Enter Domestic Helper's passport number</label> 
-	<input id="passportNumber" name="passportNumber" type="text" style="height:41px;margin-left:5px;" placeholder="Enter Domestic Helper's passport number" class="form-control input-md" required>
+	<input id="passportNumber" name="passportNumber" type="text" placeholder="Enter Domestic Helper's passport number" class="form-control input-md" required>
 	</div>
 	</div>
+	<div class="col-md-1"></div>
 	</div>
 	
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-1"></div>
+	<div class="col-md-4">
 	<div class="form-group">
 	<label for="claim">Have you reported any claim(s) in the last 3 years?</label> 
-	<div class="form-control" style="border-radius:20px;width:100%;height:41px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="claim" name="claim" value="yes" type="radio"  required>&nbsp;Yes
 		<input id="claim" name="claim" value="no" checked="checked" type="radio">&nbsp;No
 		</div></div>
 	</div>
-	</div>
-	
-    <!-- Button -->
-	<div class="row">
-	  <div class="col-md-4">
-	<div class="form-group">
-    <a href="property.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-	
-	 </div>
-    </div>
+	<div class="col-md-2"></div>
 	<div class="col-md-4">
-	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+	<div class="form-group"><br>
+    <a href="property.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+	<button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
 	 </div>
     </div>
 	</div>
+	
 	
 </div>
 </form>
@@ -319,8 +332,9 @@ Safeguard your property, contents or both.</p>
 					<div class="col-md-3 colorlib-widget">
 						<h4><a class="NewLink" href="aboutUs.html">About Us</a></h4>
 						<p>
-							Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+							To be the insurance company of your choice. To provide you with the right product coupled with prompt service. All supported by our financial strength and dedication of our staff.
 						</p>
+						<p>To deliver innovative insurance solutions whilst achieving customer satisfaction.</p>
 					</div>
 					<div class="col-md-3 colorlib-widget">
 						<h4>Quick Links</h4>
@@ -357,17 +371,17 @@ Safeguard your property, contents or both.</p>
 						<h4><a class="NewLink" href="listingBlog.html">Address</a></h4>
 						<p>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
-							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li>Sharjah Al Buhaira Tower, Khalid Lagoon,<br> Buhaira Corniche., P.O. Box – 6000</li>
+							<li><a href="tel://065174444"><i class="icon-phone"></i>06 517 4444</a></li>
+							<li><a href="mailto:abnicho@albuhaira.com"><i class="icon-envelope"></i> abnicho@albuhaira.com</a></li>
+							<li><a href="javascript:void(0);"><i class="icon-location4"></i>Fax: 06 574 8855</a></li>
 							<li></li><br>
 							<li><h5>Follow Us</b></li>
-							<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-							<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
-							<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
-							<a href="#"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
-							<a href="#"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
+							<li><a href="https://www.facebook.com/Al-Buhaira-National-Insurance-Company-105668041161302/?ref=nf&hc_ref=ARSvOhz974ovDZXQmN5IW03TNRewcmZ12o7GAU-KTZsQWki65BS2QRrs0n3ASMlCB20"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
+							<a href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
+							<a href="https://www.instagram.com/albuhaira_insurance/"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
+							<a href="https://www.linkedin.com/company/al-buhaira-national-insurance-co./?viewAsMember=true"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
+							<a href="javascript:void(0);"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
 
 							
 						</ul>
@@ -383,7 +397,7 @@ Safeguard your property, contents or both.</p>
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-<small class="block">&copy; Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved &nbsp; | 
+<small class="block">&copy; 2017 Albuhaira National Insurance Company. All Rights Reserved. &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html">Terms & Conditions</a> &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="termsAndCondition.html" href="privacyPolicy.html">Privacy Policy </a>
 </small><br> 

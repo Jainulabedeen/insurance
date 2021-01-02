@@ -9,11 +9,17 @@ const urlNationality = "https://buhaira.herokuapp.com/api/nationality";
 const urlCarModel = "https://buhaira.herokuapp.com/api/getcarmodel/";
 //const urlCarValue = "https://buhaira.herokuapp.com/api/getcardepvalue/1/1/01-01-2029";
 const urlCarValue = "https://buhaira.herokuapp.com/api/getcardepvalue/";
+const urlUaeLicense = "https://buhaira.herokuapp.com/api/uae-license-age";
+const urlGetQuote = "https://buhaira.herokuapp.com/api/getQuoteValue/";
+//https://buhaira.herokuapp.com/api/getQuoteValue/%7Bcar_value%7D/%7Bcar_make%7D/%7Bcar_model%7D/%7Broad_type%7D/%7Bclaim%7D/%7Buae_license_age%7D/%7Bnationality%7D
+//https://buhaira.herokuapp.com/api/getQuoteValue/720000/1/2/1/1/1/1
+
 
 const vm = new Vue({
         el: '#app',
+		
         data: {
-			value:0,
+			carValue:0,
           carMakes: [],
 		  carTypes:[],
 		  carModels:[],
@@ -36,14 +42,17 @@ const vm = new Vue({
 		 claimSelected:'',
 		 existingUserChecked:'',
 		 uaeLicensedSelected:'',
-		 plicyExpireChecked:''
+		 plicyExpireChecked:'',
+		 UaeLicenes:[],
+		 nationalitySelected:'',
+		 QuoteValues:[]
 		 
 		 
         },
 		
 		computed: {
       total: function () {
-      return this.value
+      return this.carValue
 		}
 	},
 	methods:{
@@ -51,7 +60,7 @@ const vm = new Vue({
 	 axios.get(urlCarModel+""+carModelId).then(response => {
 			 this.carModels = response.data
 	
-	this.value=0;
+	this.carValue=0;
           });
   },
   getValue:function(carMakesId,carModelsId,registeredDate){
@@ -60,21 +69,33 @@ const vm = new Vue({
           });	
 document.getElementById("valueOfCar").max=this.carValues.maxcost;
 document.getElementById("valueOfCar").min=this.carValues.mincost;
-document.getElementById("valueOfCar").value=this.carValues.carcost;
+document.getElementById("valueOfCar").carValue=this.carValues.carcost;
 		  
 	this.max=this.carValues.maxcost;
 	this.min=this.carValues.mincost;
-	this.value=this.carValues.carcost;
+	this.carValue=this.carValues.carcost;
 
   },
-  
-		
+
+  getQuoteValue:function(){
+	 axios.get(urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected).then(response => {
+           this.QuoteValues = response.data
+          });
+		  
+//alert(this.QuoteValues[0]+""+urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected);		  
+
+  }
+	
 	},
 	
         mounted() {
 			 if(localStorage.carMakeSelected) {
 				 this.carMakeSelected = localStorage.carMakeSelected;
 			 }
+			if(localStorage.carModelSelected) {
+				 this.carModelSelected = localStorage.carModelSelected;
+			 }
+	
 			if(localStorage.registeredDate) {
 				  this.registeredDate = localStorage.registeredDate;
 			  }
@@ -99,7 +120,12 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
 			if(localStorage.plicyExpireChecked) {
 				  this.plicyExpireChecked = localStorage.plicyExpireChecked;
 			  }
-			  
+			 if(localStorage.nationalitySelected) {
+				 this.nationalitySelected = localStorage.nationalitySelected;
+			 } 
+			 if(localStorage.carValue) {
+				 this.carValue = localStorage.carValue;
+			 }  
           axios.get(urlCarMake).then(response => {
             this.carMakes = response.data
           }),
@@ -122,6 +148,9 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
           }),
 		   axios.get(urlNationality).then(response => {
             this.nationality = response.data
+          }),
+			axios.get(urlUaeLicense).then(response => {
+            this.UaeLicenes = response.data
           })
 		 
 		  
@@ -131,6 +160,10 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
     carMakeSelected(NewcarMakeSelected) {
       localStorage.carMakeSelected = NewcarMakeSelected;
     },
+	carModelSelected(NewcarModelSelected) {
+      localStorage.carModelSelected = NewcarModelSelected;
+    },
+	
 	 registeredDate(NewregisteredDate) {
       localStorage.registeredDate = NewregisteredDate;
     },
@@ -154,6 +187,12 @@ document.getElementById("valueOfCar").value=this.carValues.carcost;
     },
 	 plicyExpireChecked(NewplicyExpireChecked) {
       localStorage.plicyExpireChecked = NewplicyExpireChecked;
+    },
+	 nationalitySelected(NewnationalitySelected) {
+      localStorage.nationalitySelected = NewnationalitySelected;
+    },
+	 carValue(NewcarValue) {
+      localStorage.carValue = NewcarValue;
     }
   }	
       });

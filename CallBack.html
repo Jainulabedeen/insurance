@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Property</title>
+	<title>Call Me Back</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -112,21 +112,18 @@
 				</div>
 			</div>
 		</nav>
-		<br><br><br><br><br><br><br>
-<div class="col-md-12 text-center animate-box">
+		<br><br><br><br><br><br>
 
-		<center>
-		<h3>Property Insurance</h3>
-		<p>Property insurance comes in different shapes and sizes.
-Safeguard your property, contents or both.</p>
-		<h4><b>Share your Personal Details</b></h4>
-		</center>
-		
-</div>
 
-<br><br><br>
 <div class="colorlib-trainers">
 <div class="container">
+<div class="col-md-12">
+<center>
+		<h3><b>Call me back</b></h3>
+		
+		<p>If you require more information on Insurance products or services, <br>please complete our helpful call back service and one of our customer service representatives will contact you shortly.</p>
+		</center>
+</div>
 
 <form class="form-horizontal" id="form1" method="post" action="">
 <div class="col-md-12 animate-box">
@@ -135,53 +132,87 @@ Safeguard your property, contents or both.</p>
 	<div class="col-md-1"></div>
   <div class="col-md-4">
 	<div class="form-group">
-	<label for="fname">Policy Holder Name</label>  
-	  <input type="text" id ="fname" name="fname" value="" class="form-control input-md" placeholder="First Name" required>  
+	<label for="companyName">Company Name *</label>  
+	  <input type="text" id ="companyName" name="companyName" class="form-control input-md" placeholder="First Name *" required>  
 		  </div>
 		  </div>
-	<div class="col-md-2"></div>	  
-		<div class="col-md-4">
+		  <div class="col-md-2"></div>
+		<div class="col-md-4">  
+	  <div class="form-group">
+	  <label for="cname">Contact Name *</label>  
+	   <input type="text" id ="cname" name="cname" class="form-control input-md" placeholder="Last Name *" required>  
+			 </div>
+		 </div>
+		 <div class="col-md-1"></div>
+	</div>
+	<div class="row">
+	<div class="col-md-1"></div>
+			 <div class="col-md-4">
 	<div class="form-group">
-      <label for="dob">Date of Birth</label> 
-       <input placeholder="Date of Birth "  class="form-control input-md" min="1955-01-01" max="2999-12-31" type="date" id="dob" name="dob" required>	
+      <label for="mobile">Mobile No. *</label> 
+       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
         </div>
 	 </div>
-	 <div class="col-md-1"></div>
+	<div class="col-md-2"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<label for="email">Email *</label> 
+	<input id="email" name="email" type="email" placeholder="Email *" class="form-control input-md" required>
 	</div>
+	</div>
+	<div class="col-md-1"></div>
+	</div>
+	
 	<div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-4">
 	<div class="form-group">
-	<label for="email">Email </label> 
-	<input id="email" name="email" type="email" placeholder="Email " class="form-control input-md" required>
-	</div>
-	</div>
-	<div class="col-md-2"></div>
-	 <div class="col-md-4">
+      <label for="companyType">Company type</label> 
+      <select name="companyType" id="companyType" class="form-control input-md" required>
+			<option value="">Select</option>
+			<option>SME (less than 100 employees)</option>
+			<option>Large Corporate (more than 100 employees)</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-4">
 	<div class="form-group">
-      <label for="mobile">Mobile No.</label> 
-       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
-        </div>
+      <label for="country">Country</label> 
+      <select name="country" id="country" class="form-control input-md" required>
+			<option value="">Select Country</option>
+			<option>India</option>
+			<option>UAE</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-1"></div>
 	 </div>
-	 <div class="col-md-1"></div>
-	</div>
 	
-	
+
 
  
     <!-- Button -->
 	<div class="row">
 	<div class="col-md-1"></div>
-	  <div class="col-md-4">
-	<div class="form-group">
-    <a href="property.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-	
-	 </div>
-    </div>
-	<div class="col-md-2"></div>
 	<div class="col-md-4">
 	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Get Quote &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+      <label for="products">You can select multiple products</label> 
+	  <br>
+	  <div id="location"></div>
+      <select name="products" id="products" class="form-control input-md" required>
+			<option value="">Select products</option>
+			<option value="Corporate Art Insurance">Corporate Art Insurance</option>
+			<option value="Cyber Insurance">Cyber Insurance</option>
+			<option value="Engineering Insurance">Engineering Insurance</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-2"></div>
+	<div class="col-md-4">
+	<div class="form-group">
+	<br>
+  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Submit</button>     
 	 </div>
     </div>
 	<div class="col-md-1"></div>
@@ -307,8 +338,6 @@ Safeguard your property, contents or both.</p>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
-	
 	<!-- jQuery -->
 
 	<script src="js/jquery.min.js"></script>
@@ -336,17 +365,14 @@ Safeguard your property, contents or both.</p>
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/propertyPersonalDetailsValidation.js"></script>
+	<script src="js/engineeringCallBackValidation.js"></script>
 <script>
+$("#products").change(function(){ // bind a function to the change event
+var value = $('#products').val();
+$("#location").append("<p style='width:300px;background-color:#2E9AC5;display:inline-block;margin-left:5px;' class='alert alert-primary alert-dismissable'><button class='close' data-dismiss='alert'><i class='fa fa-window-close' style='color:black;' aria-hidden='true'></i></button><span style='color:white;'>"+value+"</span> </p>");
+    });
 
- function checkFilled() {
-    
-	$(document).ready(function(){
-	$("fname").css("background-color","#302a39");
 
-	});
-	
-}
 </script>
 	</body>
 </html>

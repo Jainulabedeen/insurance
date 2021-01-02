@@ -238,7 +238,7 @@ input[type=range]::-ms-tooltip {
 	<label for="carmodel">Car Model</label>  
        <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md" required>
 			 <option disabled value="">Select Car Model</option>
-			<option v-for="carModel in carModels"  v-bind:value="carModel.id" >
+			<option v-bind:value="carModel.id" v-for="carModel in carModels">
 			{{carModel.name}}
 			</option>
 			</select>
@@ -260,7 +260,7 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
 	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;" v-text="total"></span>
 	<div class="input-group" style="border-radius:20px;width:100%;color:#55cbcf;height:41px;">
-         <input type="range" min="0" max="0" id="valueOfCar" v-model="value"  name="valueOfCar"  class="form-control input-md" >
+         <input type="range" id="valueOfCar" v-model="carValue"  name="valueOfCar"  class="form-control input-md" >
         </div>
       </div>
     </div>
@@ -275,7 +275,7 @@ input[type=range]::-ms-tooltip {
       <label for="cartype">Car Type</label>  
        <select name="cartype" id="cartype" class="form-control input-md" v-model="carTypeSelected">
 			<option disabled value="">Select Car Type</option>
-			<option v-for="carType in carTypes"  v-bind:value="carType.id" >
+			<option v-bind:value="carType.id" v-for="carType in carTypes">
 			{{carType.name}}
 			</option>
 			</select>
@@ -313,7 +313,7 @@ input[type=range]::-ms-tooltip {
 	<label for="claim">When Did You Last File Claim?</label>  
        <select name="claim" id="claim" class="form-control input-md" v-model="claimSelected">
 			<option disabled value="">When Did You Last File Claim?</option>
-			<option v-for="carClaim in carClaims" v-bind:value="carClaim.id">
+			<option v-bind:value="carClaim.id" v-for="carClaim in carClaims">
 			{{carClaim.name}}
 			</option>
 			</select>
@@ -340,8 +340,9 @@ input[type=range]::-ms-tooltip {
 	<label for="carlicense">UAE License Held for?</label>      
 	<select name="carlicense" id="carlicense" class="form-control input-md" v-model="uaeLicensedSelected">
 			<option disabled value="">UAE License Held for?</option>
-			<option value="AUDI">13-24 Months</option>
-			<option value="MBW">13-24 Months</option>
+			<option v-bind:value="UaeLicene.id" v-for="UaeLicene in UaeLicenes">
+			{{UaeLicene.name}}
+			</option>
 			</select>
 			</div>
 	  </div>
@@ -354,7 +355,7 @@ input[type=range]::-ms-tooltip {
 	
 	<div class="form-group">
     <label for="license">Has your previous policy expired?*</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;margin-left:5px;">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio" v-model="plicyExpireChecked"  required>&nbsp;Yes
 		<input id="license" name="license" value="no" v-model="plicyExpireChecked" type="radio">&nbsp;No
 		</div>
