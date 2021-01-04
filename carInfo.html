@@ -226,7 +226,7 @@ input[type=range]::-ms-tooltip {
 	<label for="car">Car Make</label>  
        <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" v-on:change="getModel(carMakeSelected)" required>
 	   <option disabled value="">Select Car Make</option>
-			<option  v-bind:value="carMake.id" v-for="carMake in carMakes">
+			<option v-for="carMake in carMakes" v-bind:value="carMake.id">
 			{{carMake.name}}
 			</option>
 			</select>
@@ -239,7 +239,7 @@ input[type=range]::-ms-tooltip {
        <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md" required>
 			 <option disabled value="">Select Car Model</option>
 			<option v-bind:value="carModel.id" v-for="carModel in carModels">
-			{{carModel.name}}
+			{{carModel.model_name}}
 			</option>
 			</select>
        </div>
@@ -252,7 +252,7 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4">
 	<div class="form-group">
       <label for="yearofregister">When Did You First Register Your Car</label>  
-     <input type="text" name="yearofregister" id="yearofregister" class="form-control input-md" min="1990-01-01" max="2030-01-01" v-model="registeredDate" v-on:input="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
+     <input type="text" name="yearofregister" id="yearofregister" class="form-control input-md" v-model="registeredDate" v-on:input="getValue(carMakeSelected,carModelSelected,registeredDate)" required>  
 	
 	  </div>
 	  </div>
@@ -261,7 +261,7 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
 	<label for="valueOfCar" id="textInput">What's the value of your car?</label><span style="float:right;color:black;font-weight:bold;">{{carValue}}</span>
 	<div class="input-group" style="border-radius:20px;width:100%;color:#55cbcf;height:41px;">
-         <input type="range" id="valueOfCar" min="0" max="0" v-model="carValue"  name="valueOfCar"  class="form-control input-md" >
+         <input type="range" id="valueOfCar" v-bind:min="min" v-bind:max="max" v-model="carValue"  name="valueOfCar"  class="form-control input-md" >
         </div>
       </div>
     </div>
@@ -533,7 +533,8 @@ function isOlderEdgeOrIE() {
 }
 
 function valueTotalRatio(value, min, max) {
-//alert(value);
+//alert(min);
+
   return ((value - min) / (max - min)).toFixed(2);
 }
 
