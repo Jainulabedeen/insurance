@@ -27,9 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 
@@ -185,31 +185,29 @@ Safeguard your property, contents or both.</p>
 
     <div class="row">
 	<div class="col-md-1"></div>
-  <div class="col-md-4">
+  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="fname">Policy Holder Name</label>  
 	  <input type="text" id ="fname" name="fname" value="" class="form-control input-md" placeholder="First Name" required>  
 		  </div>
 		  </div>
-	<div class="col-md-2"></div>	  
-		<div class="col-md-4">
+		<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="dob">Date of Birth</label> 
-       <input placeholder="Date of Birth "  class="form-control input-md" min="1955-01-01" max="2999-12-31" type="date" id="dob" name="dob" required>	
+       <input placeholder="Date of Birth "  class="form-control input-md" min="1955-01-01" autocomplete="off" max="2999-12-31" type="text" id="dob" name="dob" required>	
         </div>
 	 </div>
 	 <div class="col-md-1"></div>
 	</div>
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">Email </label> 
 	<input id="email" name="email" type="email" placeholder="Email " class="form-control input-md" required>
 	</div>
 	</div>
-	<div class="col-md-2"></div>
-	 <div class="col-md-4">
+	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="mobile">Mobile No.</label> 
        <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
@@ -224,18 +222,23 @@ Safeguard your property, contents or both.</p>
     <!-- Button -->
 	<div class="row">
 	<div class="col-md-1"></div>
-	  <div class="col-md-4">
+	<div class="col-md-9 inputTypeCenter">
+	<div class="form-group">
+  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Get Quote &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+	 </div>
+    </div>
+	<div class="col-md-1"></div>
+	</div>
+	
+	<div class="row">
+	<div class="col-md-1"></div>
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
     <a href="property.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
 	
 	 </div>
     </div>
-	<div class="col-md-2"></div>
-	<div class="col-md-4">
-	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Get Quote &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
-	 </div>
-    </div>
+	
 	<div class="col-md-1"></div>
 	</div>
 	
@@ -383,6 +386,8 @@ Safeguard your property, contents or both.</p>
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -400,6 +405,14 @@ Safeguard your property, contents or both.</p>
 	
 }
 </script>
+ <script>
+$(function() {
+	$('#dob').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+
+
+</script>
+
 	</body>
 </html>
 

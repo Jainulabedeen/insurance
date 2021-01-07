@@ -27,9 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	
 	</head>
@@ -180,14 +180,14 @@
     <!-- Form Name -->
     <div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="fullName">What's your full name?</label>  
        <input type="text" name="fullName" id="fullName" class="form-control input-md" placeholder="Full Name " required>
        </div>
 	  </div>
-	  <div class="col-md-2"></div>
-	  <div class="col-md-4">
+	 
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="visa">Which emirates is your visa issued from?</label>  
        <select name="visa" id="visa" class="form-control input-md" required>
@@ -202,14 +202,14 @@
 	
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="phone">What's your phone number?</label>  
        <input type="text" name="phone" id="phone" class="form-control input-md"  maxlength="12" placeholder="Mobile No. " required>
        </div>
 	  </div>
-	  <div class="col-md-2"></div>
-	  <div class="col-md-4">
+	  
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">What's your email address?</label>  
        <input type="email" name="email" id="email" class="form-control input-md" placeholder="Email " required>
@@ -220,7 +220,7 @@
 	
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
     <label for="salary">Is your salary more than AED 4,000 per month?</label>  <br>
 	<div class="form-control" style="width:100%;height:41px;">
@@ -229,11 +229,11 @@
 		</div>
      </div>
 	  </div>
-<div class="col-md-2"></div>
-	<div class="col-md-4">
+
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 		<label for="dob">Please select member's date of birth?</label>  
-       <input type="date" name="dob" id="dob" class="form-control input-md" min="1900-01-01" max="2999-12-31">
+       <input type="text" name="dob" id="dob" class="form-control input-md" autocomplete="off"	 min="1900-01-01" max="2999-12-31">
        </div>
 	  </div>
 	  <div class="col-md-1"></div>
@@ -241,18 +241,18 @@
 	
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="cover">What type of cover are you looking for?</label>  
      <div class="form-control" style="width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="legerCover" checked="checked" type="radio"  required>&nbsp;&nbsp;legal
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;&nbsp;minimum
-		&nbsp;&nbsp;&nbsp;<input id="cover" name="cover" value="everything" type="radio">&nbsp;&nbsp;everything
+		<input id="cover" name="cover" value="legerCover" checked="checked" type="radio"  required>legal
+		<input id="cover" name="cover" value="minimumCover" type="radio">&nbsp;minimum
+		<input id="cover" name="cover" value="everything" type="radio">&nbsp;everything
 		</div>
 		</div>
 	  </div>
-	  <div class="col-md-2"></div>
-	  <div class="col-md-4">
+	  
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="gender">What's your gender?</label>      
 	<select name="gender" id="gender" class="form-control input-md" required>
@@ -271,7 +271,7 @@
 	 <div class="col-md-1"></div>
 	
 	  
-	  <div class="col-md-4">
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="nationality">What's your nationality?</label>  
      <select name="nationality" id="nationality" class="form-control input-md" required>
@@ -283,8 +283,8 @@
 			</select>
 	  </div>
 	  </div>
-	  <div class="col-md-2"></div>
-	  <div class="col-md-4">
+	  
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 
 		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
@@ -295,14 +295,23 @@
 	</div>
 	
    <div class="row">
-    <div class="col-md-1"></div>
-   <div class="col-md-10">
+    <div class="col-md-2"></div>
+   <div class="col-md-10 inputTypeCenter">
    <div class="form-group" style="display:inline;">
-   <a href="familyMedical.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
       <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
- <div class="col-md-1"></div>
+ 
+   </div>
+	  
+	   <div class="row">
+    <div class="col-md-1"></div>
+   <div class="col-md-6 inputTypeCenter">
+   <div class="form-group" style="display:inline;">
+   <a href="familyMedical.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
+      </div>
+    </div>
+ <div class="col-md-4"></div>
    </div>
 	  
 	 
@@ -439,11 +448,17 @@
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+		<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/familyQuoteValidation.js"></script>
 <script>
+$(function() {
+	$('#dob').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+
 
 </script>
 	</body>

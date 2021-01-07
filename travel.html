@@ -27,9 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		
@@ -275,14 +275,14 @@
  <div class="col-md-4">
  <div class="form-group">
       <label for="date">From Date:</label>
-	     <input type="date" style="margin-left:5px;height:41px;" class="form-control" id="todate" name="todate">
+	     <input type="text" style="margin-left:5px;height:41px;" class="form-control" id="todate" name="todate">
    
  </div>
  </div>
  <div class="col-md-4">
  <div class="form-group">
       <label for="email">To Date:</label>
-     <input type="date" style="margin-left:5px;height:41px;" class="form-control" id="fromdate" name="fromdate">
+     <input type="text" style="margin-left:5px;height:41px;" class="form-control" id="fromdate" name="fromdate">
   </div>
  </div>
   <div class="col-md-4">
@@ -463,6 +463,9 @@
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
+	
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
@@ -508,7 +511,15 @@ $("#worldwide").click(function(){
 		  
   
 });  
-</script>  
+</script> 
+ <script>
+$(function() {
+	$('#todate').datepick({dateFormat: 'yyyy-mm-dd'});
+	$('#fromdate').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+
+
+</script> 
 	</body>
 </html>
 

@@ -27,9 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 
@@ -183,14 +183,14 @@
 
     <div class="row">
 	<div class="col-md-1"></div>
-  <div class="col-md-4">
+  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="policyDate">Policy start date *</label>  
-	  <input type="date" id ="policyDate" name="policyDate" style="height:41px;" class="form-control input-md" required>  
+	  <input type="text" id ="policyDate" name="policyDate" style="height:41px;" class="form-control input-md" required>  
 		  </div>
 		  </div>
-	<div class="col-md-2"></div>
-		<div class="col-md-4">  
+	
+		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	  <label for="fname">Full Name *</label>  
 	   <input type="text" id ="fname" name="fname" style="height:41px;margin-left:5px;" class="form-control input-md" placeholder="Full Name *" required>  
@@ -200,14 +200,14 @@
 	</div>
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-4">
+	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">Email *</label> 
 	<input id="email" name="email" type="email" style="height:41px;" placeholder="Email *" class="form-control input-md" required>
 	</div>
 	</div>
-	<div class="col-md-2"></div>
-	 <div class="col-md-4">
+	
+	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="mobile">Mobile No. *</label> 
        <input type="text" id ="mobile" name="mobile" style="height:41px;margin-left:5px;" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
@@ -217,7 +217,7 @@
 	</div>
 	<div class="row">
 	<div class="col-md-1"></div>
-	<div class="col-md-10">
+	<div class="col-md-8 inputTypeCenter">
 	<div class="form-group">
 
 		&nbsp;&nbsp;<input type="checkbox" id="update" name="update" value="yes">&nbsp;
@@ -231,18 +231,24 @@
     <!-- Button -->
 	<div class="row">
 	<div class="col-md-1"></div>
-	  <div class="col-md-4">
+	  
+	<div class="col-md-9 inputTypeCenter">
+	<div class="form-group">
+  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+	 </div>
+    </div>
+	<div class="col-md-1"></div>
+	</div>
+	
+	<div class="row">
+	<div class="col-md-1"></div>
+	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
     <a href="index.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
 	
 	 </div>
     </div>
-	<div class="col-md-2"></div>
-	<div class="col-md-4">
-	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
-	 </div>
-    </div>
+	
 	<div class="col-md-1"></div>
 	</div>
 	
@@ -389,15 +395,22 @@
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/homeValidation.js"></script>
-<script>
+ <script>
+$(function() {
+	$('#policyDate').datepick({dateFormat: 'yyyy-mm-dd'});
+});
+
 
 </script>
+
 	</body>
 </html>
 
