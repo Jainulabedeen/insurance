@@ -11,7 +11,7 @@ $(function() {
 		required: true,
 		minlength: 3
 		},
-	lname : {
+	mobile : {
 		required: true,
 		minlength: 3
 		},
@@ -21,10 +21,10 @@ $(function() {
         // by the built-in "email" rule
         email: true
 		},
-	subject : {
+	resume : {
 		required: true,
 		},
-	message : {
+	comment : {
 		required: true,
 		
 		}
@@ -54,7 +54,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	   // window.location= "login.html";
+	    //window.location= "login.html";
     }
   });
 });

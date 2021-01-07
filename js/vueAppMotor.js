@@ -22,14 +22,12 @@ const vm = new Vue({
 			carValue:0,
           carMakes: [],
 		  carTypes:[],
-		  carModels:[],
 		  carClaims:[],
 		  carRepaires:[],
 		  carCylinderes:[],
 		  carManufacturingCoutnries:[],
 		   nationality:[],
 		   carModels:[],
-		   carMakeSelected:null,
 		   carValues:[],
 		   max:0,
 		   min:0,
@@ -60,36 +58,35 @@ const vm = new Vue({
 		}
 	},
 	methods:{
+
 		getModel:function(carModelId){
 	 axios.get(urlCarModel+""+carModelId).then(response => {
 			 this.carModels = response.data
-	
-	this.carValue=0;
+				this.carValue=0;
           });
   },
   getValue:function(carMakesId,carModelsId,registeredDate){
 	 axios.get(urlCarValue+""+carMakesId+"/"+carModelsId+"/"+registeredDate).then(response => {
             this.carValues = response.data
-          });
-		  
-document.getElementById("valueOfCar").max=this.carValues.maxcost;
+			document.getElementById("valueOfCar").max=this.carValues.maxcost;
 document.getElementById("valueOfCar").min=this.carValues.mincost;
 document.getElementById("valueOfCar").carValue=this.carValues.carcost;
+document.getElementById("valueOfCar").value=this.carValues.carcost;
+
 		  
 	this.max=this.carValues.maxcost;
 	this.min=this.carValues.mincost;
 	this.carValue=this.carValues.carcost;
+          });
+		  
+
 
   },
 
   getQuoteValue:function(){
 	 axios.get(urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected).then(response => {
            this.QuoteValues = response.data
-          });
-		  
-//alert(this.QuoteValues[0]+""+urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected);		  
-//$quotationPrice = (($sessionItem->car_value * $list->base_rate) / 100);
-for(i=0;i<this.QuoteValues.length;i++){
+		   for(i=0;i<this.QuoteValues.length;i++){
 quotationPrice=(this.carValue*this.QuoteValues[i].base_rate)/100;
 
 
@@ -103,6 +100,11 @@ else{
 	//alert(policyPrice);		
 }
 }
+          });
+		  
+//alert(this.QuoteValues[0]+""+urlGetQuote+""+this.carValue+"/"+this.carMakeSelected+"/"+this.carModelSelected+"/"+this.carTypeSelected+"/"+this.claimSelected+"/"+this.uaeLicensedSelected+"/"+this.nationalitySelected);		  
+//$quotationPrice = (($sessionItem->car_value * $list->base_rate) / 100);
+
 /*
 if($quotationPrice > $list->minimum_premium)
 {
@@ -119,6 +121,7 @@ else
         mounted() {
 			 if(localStorage.carMakeSelected) {
 				 this.carMakeSelected = localStorage.carMakeSelected;
+				 
 			 }
 			if(localStorage.carModelSelected) {
 				 this.carModelSelected = localStorage.carModelSelected;
@@ -154,6 +157,7 @@ else
 			 if(localStorage.carValue) {
 				 this.carValue = localStorage.carValue;
 			 }  
+			 
           axios.get(urlCarMake).then(response => {
             this.carMakes = response.data
           }),

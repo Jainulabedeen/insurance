@@ -56,6 +56,7 @@
 }
 .datepick-cmd:hover {
 	background-color: #33C6DA;
+	
 }
 .datepick-ctrl .datepick-cmd:hover {
 	background-color: #33C6DA;
@@ -64,7 +65,7 @@
 	width: 8%;
 }
 a.datepick-cmd {
-	height: 1.5em;
+	height: 3.5em;
 }
 button.datepick-cmd {
 	text-align: center;
@@ -119,7 +120,7 @@ button.datepick-cmd {
 }
 .datepick-month {
 	float: left;
-	width: 15em;
+	width: 17em;
 	border: 1px solid #444;
 	text-align: center;
 }
@@ -128,6 +129,9 @@ button.datepick-cmd {
 	background-color: #2E9AC5;
 	color: #fff;
 	font-weight: bold;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	border-radius:5px;
+	
 }
 .datepick-month-header select, .datepick-month-header input {
 	height: 1.4em;
@@ -215,4 +219,8 @@ button.datepick-cmd {
 }
 .datepick-clear-fix {
 	clear: both;
+}
+th,td{
+	
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

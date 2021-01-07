@@ -153,16 +153,20 @@ h1, h2, h3, h4, h5, h6, figure {
 		
 		
 	}
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
       .colorlib-nav .top-menu {
         padding: 28px 1em;
         background: #fff; }
 	.logo{
-		width:80%;
-		height:100%;
+		width:75%;
+		height:auto;
 	}
 	
-}  
+} 
+.menu-1{
+	margin-top:27px;
+	
+} 
 
 
 	
@@ -186,9 +190,11 @@ h1, h2, h3, h4, h5, h6, figure {
       @media screen and (max-width: 768px) {
         .colorlib-nav #colorlib-logo a {
           color: #000; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .colorlib-nav .menu-1 {
-      display: none; } }
+     display:none;
+	  } 
+	  }
   .colorlib-nav ul {
     padding: 0;
     margin: 0; }
@@ -517,7 +523,9 @@ h1, h2, h3, h4, h5, h6, figure {
   appearance: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: white;
-  background: transparent; }
+  background: transparent; 
+  
+  }
   .colorlib-form .form-control:active, .colorlib-form .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1245,8 +1253,14 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
-  border-radius: 5px; 
+  border-radius: 5px;
+ 
   
+  }
+  .inputTypeCenter{
+	  margin-left:45px;
+	  margin-right:45px;
+	  
   }
   .form-control:focus, .form-control:active {
     background: transparent;
@@ -1494,26 +1508,27 @@ input[type="text"] {
 #colorlib-offcanvas {
   position: absolute;
   z-index: 1901;
-  width: 270px;
+  width: 100%;
   background:white;
   top: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  padding: 75px 40px 40px 40px;
+  padding: 75px 15px 40px 15px;
   overflow-y: auto;
   display: none;
   -moz-transform: translateX(270px);
   -webkit-transform: translateX(270px);
   -ms-transform: translateX(270px);
   -o-transform: translateX(270px);
-  transform: translateX(270px);
+  transform: translateX(100%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     #colorlib-offcanvas {
-      display: block; } }
+      display: block; } 
+	  }
   .offcanvas #colorlib-offcanvas {
     -moz-transform: translateX(0px);
     -webkit-transform: translateX(0px);
@@ -1533,14 +1548,20 @@ input[type="text"] {
     #colorlib-offcanvas ul li {
       padding: 0;
       margin: 0;
-      list-style: none; }
+      list-style: none;
+	  }
+	#colorlib-offcanvas p{
+		padding:0 20px 0 20px;
+		font-size:17px;
+		
+	}  
       #colorlib-offcanvas ul li > ul {
         padding: 10px;
-        display: none; }
+        display: none; 
+		}
       #colorlib-offcanvas ul li.offcanvas-has-dropdown > a {
         display: block;
         position: relative; 
-		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 		border-radius:5px;
 		padding:10px;
 		text-align:center;
@@ -1621,7 +1642,9 @@ input[type="text"] {
     background: #444; }
   .colorlib-nav-toggle:hover, .colorlib-nav-toggle:focus, .colorlib-nav-toggle:active {
     outline: none;
-    border-bottom: none !important; }
+    border-bottom: none !important; 
+	
+	}
   .colorlib-nav-toggle i {
     position: relative;
     display: inline-block;
@@ -1634,7 +1657,9 @@ input[type="text"] {
     background: #252525;
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
-    transition: all .2s ease-out; }
+    transition: all .2s ease-out; 
+	}
+	
     .colorlib-nav-toggle i::before, .colorlib-nav-toggle i::after {
       content: '';
       width: 25px;
@@ -1702,7 +1727,8 @@ input[type="text"] {
   border-bottom: none !important; }
   @media screen and (max-width: 768px) {
     .colorlib-nav-toggle {
-      display: block; } 
+      display: block; 
+	  } 
 	  
 	  }
   @media screen and (min-width: 768px) {
