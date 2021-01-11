@@ -184,14 +184,14 @@
 	<div class="col-md-1"></div>
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="maxSpeed">Max Speed</label>  
-	  <input type="text" id ="maxSpeed" name="maxSpeed" class="form-control input-md" placeholder="Max Speed" required>  
+	<label for="estimatedValue">What is its estimated value?</label>  
+	  <input type="number" id ="estimatedValue" name="estimatedValue" class="form-control input-md" placeholder="What is its estimated value?" required>  
 		  </div>
 		  </div>
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="seatingCapacity">Seating capacity</label>  
-	   <input type="text" id ="seatingCapacity" name="seatingCapacity" class="form-control input-md" placeholder="Seating capacity" required>  
+	  <label for="extenstionValue">Racing Risk Extension Value</label>  
+	   <input type="number" id ="extenstionValue" name="extenstionValue" class="form-control input-md" placeholder="Racing Risk Extension Value" required>  
 			 </div>
 		 </div>
 	<div class="col-md-1"></div>	 
@@ -201,72 +201,30 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="enginePower">Engine Power (hp) </label> 
-	<input id="enginePower" name="enginePower" type="text" placeholder="Engine Power (hp)" class="form-control input-md" required>
+	<label for="duration">Select the duration of your policy</label> 
+	<select id="duration" name="duration" class="form-control input-md" required>
+	<option value="">Select Duration</option>
+	<option value="12 Months">12 Months</option>
+	<option value="13 Months">13 Months</option>
+	
+	
+	</select>
 	</div>
 	</div>
 	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-      <label for="year">Year of Manufacture</label> 
-       <input type="text" id ="year" name="year" class="form-control input-md" maxlength="4" placeholder=" year your JET SKI's was manufactured" required>  
-        </div>
-	 </div>
+	<br>
+  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+ <a href="jetski.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+		
+	</div>
+    </div>
 	<div class="col-md-1"></div>
 	</div>
-	 <div class="row">
-	 <div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="material">Material of Construction</label>  
-	 		<select name="material" id="material" class="form-control input-md" required>
-			<option value="">Select</option>
-			<option value="GRP">GRP</option>
-			<option value="FRP">FRP</option>
-			<option value="Other">Other</option>
-			
-			</select>
 	
-		 </div>
-		  </div>
-		<div class="col-md-4 inputTypeCenter">  
-	  <div class="form-group">
-	  <label for="model">Jet Ski Use</label>  
-			<select name="jetSkiUse" id="jetSkiUse" class="form-control input-md" required>
-			<option value="">Select</option>
-			<option value="Private">Private</option>
-			<option value="Commercial Use(Rental Business)">Commercial</option>
-			</select>
-		</div>
-		 </div>
-	<div class="col-md-1"></div>	 
-	</div>
 	 
-	  <div class="row">
-	  <div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="make">Claims Experience for past 5 years</label>  
-	  <input type="text" id ="make" name="make" class="form-control input-md" placeholder="Claims Experience for past 5 years" required>  
-		  </div>
-		  </div>
-	 <div class="col-md-4 inputTypeCenter">
-	<div class="form-group"><br>
-    <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
-	 </div>
-    </div>
-	
-	</div>
-	
-	 <div class="row">
-	  <div class="col-md-1"></div>
-	 <div class="col-md-4 inputTypeCenter">
-	<div class="form-group"><br>
-    <a href="jetski.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-	 </div>
-    </div>
-	
-	</div>
-	
+	 
+
 	
     <!-- Button -->
 

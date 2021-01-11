@@ -14,10 +14,18 @@ $(function() {
 	  yearofmanufacture:"required",
 	  claim:"required",
 	  carlicense:"required",
-	  yearofregister:{
+	  valueOfCar:"required",
+	  day:{
 		  required:true,
-		  yearofregister:true
+		 
 		  },
+	 month:{
+		  required:true,
+		 
+		  },
+	 year:{
+		  required:true,
+		  },	  
 	  customer:"required",
 	  license:"required"
      

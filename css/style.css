@@ -1928,5 +1928,26 @@ border-radius:5px;
     display: block; 
 	padding:10px;
 	}  
-  
-  
+.selectTag{
+	width:32%;
+	height:42px;
+	border-radius:5px;
+	font-size:16px;
+	padding: 10px 20px;
+	}
+	
+@media(min-width: 300px) and (max-width: 1024px){
+.selectTag{
+	width:32%;
+	height:42px;
+	border-radius:5px;
+	font-size:13px;
+	padding: 10px 20px;
+	}
+.inputTypeCenter{
+	  margin-left:20px;
+	  margin-right:20px;
+	  
+  }	
+	
+}  

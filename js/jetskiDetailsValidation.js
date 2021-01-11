@@ -7,35 +7,13 @@ $(function() {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
-    maxSpeed : {
+    estimatedValue : {
 		required: true
 		},
-	seatingCapacity : {
+	extenstionValue : {
 		required: true
 		
-		},
-    enginePower: {
-        required: true
-        // Specify that email should be validated
-        // by the built-in "email" rule
-      
-		},
-	year : {
-		required: true,
-		maxlength:4
-		},
-	material : {
-		required: true,
-		
-		},
-	jetSkiUse : {
-		required: true,
-		
-		
-		},
-	make:{
-		required:true
-	}	
+		}
 		
       },
     // Specify validation error messages

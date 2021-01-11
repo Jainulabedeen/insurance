@@ -7,31 +7,23 @@ $(function() {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
-    fname : {
+    boatType : {
 		required: true,
-		minlength: 3
-		},
-	lname : {
-		required: true,
-		minlength: 3
-		},
-    email: {
-        required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
-		},
-	make : {
-		required: true,
-		},
-	model : {
-		required: true,
-		},
-	mobile : {
-		required: true,
-		mobile:true,
-		maxlength:12
 		
+		},
+	manufacturer : {
+		required: true,
+		
+		},
+    yearOfManufacturer: {
+        required: true,
+      
+		},
+	engineType : {
+		required: true,
+		},
+	lengthBoat : {
+		required: true,
 		}
 		
       },
