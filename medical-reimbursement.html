@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Claims</title>
+	<title>Enquiry</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -28,8 +28,8 @@
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style2.css">
-	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
 
@@ -170,51 +170,113 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-9">
-						<h3><b>Report a claim</b></h3>
+						<h3><b>Medical Reimbursement</b></h3>
 					</div>
-					<br><br><br>
 					<div class="col-md-9">
-					<div class="row">
-					<div class="col-md-4">
-					<div class="myNew2">
-					<a href="motor-claim.html" style="height:80px;" class="services text-center ">
-											<span class="icon2">
-											<img src="images/motor72.png" style="width:40px;">
-											</span>
-										</a>
-					<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Motor Claim</p>
-					</div>	
-					</div>
-					<div class="col-md-4">
-					<div class="myNew2">
-					<a href="non-motor-claim.html" style="height:80px;" class="services text-center ">
-											<span class="icon2">
-											<img src="images/no-car.png" style="width:40px;">
-											</span>
-										</a>
-					<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Non-Motor Claim</p>
-					</div>
-					</div>
-					<div class="col-md-4">
-					<div class="myNew2">
-					<a href="medical-reimbursement.html" style="height:80px;" class="services text-center ">
-											<span class="icon2">
-											<img src="images/familyMedical.png" style="width:40px;">
-											</span>
-										</a>
-					<p class="textOfInsurance" style="text-align:center;margin-top:-24px;font-size:13px;">Medical Reimbursement Claim</p>
-					</div>	
-					</div>
-					</div>	
-						
-						
-					
+						<form action="" method="post" id="form1">
+
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="insname">Insured Name</label>
+									<input type="text" id="insname" style="" name="insname"  class="form-control" placeholder="Insured Name *" required>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="lname">Policy Holder Name</label>
+									<input type="text" id="policyHolderNmae" name="policyHolderNmae" style="" class="form-control" placeholder="Policy Holder Name" required>
+								</div>
+								
+							</div>
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="insuranceIdNo">Insurance ID No</label>
+									<input type="text" id="insuranceIdNo" style="" name="insuranceIdNo"  class="form-control" placeholder="Insurance ID No" required>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="lname">Date of Treatment</label>
+									<input type="text" id="dateOfTreat" name="dateOfTreat" style="" class="form-control" placeholder="Date of Treatment" required>
+								</div>
+								
+							</div>
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="placeOfTreat">Place Of Treatment</label>
+									<select id="placeOfTreat" name="placeOfTreat" class="form-control" required>
+									<option value="">Select Place Of Treatment</option>
+									<option value="United Arab Emirates">United Arab Emirates</option>
+									<option value="Aruba">Aruba</option>
+									<option value="Afghanistan">Afghanistan</option>
+									</select>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="lname">Claim amount in AED (Optional)</label>
+									<input type="number" id="claimAmount" name="claimAmount" style="" class="form-control" placeholder="Claim amount in AED (Optional)" required>
+								</div>
+								
+							</div>
+
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="bankName">Name of Bank</label>
+									<input type="text" id="bankName" name="bankName" style="" class="form-control" placeholder="Name of Bank" required>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="branch">Branch</label>
+									<input type="text" id="branch" name="branch" style="" class="form-control" placeholder="Name of Branch" required>
+								</div>
+							</div>
+							
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="actNo">Account No.</label>
+									<input type="text" id="actNo" style="" name="actNo"  class="form-control" placeholder="Account No." required>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="lname">IBAN No</label>
+									<input type="text" id="ibnNo" name="ibnNo" style="" class="form-control" placeholder="IBAN No" required>
+								</div>
+								
+							</div>
+							<div class="row form-group">
+								<div class="col-md-4">
+									<label for="mobile">Mobile No.</label>
+									<input type="text" id="mobile" style="" name="mobile"  class="form-control" placeholder="Mobile No." required>
+								</div>
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<label for="lname">Emial</label>
+									<input type="email" id="email" name="email" style="" class="form-control" placeholder="Email" required>
+								</div>
+								
+							</div>
+							<div class="row form-group">
+								<div class="col-md-9">
+									<label for="claimFile">Choose File</label>
+									<input type="file" id="claimFile" style="" name="claimFile"  class="form-control" placeholder="Claim File" required>
+								</div>
+								
+							</div>
+							
+							<div class="row form-group">
+								<div class="col-md-9">
+								<label for="message">Message</label>
+									<textarea name="message" id="message" style="" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Send Message" class="btn btn-info">
+							</div>
+						</form>		
 					</div>
 					
 					<div class="col-md-3">
 									
-									<div class="row" style="padding:5px;">
-									
+									<div class="row" style="height:100%;border-radius:5px;padding-right:20px;">
+									<br>
 									
 									<ul style="list-style:none;">
 									<li><h3>Get in Touch with Us</h3></li>
@@ -344,6 +406,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -365,11 +428,20 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Google Map -->
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
+	
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/enquiryValidation.js"></script>
+	<script src="js/MedicalClaimValidation.js"></script>
+ <script>
+$(function() {
+	$('#dateOfTreat').datepick({dateFormat: 'yyyy-mm-dd'});
+});
 
+
+</script>
 	</body>
 </html>
 
