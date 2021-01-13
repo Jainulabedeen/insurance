@@ -27,7 +27,7 @@ $(function() {
 	policyno : {
 		required: true,
 		},
-	motorClaimFile : {
+	file : {
 		required: true,
 		},		
 	message : {

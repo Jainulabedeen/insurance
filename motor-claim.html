@@ -172,17 +172,17 @@
 					<div class="col-md-9">
 						<h3><b>Motor Claim</b></h3>
 					</div>
-					<div class="col-md-9">
-						<form action="" method="post" id="form1">
+					<div class="col-md-9" id="app">
+						<form method="post" id="form1" v-on:submit.prevent="formSubmit()">
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="fname">Full Name</label>
-									<input type="text" id="fname" style="" name="fname"  class="form-control" placeholder="Full Name *" required>
+									<input type="text" id="fname" v-model="fname" name="fname"  class="form-control" placeholder="Full Name *" required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="lname">Mobile No.</label>
-									<input type="text" id="mobile" name="mobile" style="" class="form-control" placeholder="Mobile No. *" required>
+									<input type="text" id="mobile" v-model="mobile" name="mobile" style="" class="form-control" placeholder="Mobile No. *" required>
 								</div>
 								
 							</div>
@@ -191,39 +191,40 @@
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="email">Email</label>
-									<input type="text" id="email" name="email" style="" class="form-control" placeholder="Email address" required>
+									<input type="text" id="email" v-model="email" name="email" style="" class="form-control" placeholder="Email address" required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="enquiryType">Motor Claim</label>
 									
-									<input type="text" id="motorClaim" name="motorClaim" style="" class="form-control" placeholder="Motor Claim" required>
+									<input type="text" id="motorClaim" v-model="motorClaim" value="Motor Claim" name="motorClaim" style="" class="form-control" placeholder="Motor Claim" required>
 								</div>
 							</div>
 							
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="email">Policy No.</label>
-									<input type="text" id="policyno" name="policyno" style="" class="form-control" placeholder="Policy No." required>
+									<input type="text" id="policyno" v-model="policyno" name="policyno" style="" class="form-control" placeholder="Policy No." required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="enquiryType">Choose File</label>
 									
-									<input type="file" id="motorClaimFile" name="motorClaimFile" style="" class="form-control" required>
+									<input type="file" id="file" name="file" ref="file" v-on:change="handleFileUpload()" class="form-control" required>
 								</div>
 							</div>		
 							
 							<div class="row form-group">
 								<div class="col-md-9">
 								<label for="message">Message</label>
-									<textarea name="message" id="message" style="" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
+									<textarea name="message" id="message" v-model="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
 								</div>
 							</div>
 							<div class="form-group">
 								<input type="submit" value="Send Message" class="btn btn-info">
 							</div>
-						</form>		
+						</form>	
+						
 					</div>
 					<div class="col-md-3"></div>
 					<div class="col-md-3">
@@ -385,7 +386,11 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/motorClaimValidation.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppMotorClaim.js"></script>  
 
+	
 	</body>
 </html>
 

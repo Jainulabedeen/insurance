@@ -64,7 +64,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	    window.location= "groupMedicalQuotes.html";
+	    window.location= "group-medical-company-details.html";
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

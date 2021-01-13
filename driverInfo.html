@@ -176,24 +176,24 @@
 
 <br><br><br>
 <div class="colorlib-trainers">
-<div class="container">
+<div class="container" id="app">
 
-<form class="form-horizontal" id="form1" method="post" autocomplete="on" action="">
-<div class="col-md-12 animate-box" id="app">
+<form class="form-horizontal" id="form1" v-on:submit.prevent="submitForm()" method="post">
+<div class="col-md-12 animate-box">
 
     <div class="row">
 	<div class="col-md-1"></div>
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="fname">First Name *</label>  
-	  <input type="text" id ="fname" name="fname" value="" class="form-control input-md" placeholder="First Name *" required>  
+	<label for="fname">First Name </label>  
+	  <input type="text" id ="fname" name="fname" v-model="fname" class="form-control input-md" placeholder="First Name " required>  
 		  </div>
 		  </div>
 		
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="lname">Last Name *</label>  
-	   <input type="text" id ="lname" name="lname"  class="form-control input-md" placeholder="Last Name *" required>  
+	  <label for="lname">Last Name </label>  
+	   <input type="text" id ="lname" name="lname" v-model="lname" class="form-control input-md" placeholder="Last Name " required>  
 			 </div>
 		 </div>
 		 <div class="col-md-1"></div>
@@ -202,17 +202,17 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" placeholder="Email *" class="form-control input-md" required>
+	<label for="email">Email </label> 
+	<input id="email" name="email" type="email" v-model="email" placeholder="Email " class="form-control input-md" required>
 	</div>
 	</div>
 	
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-      <label for="dob">Date of Birth *</label> 
+      <label for="dob">Date of Birth </label> 
          <br>
-<select name="month" id="month" class="selectTag" required>
-									<option value="0" selected="selected">Month</option>
+<select name="month" id="month" class="selectTag" required v-model="dobmonth">
+									<option value="0" selected disabled>Month</option>
 									<option value="1">January</option>
 									<option value="2">February</option>
 									<option value="3">March</option>
@@ -228,8 +228,8 @@
 								</select>
 								
 								
-	<select name="day"  id="day" class="selectTag" required>
-									<option value="0" selected="selected">Day</option>
+	<select name="day"  id="day" class="selectTag" v-model="dobday" required>
+									<option value="0" selected disabled>Day</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -263,8 +263,8 @@
 									<option value="31">31</option>
 								</select>	
 								
-	<select name="year" id="year" class="selectTag" required>
-									<option value="0" selected="selected">Year</option>
+	<select name="year" id="year" class="selectTag" v-model="dobyear" required>
+									<option value="0" selected disabled>Year</option>
 									<option value="2021">2021</option>
 									<option value="2020">2020</option>
 									<option value="2019">2019</option>
@@ -385,16 +385,16 @@
 	 <div class="col-md-1"></div>
 	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-      <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+      <label for="mobile">Mobile No. </label> 
+       <input type="text" id ="mobile" name="mobile" v-model="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile " title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
         </div>
 	 </div>
 	
 	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="mobile">Nationality</label> 
-	<select id="nationality" name="nationality" class="form-control input-md" required>
-										<option value="" selected="selected">Choose a Nationality</option>
+	<select id="nationality" name="nationality" class="form-control input-md" v-model="nationality" required>
+										<option value="" disabled selected="selected">Choose a Nationality</option>
 										 <option value="Afghan">Afghan</option> 
 										<option value="Albanian">Albanian</option> 
 										<option value="Algerian">Algerian</option> 
@@ -592,23 +592,25 @@
 										<option value="(other)">(other)</option>
 										  </select>			
        </div>
+	   
     </div>
 
+
+    <!-- Button -->
+	
+</div>
 <div class="row">
 	
-	<div class="col-md-9 inputTypeCenter">
+	<div class="col-md-12 inputTypeCenter text-center">
 	<div class="form-group">
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="carInfo.html" class="btn btn-info" style="float:right;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-		
+ <a href="carInfo.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
+ <button type="submit" id="submitbtn" class="btn btn-info">Submit</button>     
+ 		
 	</div>
     </div>
 
 	</div>
  
-    <!-- Button -->
-	
-</div>
 </form>
 
 </div>
@@ -761,14 +763,8 @@
 	<script src="js/driverInfoValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	<script src = "js/vueAppMotor.js"></script>  
-	 <script>
-$(function() {
-	$('#dob').datepick({dateFormat: 'yyyy-mm-dd'});
-});
-
-
-</script>
+	<script src = "js/vueAppMotorInsurance.js"></script>  
+	
 
 	</body>
 </html>

@@ -70,8 +70,8 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-     // form.submit();
-	   // window.location= "success.html";
+      //form.submit();
+	    window.location= "group-medical-company-details.html";
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

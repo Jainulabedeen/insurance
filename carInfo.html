@@ -31,99 +31,7 @@
 	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-input[type="range"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 100%;
-  height: 10px;
-  padding: 0;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  background-color:#2E9AC5;
-  margin-top:15px;
-}
 
-
-/*Chrome thumb*/
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-border-radius: 5px;
-  /*16x16px adjusted to be same as 14x14px on moz*/
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;
-}
-
-
-/*Mozilla thumb*/
-
-input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -moz-border-radius: 5px;
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;
-}
-
-
-/*IE & Edge input*/
-
-input[type=range]::-ms-track {
-  width: 300px;
-  height: 6px;
-  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-  background: transparent;
-  /*leave room for the larger thumb to overflow with a transparent border */
-  border-color: transparent;
-  border-width: 2px 0;
-  /*remove default tick marks*/
-  color: transparent;
-}
-
-
-/*IE & Edge thumb*/
-
-input[type=range]::-ms-thumb {
-  height: 25px;
-  width: 15px;
-  border-radius: 5px;
-  background: #2E9AC5;
-  border: 1px solid white;}
-
-
-/*IE & Edge left side*/
-
-input[type=range]::-ms-fill-lower {
-  background: #2E9AC5;
-  border-radius: 2px;
-}
-
-
-/*IE & Edge right side*/
-
-input[type=range]::-ms-fill-upper {
-  background: #2E9AC5;
-  border-radius: 2px;
-}
-
-
-/*IE disable tooltip*/
-
-input[type=range]::-ms-tooltip {
-  display: none;
-}
-
-</style>
-	
 	</head>
 	<body>
 		
@@ -265,9 +173,9 @@ input[type=range]::-ms-tooltip {
 
 
 <div class="colorlib-trainers">
-<div class="container">
+<div class="container" id="app">
 <form class="form-horizontal" id="form1" name="form1" autocomplete="on" action="">
-<div class="col-md-12 animate-box justify-content-center" id="app">
+<div class="col-md-12 animate-box justify-content-center">
   <fieldset>
     
     <!-- Form Name -->
@@ -276,11 +184,8 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="car">Car Make</label>  
-       <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" v-on:change="getModel(carMakeSelected)" required>
+       <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" onchange="carModelShow(this.value)" required>
 	   <option disabled value="">Select Car Make</option>
-			<option v-for="carMake in carMakes" v-bind:value="carMake.id">
-			{{carMake.name}}
-			</option>
 			</select>
        </div>
 	  </div>
@@ -290,9 +195,7 @@ input[type=range]::-ms-tooltip {
 	<label for="carmodel">Car Model</label>  
        <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md" required>
 			 <option disabled value="">Select Car Model</option>
-			<option v-bind:value="carModel.id" v-for="carModel in carModels">
-			{{carModel.model_name}}
-			</option>
+			
 			</select>
        </div>
 	  </div>
@@ -305,8 +208,8 @@ input[type=range]::-ms-tooltip {
 	<div class="form-group">
       <label for="yearofregister">When Did You First Register Your Car</label>  
 	 <br>
-<select name="month" id="month" class="selectTag">
-									<option value="0" selected="selected">Month</option>
+<select name="month" id="month" class="selectTag" v-model="monthSelected">
+									<option value="0" disabled selected="selected">Month</option>
 									<option value="1">January</option>
 									<option value="2">February</option>
 									<option value="3">March</option>
@@ -322,8 +225,8 @@ input[type=range]::-ms-tooltip {
 								</select>
 								
 								
-	<select name="day"  id="day" class="selectTag">
-									<option value="0" selected="selected">Day</option>
+	<select name="day"  id="day" class="selectTag" v-model="daySelected">
+									<option value="0" disabled selected="selected">Day</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -357,8 +260,8 @@ input[type=range]::-ms-tooltip {
 									<option value="31">31</option>
 								</select>	
 								
-	<select name="year" id="year" class="selectTag">
-									<option value="0" selected="selected">Year</option>
+	<select name="year" id="year" class="selectTag" v-model="yearSelected">
+									<option value="0" disabled selected="selected">Year</option>
 									<option value="2021">2021</option>
 									<option value="2020">2020</option>
 									<option value="2019">2019</option>
@@ -473,7 +376,7 @@ input[type=range]::-ms-tooltip {
 	   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="valueOfCar" id="textInput">What's the value of your car?</label>
-	     <input type="number" id="valueOfCar"  name="valueOfCar"  class="form-control input-md" >
+	     <input type="number" id="valueOfCar" v-model="valueOfCar"  name="valueOfCar"  class="form-control input-md" >
       </div>
     </div>
 	  <div class="col-md-1"></div> 
@@ -487,9 +390,9 @@ input[type=range]::-ms-tooltip {
       <label for="cartype">Car Type</label>  
        <select name="cartype" id="cartype" class="form-control input-md" v-model="carTypeSelected">
 			<option disabled value="">Select Car Type</option>
-			<option v-bind:value="carType.id" v-for="carType in carTypes">
-			{{carType.name}}
-			</option>
+			<option value="private">Private</option>
+			<option value="commercial">Commercial</option>
+			
 			</select>
 	  </div>
 	  </div>  
@@ -511,11 +414,32 @@ input[type=range]::-ms-tooltip {
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 		<label for="yearofmanufacture">Year of Manufacture *</label>  
-       <select name="yearofmanufacture" id="yearofmanufacture" class="form-control input-md" v-model="yearofmanufactureSelected">
+       <select name="yearofmanufacture" id="yearofmanufacture" v-model="yearofmanufacture" class="form-control input-md" v-model="yearofmanufactureSelected">
 			<option disabled value="">Year of Manufacture</option>
-			<option value="2020">2020</option>
-			<option value="2019">2019</option>
-			</select>
+		<option value="2021">2021</option>
+		<option value="2020">2020</option>
+		<option value="2019">2019</option>
+		<option value="2018">2018</option>
+		<option value="2017">2017</option>
+		<option value="2016">2016</option>
+		<option value="2015">2015</option>
+		<option value="2014">2014</option>
+		<option value="2013">2013</option>
+		<option value="2012">2012</option>
+		<option value="2011">2011</option>
+		<option value="2010">2010</option>
+		<option value="2009">2009</option>
+		<option value="2008">2008</option>
+		<option value="2007">2007</option>
+		<option value="2006">2006</option>
+		<option value="2005">2005</option>
+		<option value="2004">2004</option>
+		<option value="2003">2003</option>
+		<option value="2002">2002</option>
+		<option value="2001">2001</option>
+		<option value="2000">2000</option>
+		<option value="1999">1999</option>
+		</select>
        </div>
 	  </div>
 	
@@ -525,10 +449,16 @@ input[type=range]::-ms-tooltip {
 	<label for="claim">When Did You Last File Claim?</label>  
        <select name="claim" id="claim" class="form-control input-md" v-model="claimSelected">
 			<option disabled value="">When Did You Last File Claim?</option>
-			<option v-bind:value="carClaim.id" v-for="carClaim in carClaims">
-			{{carClaim.name}}
-			</option>
+			<option value="No claims in the past year">No claims in the past year</option>
+			<option value="No claims for 2 years">No claims for 2 years</option>
+			<option value="No claims for 3 years">No claims for 3 years</option>
+			<option value="No claims for 4 years">No claims for 4 years</option>
+			<option value="No claims for 5+ years">No claims for 5+ years</option>
+			<option value="I claimed last year">I claimed last year</option>
+			<option value="This is my very first car ever!">This is my very first car ever!</option> 
+			
 			</select>
+		
        </div>
 	  </div>
 	<div class="col-md-1"></div>
@@ -552,9 +482,29 @@ input[type=range]::-ms-tooltip {
 	<label for="carlicense">UAE License Held for?</label>      
 	<select name="carlicense" id="carlicense" class="form-control input-md" v-model="uaeLicensedSelected">
 			<option disabled value="">UAE License Held for?</option>
-			<option v-bind:value="UaeLicene.id" v-for="UaeLicene in UaeLicenes">
-			{{UaeLicene.name}}
-			</option>
+			<option value="" selected="selected">Please Choose</option>
+			<option value="less than 6 months">less than 6 months</option>
+			<option value="less than 1 year">less than 1 year</option>
+			<option value="1 year">1 year</option>
+			<option value="2 years">2 years</option>
+			<option value="3 years">3 years</option>
+			<option value="4 years">4 years</option>
+			<option value="5 years">5 years</option>
+			<option value="6 years">6 years</option>
+			<option value="7 years">7 years</option>
+			<option value="8 years">8 years</option>
+			<option value="9 years">9 years</option>
+			<option value="10 years">10 years</option>
+			<option value="11 years">11 years</option>
+			<option value="12 years">12 years</option>
+			<option value="13 years">13 years</option>
+			<option value="14 years">14 years</option>
+			<option value="15 years">15 years</option>
+			<option value="16 years">16 years</option>
+			<option value="17 years">17 years</option>
+			<option value="18 years">18 years</option>
+			<option value="19 years">19 years</option>
+			<option value="20 years +">20 years +</option> 
 			</select>
 			</div>
 	  </div>
@@ -574,13 +524,6 @@ input[type=range]::-ms-tooltip {
      </div>
 	  </div>
 	
-	 <div class="col-md-4 inputTypeCenter">
-   <div class="form-group" style="display:inline;">    
- <a href="motorInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
-    
-  <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-      </div>
-    </div>
 	 <div class="col-md-1"></div> 
 	</div>
 	
@@ -590,6 +533,14 @@ input[type=range]::-ms-tooltip {
     <!-- Button -->
 	
   </fieldset>
+</div>
+<div class="row">
+
+	 <div class="col-md-12 inputTypeCenter text-center">
+   <div class="form-group" style="display:inline;">       
+  <button class="btn btn-info" type="submit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
 </div>
 </form>
 
@@ -728,126 +679,39 @@ input[type=range]::-ms-tooltip {
 	<script src="js/carInfoValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	<script src = "js/vueAppMotor.js"></script>  
+	<script src = "js/vueAppMotorInsurance.js"></script>  
+	<script src = "js/carWithModalName.json"></script>  
 	 
 
 <script>
-//var a=40000;
-//document.getElementById("valueOfCar").value =a;
-//document.getElementById("valueOfCarFromJS").innerHTML=a;  
-
-function isOlderEdgeOrIE() {
-  return (
-    window.navigator.userAgent.indexOf("MSIE ") > -1 ||
-    !!navigator.userAgent.match(/Trident.*rv\:11\./) ||
-    window.navigator.userAgent.indexOf("Edge") > -1
-  );
+var obj = JSON.parse(data);
+var carMakeData=[...new Set(obj.map(({UAM_MAKE_DESC})=>UAM_MAKE_DESC))];
+document.getElementById("car").innerHTML = "<option></option>";
+var carOptions = "";
+for(i=0;i<carMakeData.length;i++){
+//document.write(carMake[j]+"<br>");
+carOptions+="<option value='"+carMakeData[i]+"'>"+carMakeData[i]+"</option>";
 }
+document.getElementById("car").innerHTML = carOptions;
 
-function valueTotalRatio(value, min, max) {
-//alert(min);
+function carModelShow(value) {
+//alert(value);
+var carModelOptions = "";
 
-  return ((value - min) / (max - min)).toFixed(2);
+if(value.length==0) {
+document.getElementById("carmodel").innerHTML = "<option></option>";
 }
-
-function getLinearGradientCSS(ratio, leftColor, rightColor) {
-  return [
-    '-webkit-gradient(',
-    'linear, ',
-    'left top, ',
-    'right top, ',
-    'color-stop(' + ratio + ', ' + leftColor + '), ',
-    'color-stop(' + ratio + ', ' + rightColor + ')',
-    ')'
-  ].join('');
+else {
+for(i=0;i<obj.length;i++){
+if(obj[i].UAM_MAKE_DESC==value){
+//document.write(obj[i].UAM_MODEL_DESC+"<br>");
+carModelOptions+="<option>"+obj[i].UAM_MODEL_DESC+"</option>";
 }
-
-function updateRangeEl(rangeEl) {
-  var ratio = valueTotalRatio(rangeEl.value, rangeEl.min, rangeEl.max);
-  rangeEl.style.backgroundImage = getLinearGradientCSS(ratio, '#2E9AC5', 'white');
 }
+document.getElementById("carmodel").innerHTML = carModelOptions;
 
-function initRangeEl() {
-  var rangeEl = document.querySelector('input[type=range]');
-  var textEl = document.querySelector('input[type=text]');
-
-  /**
-   * IE/Older Edge FIX
-   * On IE/Older Edge the height of the <input type="range" />
-   * is the whole element as oposed to Chrome/Moz
-   * where the height is applied to the track.
-   *
-   */
-  if (isOlderEdgeOrIE()) {
-    rangeEl.style.height = "20px";
-    // IE 11/10 fires change instead of input
-    // https://stackoverflow.com/a/50887531/3528132
-    rangeEl.addEventListener("change", function(e) {
-      textEl.value = e.target.value;
-    });
-    rangeEl.addEventListener("input", function(e) {
-      textEl.value = e.target.value;
-    });
-  } else {
-    updateRangeEl(rangeEl);
-    rangeEl.addEventListener("input", function(e) {
-     updateRangeEl(e.target);
-      //textEl.value = e.target.value;
-    });
-  }
 }
-
-initRangeEl();
-/*
-
-window.onload = function() {
-  if (sessionStorage.car && sessionStorage.carModel) {
-      document.getElementById("car").value = sessionStorage.car;
-      document.getElementById("carModel").value = sessionStorage.carModel;
-    }
-};
-
-function storedata() {
-  if(typeof(Storage) !== "undefined") {
-    var car = document.getElementById("car").value;
-    var carModel = document.getElementById("carModel").value;
-
-    sessionStorage.car = car;
-    sessionStorage.carModel = carModel;
-alert("Values set");
-   
-  } 
 }
-
-window.onbeforeunload = function() {
-    localStorage.setItem("car", $('#car').val());
-    localStorage.setItem("carModel", $('#carModel').val());
-   
-}
-
- function setCookieValues(form)  
-  {
-    setCookie("car", form1.c.value);
-    setCookie("field2", form.field2.value);
-    setCookie("field3", form.field3.value);
-    setCookie("field4", form.field4.value);
-    return true;
-  }
-  function getCookieValues(){
-  
- if(field1 = getCookie("field1")) document.myForm.field1.value = field1;
-  if(field2 = getCookie("field2")) document.myForm.field2.value = field2;
-  if(field3 = getCookie("field3")) document.myForm.field3.value = field3;
-  if(field4 = getCookie("field4")) document.myForm.field4.value = field4;  
-  }*/
-  
-</script>
-<script>
-$(function() {
-	$('#yearofregister').datepick({dateFormat: 'yyyy-mm-dd'});
-});
-
-
 </script>
 	</body>
 </html>

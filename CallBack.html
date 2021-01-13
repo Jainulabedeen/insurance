@@ -219,7 +219,7 @@
 	<div class="form-group">
       <label for="companyType">Company type</label> 
       <select name="companyType" id="companyType" class="form-control input-md" required>
-			<option value="">Select</option>
+			<option value="" disabled selected>Select</option>
 			<option>SME (less than 100 employees)</option>
 			<option>Large Corporate (more than 100 employees)</option>
 				</select>
@@ -229,7 +229,7 @@
 	<div class="form-group">
       <label for="country">Country</label> 
       <select name="country" id="country" class="form-control input-md" required>
-			<option value="" selected="selected">Choose a Nationality</option>
+			<option value="" disabled selected>Choose a Nationality</option>
 										 <option value="Afghan">Afghan</option> 
 										<option value="Albanian">Albanian</option> 
 										<option value="Algerian">Algerian</option> 
@@ -443,7 +443,7 @@
 	  <br>
 	  <div id="location"></div>
       <select name="products" id="products" class="form-control input-md" required>
-			<option value="">Select products</option>
+			<option disabled value="">Select products</option>
 			<option value="Aviation Insurance">Aviation Insurance</option>
 				<option value="Business Travel Insurance">Business Travel Insurance</option>
 				<option value="Engineering Insurance">Engineering Insurance</option>
@@ -626,7 +626,7 @@
 <script>
 $("#products").change(function(){ // bind a function to the change event
 var value = $('#products').val();
-$("#location").append("<p style='width:300px;background-color:#2E9AC5;display:inline-block;margin-left:5px;' class='alert alert-primary alert-dismissable'><button class='close' data-dismiss='alert'><i class='fa fa-window-close' style='color:black;' aria-hidden='true'></i></button><span style='color:white;'>"+value+"</span> </p>");
+$("#location").append("<p style='width:320px;background-color:#ddd;display:inline-block;margin-left:5px;padding:5px 5px;' class='alert alert-primary alert-dismissable'><button class='close' style='margin-right:25px;' data-dismiss='alert'><i class='fa fa-window-close' style='color:black;' aria-hidden='true'></i></button><span style='color:black;'>"+value+"</span> </p>");
     });
 
 
