@@ -175,10 +175,10 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
-<form class="form-horizontal" id="form1" method="post" autocomplete="on" action="">
+<form class="form-horizontal" id="form1" method="post" v-on:submit.prevent="submitForm()">
 <div class="col-md-12 animate-box" id="app">
 
     <div class="row">
@@ -186,7 +186,7 @@
  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="claimExperience">Claims experience</label> 
-	<textarea rows="1" cols="10" id ="claimExperience" name="claimExperience" class="form-control input-md" placeholder="Claims experience" required></textarea>  
+	<textarea rows="1" cols="10" id ="claimExperience" name="claimExperience" v-model="claimExperience" class="form-control input-md" placeholder="Claims experience" required></textarea>  
        
 	   </div>
 	   </div>
@@ -194,7 +194,7 @@
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	  <label for="sumInsured">Sum insured</label>  
-	   <input type="number" id ="sumInsured" name="sumInsured"  class="form-control input-md" placeholder="Sum Insured" required>  
+	   <input type="number" id ="sumInsured" name="sumInsured" v-model="sumInsured"  class="form-control input-md" placeholder="Sum Insured" required>  
 			 </div>
 		 </div>
 		 <div class="col-md-1"></div>
@@ -204,13 +204,13 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">Use</label> 
-	<input id="use" name="use" type="text" placeholder="Use" class="form-control input-md" required>
+	<input id="use" name="use" type="text" v-model="use" placeholder="Use" class="form-control input-md" required>
 	</div>
 	</div>
 		 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="mobile">Operator's experience</label> 
-       <input type="text" id ="operatorExperience" name="operatorExperience" class="form-control input-md" placeholder="Operator's experience" required>  
+       <input type="text" id ="operatorExperience" name="operatorExperience" v-model="operatorExperience" class="form-control input-md" placeholder="Operator's experience" required>  
         </div>
 	 </div>
 	
@@ -220,28 +220,15 @@
 	
 	<div class="row">
 	
-	 <div class="col-md-1"></div>
 	
-	  <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="mobile">Engine details</label> 
-	<textarea rows="1" cols="10" id ="engineDetails" name="engineDetails" class="form-control input-md" placeholder="Engine details" required></textarea>  
-       
-	   </div>
-	   </div>
-	<div class="col-md-1"></div>
-    </div>
 	
-	<div class="row">
-	
-	 <div class="col-md-1"></div>
-	
-	   <div class="col-md-9 inputTypeCenter">
+	   <div class="col-md-12 inputTypeCenter text-center">
 	<div class="form-group">
 	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="yacht-details.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-		
+<a href="yacht-details.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
+ 
+ <button type="submit" id="submitbtn" class="btn btn-info">Submit</button>     
+ 		
 	</div>
     </div>
 	<div class="col-md-1"></div>
@@ -400,7 +387,7 @@
 	<script src="js/yachtOperatorDetailsValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	
+	<script src = "js/vueAppYachtInsurance.js"></script>  
 	 
 	</body>
 </html>

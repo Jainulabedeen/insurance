@@ -57,7 +57,7 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-      //form.submit();
+      form.submit();
 	    window.location= "home-address.html";
     }
   });

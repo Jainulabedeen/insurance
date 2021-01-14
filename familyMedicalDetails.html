@@ -175,10 +175,10 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
-<form class="form-horizontal" id="form1" method="post" autocomplete="on" action="">
+<form class="form-horizontal" id="form1" method="post" autocomplete="on">
 <div class="col-md-12 animate-box" id="app">
 
     <div class="row">
@@ -186,7 +186,7 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="fname">Who would you like the cover for?</label>  
-		<select id="coverType" name="coverType" class="form-control input-md" required="required">
+		<select id="coverType" name="coverType" v-model="coverType" class="form-control input-md" required="required">
 			 <option value="">Select</option> 
 			 <option value="Just me">Just me</option> 
 			 <option value="My family">My family</option> 
@@ -198,7 +198,7 @@
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	  <label for="lname">Marital status</label>  
-		<select id="maritalStatus" name="maritalStatus" class="form-control input-md" required>
+		<select id="maritalStatus" name="maritalStatus" v-model="maritalStatus" class="form-control input-md" required>
 				<option value="" selected="selected">Select</option>
 				<option value="Single">Single</option>
 				<option value="Married">Married</option>
@@ -215,7 +215,7 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">Emirate of your visa</label> 
-	<select id="visa" name="visa" class="form-control input-md" required>
+	<select id="visa" name="visa" class="form-control input-md" v-model="visa" required>
 		 <option value="">Select</option> 
 		 <option value="Ajman">Ajman</option> 
 		 <option value="Dubai">Dubai</option> 
@@ -231,7 +231,7 @@
 	<div class="form-group">
       <label for="dob">Date of Birth</label> 
          <br>
-<select name="month" id="month" class="selectTag" required>
+<select name="month" id="month" class="selectTag" v-model="dobmonth" required>
 									<option value="0" selected="selected">Month</option>
 									<option value="1">January</option>
 									<option value="2">February</option>
@@ -248,7 +248,7 @@
 								</select>
 								
 								
-	<select name="day"  id="day" class="selectTag" required>
+	<select name="day"  id="day" class="selectTag" v-model="dobday" required>
 									<option value="0" selected="selected">Day</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -283,7 +283,7 @@
 									<option value="31">31</option>
 								</select>	
 								
-	<select name="year" id="year" class="selectTag" required>
+	<select name="year" id="year" class="selectTag" v-model="dobyear" required>
 									<option value="0" selected="selected">Year</option>
 									<option value="2021">2021</option>
 									<option value="2020">2020</option>
@@ -405,24 +405,26 @@
 	<div class="form-group">
     <label for="customer">Applicant's Gender?</label>  <br>
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="gender" checked="checked" name="gender" value="Male" type="radio" required>&nbsp;Male
-		<input id="gender" name="gender" value="Female"  type="radio">&nbsp;Female
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="gender" checked="checked" v-model="gender" name="gender" value="Male" type="radio" required>&nbsp;Male
+		<input id="gender" name="gender" value="Female" v-model="gender"  type="radio">&nbsp;Female
 		</div>
      </div>
 	  </div>
-	<div class="col-md-4 inputTypeCenter">
-	<div class="form-group"><br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="familyMedicalInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-		
-	</div>
-    </div>  
+	
 	<div class="col-md-1"></div>
 </div>
 
  
     <!-- Button -->
 	
+	<div class="row">
+	<div class="col-md-12 inputTypeCenter text-center">
+	<div class="form-group"><br>
+  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+		
+	</div>
+    </div>  
+	</div>
 </div>
 </form>
 
@@ -430,7 +432,7 @@
 </div>
 
 
-<br><br><br><br><br><br>
+<br>
 
 
 
@@ -576,6 +578,7 @@
 	<script src="js/familyMedicalDetailsValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppFamilyMedicalInsurance.js"></script>  
 	
 	
 	</body>

@@ -173,7 +173,7 @@
 </div>
 
 
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 <form class="form-horizontal" id="form1" name="form1" autocomplete="on" action="">
 <div class="col-md-12 animate-box justify-content-center" id="app">
@@ -185,14 +185,14 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="coverDays">How many days would you like cover?</label>  
-	<input type="number" id ="coverDays" name="coverDays"  class="form-control input-md" placeholder="How many days would you like cover for?" required>  
+	<input type="number" id ="coverDays" name="coverDays" v-model="coverDays" class="form-control input-md" placeholder="How many days would you like cover for?" required>  
 	</div>
 	  </div>
 	 
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="region">Which regions do you need cover for?</label>  
-						<select id="region" name="region" class="form-control input-md" required>
+						<select id="region" name="region" v-model="region" class="form-control input-md" required>
 								<option value="" selected="selected">Select</option> 
 								<option value="Worldwide (excl. US/Canada)">Worldwide (excl. US/Canada)</option> 
 								<option value="Worldwide (incl. US/Canada)">Worldwide (incl. US/Canada)</option> 
@@ -207,7 +207,7 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
      <label for="coverFor">Who would you like cover for?</label>  
-					<select id="coverFor" name="coverFor" class="form-control input-md" required>
+					<select id="coverFor" name="coverFor" v-model="coverFor" class="form-control input-md" required>
 								<option value="" selected="selected">Select</option> 
 								<option value="Just me">Just me!</option> 
 								<option value="My whole family">My whole family</option> 
@@ -218,7 +218,7 @@
 	   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="valueOfCar" id="textInput">Details</label>
-					<textarea rows="1" cols="10" id ="details" name="details"  class="form-control input-md" placeholder="Details" required></textarea>  
+					<textarea rows="1" cols="10" id ="details" v-model="details" name="details"  class="form-control input-md" placeholder="Details" required></textarea>  
 					</div>
 	  <div class="col-md-1"></div> 
 	</div>
@@ -227,18 +227,7 @@
 	
 	
 	
-	<div class="row">
-	 <div class="col-md-2"></div> 
 	
-	 <div class="col-md-6 inputTypeCenter">
-   <div class="form-group" style="display:inline;">    
- <a href="travelInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Previous Step</a>     
-    
-  <button class="btn btn-info" type="submit" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-      </div>
-    </div>
-	 <div class="col-md-2"></div> 
-	</div>
 	
 	  
 	 
@@ -247,6 +236,15 @@
 	
   </fieldset>
 </div>
+<div class="row">
+	
+	 <div class="col-md-12 inputTypeCenter text-center">
+   <div class="form-group" style="display:inline;">        
+  <button class="btn btn-info" type="submit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+	
+	</div>
 </form>
 
 </div>
@@ -383,10 +381,10 @@
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/travelValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	<script src="js/travelValidation.js"></script>
-	 
+	<script src = "js/vueAppTravelInsurance.js"></script>   
 
 <script>
 

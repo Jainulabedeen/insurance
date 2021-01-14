@@ -5,16 +5,16 @@ const vm = new Vue({
 		
         data() {
 			return{
-			coverDays: '',
-               region: '',
-                coverFor: '',
-                details: '',
+			claimExperience: '',
+               sumInsured: '',
+                use: '',
+                operatorExperience: '',
 				fname:'',
 				lname:'',
 				email:'',
 				mobile:'',
-				nationality:'',
-				destination:'',
+				boatDetails:'',
+				engineDetails:'',
 				info:null
 		 
 		 
@@ -26,18 +26,17 @@ const vm = new Vue({
 	},
 	methods:{
  submitForm(){
-	 //alert("Hello I am travel");
-            axios.post('http://buhaira.herokuapp.com/api/travel',{
-				days:this.coverDays,
-				region:this.region,
-                cover_type:this.coverFor,
-                detail:this.details,
+            axios.post('http://buhaira.herokuapp.com/api/yacht-insurance',{
+				claims:this.claimExperience,
+				sum_insured:this.sumInsured,
+                use:this.use,
+                operator_exp:this.operatorExperience,
 				first_name:this.fname,
 				last_name:this.lname,
 				email:this.email,
 				mobile:this.mobile,
-				nationality:this.nationality,
-				destination:this.destination
+				boat_detail:this.boatDetails,
+				engine_detail:this.engineDetails
 
 			}).then((response) => {
 				if(response.data.length===0){
@@ -67,17 +66,17 @@ const vm = new Vue({
 
 			
         mounted() {
-			 if(localStorage.coverDays) {
-				 this.coverDays = localStorage.coverDays;
+			 if(localStorage.claimExperience) {
+				 this.claimExperience = localStorage.claimExperience;
 				 }
-			if(localStorage.region) {
-				 this.region = localStorage.region;
+			if(localStorage.sumInsured) {
+				 this.sumInsured = localStorage.sumInsured;
 			 }
-			if(localStorage.coverFor) {
-				  this.coverFor = localStorage.coverFor;
+			if(localStorage.use) {
+				  this.use = localStorage.use;
 			  }
-			if(localStorage.details) {
-				  this.details = localStorage.details;
+			if(localStorage.operatorExperience) {
+				  this.operatorExperience = localStorage.operatorExperience;
 			  }
 			if(localStorage.fname) {
 				 this.fname = localStorage.fname;
@@ -91,26 +90,26 @@ const vm = new Vue({
 			  if(localStorage.mobile) {
 				 this.mobile = localStorage.mobile;
 			 } 
-			 if(localStorage.nationality) {
-				 this.nationality = localStorage.nationality;
+			 if(localStorage.boatDetails) {
+				 this.boatDetails = localStorage.boatDetails;
 			 } 
-			 if(localStorage.destination) {
-				 this.destination = localStorage.destination;
+			 if(localStorage.engineDetails) {
+				 this.engineDetails = localStorage.engineDetails;
 			 } 
 			 
         },
 	watch:{
-    coverDays(NewcoverDays) {
-      localStorage.coverDays = NewcoverDays;
+    claimExperience(NewclaimExperience) {
+      localStorage.claimExperience = NewclaimExperience;
     },
-	region(Newregion) {
-      localStorage.region = Newregion;
+	sumInsured(NewsumInsured) {
+      localStorage.sumInsured = NewsumInsured;
     },
-	coverFor(NewcoverFor) {
-      localStorage.coverFor = NewcoverFor;
+	use(Newuse) {
+      localStorage.use = Newuse;
     },
-	details(Newdetails) {
-      localStorage.details = Newdetails;
+	operatorExperience(NewoperatorExperience) {
+      localStorage.operatorExperience = NewoperatorExperience;
     },
 	fname(Newfname) {
       localStorage.fname = Newfname;
@@ -124,11 +123,11 @@ const vm = new Vue({
 	mobile(Newmobile) {
       localStorage.mobile = Newmobile;
     },
-	nationality(Newnationality) {
-      localStorage.nationality = Newnationality;
+	boatDetails(NewboatDetails) {
+      localStorage.boatDetails = NewboatDetails;
     },
-	destination(Newdestination) {
-      localStorage.destination = Newdestination;
+	engineDetails(NewengineDetails) {
+      localStorage.engineDetails = NewengineDetails;
     }
 	
   }	

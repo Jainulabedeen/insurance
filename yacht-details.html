@@ -175,7 +175,7 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post" autocomplete="on" action="">
@@ -185,15 +185,15 @@
 	<div class="col-md-1"></div>
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="fname">First Name *</label>  
-	  <input type="text" id ="fname" name="fname" value="" class="form-control input-md" placeholder="First Name *" required>  
+	<label for="fname">First Name </label>  
+	  <input type="text" id ="fname" name="fname" v-model="fname" class="form-control input-md" placeholder="First Name " required>  
 		  </div>
 		  </div>
 		
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="lname">Last Name *</label>  
-	   <input type="text" id ="lname" name="lname"  class="form-control input-md" placeholder="Last Name *" required>  
+	  <label for="lname">Last Name </label>  
+	   <input type="text" id ="lname" name="lname" v-model="lname" class="form-control input-md" placeholder="Last Name " required>  
 			 </div>
 		 </div>
 		 <div class="col-md-1"></div>
@@ -202,14 +202,14 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" placeholder="Email *" class="form-control input-md" required>
+	<label for="email">Email </label> 
+	<input id="email" name="email" type="email" v-model="email" placeholder="Email " class="form-control input-md" required>
 	</div>
 	</div>
 		 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-      <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+      <label for="mobile">Mobile No.</label> 
+       <input type="text" id ="mobile" name="mobile" v-model="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile " title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
         </div>
 	 </div>
 	
@@ -223,37 +223,35 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="mobile">Boat details</label> 
-	<textarea rows="1" cols="10" id ="boatDetails" name="boatDetails" class="form-control input-md" placeholder="Boat details" required></textarea>  
+	<textarea rows="1" cols="10" id ="boatDetails" name="boatDetails" v-model="boatDetails" class="form-control input-md" placeholder="Boat details" required></textarea>  
        
 	   </div>
 	   </div>
 	  <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="mobile">Engine details</label> 
-	<textarea rows="1" cols="10" id ="engineDetails" name="engineDetails" class="form-control input-md" placeholder="Engine details" required></textarea>  
+	<textarea rows="1" cols="10" id ="engineDetails" name="engineDetails" v-model="engineDetails" class="form-control input-md" placeholder="Engine details" required></textarea>  
        
 	   </div>
 	   </div>
 	<div class="col-md-1"></div>
     </div>
 	
-	<div class="row">
-	
-	 <div class="col-md-1"></div>
-	
-	   <div class="col-md-9 inputTypeCenter">
-	<div class="form-group">
-	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="yachtInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-		
-	</div>
-    </div>
-	<div class="col-md-1"></div>
-    </div>
 </div>	
     <!-- Button -->
 	
+	<div class="row">
+	 <div class="col-md-12 inputTypeCenter text-center">
+	<div class="form-group">
+	<br>
+<a href="yachtInfo.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
+ 
+ <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+ 		
+	</div>
+    </div>
+	
+    </div>
 </div>
 </form>
 
@@ -407,6 +405,7 @@
 	<script src="js/yachtDetailsValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppYachtInsurance.js"></script>  
 	
 	 
 	</body>

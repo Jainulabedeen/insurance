@@ -174,10 +174,10 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
-<form class="form-horizontal" id="form1" method="post" action="">
+<form class="form-horizontal" id="form1" v-on:submit.prevent="submitForm()">
 <div class="col-md-12 animate-box">
 
     <div class="row">
@@ -185,13 +185,13 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="estimatedValue">What is its estimated value?</label>  
-	  <input type="number" id ="estimatedValue" name="estimatedValue" class="form-control input-md" placeholder="What is its estimated value?" required>  
+	  <input type="number" id ="estimatedValue" name="estimatedValue" v-model="estimatedValue" class="form-control input-md" placeholder="What is its estimated value?" required>  
 		  </div>
 		  </div>
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	  <label for="extenstionValue">Racing Risk Extension Value</label>  
-	   <input type="number" id ="extenstionValue" name="extenstionValue" class="form-control input-md" placeholder="Racing Risk Extension Value" required>  
+	   <input type="number" id ="extenstionValue" name="extenstionValue" v-model="extenstionValue" class="form-control input-md" placeholder="Racing Risk Extension Value" required>  
 			 </div>
 		 </div>
 	<div class="col-md-1"></div>	 
@@ -202,7 +202,7 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="duration">Select the duration of your policy</label> 
-	<select id="duration" name="duration" class="form-control input-md" required>
+	<select id="duration" name="duration" v-model="duration" class="form-control input-md" required>
 	<option value="">Select Duration</option>
 	<option value="12 Months">12 Months</option>
 	<option value="13 Months">13 Months</option>
@@ -211,14 +211,7 @@
 	</select>
 	</div>
 	</div>
-	 <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="jetski.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
-		
-	</div>
-    </div>
+	
 	<div class="col-md-1"></div>
 	</div>
 	
@@ -228,7 +221,17 @@
 	
     <!-- Button -->
 
-	
+	<div class="row">
+	 <div class="col-md-12 inputTypeCenter text-center">
+	<div class="form-group">
+	<br>
+ <a href="jetski.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Previous</a>     
+
+  <button type="submit" id="submitbtn" class="btn btn-info">Submit</i></button>     
+		
+	</div>
+    </div>
+	</div>
 </div>
 </form>
 
@@ -379,6 +382,9 @@
 	
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jetskiDetailsValidation.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppJetskiInsurance.js"></script>   
 <script>
 
 </script>

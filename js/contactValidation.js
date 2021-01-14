@@ -9,11 +9,11 @@ $(function() {
       // on the right side
     fname : {
 		required: true,
-		minlength: 3
+		
 		},
-	lname : {
+	mobile : {
 		required: true,
-		minlength: 3
+		
 		},
     email: {
         required: true,

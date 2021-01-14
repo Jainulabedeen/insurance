@@ -174,10 +174,10 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
-<form class="form-horizontal" id="form1" method="post" action="">
+<form class="form-horizontal" id="form1" method="post">
 <div class="col-md-12 animate-box">
 
     <div class="row">
@@ -185,7 +185,7 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="boatType">Select your boat's type</label>  
-	  <select id ="boatType" name="boatType" class="form-control input-md" required>
+	  <select id ="boatType" name="boatType" v-model="boatType" class="form-control input-md" required>
 	  <option value="">Select Boat's Type</option>
 	  <option value="sailboat">Sailboat</option>
 	  <option value="motorboat">Motorboat</option>
@@ -197,7 +197,7 @@
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	 <label for="mobile">Nationality</label> 
-	<select id="nationality" name="nationality" class="form-control input-md" required>
+	<select id="nationality" name="nationality" v-model="nationality" class="form-control input-md" required>
 										<option value="" selected="selected">Choose a Nationality</option>
 										 <option value="Afghan">Afghan</option> 
 										<option value="Albanian">Albanian</option> 
@@ -405,7 +405,7 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="manufacturer">What's the name of the manufacturing company of your boat?</label> 
-	<select class="form-control input-md" id="manufacturer" name="manufacturer" required>
+	<select class="form-control input-md" id="manufacturer" name="manufacturer" v-model="manufacturer" required>
 <option value="">Select Manufacturer</option>
 <option value="000">ABBATE TULLIO</option>
 <option value="171">ACM</option>
@@ -758,7 +758,7 @@
 	 <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="yearOfManufacturer">In which year was it manufactured?</label> 
-<select class="form-control input-md" id="yearOfManufacturer" name="yearOfManufacturer" required>
+<select class="form-control input-md" id="yearOfManufacturer" name="yearOfManufacturer" v-model="yearOfManufacturer" required>
 <option value="">Select Year</option>
 <option value="2021">2021</option>
 <option value="2020">2020</option>
@@ -806,7 +806,7 @@
 	<div class="form-group">
 	<label for="engineType"> What is the engine type?</label>  
 	  
- <select id ="engineType" name="engineType" class="form-control input-md" required>
+ <select id ="engineType" name="engineType" class="form-control input-md" v-model="engineType" required>
 	  <option value="">Select Engine Type</option>
 	  <option value="Inboard Engine">Inboard Engine</option>
 	  <option value="Outboard Engine">Outboard Engine</option>
@@ -817,7 +817,7 @@
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
 	  <label for="lengthBoat">What is the length of your Boat</label>  
-	   <input type="text" id ="lengthBoat" name="lengthBoat" class="form-control input-md" placeholder="What is the length of your Boat" required>  
+	   <input type="text" id ="lengthBoat" name="lengthBoat" v-model="lengthBoat" class="form-control input-md" placeholder="What is the length of your Boat" required>  
 			 </div>
 		 </div>
 	<div class="col-md-1"></div>	 
@@ -827,12 +827,13 @@
 	
     <!-- Button -->
 	<div class="row">
-	<div class="col-md-1"></div>	 
-	 <div class="col-md-9 inputTypeCenter">
+	
+	 <div class="col-md-12 inputTypeCenter text-center">
 	<div class="form-group">
 	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="jetskiInfo.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+ <a href="jetskiInfo.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Previous</a>     
+
+  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
 		
 	</div>
     </div>
@@ -988,9 +989,11 @@
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/popper.min.js"></script>
-	
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jetskiValidation.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppJetskiInsurance.js"></script>   
 <script>
 
 </script>

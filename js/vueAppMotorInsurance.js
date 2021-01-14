@@ -6,9 +6,9 @@ const vm = new Vue({
         data() {return{
 			carMakeSelected: '',
                 carModelSelected: '',
-                monthSelected: '0',
-                daySelected: '0',
-                yearSelected:'0' ,
+                monthSelected: '',
+                daySelected: '',
+                yearSelected:'' ,
                 valueOfCar: '',
                 carTypeSelected: '',
                 brandChecked: '',
@@ -27,7 +27,8 @@ const vm = new Vue({
 				nationality:'',
 				alldata:'',
 				registeredDate:'',
-				dateOfBirth:''
+				dateOfBirth:'',
+				info:''
 		 
 		 
 		 }
@@ -39,14 +40,15 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 	
-			this.registeredDate=this.yearSelected+"-"+this.monthSelected+"-"+this.daySelected;
-			this.dateOfBirth=this.dobyear+"-"+this.dobmonth+"-"+this.dobday;
+			//this.registeredDate=this.yearSelected+"-"+this.monthSelected+"-"+this.daySelected;
+			//alert(registeredDate);
+			//this.dateOfBirth=this.dobyear+"-"+this.dobmonth+"-"+this.dobday;
 			
 			
             axios.post('http://buhaira.herokuapp.com/api/motor',{
 				car_make:this.carMakeSelected,
 				car_model:this.carModelSelected,
-				first_registration:this.registeredDate,
+				first_registration:this.yearSelected+"-"+this.monthSelected+"-"+this.daySelected,
 				car_value:this.valueOfCar,
 				car_type:this.carTypeSelected,
 				car_brand:this.brandChecked,
@@ -58,11 +60,19 @@ const vm = new Vue({
 				first_name:this.fname,
 				last_name:this.lname,
 				email:this.email,
-				dob:this.dateOfBirth,
+				dob:this.dobyear+"-"+this.dobmonth+"-"+this.dobday,
 				mobile:this.mobile,
 				nationality:this.nationality
 
 			}).then((response) => {
+				if(response){
+					window.location.href = 'success.html';
+					this.info=response
+				}
+				else{
+					this.info=response
+					window.location.href = 'error.html';
+				}
                     console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {
@@ -87,17 +97,23 @@ const vm = new Vue({
 				 this.carModelSelected = localStorage.carModelSelected;
 			 }
 	
-			if(localStorage.registeredDate) {
-				  this.registeredDate = localStorage.registeredDate;
+			if(localStorage.yearSelected) {
+				  this.yearSelected = localStorage.yearSelected;
 			  }
+			if(localStorage.monthSelected) {
+				  this.monthSelected = localStorage.monthSelected;
+			  }
+			if(localStorage.daySelected) {
+				  this.daySelected = localStorage.daySelected;
+			  }  
 			if(localStorage.carTypeSelected) {
 				  this.carTypeSelected = localStorage.carTypeSelected;
 			  }
 			if(localStorage.brandChecked) {
 				  this.brandChecked = localStorage.brandChecked;
 			  }
-			if(localStorage.yearofmanufactureSelected) {
-				  this.yearofmanufactureSelected = localStorage.yearofmanufactureSelected;
+			if(localStorage.yearofmanufacture) {
+				  this.yearofmanufacture = localStorage.yearofmanufacture;
 			  }	
 			if(localStorage.claimSelected) {
 				  this.claimSelected = localStorage.claimSelected;
@@ -131,9 +147,15 @@ const vm = new Vue({
 			 if(localStorage.mobile) {
 				 this.mobile = localStorage.mobile;
 			 } 
-			 if(localStorage.dateOfBirth) {
-				 this.dateOfBirth = localStorage.dateOfBirth;
+			 if(localStorage.dobyear) {
+				 this.dobyear = localStorage.dobyear;
+			 }
+			 if(localStorage.dobmonth) {
+				 this.dobmonth = localStorage.dobmonth;
 			 } 
+			 if(localStorage.dobday) {
+				 this.dobday = localStorage.dobday;
+			 }  
 			 if(localStorage.nationality) {
 				 this.nationality = localStorage.nationality;
 			 } 
@@ -178,8 +200,14 @@ const vm = new Vue({
       localStorage.carModelSelected = NewcarModelSelected;
     },
 	
-	 registeredDate(NewregisteredDate) {
-      localStorage.registeredDate = NewregisteredDate;
+	yearSelected(NewyearSelected) {
+      localStorage.yearSelected = NewyearSelected;
+    },
+	monthSelected(NewmonthSelected) {
+      localStorage.monthSelected = NewmonthSelected;
+    },
+	daySelected(NewdaySelected) {
+      localStorage.daySelected = NewdaySelected;
     },
 	 carTypeSelected(NewcarTypeSelected) {
       localStorage.carTypeSelected = NewcarTypeSelected;
@@ -187,8 +215,8 @@ const vm = new Vue({
 	 brandChecked(NewbrandChecked) {
       localStorage.brandChecked = NewbrandChecked;
     },
-	 yearofmanufactureSelected(NewyearofmanufactureSelected) {
-      localStorage.yearofmanufactureSelected = NewyearofmanufactureSelected;
+	 yearofmanufacture(Newyearofmanufacture) {
+      localStorage.yearofmanufacture = Newyearofmanufacture;
     },
 	 claimSelected(NewclaimSelected) {
       localStorage.claimSelected = NewclaimSelected;
@@ -208,8 +236,14 @@ const vm = new Vue({
 	 lname(Newlname) {
       localStorage.lname = Newlname;
     },
-	dateOfBirth(NewdateOfBirth) {
-      localStorage.dateOfBirth = NewdateOfBirth;
+	dobyear(Newdobyear) {
+      localStorage.dobyear = Newdobyear;
+    },
+	dobmonth(Newdobmonth) {
+      localStorage.dobmonth = Newdobmonth;
+    },
+	dobday(Newdobday) {
+      localStorage.dobday = Newdobday;
     },
 	email(Newemail) {
       localStorage.email = Newemail;
