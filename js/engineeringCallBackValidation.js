@@ -9,11 +9,11 @@ $(function() {
       // on the right side
     companyName : {
 		required: true,
-		minlength: 3
+		
 		},
 	cname : {
 		required: true,
-		minlength: 5
+		
 		},
     email: {
         required: true,
@@ -31,7 +31,7 @@ $(function() {
 		maxlength:12
 		
 		},
-	nationality:{
+	country:{
 			required:true,
 		},
 	products:{
@@ -63,7 +63,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	   window.location= "success.html";
+	   //window.location= "success.html";
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

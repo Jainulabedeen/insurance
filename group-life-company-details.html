@@ -175,10 +175,10 @@
 </div>
 
 <br><br><br>
-<div class="colorlib-trainers">
+<div class="colorlib-trainers" id="app">
 <div class="container">
 
-<form class="form-horizontal" id="form1" method="post" autocomplete="on" action="">
+<form class="form-horizontal" id="form1" method="post" v-on:submit.prevent="submitForm()">
 <div class="col-md-12 animate-box" id="app">
 
     <div class="row">
@@ -186,14 +186,14 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="cname">Company Name</label>  
-	  <input type="text" id ="cname" name="cname" value="" class="form-control input-md" placeholder="Company Name " required>  
+	  <input type="text" id ="cname" name="cname" v-model="cname" class="form-control input-md" placeholder="Company Name " required>  
 		  </div>
 		  </div>
 		
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="lname">Brief Details</label>  
-	   <textarea type="text" rows="1" cols="10" id ="details" name="details"  class="form-control input-md" placeholder="Brief Details" required></textarea>  
+	  <label for="details">Brief Details</label>  
+	   <textarea rows="1" cols="10" v-model="details" id ="details" name="details"  class="form-control input-md" placeholder="Brief Details" required></textarea>  
 			 </div>
 		 </div>
 		 <div class="col-md-1"></div>
@@ -203,16 +203,16 @@
 	 
 
 <div class="row">
-	<div class="col-md-1"></div>
 	
-	<div class="col-md-9 inputTypeCenter">
+	<div class="col-md-12 text-center">
 	<div class="form-group"><br>
-  <button type="submit" id="submitbtn" class="btn btn-info" style="float:right;">Next Step &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
- <a href="group-medical-details.html" class="btn btn-info" style="float:left;"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous Step</a>     
+ <a href="property-details.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Previous</a>     
+
+  <button type="submit" id="submitbtn" class="btn btn-info">Submit&nbsp;</button>     
 		
 	</div>
     </div>
-	 <div class="col-md-1"></div>
+	
 	 </div>
 	
  
@@ -226,22 +226,7 @@
 
 
 <br>
-
-
-
-
-
-		
 	
-
-
-
-
-
-		
-	
-
-		
 		<footer id="colorlib-footer">
 		<style>
 		.NewLink:hover{
@@ -368,10 +353,10 @@
 	<script src="js/popper.min.js"></script>
 	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/groupLifeCompanyDetailsValidation.js"></script>
+	<script src="js/propertyCompanyDetailsValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	<script src = "js/vueAppMotor.js"></script>  
+	<script src = "js/vueAppGroupLifeInsurance.js"></script>  
 	
 
 	</body>

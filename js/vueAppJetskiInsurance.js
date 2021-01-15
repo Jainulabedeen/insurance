@@ -25,17 +25,17 @@ const vm = new Vue({
 	},
 	methods:{
  submitForm(){
-	 //alert("Hello I am travel");
-            axios.post('http://buhaira.herokuapp.com/api/travel',{
-				days:this.boatType,
+
+            axios.post('http://buhaira.herokuapp.com/api/jet-ski',{
+				boat_type:this.boatType,
 				nationality:this.nationality,
-                cover_type:this.manufacturer,
-                detail:this.yearOfManufacturer,
-				first_name:this.engineType,
-				last_name:this.lengthBoat,
-				email:this.estimatedValue,
-				mobile:this.extenstionValue,
-				duration:this.duration,
+                mfg_company:this.manufacturer,
+                mfg_year:this.yearOfManufacturer,
+				engine_type:this.engineType,
+				boat_length:this.lengthBoat,
+				estimated_value:this.estimatedValue,
+				risk_value:this.extenstionValue,
+				policy_duration:this.duration,
 				
 
 			}).then((response) => {

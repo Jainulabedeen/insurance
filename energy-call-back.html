@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Jet Ski</title>
+	<title>Energy</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -164,41 +164,72 @@
 				</div>
 			</div>
 		</nav>
-		<br><br><br><br><br><br><br>
-<div class="col-md-12 text-center animate-box">
+		<br><br><br><br><br><br>
 
-		<center>
-		<h3><b>Jet Ski Insurance</b></h3>
-		</center>
 
-</div>
-
-<br><br><br>
 <div class="colorlib-trainers" id="app">
 <div class="container">
+<div class="col-md-12">
+<center>
+		<h3><b>Call me back</b></h3>
+		
+		<p>If you require more information on Insurance products or services, <br>please complete our helpful call back service and one of our customer service representatives will contact you shortly.</p>
+		</center>
+</div>
 
-<form class="form-horizontal" id="form1" method="post">
+<form class="form-horizontal" id="form1" method="post" v-on:submit.prevent="submitForm()">
 <div class="col-md-12 animate-box">
 
     <div class="row">
 	<div class="col-md-1"></div>
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="boatType">Select your boat's type</label>  
-	  <select id ="boatType" name="boatType" v-model="boatType" class="form-control input-md" required>
-	  <option value="">Select Boat's Type</option>
-	  <option value="sailboat">Sailboat</option>
-	  <option value="motorboat">Motorboat</option>
-	  
-	  </select>  
+	<label for="companyName">Company Name </label>  
+	  <input type="text" id ="companyName" name="companyName" v-model="companyName" class="form-control input-md" placeholder="First Name " required>  
 		  </div>
 		  </div>
-	
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	 <label for="mobile">Nationality</label> 
-	<select id="nationality" name="nationality" v-model="nationality" class="form-control input-md" required>
-										<option value="" selected="selected">Choose a Nationality</option>
+	  <label for="cname">Contact Name </label>  
+	   <input type="text" id ="cname" name="cname" v-model="cname" class="form-control input-md" placeholder="Last Name " required>  
+			 </div>
+		 </div>
+		 <div class="col-md-1"></div>
+	</div>
+	<div class="row">
+	<div class="col-md-1"></div>
+			 <div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+      <label for="mobile">Mobile No. </label> 
+       <input type="text" id ="mobile" name="mobile" v-model="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile " title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+        </div>
+	 </div>
+	<div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+	<label for="email">Email </label> 
+	<input id="email" name="email" type="email" v-model="email" placeholder="Email " class="form-control input-md" required>
+	</div>
+	</div>
+	<div class="col-md-1"></div>
+	</div>
+	
+	<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+      <label for="companyType">Company type</label> 
+      <select name="companyType" id="companyType" v-model="companyType" class="form-control input-md" required>
+			<option value="" disabled selected>Select</option>
+			<option>SME (less than 100 employees)</option>
+			<option>Large Corporate (more than 100 employees)</option>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+      <label for="country">Country</label> 
+      <select name="country" id="country" v-model="country" class="form-control input-md" required>
+			<option value="" disabled selected>Choose a Nationality</option>
 										 <option value="Afghan">Afghan</option> 
 										<option value="Albanian">Albanian</option> 
 										<option value="Algerian">Algerian</option> 
@@ -394,460 +425,61 @@
 										<option value="Zambian">Zambian</option> 
 										<option value="Zimbabwean">Zimbabwean</option> 
 										<option value="(other)">(other)</option>
-										  </select>			 
-			 </div>
-		 </div>
-	<div class="col-md-1"></div>	 
-	</div>
+				</select>
+       </div>  
+	   </div>
+	   <div class="col-md-1"></div>
+	 </div>
 	
+
+
+ 
+    <!-- Button -->
 	<div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="manufacturer">What's the name of the manufacturing company of your boat?</label> 
-	<select class="form-control input-md" id="manufacturer" name="manufacturer" v-model="manufacturer" required>
-<option value="">Select Manufacturer</option>
-<option value="000">ABBATE TULLIO</option>
-<option value="171">ACM</option>
-<option value="001">ADRIA</option>
-<option value="172">AIRON MARINE</option>
-<option value="342">AL DAHEN</option>
-<option value="343">AL SHAALI</option>
-<option value="002">ALB SAIL</option>
-<option value="173">ALBIN MARINE</option>
-<option value="003">ALESIA MARINE</option>
-<option value="174">ALLIAURA MARINE</option>
-<option value="004">ALOA MARINE</option>
-<option value="175">ALPA</option>
-<option value="005">ALUBAT</option>
-<option value="176">ALUMARINE</option>
-<option value="006">AMERGLASS</option>
-<option value="177">AMERICAN MARINE</option>
-<option value="007">ANTAGO</option>
-<option value="178">APREAMARE</option>
-<option value="008">AQUADOR</option>
-<option value="179">AQUAMAR</option>
-<option value="009">AQUASTAR</option>
-<option value="010">ARCHAMBAULT</option>
-<option value="180">ARCOA</option>
-<option value="011">ARIMAR</option>
-<option value="181">ARKOS</option>
-<option value="012">ARMOR</option>
-<option value="182">ARVOR</option>
-<option value="013">ASTONDOA</option>
-<option value="183">ASTUSBOATS</option>
-<option value="014">ATLANTIS</option>
-<option value="184">AUBIN</option>
-<option value="015">AUTOMARINE</option>
-<option value="185">AZIMUT</option>
-<option value="016">B2 MARINE</option>
-<option value="186">BAGLIETTO</option>
-<option value="017">BAHA CRUISER</option>
-<option value="187">BAIA</option>
-<option value="018">BALT YACHT</option>
-<option value="188">BALTIC YACHTS</option>
-<option value="019">BARBERIS</option>
-<option value="189">BARBICAN</option>
-<option value="020">BAVARIA</option>
-<option value="190">BAYLINER</option>
-<option value="021">BEDINI</option>
-<option value="191">BELLIURE</option>
-<option value="022">BENETEAU</option>
-<option value="192">BENETTI</option>
-<option value="023">BERTHON</option>
-<option value="193">BERTRAM</option>
-<option value="024">BIMAX</option>
-<option value="194">BIOT</option>
-<option value="025">BIRCHWOOD</option>
-<option value="195">BOIS AUX MOINES</option>
-<option value="026">BOMBARD</option>
-<option value="196">BOMBARDIER</option>
-<option value="027">BOSTON WHALER</option>
-<option value="197">BOTNIA</option>
-<option value="028">BWA</option>
-<option value="198">C and B</option>
-<option value="029">C and C YACHTS</option>
-<option value="199">CAMPER and NICHOLSON</option>
-<option value="030">CAMPION</option>
-<option value="200">CANADOS</option>
-<option value="031">CANTIERE DI PISA</option>
-<option value="201">CANTIERI DEL CANALE</option>
-<option value="032">CANTIERI DI ANGUILLARA</option>
-<option value="202">CANTIERI DI SARNICO</option>
-<option value="033">CANTIERI NAVALI DI CHIAVA</option>
-<option value="203">CANTIERI NAVALI DI LA SPE</option>
-<option value="034">CAPELLI</option>
-<option value="204">CARNEVALI</option>
-<option value="035">CAROFF</option>
-<option value="205">CARVER YACHTS</option>
-<option value="036">CATALINA YACHTS</option>
-<option value="206">CATANA</option>
-<option value="037">CATARSI</option>
-<option value="207">CBS NAUTICA</option>
-<option value="038">CENTURY</option>
-<option value="208">CHAPARRAL</option>
-<option value="039">CHASSIRON</option>
-<option value="209">CHEOY LEE</option>
-<option value="040">CHIAVARI</option>
-<option value="210">CHRIS CRAFT</option>
-<option value="041">CIGARETTE</option>
-<option value="211">CIM</option>
-<option value="042">CNS SANDRE</option>
-<option value="212">CNSO</option>
-<option value="043">COLVIC CRAFT</option>
-<option value="213">COMAR</option>
-<option value="044">CONTESSA YACHTS</option>
-<option value="214">CONYPLEX</option>
-<option value="045">CORONET</option>
-<option value="215">COTE BASQUE MARINE</option>
-<option value="046">CRANCHI</option>
-<option value="216">CRESCENT</option>
-<option value="047">CROWNLINE</option>
-<option value="217">CRUISER YACHTS</option>
-<option value="048">CTI</option>
-<option value="218">CUSTOM</option>
-<option value="049">DALLA PIETA</option>
-<option value="219">DE CESARI</option>
-<option value="050">DE VRIES</option>
-<option value="220">DEHLER</option>
-<option value="051">DEL PARDO</option>
-<option value="221">DELLA PASQUA</option>
-<option value="052">DELTA MARINE</option>
-<option value="222">DOQUEVE</option>
-<option value="053">DORAL</option>
-<option value="223">DRACO</option>
-<option value="054">DUFOUR YACHTS</option>
-<option value="224">EDEL</option>
-<option value="055">EDGE WATER</option>
-<option value="225">EGB HARBOR NEW JERSEY</option>
-<option value="056">EGEMAR</option>
-<option value="226">EIDER MARINE</option>
-<option value="057">ELAN</option>
-<option value="227">ELEGANCE</option>
-<option value="058">ETAP YACHTING</option>
-<option value="228">EUROMARINE</option>
-<option value="059">FAETON</option>
-<option value="229">FAIRLINE</option>
-<option value="060">FALCON</option>
-<option value="230">FARR YACHT DESIGN</option>
-<option value="061">FERRETTI CRAFT</option>
-<option value="231">FIART MARE</option>
-<option value="062">FIREBIRD</option>
-<option value="232">FISHER</option>
-<option value="063">FISKARS</option>
-<option value="233">FJORD</option>
-<option value="064">FLASH BOAT</option>
-<option value="234">FLETCHER</option>
-<option value="065">FORA MARINE</option>
-<option value="235">FORMOSA</option>
-<option value="066">FORMULA</option>
-<option value="236">FOUNTAINE PAJOT</option>
-<option value="067">FOUR WINNS</option>
-<option value="237">FRANCHINI</option>
-<option value="068">FRANCK ROY</option>
-<option value="238">FREEMAN</option>
-<option value="069">FRIENDSHIP HOLLAND</option>
-<option value="239">FURIA</option>
-<option value="070">GALLART</option>
-<option value="240">GALTAROSSA</option>
-<option value="071">GARCIA</option>
-<option value="241">GARIN</option>
-<option value="072">GIB SEA</option>
-<option value="242">GIBERT MARINE</option>
-<option value="073">GIORGI</option>
-<option value="243">GL COMPOSITES</option>
-<option value="074">GLASTRON</option>
-<option value="244">GO CATAMARAN</option>
-<option value="075">GOBBI</option>
-<option value="245">GOUTERON</option>
-<option value="344">GULF CRAFT</option>
-<option value="076">GULFSTAR YACHTS</option>
-<option value="246">GUY BONNET</option>
-<option value="077">GUY COUACH</option>
-<option value="247">GUY MARINE</option>
-<option value="078">HALLBERG RASSY</option>
-<option value="248">HALMATIC</option>
-<option value="079">HANSE YACHTS</option>
-<option value="249">HARDY MARINE</option>
-<option value="080">HATTERAS</option>
-<option value="250">HERSHINE MARINE</option>
-<option value="081">HUNTER</option>
-<option value="251">HYDRA SPORT</option>
-<option value="082">ILVER</option>
-<option value="252">INERGA</option>
-<option value="083">INNOVAZIONE E PROGETTI</option>
-<option value="253">INTERMARE</option>
-<option value="084">INVADER</option>
-<option value="254">IRWIN</option>
-<option value="085">ISLAND GYPSY</option>
-<option value="255">ITAMA</option>
-<option value="086">J BOATS</option>
-<option value="256">J COMPOSITE</option>
-<option value="087">J EUROPE</option>
-<option value="257">JEANNEAU</option>
-<option value="088">JEANTOT MARINE</option>
-<option value="258">JOKER BOAT</option>
-<option value="089">JOUBERT NIVELT</option>
-<option value="259">JOUET</option>
-<option value="090">JULLIEN</option>
-<option value="260">KARNIC</option>
-<option value="091">KELT</option>
-<option value="261">KETC</option>
-<option value="092">KIRIE</option>
-<option value="262">KOOPMANS</option>
-<option value="093">LABBE</option>
-<option value="263">LANGEVIN</option>
-<option value="094">LAPEYRE</option>
-<option value="264">LARSON</option>
-<option value="095">LAVER</option>
-<option value="265">LE GUEN HEMIDY</option>
-<option value="096">LEGEND</option>
-<option value="266">LEISURE</option>
-<option value="097">LEMA</option>
-<option value="267">LINSSEN YACHTS</option>
-<option value="098">LOMAC</option>
-<option value="268">LOMBARD</option>
-<option value="099">LUHRS</option>
-<option value="269">MAC GREGOR</option>
-<option value="100">MAGNUM</option>
-<option value="270">MAINSHIP TRAWLERS</option>
-<option value="101">MAIORA</option>
-<option value="271">MAKO</option>
-<option value="102">MALLARD</option>
-<option value="272">MANO MARINE</option>
-<option value="103">MARCO BOATS</option>
-<option value="273">MARINE PROJECT</option>
-<option value="104">MARINE SERVICE</option>
-<option value="274">MARINELLO</option>
-<option value="105">MARINER</option>
-<option value="275">MAXI YACHTS</option>
-<option value="106">MAXUM</option>
-<option value="276">MAYLAND</option>
-<option value="107">MENORQUIN YACHTS</option>
-<option value="277">MERY NAUTIC</option>
-<option value="108">METALU</option>
-<option value="278">MIMI</option>
-<option value="109">MOCHI CRAFT</option>
-<option value="279">MOLINARI</option>
-<option value="110">MONDOMARINE</option>
-<option value="280">MONTEREY</option>
-<option value="111">MOODY</option>
-<option value="281">MORGAN</option>
-<option value="112">MULTICAP CARAIBES</option>
-<option value="282">MYABCA</option>
-<option value="113">NAUTIC SAINTONGE</option>
-<option value="283">NAUTITECH</option>
-<option value="114">NAUTOR</option>
-<option value="284">NELSON</option>
-<option value="115">NEPTUNE</option>
-<option value="285">NIMBUS</option>
-<option value="116">NORDCANTIERI</option>
-<option value="286">NORDSHIP YACHTS</option>
-<option value="117">NORTHSHORE YACHTS</option>
-<option value="287">NORTHWIND</option>
-<option value="118">OBRADOR MAJORQUE</option>
-<option value="288">OCEAN ALEXANDER</option>
-<option value="119">OCQUETEAU</option>
-<option value="289">OFF COURSE</option>
-<option value="341">Other</option>
-<option value="120">OUTREMER</option>
-<option value="290">OYSTER MARINE</option>
-<option value="121">PARTENAUTICA</option>
-<option value="291">PATRONE</option>
-<option value="122">PERSHING</option>
-<option value="292">PETTER QUALITY YACHTS</option>
-<option value="123">PHILEAS</option>
-<option value="293">PIANTONI</option>
-<option value="124">POLITI</option>
-<option value="294">POSILLIPO</option>
-<option value="125">POWLES</option>
-<option value="295">PRESIDENT</option>
-<option value="126">PRINCESS</option>
-<option value="296">PRO MARINE</option>
-<option value="127">PROMETA</option>
-<option value="297">PROUT</option>
-<option value="128">PROVIN</option>
-<option value="298">PURSUIT</option>
-<option value="129">QUERE</option>
-<option value="299">QUICKSILVER</option>
-<option value="130">RAFFAELLI</option>
-<option value="300">RANCRAFT</option>
-<option value="131">RANGER</option>
-<option value="301">RANIERI</option>
-<option value="132">REGAL</option>
-<option value="302">RHEA MARINE</option>
-<option value="133">RICHARD</option>
-<option value="303">RINKER</option>
-<option value="134">RIO</option>
-<option value="304">RIVA</option>
-<option value="135">RIVAL</option>
-<option value="305">RIVIERA</option>
-<option value="136">RIZZARDI</option>
-<option value="306">ROBALO</option>
-<option value="137">ROCCA</option>
-<option value="307">RODMAN</option>
-<option value="138">RON HOLLAND</option>
-<option value="308">ROSE ISLAND</option>
-<option value="139">RPD</option>
-<option value="309">RYDS</option>
-<option value="140">SABRE</option>
-<option value="310">SACS</option>
-<option value="141">SADLER</option>
-<option value="311">SAGA</option>
-<option value="142">SAN LORENZO</option>
-<option value="312">SANGERMAN</option>
-<option value="143">SAS VEKTOR</option>
-<option value="313">SAVER</option>
-<option value="144">SBPEM</option>
-<option value="314">SCIALLINO</option>
-<option value="145">SEA DOO</option>
-<option value="315">SEA RAY</option>
-<option value="146">SEALINE</option>
-<option value="316">SEAMASTER</option>
-<option value="147">SEAWIND</option>
-<option value="317">SELVA</option>
-<option value="148">SESSA MARINE</option>
-<option value="318">SHETLAND</option>
-<option value="149">SIGMA YACHTS</option>
-<option value="319">SILLINGER</option>
-<option value="150">SILTALA YACHTS</option>
-<option value="320">SILVERTON</option>
-<option value="151">SOFF CO</option>
-<option value="321">SOLARE</option>
-<option value="152">SOLARIS</option>
-<option value="322">SOLEMAR</option>
-<option value="153">SOUTHERN OCEAN SHIPYARD</option>
-<option value="323">SPORTLAKE</option>
-<option value="154">ST BOATS</option>
-<option value="324">STAMPE</option>
-<option value="155">STARFISHER</option>
-<option value="325">STINGRAY</option>
-<option value="156">STOREBRO</option>
-<option value="326">SUNBIRD</option>
-<option value="157">SUNSEEKER</option>
-<option value="327">SWIFT CRAFT</option>
-<option value="158">TARQUIN</option>
-<option value="328">TECNOMARINE</option>
-<option value="159">TIARA</option>
-<option value="329">TORNADO</option>
-<option value="160">TRAPANI</option>
-<option value="330">TRAPPER YACHTS</option>
-<option value="161">TRIDENT MARINE</option>
-<option value="331">TRINTELLA</option>
-<option value="162">TROJAN</option>
-<option value="332">TULLIO ABBATE</option>
-<option value="163">ULTRAMAR</option>
-<option value="164">VALIANT</option>
-<option value="333">VALICELLI</option>
-<option value="165">VAN DE STADT</option>
-<option value="334">VERSILCRAFT</option>
-<option value="166">VINDO</option>
-<option value="335">WAUQUIEZ</option>
-<option value="167">WESTERLY</option>
-<option value="336">WINDY</option>
-<option value="168">WRIGHTON</option>
-<option value="337">X-YACHTS</option>
-<option value="169">YACHTING FRANCE</option>
-<option value="338">YAMAHA</option>
-<option value="170">YARDING YACHT</option>
-<option value="339">ZETA GROUP</option>
-<option value="340">ZODIAC</option>
-</select>
-	</div>
-	</div>
-	 <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-      <label for="yearOfManufacturer">In which year was it manufactured?</label> 
-<select class="form-control input-md" id="yearOfManufacturer" name="yearOfManufacturer" v-model="yearOfManufacturer" required>
-<option value="">Select Year</option>
-<option value="2021">2021</option>
-<option value="2020">2020</option>
-<option value="2019">2019</option>
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-<option value="2011">2011</option>
-<option value="2010">2010</option>
-<option value="2009">2009</option>
-<option value="2008">2008</option>
-<option value="2007">2007</option>
-<option value="2006">2006</option>
-<option value="2005">2005</option>
-<option value="2004">2004</option>
-<option value="2003">2003</option>
-<option value="2002">2002</option>
-<option value="2001">2001</option>
-<option value="2000">2000</option>
-<option value="1999">1999</option>
-<option value="1998">1998</option>
-<option value="1997">1997</option>
-<option value="1996">1996</option>
-<option value="1995">1995</option>
-<option value="1994">1994</option>
-<option value="1993">1993</option>
-<option value="1992">1992</option>
-<option value="1991">1991</option>
-<option value="1990">1990</option>
-<option value="1989">1989</option>
-<option value="1988">1988</option>
-<option value="1987">1987</option>
-</select>       
+      <label for="products">You can select multiple products</label> 
+	  <br>
+	  <div id="location"></div>
+      <select name="products" id="products" v-model="products" class="form-control input-md" required>
+			<option disabled value="">Select products</option>
+			<option value="Aviation Insurance">Aviation Insurance</option>
+				<option value="Business Travel Insurance">Business Travel Insurance</option>
+				<option value="Engineering Insurance">Engineering Insurance</option>
+				<option value="Group Life and Personal Accident Insurance">Group Life and Personal Accident Insurance</option>
+				<option value="Group Medical Insurance">Group Medical Insurance</option>
+				<option value="Home Shield Isurance">Home Shield Isurance</option>
+				<option value="Medical Insurance">Medical Insurance</option>
+				<option value="Miscellaneous">Miscellaneous</option>
+				<option value="Personal Accident Insurance">Personal Accident Insurance</option>
+				<option value="Property Insurance">Property Insurance</option>
+				<option value="Travel Insurance">Travel Insurance</option>
+				<option value="Yacht Insurance">Yacht Insurance</option>
+				<option value="Jetski Insurance">Jetski Insurance</option>
+				<option value="Marine Hull">Marine Hull</option>
+				<option value="Maring Cargo">Maring Cargo</option>
+									
+				</select>
+       </div>  
 	   </div>
-	 </div>
+	
 	<div class="col-md-1"></div>
 	</div>
-	 <div class="row">
-	 <div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="engineType"> What is the engine type?</label>  
-	  
- <select id ="engineType" name="engineType" class="form-control input-md" v-model="engineType" required>
-	  <option value="">Select Engine Type</option>
-	  <option value="Inboard Engine">Inboard Engine</option>
-	  <option value="Outboard Engine">Outboard Engine</option>
-	  
-	  </select>  	  
-		  </div>
-		  </div>
-		<div class="col-md-4 inputTypeCenter">  
-	  <div class="form-group">
-	  <label for="lengthBoat">What is the length of your Boat</label>  
-	   <input type="text" id ="lengthBoat" name="lengthBoat" v-model="lengthBoat" class="form-control input-md" placeholder="What is the length of your Boat" required>  
-			 </div>
-		 </div>
-	<div class="col-md-1"></div>	 
-	</div>
-	 
-	
-	
-    <!-- Button -->
 	<div class="row">
-	
-	 <div class="col-md-12 text-center">
+	  
+	<div class="col-md-12 text-center">
 	<div class="form-group">
 	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
-		
-	</div>
+  <button type="submit" id="submitbtn" class="btn btn-info">Submit</button>  	  
+	 </div>
     </div>
-	<div class="col-md-1"></div>
 	</div>
-	
-	
-	
 </div>
-</form>
-
 </div>
 </div>
 
-
-<br><br><br><br><br><br>
+<br>
 
 
 
@@ -864,7 +496,7 @@
 	
 
 		
-		<footer id="colorlib-footer">
+<footer id="colorlib-footer">
 		<style>
 		.NewLink:hover{
 		color:#2E9AC5;
@@ -960,8 +592,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
-	
 	<!-- jQuery -->
 
 	<script src="js/jquery.min.js"></script>
@@ -987,12 +617,18 @@
 	<script src="js/main.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/popper.min.js"></script>
+	
 	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/jetskiValidation.js"></script>
+	<script src="js/engineeringCallBackValidation.js"></script>
 	<script src = "js/axios.min.js"></script> 
 	<script src = "js/vue.js"></script>  
-	<script src = "js/vueAppJetskiInsurance.js"></script>   
+	<script src = "js/vueAppEnergyInsurance.js"></script>  
 <script>
+$("#products").change(function(){ // bind a function to the change event
+var value = $('#products').val();
+$("#location").append("<p style='width:320px;background-color:#ddd;display:inline-block;margin-left:5px;padding:5px 5px;' class='alert alert-primary alert-dismissable'><button class='close' style='margin-right:25px;' data-dismiss='alert'><i class='fa fa-window-close' style='color:black;' aria-hidden='true'></i></button><span style='color:black;' class='selectedProducts'>"+value+"</span> </p>");
+    });
+
 
 </script>
 	</body>

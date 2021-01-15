@@ -34,7 +34,7 @@ const vm = new Vue({
 				who_am:this.iam,
 				live_in:this.livein,
                 cover_type:this.optionalCover,
-                content:this.contentsaed,
+                contents:this.contentsaed,
 				personal_belonging:this.belongingsaed,
 				building:this.buildingaed,
 				
@@ -45,7 +45,7 @@ const vm = new Vue({
 				address:this.address
 
 			}).then((response) => {
-				alert(this.contentsaed);
+				//alert(this.contentsaed);
 				if(response.data.length===0){
 					window.location.href = 'error.html';
 					

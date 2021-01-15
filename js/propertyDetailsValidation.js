@@ -20,30 +20,12 @@ $(function() {
         // Specify that email should be validated
         // by the built-in "email" rule
         email: true
-		},
-	month : {
-		required: true,
-		
-	
-		},
-	day : {
-		required: true,
-		
-	
-		},
-	year : {
-		required: true,
-		
-	
 		},	
 	mobile : {
 		required: true,
 		mobile:true,
 		maxlength:12
 		
-		},
-		nationality:{
-			required:true,
 		}
 		
       },
@@ -70,7 +52,7 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-      //form.submit();
+      form.submit();
 	    window.location= "property-company-details.html";
     }
   });

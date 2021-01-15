@@ -9,11 +9,11 @@ $(function() {
       // on the right side
     fname : {
 		required: true,
-		minlength: 3
+		
 		},
 	lname : {
 		required: true,
-		minlength: 3
+		
 		},
     email: {
         required: true,
@@ -70,7 +70,7 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-      //form.submit();
+      form.submit();
 	    window.location= "group-life-company-details.html";
     }
   });
