@@ -32,21 +32,21 @@ const vm = new Vue({
 		 formSubmit() {
 				let formData = new FormData();
 				formData.append('file', this.file);
+				formData.append('insured_name', this.insname);
+				formData.append('policy_holder_name', this.policyHolderNmae);
+				formData.append('insured_id', this.insuranceIdNo);
+				formData.append('date_of_treatment', this.dobyear+"-"+this.dobmonth+"-"+this.dobday);
+				formData.append('place_of_treatment', this.placeOfTreat);
+				formData.append('claim_amount', this.claimAmount);
+				formData.append('bank_name', this.bankName);
+				formData.append('branch', this.branch);
+				formData.append('account', this.actNo);
+				formData.append('iban', this.ibnNo);
+				formData.append('mobile', this.mobile);
+				formData.append('email', this.email);
+				formData.append('message', this.message);
 				
-               axios.post('https://buhaira.herokuapp.com/api/medical-reimbursement-claim', {
-				    insured_name:this.insname,
-					policy_holder_name:this.policyHolderNmae,
-					insured_id:this.insuranceIdNo,
-					date_of_treatment:this.dobyear+"-"+this.dobmonth+"-"+this.dobday,
-					place_of_treatment:this.placeOfTreat,
-					claim_amount:this.claimAmount,
-					bank_name:this.bankName,
-					branch:this.branch,
-					account:this.actNo,
-					iban:this.ibnNo,
-					mobile:this.mobile,
-					email:this.email,
-					message:this.message,
+               axios.post('https://buhaira.herokuapp.com/api/medical-reimbursement-claim',formData, {
 					  headers: {
 							'Content-Type': 'multipart/form-data'
 						}

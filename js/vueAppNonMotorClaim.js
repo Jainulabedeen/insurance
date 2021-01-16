@@ -23,14 +23,14 @@ const vm = new Vue({
 		 formSubmit() {
 				let formData = new FormData();
 				formData.append('file', this.file);
-				
-               axios.post('https://buhaira.herokuapp.com/api/non-motor-claim', {
-                    full_name: this.fname,
-					email: this.email,
-					mobile: this.mobile,
-					insurance: this.insurance,
-					policy_no: this.policyno,
-					message: this.message,
+				formData.append('mobile', this.mobile);
+				formData.append('full_name', this.fname);
+				formData.append('email', this.email);
+				formData.append('insurance', this.insurance);
+				formData.append('policy_no', this.policyno);
+				formData.append('message', this.message);
+               axios.post('https://buhaira.herokuapp.com/api/non-motor-claim',formData, {
+                   
 					  headers: {
 							'Content-Type': 'multipart/form-data'
 						}

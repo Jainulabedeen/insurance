@@ -23,14 +23,14 @@ const vm = new Vue({
 		 formSubmit() {
 				let formData = new FormData();
 				formData.append('file', this.file);
+				formData.append('full_name', this.fname);
+				formData.append('email', this.email);
+				formData.append('motor_claim', this.motorClaim);
+				formData.append('policy_no', this.policyno);
+				formData.append('message', this.message);
 				
-               axios.post('https://buhaira.herokuapp.com/api/motor-claim', {
-                    full_name: this.fname,
-					email: this.email,
-					motor_claim: this.motorClaim,
-					policy_no: this.policyno,
+               axios.post('https://buhaira.herokuapp.com/api/motor-claim',formData,{
 					
-					message: this.message,
 					  headers: {
 							'Content-Type': 'multipart/form-data'
 						}
@@ -44,7 +44,9 @@ const vm = new Vue({
             }
 		,
 	 handleFileUpload(){
+		// alert("Hello");
 		this.file = this.$refs.file.files[0];
+		//alert(this.file);
       }	
 
 	
