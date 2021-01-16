@@ -24,6 +24,10 @@ $(function() {
 	enquiryType : {
 		required: true,
 		},
+	complaints : {
+		required: true,
+		},
+	
 	message : {
 		required: true,
 		

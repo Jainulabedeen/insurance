@@ -165,7 +165,7 @@
 		<br><br><br><br><br><br>
 	
 
-		<div class="colorlib-services">
+		<div class="colorlib-services" id="app">
 			<div class="container">
 			<div class="col-md-12">
 				<div class="row">
@@ -173,16 +173,16 @@
 						<h3><b>Non-Motor Claim</b></h3>
 					</div>
 					<div class="col-md-9">
-						<form action="" method="post" id="form1">
+						<form action="" method="post" id="form1" enctype="multipart/form-data" v-on:submit.prevent="formSubmit()">
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="fname">Full Name</label>
-									<input type="text" id="fname" style="" name="fname"  class="form-control" placeholder="Full Name *" required>
+									<input type="text" id="fname" name="fname" v-model="fname"  class="form-control" placeholder="Full Name *" required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="lname">Mobile No.</label>
-									<input type="text" id="mobile" name="mobile" style="" class="form-control" placeholder="Mobile No. *" required>
+									<input type="text" id="mobile" name="mobile" v-model="mobile" class="form-control" placeholder="Mobile No. *" required>
 								</div>
 								
 							</div>
@@ -191,13 +191,13 @@
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="email">Email</label>
-									<input type="text" id="email" name="email" style="" class="form-control" placeholder="Email address" required>
+									<input type="text" id="email" name="email" v-model="email" class="form-control" placeholder="Email address" required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="insurance">Select Insurance</label>
 									
-									<select id="insurance" name="insurance" class="form-control" required>
+									<select id="insurance" name="insurance" v-model="insurance" class="form-control" required>
 									<option value="">Select Insurance</option>
 									<option value="Aviation Insurance">Aviation Insurance</option>
 										<option value="Business Travel Insurance">Business Travel Insurance</option>
@@ -222,13 +222,13 @@
 							<div class="row form-group">
 								<div class="col-md-4">
 									<label for="email">Policy No.</label>
-									<input type="text" id="policyno" name="policyno" style="" class="form-control" placeholder="Policy No." required>
+									<input type="text" id="policyno" name="policyno" v-model="policyno" class="form-control" placeholder="Policy No." required>
 								</div>
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="enquiryType">Choose File</label>
 									
-									<input type="file" id="motorClaimFile" name="motorClaimFile" style="" class="form-control" required>
+									<input type="file" id="file" name="file" ref="file" v-on:change="handleFileUpload()" class="form-control" required>
 								</div>
 							</div>	
 
@@ -236,7 +236,7 @@
 							<div class="row form-group">
 								<div class="col-md-9">
 								<label for="message">Message</label>
-									<textarea name="message" id="message" style="" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
+									<textarea name="message" id="message" v-model="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
 								</div>
 							</div>
 							<div class="form-group">
@@ -404,7 +404,9 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/nonMotorClaimValidation.js"></script>
-
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppNonMotorClaim.js"></script>  
 	</body>
 </html>
 

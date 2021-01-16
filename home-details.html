@@ -212,9 +212,9 @@
 	<div class="form-group">
 	<label for="optionalCover">I'm looking for cover for my</label>
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-	<input id="Contents" name="optionalCover" value="Contents" class="contents" type="checkbox" checked v-model="optionalCover" required >&nbsp;Contents
-	<input id="belongings" name="optionalCover" value="Personal belongings" class="belongings" type="checkbox" v-model="optionalCover">&nbsp;Personal belongings
-	<span class="contentsItem"><input id="Building" name="optionalCover" value="Building" class="buildings"  type="checkbox" v-model="optionalCover">&nbsp;Building</span>
+	<input type="checkbox" id="Contents" name="optionalCover" true-value="Contents" v-model="optionalCover1" checked class="contents" required>&nbsp;Contents
+	<input type="checkbox" id="belongings" name="optionalCover" true-value="Personal belongings" v-model="optionalCover2" class="belongings">&nbsp;Personal belongings
+	<span class="contentsItem"><input type="checkbox" id="Building" name="optionalCover" true-value="Building" v-model="optionalCover3" class="buildings">&nbsp;Building</span>
 	</div>
 	</div>
 	</div>
@@ -420,10 +420,10 @@
 	<script src = "js/homeDetailsValidation.js"></script>  
 	<script src = "js/vueAppHomeInsurance.js"></script>  
 	 <script>
+	 
 $(".contents").change(function(){ // bind a function to the change event
      
 		if(this.checked){
-		//alert("yes");
 		$('.contentsItem').show();
         }
 		else{
@@ -454,7 +454,8 @@ $(".belongings").change(function(){ // bind a function to the change event
 		}
 		
 		
-    });			
+    });
+
 </script>
 	</body>
 </html>

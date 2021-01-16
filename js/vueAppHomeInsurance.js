@@ -7,7 +7,9 @@ const vm = new Vue({
 			return{
 				iam: '',
 				livein: '',
-                optionalCover:[],
+                optionalCover1:'',
+				optionalCover2:'',
+				optionalCover3:'',
                 contentsaed: '',
 				belongingsaed: '',
 				buildingaed: '',
@@ -33,7 +35,7 @@ const vm = new Vue({
             axios.post('http://buhaira.herokuapp.com/api/home-insurance',{
 				who_am:this.iam,
 				live_in:this.livein,
-                cover_type:this.optionalCover,
+                cover_type:JSON.stringify(this.optionalCover1+","+this.optionalCover2+","+this.optionalCover3),
                 contents:this.contentsaed,
 				personal_belonging:this.belongingsaed,
 				building:this.buildingaed,
@@ -45,17 +47,17 @@ const vm = new Vue({
 				address:this.address
 
 			}).then((response) => {
-				//alert(this.contentsaed);
-				if(response.data.length===0){
-					window.location.href = 'error.html';
-					
+				
+				if(response){
+					window.location.href = 'success.html';
 					this.info=response
 				}
 				else{
 					this.info=response
-					window.location.href = 'success.html';
+					window.location.href = 'error.html';
 				}
                     console.log('SUCCESS!! '+response);
+				
 				
                  }).catch((error) => {
                        console.log('FAILURE!! '+error);
@@ -79,9 +81,15 @@ const vm = new Vue({
 			if(localStorage.livein) {
 				 this.livein = localStorage.livein;
 			 }
-			if(localStorage.optionalCover) {
-				  this.optionalCover = localStorage.optionalCover;
+			if(localStorage.optionalCover1) {
+				  this.optionalCover1 = localStorage.optionalCover1;
 			  }
+			if(localStorage.optionalCover2) {
+				  this.optionalCover2 = localStorage.optionalCover2;
+			  }
+			if(localStorage.optionalCover3) {
+				  this.optionalCover3 = localStorage.optionalCover3;
+			  }  
 			if(localStorage.contentsaed) {
 				  this.contentsaed = localStorage.contentsaed;
 			  }
@@ -116,8 +124,14 @@ const vm = new Vue({
 	livein(Newlivein) {
       localStorage.livein = Newlivein;
     },
-	optionalCover(NewoptionalCover) {
-      localStorage.optionalCover = NewoptionalCover;
+	optionalCover1(NewoptionalCover1) {
+      localStorage.optionalCover1 = NewoptionalCover1;
+    },
+	optionalCover2(NewoptionalCover2) {
+      localStorage.optionalCover2 = NewoptionalCover2;
+    },
+	optionalCover3(NewoptionalCover3) {
+      localStorage.optionalCover3 = NewoptionalCover3;
     },
 	contentsaed(Newcontentsaed) {
       localStorage.contentsaed = Newcontentsaed;

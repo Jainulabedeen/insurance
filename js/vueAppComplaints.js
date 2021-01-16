@@ -8,7 +8,7 @@ const vm = new Vue({
 				fname:'',
 				email:'',
 				mobile:'',
-				enquiryType:'',
+				complaints:'',
 				message:'',
 				info:''
 		 
@@ -22,11 +22,11 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-            axios.post('http://buhaira.herokuapp.com/api/inquiry',{
+            axios.post('http://buhaira.herokuapp.com/api/complain',{
 				full_name:this.fname,
 				mobile:this.mobile,
-				inquiry_type:this.enquiryType,
-				message:this.message,
+				subject:this.complaints,
+				detail:this.message,
 				email:this.email
 				
 
@@ -58,8 +58,8 @@ const vm = new Vue({
 			if(localStorage.fname) {
 				 this.fname = localStorage.fname;
 			 } 
-			 if(localStorage.enquiryType) {
-				 this.enquiryType = localStorage.enquiryType;
+			 if(localStorage.complaints) {
+				 this.complaints = localStorage.complaints;
 			 } 
 			 if(localStorage.email) {
 				 this.email = localStorage.email;
@@ -79,8 +79,8 @@ const vm = new Vue({
 	 fname(Newfname) {
       localStorage.fname = Newfname;
     },
-	 enquiryType(NewenquiryType) {
-      localStorage.enquiryType = NewenquiryType;
+	 complaints(Newcomplaints) {
+      localStorage.complaints = Newcomplaints;
     },
 	message(Newmessage) {
       localStorage.message = Newmessage;

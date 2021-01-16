@@ -6,9 +6,9 @@ const vm = new Vue({
         data() {
             return {
 				fname:'',
-				motorClaim:'',
-				email:'',
 				mobile:'',
+				email:'',
+				insurance:'',
 				policyno:'',
 				message:'',
 				file: ''
@@ -24,12 +24,12 @@ const vm = new Vue({
 				let formData = new FormData();
 				formData.append('file', this.file);
 				
-               axios.post('http://buhaira.herokuapp.com/api/motor-claim', {
+               axios.post('http://buhaira.herokuapp.com/api/non-motor-claim', {
                     full_name: this.fname,
 					email: this.email,
-					motor_claim: this.motorClaim,
+					mobile: this.mobile,
+					insurance: this.insurance,
 					policy_no: this.policyno,
-					
 					message: this.message,
 					  headers: {
 							'Content-Type': 'multipart/form-data'
@@ -60,8 +60,8 @@ const vm = new Vue({
 			 if(localStorage.email) {
 				 this.email = localStorage.email;
 			 } 
-			 if(localStorage.motorClaim) {
-				 this.motorClaim = localStorage.motorClaim;
+			 if(localStorage.insurance) {
+				 this.insurance = localStorage.insurance;
 			 } 	
 			if(localStorage.policyno) {
 				 this.policyno = localStorage.policyno;
@@ -83,8 +83,8 @@ const vm = new Vue({
 	email(Newemail) {
       localStorage.email = Newemail;
     },
-	 motorClaim(NewmotorClaim) {
-      localStorage.motorClaim = NewmotorClaim;
+	 insurance(Newinsurance) {
+      localStorage.insurance = Newinsurance;
     },
 	policyno(Newpolicyno) {
       localStorage.policyno = Newpolicyno;
