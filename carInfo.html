@@ -183,20 +183,15 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="car">Car Make</label>  
-       <select name="car" id="car" class="form-control input-md" v-model="carMakeSelected" onchange="carModelShow(this.value)" required>
-	   <option disabled value="">Select Car Make</option>
-			</select>
+	<label for="car">Car Make</label> 
+	<input type="text" name="car" id="car" class="form-control input-md" placeholder="Car Make" v-model="carMakeSelected" required>	  
        </div>
 	  </div>
 	 
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="carmodel">Car Model</label>  
-       <select name="carmodel" id="carmodel"  v-model="carModelSelected" class="form-control input-md" required>
-			 <option disabled value="">Select Car Model</option>
-			
-			</select>
+<input type="text" name="carmodel" id="carmodel" placeholder="Car Model" v-model="carModelSelected" class="form-control input-md" required>	  
        </div>
 	  </div>
 	<div class="col-md-1"></div>
@@ -683,36 +678,6 @@
 	<script src = "js/carWithModalName.json"></script>  
 	 
 
-<script>
-var obj = JSON.parse(data);
-var carMakeData=[...new Set(obj.map(({UAM_MAKE_DESC})=>UAM_MAKE_DESC))];
-document.getElementById("car").innerHTML = "<option></option>";
-var carOptions = "";
-for(i=0;i<carMakeData.length;i++){
-//document.write(carMake[j]+"<br>");
-carOptions+="<option value='"+carMakeData[i]+"'>"+carMakeData[i]+"</option>";
-}
-document.getElementById("car").innerHTML = carOptions;
-
-function carModelShow(value) {
-//alert(value);
-var carModelOptions = "";
-
-if(value.length==0) {
-document.getElementById("carmodel").innerHTML = "<option></option>";
-}
-else {
-for(i=0;i<obj.length;i++){
-if(obj[i].UAM_MAKE_DESC==value){
-//document.write(obj[i].UAM_MODEL_DESC+"<br>");
-carModelOptions+="<option>"+obj[i].UAM_MODEL_DESC+"</option>";
-}
-}
-document.getElementById("carmodel").innerHTML = carModelOptions;
-
-}
-}
-</script>
 	</body>
 </html>
 
