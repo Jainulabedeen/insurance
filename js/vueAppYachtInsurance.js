@@ -26,7 +26,7 @@ const vm = new Vue({
 	},
 	methods:{
  submitForm(){
-            axios.post('http://buhaira.herokuapp.com/api/yacht-insurance',{
+            axios.post('https://buhaira.herokuapp.com/api/yacht-insurance',{
 				claims:this.claimExperience,
 				sum_insured:this.sumInsured,
                 use:this.use,

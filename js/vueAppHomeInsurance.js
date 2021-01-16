@@ -32,7 +32,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-            axios.post('http://buhaira.herokuapp.com/api/home-insurance',{
+            axios.post('https://buhaira.herokuapp.com/api/home-insurance',{
 				who_am:this.iam,
 				live_in:this.livein,
                 cover_type:JSON.stringify(this.optionalCover1+","+this.optionalCover2+","+this.optionalCover3),

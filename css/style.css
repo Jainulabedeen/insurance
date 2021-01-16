@@ -1753,15 +1753,17 @@ input[type="text"] {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 8px 20px; }
+  padding: 8px 20px; 
+  border-color:white;
+  }
   .btn.btn-md {
     padding: 8px 20px !important; }
   .btn.btn-lg {
     padding: 18px 36px !important; }
   .btn:hover, .btn:active, .btn:focus {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline: none !important; }
+    -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+  box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+	}
 
 .btn-primary {
   background: #302a39;
@@ -1809,6 +1811,8 @@ input[type="text"] {
 	 background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
 border-radius:5px;
+ -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+  box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
 }	
 	}
   .btn-info.btn-outline {

@@ -22,7 +22,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-            axios.post('http://buhaira.herokuapp.com/api/complain',{
+            axios.post('https://buhaira.herokuapp.com/api/complain',{
 				full_name:this.fname,
 				mobile:this.mobile,
 				subject:this.complaints,

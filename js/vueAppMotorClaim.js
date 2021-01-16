@@ -24,7 +24,7 @@ const vm = new Vue({
 				let formData = new FormData();
 				formData.append('file', this.file);
 				
-               axios.post('http://buhaira.herokuapp.com/api/motor-claim', {
+               axios.post('https://buhaira.herokuapp.com/api/motor-claim', {
                     full_name: this.fname,
 					email: this.email,
 					motor_claim: this.motorClaim,

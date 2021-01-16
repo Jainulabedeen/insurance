@@ -33,7 +33,7 @@ const vm = new Vue({
 				let formData = new FormData();
 				formData.append('file', this.file);
 				
-               axios.post('http://buhaira.herokuapp.com/api/medical-reimbursement-claim', {
+               axios.post('https://buhaira.herokuapp.com/api/medical-reimbursement-claim', {
 				    insured_name:this.insname,
 					policy_holder_name:this.policyHolderNmae,
 					insured_id:this.insuranceIdNo,

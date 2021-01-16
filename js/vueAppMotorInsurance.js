@@ -45,7 +45,7 @@ const vm = new Vue({
 			//this.dateOfBirth=this.dobyear+"-"+this.dobmonth+"-"+this.dobday;
 			
 			
-            axios.post('http://buhaira.herokuapp.com/api/motor',{
+            axios.post('https://buhaira.herokuapp.com/api/motor',{
 				car_make:this.carMakeSelected,
 				car_model:this.carModelSelected,
 				first_registration:this.yearSelected+"-"+this.monthSelected+"-"+this.daySelected,

@@ -22,7 +22,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-            axios.post('http://buhaira.herokuapp.com/api/inquiry',{
+            axios.post('https://buhaira.herokuapp.com/api/inquiry',{
 				full_name:this.fname,
 				mobile:this.mobile,
 				inquiry_type:this.enquiryType,

@@ -26,7 +26,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-            axios.post('http://buhaira.herokuapp.com/api/jet-ski',{
+            axios.post('https://buhaira.herokuapp.com/api/jet-ski',{
 				boat_type:this.boatType,
 				nationality:this.nationality,
                 mfg_company:this.manufacturer,

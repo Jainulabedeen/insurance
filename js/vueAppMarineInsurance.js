@@ -22,7 +22,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 
-	     axios.post('http://buhaira.herokuapp.com/api/marine',{
+	     axios.post('https://buhaira.herokuapp.com/api/marine',{
 				first_name:this.fname,
 				last_name:this.lname,
 				email:this.email,

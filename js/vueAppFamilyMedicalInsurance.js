@@ -30,7 +30,7 @@ const vm = new Vue({
 	},
 	methods:{
  submitForm(){
-            axios.post('http://buhaira.herokuapp.com/api/family-medical',{
+            axios.post('https://buhaira.herokuapp.com/api/family-medical',{
 				cover_type:this.coverType,
 				marital_status:this.maritalStatus,
 				visa_emirate:this.visa,

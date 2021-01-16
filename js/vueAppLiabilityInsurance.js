@@ -33,7 +33,7 @@ for (var i = 0; i < productData.length; i++) {
  //console.log(this.spanData[i]);
 }
 			
-            axios.post('http://buhaira.herokuapp.com/api/liability',{
+            axios.post('https://buhaira.herokuapp.com/api/liability',{
 				company_name:this.companyName,
 				contact_name:this.cname,
 				email:this.email,

@@ -27,7 +27,7 @@ const vm = new Vue({
 	methods:{
  submitForm(){
 	 //alert("Hello I am travel");
-            axios.post('http://buhaira.herokuapp.com/api/travel',{
+            axios.post('https://buhaira.herokuapp.com/api/travel',{
 				days:this.coverDays,
 				region:this.region,
                 cover_type:this.coverFor,
