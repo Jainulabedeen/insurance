@@ -6,7 +6,7 @@ const vm = new Vue({
         data() {return{
 				carMakeSelected: '',
                 carModelSelected: '',
-                dateSelected: 'yyyy-mm-dd',
+                dateSelected: '',
                 valueOfCar: '',
                 carTypeSelected: '',
                 brandChecked: 'no',
@@ -18,7 +18,7 @@ const vm = new Vue({
 				fname:'',
 				lname:'',
 				email:'',
-				dobSelected:'yyyy-mm-dd',
+				dobSelected:'',
 				mobile:'',
 				nationality:'',
 				alldata:'',

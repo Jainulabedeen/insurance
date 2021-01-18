@@ -8,7 +8,7 @@ const vm = new Vue({
 				coverType: '',
                 maritalStatus: '',
                 visa: '',
-				dobSelected:'yyyy-mm-dd',
+				dobSelected:'',
 				gender: '',
 				location:'',
                 details:'' ,

@@ -8,7 +8,7 @@ const vm = new Vue({
 				insname:'',
 				policyHolderNmae:'',
 				insuranceIdNo:'',
-				treatDateSelected:'yyyy-mm-dd',
+				treatDateSelected:'',
 				placeOfTreat:'',
 				claimAmount:'',
 				bankName:'',
