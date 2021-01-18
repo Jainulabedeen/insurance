@@ -20,21 +20,6 @@ $(function() {
         // Specify that email should be validated
         // by the built-in "email" rule
         email: true
-		},
-	month : {
-		required: true,
-		
-	
-		},
-	day : {
-		required: true,
-		
-	
-		},
-	year : {
-		required: true,
-		
-	
 		},	
 	mobile : {
 		required: true,

@@ -19,21 +19,11 @@ $(function() {
         required: true,
 
 		},
-	month : {
+	dp1 : {
 		required: true,
 		
 	
 		},
-	day : {
-		required: true,
-		
-	
-		},
-	year : {
-		required: true,
-		
-	
-		},	
 	mobile : {
 		required: true,
 		mobile:true,

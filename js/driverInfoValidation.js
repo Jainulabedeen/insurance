@@ -21,21 +21,11 @@ $(function() {
         // by the built-in "email" rule
         email: true
 		},
-	month : {
+	dp1 : {
 		required: true,
 		
 	
 		},
-	day : {
-		required: true,
-		
-	
-		},
-	year : {
-		required: true,
-		
-	
-		},	
 	mobile : {
 		required: true,
 		mobile:true,

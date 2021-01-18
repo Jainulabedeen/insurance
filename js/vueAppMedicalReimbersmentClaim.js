@@ -8,9 +8,7 @@ const vm = new Vue({
 				insname:'',
 				policyHolderNmae:'',
 				insuranceIdNo:'',
-				dobmonth:'0',
-				dobday:'0',
-				dobyear:'0',
+				treatDateSelected:'yyyy-mm-dd',
 				placeOfTreat:'',
 				claimAmount:'',
 				bankName:'',
@@ -20,7 +18,7 @@ const vm = new Vue({
 				mobile:'',
 				email:'',
 				message:'',
-				file: ''
+				files: ''
 				
             };
         },
@@ -31,11 +29,15 @@ const vm = new Vue({
 
 		 formSubmit() {
 				let formData = new FormData();
-				formData.append('file', this.file);
+				for( var i = 0; i < this.files.length; i++ ){
+					let file = this.files[i];
+					formData.append('file[' + i + ']', file);
+				}
+				//formData.append('file', this.file);
 				formData.append('insured_name', this.insname);
 				formData.append('policy_holder_name', this.policyHolderNmae);
 				formData.append('insured_id', this.insuranceIdNo);
-				formData.append('date_of_treatment', this.dobyear+"-"+this.dobmonth+"-"+this.dobday);
+				formData.append('date_of_treatment', this.treatDateSelected);
 				formData.append('place_of_treatment', this.placeOfTreat);
 				formData.append('claim_amount', this.claimAmount);
 				formData.append('bank_name', this.bankName);
@@ -52,7 +54,14 @@ const vm = new Vue({
 						}
 					
                 }).then(function(response){
-					alert("Your Claim Submitted Successfully!");
+					if(response){
+					window.location.href = 'motor-claim-success.html';
+					this.info=response
+					}
+				else{
+					this.info=response
+					window.location.href = 'error.html';
+					}
                     console.log('SUCCESS!! '+response);
                 }).catch(function(error) {
                      console.log('FAILURE!! '+error);
@@ -60,7 +69,7 @@ const vm = new Vue({
             }
 		,
 	 handleFileUpload(){
-		this.file = this.$refs.file.files[0];
+		this.files = this.$refs.files.files;
       }	
 
 	
@@ -86,15 +95,10 @@ const vm = new Vue({
 			if(localStorage.message) {
 				  this.message = localStorage.message;
 			  }
-			if(localStorage.dobyear) {
-				 this.dobyear = localStorage.dobyear;
+			if(localStorage.treatDateSelected) {
+				 this.treatDateSelected = localStorage.treatDateSelected;
 			 }
-			if(localStorage.dobmonth) {
-				 this.dobmonth = localStorage.dobmonth;
-			 } 
-			if(localStorage.dobday) {
-				 this.dobday = localStorage.dobday;
-			 }    
+			   
 		   if(localStorage.placeOfTreat) {
 				 this.placeOfTreat = localStorage.placeOfTreat;
 			 }    
@@ -134,14 +138,8 @@ const vm = new Vue({
 	message(Newmessage) {
       localStorage.message = Newmessage;
     },
-	dobyear(Newdobyear) {
-      localStorage.dobyear = Newdobyear;
-    },
-	dobmonth(Newdobmonth) {
-      localStorage.dobmonth = Newdobmonth;
-    },
-	dobday(Newdobday) {
-      localStorage.dobday = Newdobday;
+	treatDateSelected(NewtreatDateSelected) {
+      localStorage.treatDateSelected = NewtreatDateSelected;
     },
 	placeOfTreat(NewplaceOfTreat) {
       localStorage.placeOfTreat = NewplaceOfTreat;

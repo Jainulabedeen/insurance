@@ -31,12 +31,17 @@ const vm = new Vue({
 				
 
 			}).then((response) => {
+				
 				if(response){
-				alert("Thank You for Contact Us");
+					window.location.href = 'contact-us-success.html';
+					
 				}
 				else{
 					
+					window.location.href = 'error.html';
 				}
+                    console.log('SUCCESS!! '+response);
+				
                     console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {

@@ -3,17 +3,18 @@
 const vm = new Vue({
         el: '#app',
 		
-        data() {return{
+        data() {
+			return{
 				coverType: '',
                 maritalStatus: '',
                 visa: '',
-				dobmonth:'0',
-				dobday:'0',
-				dobyear:'0',
-                gender: '',
+				dobSelected:'yyyy-mm-dd',
+				gender: '',
 				location:'',
                 details:'' ,
-                optionalCover:[],
+                foptionalCover1:'',
+				foptionalCover2:'',
+				foptionalCover3:'',
 				fname:'',
 				lname:'',
 				email:'',
@@ -34,11 +35,11 @@ const vm = new Vue({
 				cover_type:this.coverType,
 				marital_status:this.maritalStatus,
 				visa_emirate:this.visa,
-				dob:this.dobyear+"-"+this.dobmonth+"-"+this.dobday,
+				dob:this.dobSelected,
 				gender:this.gender,
 				prefer_hospital:this.location,
 				detail:this.details,
-				optional_cover:this.optionalCover,
+				optional_cover:JSON.stringify(this.foptionalCover1+","+this.foptionalCover2+","+this.foptionalCover3),
 				first_name:this.fname,
 				last_name:this.lname,
 				email:this.email,
@@ -79,15 +80,9 @@ const vm = new Vue({
 			if(localStorage.visa) {
 				 this.visa = localStorage.visa;
 			}
-			 if(localStorage.dobyear) {
-				 this.dobyear = localStorage.dobyear;
+			 if(localStorage.dobSelected) {
+				 this.dobSelected = localStorage.dobSelected;
 			 }
-			 if(localStorage.dobmonth) {
-				 this.dobmonth = localStorage.dobmonth;
-			 } 
-			 if(localStorage.dobday) {
-				 this.dobday = localStorage.dobday;
-			 }  
 	
 			if(localStorage.gender) {
 				  this.gender = localStorage.gender;
@@ -98,9 +93,15 @@ const vm = new Vue({
 			if(localStorage.details) {
 				  this.details = localStorage.details;
 			  }  
-			if(localStorage.optionalCover) {
-				  this.optionalCover = localStorage.optionalCover;
+			if(localStorage.foptionalCover1) {
+				  this.foptionalCover1 = localStorage.foptionalCover1;
 			  }
+			if(localStorage.optionalCover2) {
+				  this.foptionalCover2 = localStorage.foptionalCover2;
+			  }
+			if(localStorage.optionalCover3) {
+				  this.foptionalCover3 = localStorage.foptionalCover3;
+			  }  
 
 			if(localStorage.fname) {
 				 this.fname = localStorage.fname;
@@ -132,14 +133,8 @@ const vm = new Vue({
 	visa(Newvisa) {
       localStorage.visa = Newvisa;
     },
-	dobyear(Newdobyear) {
-      localStorage.dobyear = Newdobyear;
-    },
-	dobmonth(Newdobmonth) {
-      localStorage.dobmonth = Newdobmonth;
-    },
-	dobday(Newdobday) {
-      localStorage.dobday = Newdobday;
+	dobSelected(NewdobSelected) {
+      localStorage.dobSelected = NewdobSelected;
     },
 	gender(Newgender) {
       localStorage.gender = Newgender;
@@ -150,8 +145,14 @@ const vm = new Vue({
 	details(Newdetails) {
       localStorage.details = Newdetails;
     },
-	optionalCover(NewoptionalCover) {
-      localStorage.optionalCover = NewoptionalCover;
+	foptionalCover1(NewfoptionalCover1) {
+      localStorage.foptionalCover1 = NewfoptionalCover1;
+    },
+	foptionalCover2(NewfoptionalCover2) {
+      localStorage.foptionalCover2 = NewfoptionalCover2;
+    },
+	foptionalCover3(NewfoptionalCover3) {
+      localStorage.foptionalCover3 = NewfoptionalCover3;
     },
 	 fname(Newfname) {
       localStorage.fname = Newfname;

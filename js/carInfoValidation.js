@@ -15,17 +15,10 @@ $(function() {
 	  claim:"required",
 	  carlicense:"required",
 	  valueOfCar:"required",
-	  day:{
+	  dp1:{
 		  required:true,
 		 
-		  },
-	 month:{
-		  required:true,
-		 
-		  },
-	 year:{
-		  required:true,
-		  },	  
+		  },  
 	  customer:"required",
 	  license:"required"
      

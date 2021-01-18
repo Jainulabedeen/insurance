@@ -1275,7 +1275,7 @@ input[type="text"] {
   }
 
 .form-group {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
   @media screen and (max-width: 768px) {
     .form-group #fname {
       margin-bottom: 0px; 
@@ -1930,8 +1930,14 @@ border-radius:5px;
     margin: 0 auto;
     margin-bottom: 15px;
     display: block; 
+	padding:30px;
+	}
+.services .icon3 {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: block; 
 	padding:10px;
-	}  
+	} 	
 .selectTag{
 	width:32%;
 	height:42px;

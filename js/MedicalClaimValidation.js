@@ -24,7 +24,8 @@ $(function() {
 	insuranceIdNo : {
 		required: true,
 		},
-	dateOfTreat : {
+		
+	dp1 : {
 		required: true,
 		},
 	placeOfTreat : {
@@ -45,7 +46,7 @@ $(function() {
 	ibnNo : {
 		required: true,
 		},
-	claimFile : {
+	files : {
 		required: true,
 		},
 		
@@ -79,8 +80,10 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
+		
       //form.submit();
 	  //  window.location= "login.html";
+
     }
   });
 });

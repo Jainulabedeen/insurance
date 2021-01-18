@@ -11,7 +11,7 @@ const vm = new Vue({
 				mobile:'',
 				policyno:'',
 				message:'',
-				file: ''
+				files: ''
 				
             };
         },
@@ -22,7 +22,10 @@ const vm = new Vue({
 
 		 formSubmit() {
 				let formData = new FormData();
-				formData.append('file', this.file);
+				for( var i = 0; i < this.files.length; i++ ){
+					let file = this.files[i];
+					formData.append('file[' + i + ']', file);
+				}
 				formData.append('full_name', this.fname);
 				formData.append('email', this.email);
 				formData.append('motor_claim', this.motorClaim);
@@ -36,7 +39,14 @@ const vm = new Vue({
 						}
 					
                 }).then(function(response){
-					alert("Your Claim Submitted Successfully!");
+					if(response){
+					window.location.href = 'motor-claim-success.html';
+					this.info=response
+					}
+				else{
+					this.info=response
+					window.location.href = 'error.html';
+					}
                     console.log('SUCCESS!! '+response);
                 }).catch(function(error) {
                      console.log('FAILURE!! '+error);
@@ -45,7 +55,7 @@ const vm = new Vue({
 		,
 	 handleFileUpload(){
 		// alert("Hello");
-		this.file = this.$refs.file.files[0];
+		this.files = this.$refs.files.files;
 		//alert(this.file);
       }	
 

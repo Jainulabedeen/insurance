@@ -4,11 +4,9 @@ const vm = new Vue({
         el: '#app',
 		
         data() {return{
-			carMakeSelected: '',
+				carMakeSelected: '',
                 carModelSelected: '',
-                monthSelected: '1',
-                daySelected: '1',
-                yearSelected:'2021' ,
+                dateSelected: 'yyyy-mm-dd',
                 valueOfCar: '',
                 carTypeSelected: '',
                 brandChecked: 'no',
@@ -20,9 +18,7 @@ const vm = new Vue({
 				fname:'',
 				lname:'',
 				email:'',
-				dobmonth:'0',
-				dobday:'0',
-				dobyear:'0',
+				dobSelected:'yyyy-mm-dd',
 				mobile:'',
 				nationality:'',
 				alldata:'',
@@ -48,7 +44,7 @@ const vm = new Vue({
             axios.post('https://buhaira.herokuapp.com/api/motor',{
 				car_make:this.carMakeSelected,
 				car_model:this.carModelSelected,
-				first_registration:this.yearSelected+"-"+this.monthSelected+"-"+this.daySelected,
+				first_registration:this.dateSelected,
 				car_value:this.valueOfCar,
 				car_type:this.carTypeSelected,
 				car_brand:this.brandChecked,
@@ -60,7 +56,7 @@ const vm = new Vue({
 				first_name:this.fname,
 				last_name:this.lname,
 				email:this.email,
-				dob:this.dobyear+"-"+this.dobmonth+"-"+this.dobday,
+				dob:this.dobSelected,
 				mobile:this.mobile,
 				nationality:this.nationality
 
@@ -68,11 +64,11 @@ const vm = new Vue({
 				if(response){
 					window.location.href = 'success.html';
 					this.info=response
-				}
+					}
 				else{
 					this.info=response
 					window.location.href = 'error.html';
-				}
+					}
                     console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {
@@ -97,15 +93,9 @@ const vm = new Vue({
 				 this.carModelSelected = localStorage.carModelSelected;
 			 }
 	
-			if(localStorage.yearSelected) {
-				  this.yearSelected = localStorage.yearSelected;
+			if(localStorage.dateSelected) {
+				  this.dateSelected = localStorage.dateSelected;
 			  }
-			if(localStorage.monthSelected) {
-				  this.monthSelected = localStorage.monthSelected;
-			  }
-			if(localStorage.daySelected) {
-				  this.daySelected = localStorage.daySelected;
-			  }  
 			if(localStorage.carTypeSelected) {
 				  this.carTypeSelected = localStorage.carTypeSelected;
 			  }
@@ -147,15 +137,9 @@ const vm = new Vue({
 			 if(localStorage.mobile) {
 				 this.mobile = localStorage.mobile;
 			 } 
-			 if(localStorage.dobyear) {
-				 this.dobyear = localStorage.dobyear;
+			 if(localStorage.dobSelected) {
+				 this.dobSelected = localStorage.dobSelected;
 			 }
-			 if(localStorage.dobmonth) {
-				 this.dobmonth = localStorage.dobmonth;
-			 } 
-			 if(localStorage.dobday) {
-				 this.dobday = localStorage.dobday;
-			 }  
 			 if(localStorage.nationality) {
 				 this.nationality = localStorage.nationality;
 			 } 
@@ -200,14 +184,8 @@ const vm = new Vue({
       localStorage.carModelSelected = NewcarModelSelected;
     },
 	
-	yearSelected(NewyearSelected) {
-      localStorage.yearSelected = NewyearSelected;
-    },
-	monthSelected(NewmonthSelected) {
-      localStorage.monthSelected = NewmonthSelected;
-    },
-	daySelected(NewdaySelected) {
-      localStorage.daySelected = NewdaySelected;
+	dateSelected(NewdateSelected) {
+      localStorage.dateSelected = NewdateSelected;
     },
 	 carTypeSelected(NewcarTypeSelected) {
       localStorage.carTypeSelected = NewcarTypeSelected;
@@ -236,14 +214,8 @@ const vm = new Vue({
 	 lname(Newlname) {
       localStorage.lname = Newlname;
     },
-	dobyear(Newdobyear) {
-      localStorage.dobyear = Newdobyear;
-    },
-	dobmonth(Newdobmonth) {
-      localStorage.dobmonth = Newdobmonth;
-    },
-	dobday(Newdobday) {
-      localStorage.dobday = Newdobday;
+	dobSelected(NewdobSelected) {
+      localStorage.dobSelected = NewdobSelected;
     },
 	email(Newemail) {
       localStorage.email = Newemail;
