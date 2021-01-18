@@ -1804,7 +1804,16 @@ input[type="text"] {
   -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
   box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
   }
-  .btn-info:hover, .btn-info:focus, .btn-info:active {
+.btn-default {
+
+    border-radius:5px;
+  color:black;
+  border: 1px solid white; 
+  -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+  box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+  }
+  
+ .btn-info:hover, .btn-info:focus, .btn-info:active {
    
     border-color: white !important; 
 	color:black !important;
@@ -1814,7 +1823,17 @@ border-radius:5px;
  -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
   box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
 }	
-	}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+ border-color: white !important; 
+color:white !important;
+background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+border-radius:5px;
+-webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
+}
+	
   .btn-info.btn-outline {
     background: transparent;
     color: #5bc0de;
