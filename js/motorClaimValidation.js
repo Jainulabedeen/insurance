@@ -9,7 +9,7 @@ $(function() {
       // on the right side
     fname : {
 		required: true,
-		minlength: 5
+		minlength: 2
 		},
 	mobile : {
 		required: true,
