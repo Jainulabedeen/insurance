@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Motor</title>
+	<title>Family Medical</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -27,9 +27,14 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="css2/jquery.datepick.css" rel="stylesheet">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="css/datepicker.css" rel="stylesheet">
+<style>
+
+</style>
+
 	</head>
 	<body>
 		
@@ -155,81 +160,128 @@
 			</div>
 		</nav>
 		<br><br><br><br><br><br><br>
-	
-			<div class="colorlib-classes">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9 animate-box">
-					<h3><b>Motor Insurance</b></h3>
-					<p><a href="car-info.html" class="btn btn-info">Get a Quote</a></p>
-							<h5><b>Motor Insurance Dubai – Car Insurance UAE – Car Insurance Dubai</b></h5>
-						
-							<p>Motor With ABNIC motor insurance policy, you are well protected and assured of prompt service. You have two packages to select from to meet your needs</p>
-						
-							<p>Standard Policy In addition to the benefits as per the unified wording by the Insurance Authority, you can add the following additional benefits:</p>
-							<ul style="list-style:none;">
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Personal Accident Benefit (Private vehicles)</li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; AAA (Road Side Assistance)</li>
-							
-							
-							</ul>
-							<h5><b>Gold Policy It provides the following additional benefits:</b></h5>
-							<ul style="list-style:none;">
-							
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Personal Accident Benefit           </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Third Party Property Damage         </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; AAA (Road Side Assistance)          </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Natural Disaster, Storm, Flood      </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Strike, Riot & Civil Commotion      </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Personal Belongings                 </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Emergency Medical Expenses          </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Windscreen Damage without excess    </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Replacement of Locks                </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Valet Parking Theft                 </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Car replacement                     </li>
-							<li><i class="fa fa-check-circle" style="color:#2E9AC5;"></i> &nbsp; Geographical Extension				</li>
-							</ul>
-					
-					</div>
-						<div class="col-md-3">
-									
-									<div class="row" style="padding:10px;">
-									<br>
-									
-									<ul style="list-style:none;">
-									<li><h3>Get in Touch with Us</h3></li>
-									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>
-									<li><i class="icon-envelope"></i> &nbsp;Email : abnicho@albuhaira.com</li>
-									<li><hr style="border-top: 1px solid black;"></li>
-									<h5><b>Dedicated help- line numbers </b></h5>
-									<li>Motor Insurance : 600 535357            </li>
-									<li>Motor Claims : 600 545457               </li>
-									<li>Life & Medical Insurance : 600 532229   </li>
-									<li>Life & Medical Claims : 600 545459      </li>
-									<li>Home & Travel Insurance : 600 548283    </li>
-									<li>Marine Insurance : +971 6 517 4487      </li>
-									<li>Marine Claims : +971 6 517 4486			</li>
-									<li><hr style="border-top: 1px solid black;"></li>
-									<h5><b>Office Timings</b></h5>
-									<li>8:00 am to 1:30 pm, 
-									<br>2:30 am to 5:00 pm    </li>
-									<li>(Sunday to Thursday)				</li>
-									</ul>
-									
-									</div>
-					
-					</div>
-					
-			</div>	
-		</div>
-</div>
-	
+<div class="col-md-12 text-center animate-box">
 
+		<center>
+		<h1>Family Medical Information</h1>
+		<h4></h4>
+		</center>
+
+</div>
+
+<br><br><br>
+<div class="colorlib-trainers" id="app">
+<div class="container">
+
+<form class="form-horizontal" id="form1" method="post" autocomplete="on">
+<div class="col-md-12 animate-box" id="app">
+
+    <div class="row">
+	<div class="col-md-1"></div>
+  <div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+	<label for="fname">Who would you like the cover for?</label>  
+		<select id="coverType" name="coverType" v-model="coverType" class="form-control input-md" required="required">
+			 <option value="">Select</option> 
+			 <option value="Just me">Just me</option> 
+			 <option value="My family">My family</option> 
+			 <option value="employees">A group of employees</option> 
+		</select>	  
+		  </div>
+		  </div>
+		
+		<div class="col-md-4 inputTypeCenter">  
+	  <div class="form-group">
+	  <label for="lname">Marital status</label>  
+		<select id="maritalStatus" name="maritalStatus" v-model="maritalStatus" class="form-control input-md" required>
+				<option value="" selected="selected">Select</option>
+				<option value="Single">Single</option>
+				<option value="Married">Married</option>
+				<option value="Divorced">Divorced</option>
+				<option value="Widowed">Widowed</option>
+				<option value="Unmarried partner">Unmarried partner</option>
+		</select>	   
+			 </div>
+		 </div>
+		 <div class="col-md-1"></div>
+	</div>
+	<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+	<label for="email">Emirate of your visa</label> 
+	<select id="visa" name="visa" class="form-control input-md" v-model="visa" required>
+		 <option value="">Select</option> 
+		 <option value="Ajman">Ajman</option> 
+		 <option value="Dubai">Dubai</option> 
+		 <option value="Fujairah">Fujairah</option> 
+		 <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+		 <option value="Sharjah">Sharjah</option> 
+		 <option value="Umm Al Quwain">Umm Al Quwain</option>
+	</select>
+	</div>
+	</div>
 	
+	<div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+      <label for="dob">Date of Birth</label> 
+	  <input type="text" name="dp1" class="form-control input-md" placeholder="yyyy-mm-dd" v-model="dobSelected" autocomplete="off" id="dp1">
+		
+		</div>
+	 </div>
+	<div class="col-md-1"></div>
+	</div>
+	
+	<div class="row">
+	<div class="col-md-1"></div>
+	  <div class="col-md-4 inputTypeCenter">
+	<div class="form-group">
+    <label for="customer">Applicant's Gender?</label>  <br>
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="gender" checked="checked" v-model="gender" name="gender" value="Male" type="radio" required>&nbsp;Male
+		<input id="gender" name="gender" value="Female" v-model="gender"  type="radio">&nbsp;Female
+		</div>
+     </div>
+	  </div>
+	
+	<div class="col-md-1"></div>
+</div>
+
+ 
+    <!-- Button -->
+	
+	<div class="row">
+	<div class="col-md-12 inputTypeCenter text-center">
+	<div class="form-group"><br>
+  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
+		
+	</div>
+    </div>  
+	</div>
+</div>
+</form>
+
+</div>
+</div>
+
+
+<br>
+
+
 
 
 
 		
+	
+
+
+
+
+
+		
+	
+
+
 		<footer id="colorlib-footer">
 		<style>
 		.NewLink:hover{
@@ -327,10 +379,10 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
 	
-	
-	
 	<!-- jQuery -->
+
 	<script src="js/jquery.min.js"></script>
+
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
@@ -349,10 +401,25 @@
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
+	<script src="js2/jquery.plugin.min.js"></script>
+	<script src="js2/jquery.datepick.js"></script>
 	<script src="js/main.js"></script>
-<script>
-
-</script>
+	<script src="js/bootstrap-datepicker.js"></script>    
+	<script src="js/angular.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/familyMedicalDetailsValidation.js"></script>
+	<script src = "js/axios.min.js"></script> 
+	<script src = "js/vue.js"></script>  
+	<script src = "js/vueAppFamilyMedicalInsurance.js"></script>  
+	<script>
+	$('#dp1').datepicker({
+format: 'yyyy-mm-dd',
+todayBtn: 'linked'
+});
+	</script>
+	
 	</body>
 </html>
 

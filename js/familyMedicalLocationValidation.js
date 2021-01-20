@@ -45,7 +45,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       form.submit();
-	    window.location= "familyMedicalPersonalInfo.html";
+	    window.location= "family-medical-personal-info.html";
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

@@ -47,7 +47,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       form.submit();
-	    window.location= "driverInfo.html";
+	    window.location= "driver-info.html";
     }
   });
   $.validator.addMethod("yearofregister", function (date_of_registered, element) {
