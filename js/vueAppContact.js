@@ -10,7 +10,7 @@ const vm = new Vue({
 				mobile:'',
 				subject:'',
 				message:'',
-				info:''
+				info:null
 		 
 		 
 		 }
@@ -31,21 +31,12 @@ const vm = new Vue({
 				
 
 			}).then((response) => {
-				
-				if(response){
-					window.location.href = 'contact-us-success.html';
-					
-				}
-				else{
-					
-					window.location.href = 'error.html';
-				}
-                    console.log('SUCCESS!! '+response);
-				
-                    console.log('SUCCESS!! '+response);
+				window.location.href = 'contact-us-success.html';
+				    console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {
-                       console.log('FAILURE!! '+error);
+                       this.info=error.response.data.errors;
+                     console.log('FAILURE!! '+error);
 					 
                  }).finally(() => {
                     

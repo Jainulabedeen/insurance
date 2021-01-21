@@ -181,22 +181,22 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="iam">I am</label>  
-	  <select id="iam" name="iam" class="form-control input-md" v-model="iam" required>
-			<option value="" selected="selected">Select</option>
-			<option value="landlord">A landlord</option>
-			<option value="tenant" id="tenant" class="tenant">A tenant</option>
-		</select>
+	<input type="text" name="iam" class="form-control input-md" v-model="iam" list="iam" autocomplete="off" required>  	
+    <datalist id="iam"> 
+	<option value="landlord">
+	<option value="tenant">	
+	</datalist> 
 		  </div>
 		  </div>
 		
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="livein">I live in</label>  
-		<select id="livein" name="livein" class="form-control input-md" v-model="livein" required>
-			<option value="" selected="selected">Select</option>
-			<option value="apartment">An apartment</option>
-			<option value="villa">A villa</option>
-		</select>	  
+	  <label for="livein">I live in</label> 
+	<input type="text" name="livein" class="form-control input-md" v-model="livein" list="livein" autocomplete="off" required>  	
+    <datalist id="livein"> 
+	<option value="apartment">
+	<option value="villa">
+	</datalist> 
 			 </div>
 		 </div>
 		 <div class="col-md-1"></div>

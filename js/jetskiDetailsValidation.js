@@ -41,6 +41,7 @@ $(function() {
     submitHandler: function(form) {
       //form.submit();
 	    //window.location= "jetskiSuccess.html";
+		 vm.submitForm();
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

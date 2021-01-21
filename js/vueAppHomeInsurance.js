@@ -13,13 +13,11 @@ const vm = new Vue({
                 contentsaed: '',
 				belongingsaed: '',
 				buildingaed: '',
-				
 				fname:'',
 				lname:'',
 				email:'',
 				mobile:'',
 				address:'',
-				
 				info:null
 		 
 		 
@@ -47,20 +45,13 @@ const vm = new Vue({
 				address:this.address
 
 			}).then((response) => {
-				
-				if(response){
-					window.location.href = 'success.html';
-					this.info=response
-				}
-				else{
-					this.info=response
-					window.location.href = 'error.html';
-				}
-                    console.log('SUCCESS!! '+response);
+				window.location.href = 'success.html';
+				    console.log('SUCCESS!! '+response);
 				
 				
                  }).catch((error) => {
-                       console.log('FAILURE!! '+error);
+                        this.info=error.response.data.errors;
+                     console.log('FAILURE!! '+error);
 					
 					 
                  }).finally(() => {

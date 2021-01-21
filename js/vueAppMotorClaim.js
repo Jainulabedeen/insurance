@@ -11,7 +11,8 @@ const vm = new Vue({
 				mobile:'',
 				policyno:'',
 				message:'',
-				files: ''
+				files: '',
+				info:null
 				
             };
         },
@@ -38,18 +39,15 @@ const vm = new Vue({
 							'Content-Type': 'multipart/form-data'
 						}
 					
-                }).then(function(response){
-					if(response){
+                }).then((response) => {
 					window.location.href = 'motor-claim-success.html';
-					this.info=response
-					}
-				else{
-					this.info=response
-					window.location.href = 'error.html';
-					}
-                    console.log('SUCCESS!! '+response);
-                }).catch(function(error) {
+				    console.log('SUCCESS!! '+response);
+					
+                 }).catch((error) => {
+					 this.info=error.response.data.errors;
                      console.log('FAILURE!! '+error);
+					 
+                 }).finally(() => {
                 });
             }
 		,

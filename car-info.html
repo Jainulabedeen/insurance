@@ -220,12 +220,11 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
       <label for="cartype">Car Type</label>  
-       <select name="cartype" id="cartype" class="form-control input-md" v-model="carTypeSelected">
-			<option disabled value="">Select Car Type</option>
-			<option value="private">Private</option>
-			<option value="commercial">Commercial</option>
-			
-			</select>
+	  <input type="text" name="cartype" class="form-control input-md" v-model="carTypeSelected" list="cartype" autocomplete="off" required>  	
+    <datalist id="cartype">  
+	<option value="Private">
+	<option value="Commercial">
+	</datalist> 
 	  </div>
 	  </div>  
 	 
@@ -245,52 +244,50 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-		<label for="yearofmanufacture">Year of Manufacture *</label>  
-       <select name="yearofmanufacture" id="yearofmanufacture" v-model="yearofmanufacture" class="form-control input-md" v-model="yearofmanufactureSelected">
-			<option disabled value="">Year of Manufacture</option>
-		<option value="2021">2021</option>
-		<option value="2020">2020</option>
-		<option value="2019">2019</option>
-		<option value="2018">2018</option>
-		<option value="2017">2017</option>
-		<option value="2016">2016</option>
-		<option value="2015">2015</option>
-		<option value="2014">2014</option>
-		<option value="2013">2013</option>
-		<option value="2012">2012</option>
-		<option value="2011">2011</option>
-		<option value="2010">2010</option>
-		<option value="2009">2009</option>
-		<option value="2008">2008</option>
-		<option value="2007">2007</option>
-		<option value="2006">2006</option>
-		<option value="2005">2005</option>
-		<option value="2004">2004</option>
-		<option value="2003">2003</option>
-		<option value="2002">2002</option>
-		<option value="2001">2001</option>
-		<option value="2000">2000</option>
-		<option value="1999">1999</option>
-		</select>
+	<label for="yearofmanufacture">Year of Manufacture *</label>  
+	<input type="text" name="yearofmanufacture" class="form-control input-md" v-model="yearofmanufacture" list="yearofmanufacture" autocomplete="off" required>  	
+    <datalist id="yearofmanufacture">  
+		<option value="2021">
+		<option value="2020">
+		<option value="2019">
+		<option value="2018">
+		<option value="2017">
+		<option value="2016">
+		<option value="2015">
+		<option value="2014">
+		<option value="2013">
+		<option value="2012">
+		<option value="2011">
+		<option value="2010">
+		<option value="2009">
+		<option value="2008">
+		<option value="2007">
+		<option value="2006">
+		<option value="2005">
+		<option value="2004">
+		<option value="2003">
+		<option value="2002">
+		<option value="2001">
+		<option value="2000">
+		<option value="1999">
+	</datalist> 
        </div>
 	  </div>
 	
 	
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="claim">When Did You Last File Claim?</label>  
-       <select name="claim" id="claim" class="form-control input-md" v-model="claimSelected">
-			<option disabled value="">When Did You Last File Claim?</option>
-			<option value="No claims in the past year">No claims in the past year</option>
-			<option value="No claims for 2 years">No claims for 2 years</option>
-			<option value="No claims for 3 years">No claims for 3 years</option>
-			<option value="No claims for 4 years">No claims for 4 years</option>
-			<option value="No claims for 5+ years">No claims for 5+ years</option>
-			<option value="I claimed last year">I claimed last year</option>
-			<option value="This is my very first car ever!">This is my very first car ever!</option> 
-			
-			</select>
-		
+	<label for="claim">When Did You Last File Claim?</label> 
+	  <input type="text" name="claim" class="form-control input-md" v-model="claimSelected" list="claim" autocomplete="off" required>  	
+    <datalist id="claim">  
+	<option value="No claims in the past year">
+			<option value="No claims for 2 years">
+			<option value="No claims for 3 years">
+			<option value="No claims for 4 years">
+			<option value="No claims for 5+ years">
+			<option value="I claimed last year">
+			<option value="This is my very first car ever!">
+	</datalist> 
        </div>
 	  </div>
 	<div class="col-md-1"></div>
@@ -311,33 +308,32 @@
 	
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-	<label for="carlicense">UAE License Held for?</label>      
-	<select name="carlicense" id="carlicense" class="form-control input-md" v-model="uaeLicensedSelected">
-			<option disabled value="">UAE License Held for?</option>
-			<option value="" selected="selected">Please Choose</option>
-			<option value="less than 6 months">less than 6 months</option>
-			<option value="less than 1 year">less than 1 year</option>
-			<option value="1 year">1 year</option>
-			<option value="2 years">2 years</option>
-			<option value="3 years">3 years</option>
-			<option value="4 years">4 years</option>
-			<option value="5 years">5 years</option>
-			<option value="6 years">6 years</option>
-			<option value="7 years">7 years</option>
-			<option value="8 years">8 years</option>
-			<option value="9 years">9 years</option>
-			<option value="10 years">10 years</option>
-			<option value="11 years">11 years</option>
-			<option value="12 years">12 years</option>
-			<option value="13 years">13 years</option>
-			<option value="14 years">14 years</option>
-			<option value="15 years">15 years</option>
-			<option value="16 years">16 years</option>
-			<option value="17 years">17 years</option>
-			<option value="18 years">18 years</option>
-			<option value="19 years">19 years</option>
-			<option value="20 years +">20 years +</option> 
-			</select>
+	<label for="carlicense">UAE License Held for?</label> 
+	 <input type="text" name="carlicense" class="form-control input-md" v-model="uaeLicensedSelected" list="carlicense" autocomplete="off" required>  	
+    <datalist id="carlicense">  
+	<option value="less than 6 months">
+			<option value="less than 1 year">
+			<option value="1 year">
+			<option value="2 years">
+			<option value="3 years">
+			<option value="4 years">
+			<option value="5 years">
+			<option value="6 years">
+			<option value="7 years">
+			<option value="8 years">
+			<option value="9 years">
+			<option value="10 years">
+			<option value="11 years">
+			<option value="12 years">
+			<option value="13 years">
+			<option value="14 years">
+			<option value="15 years">
+			<option value="16 years">
+			<option value="17 years">
+			<option value="18 years">
+			<option value="19 years">
+			<option value="20 years +">
+	</datalist> 	
 			</div>
 	  </div>
 	   <div class="col-md-1"></div>
@@ -370,7 +366,7 @@
 
 	 <div class="col-md-12 inputTypeCenter text-center">
    <div class="form-group" style="display:inline;">       
-  <button class="btn btn-info" type="submit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+  <button class="btn btn-info" type="submit" id="carSubmit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
 </div>
@@ -516,6 +512,8 @@
 	 
 
 <script>
+//document.getElementById("carSubmit").disabled = true;
+
 var obj = JSON.parse(data);
 var carMakeData=[...new Set(obj.map(({UAM_MAKE_DESC})=>UAM_MAKE_DESC))];
 

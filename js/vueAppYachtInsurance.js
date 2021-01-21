@@ -39,19 +39,12 @@ const vm = new Vue({
 				engine_detail:this.engineDetails
 
 			}).then((response) => {
-				if(response.data.length===0){
-					window.location.href = 'error.html';
-					
-					this.info=response
-				}
-				else{
-					this.info=response
-					window.location.href = 'success.html';
-				}
-                    console.log('SUCCESS!! '+response);
+				window.location.href = 'success.html';
+				    console.log('SUCCESS!! '+response);
 				
                  }).catch((error) => {
-                       console.log('FAILURE!! '+error);
+                      this.info=error.response.data.errors;
+                     console.log('FAILURE!! '+error);
 					
 					 
                  }).finally(() => {

@@ -61,6 +61,7 @@ $(function() {
     submitHandler: function(form) {
      // form.submit();
 	  //  window.location= "login.html";
+	  vm.formSubmit();
     }
   });
 });

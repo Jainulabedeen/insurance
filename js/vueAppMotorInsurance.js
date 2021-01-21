@@ -3,7 +3,8 @@
 const vm = new Vue({
         el: '#app',
 		
-        data() {return{
+        data() {
+			return{
 				carMakeSelected: '',
                 carModelSelected: '',
                 dateSelected: '',
@@ -59,20 +60,15 @@ const vm = new Vue({
 				dob:this.dobSelected,
 				mobile:this.mobile,
 				nationality:this.nationality
+				
 
 			}).then((response) => {
-				if(response){
 					window.location.href = 'success.html';
-					this.info=response
-					}
-				else{
-					this.info=response
-					window.location.href = 'error.html';
-					}
-                    console.log('SUCCESS!! '+response);
+				    console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {
-                       console.log('FAILURE!! '+error);
+					 this.info=error.response.data.errors;
+                     console.log('FAILURE!! '+error);
 					 
                  }).finally(() => {
                     

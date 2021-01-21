@@ -71,7 +71,8 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	    window.location= "success.html";
+	    //window.location= "success.html";
+		 vm.submitForm();
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

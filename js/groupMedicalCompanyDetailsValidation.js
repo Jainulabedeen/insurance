@@ -14,38 +14,7 @@ $(function() {
 	details : {
 		required: true,
 		
-		},
-    email: {
-        required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
-		},
-	month : {
-		required: true,
-		
-	
-		},
-	day : {
-		required: true,
-		
-	
-		},
-	year : {
-		required: true,
-		
-	
-		},	
-	mobile : {
-		required: true,
-		mobile:true,
-		maxlength:12
-		
-		},
-		nationality:{
-			required:true,
 		}
-		
       },
     // Specify validation error messages
     messages: {
@@ -71,7 +40,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	    window.location= "success.html";
+	    vm.submitForm();
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

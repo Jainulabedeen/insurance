@@ -181,27 +181,27 @@
   <div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="fname">Who would you like the cover for?</label>  
-		<select id="coverType" name="coverType" v-model="coverType" class="form-control input-md" required="required">
-			 <option value="">Select</option> 
-			 <option value="Just me">Just me</option> 
-			 <option value="My family">My family</option> 
-			 <option value="employees">A group of employees</option> 
-		</select>	  
+	<input type="text" name="coverType" class="form-control input-md" v-model="coverType" list="coverType" autocomplete="off" required>  	
+    <datalist id="coverType">  
+	<option value="Just me">
+	<option value="My family">
+	<option value="employees">
+	</datalist> 
 		  </div>
 		  </div>
 		
 		<div class="col-md-4 inputTypeCenter">  
 	  <div class="form-group">
-	  <label for="lname">Marital status</label>  
-		<select id="maritalStatus" name="maritalStatus" v-model="maritalStatus" class="form-control input-md" required>
-				<option value="" selected="selected">Select</option>
-				<option value="Single">Single</option>
-				<option value="Married">Married</option>
-				<option value="Divorced">Divorced</option>
-				<option value="Widowed">Widowed</option>
-				<option value="Unmarried partner">Unmarried partner</option>
-		</select>	   
-			 </div>
+	  <label for="lname">Marital status</label> 
+	  <input type="text" name="maritalStatus" class="form-control input-md" v-model="maritalStatus" list="maritalStatus" autocomplete="off" required>  	
+		<datalist id="maritalStatus">  
+		<option value="Single">
+		<option value="Married">
+		<option value="Divorced">
+		<option value="Widowed">
+		<option value="Unmarried partner">	
+		</datalist> 
+		 </div>
 		 </div>
 		 <div class="col-md-1"></div>
 	</div>
@@ -210,14 +210,15 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="email">Emirate of your visa</label> 
-	<select id="visa" name="visa" class="form-control input-md" v-model="visa" required>
-		 <option value="">Select</option> 
-		 <option value="Ajman">Ajman</option> 
-		 <option value="Dubai">Dubai</option> 
-		 <option value="Fujairah">Fujairah</option> 
-		 <option value="Ras Al Khaimah">Ras Al Khaimah</option>
-		 <option value="Sharjah">Sharjah</option> 
-		 <option value="Umm Al Quwain">Umm Al Quwain</option>
+	  <input type="text" name="visa" class="form-control input-md" v-model="visa" list="visa" autocomplete="off" required>  	
+		<datalist id="visa">  
+		<option value="Ajman">
+		 <option value="Dubai">
+		 <option value="Fujairah">
+		 <option value="Ras Al Khaimah">
+		 <option value="Sharjah">
+		 <option value="Umm Al Quwain">
+		</datalist> 
 	</select>
 	</div>
 	</div>

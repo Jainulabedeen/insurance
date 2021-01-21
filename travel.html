@@ -187,12 +187,12 @@
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
 	<label for="region">Which regions do you need cover for?</label>  
-						<select id="region" name="region" v-model="region" class="form-control input-md" required>
-								<option value="" selected="selected">Select</option> 
-								<option value="Worldwide (excl. US/Canada)">Worldwide (excl. US/Canada)</option> 
-								<option value="Worldwide (incl. US/Canada)">Worldwide (incl. US/Canada)</option> 
-						</select>	
-					   </div>
+	<input type="text" name="region" class="form-control input-md" v-model="region" list="region" autocomplete="off" required>  	
+    <datalist id="region">
+	<option value="Worldwide (excl. US/Canada)">
+	<option value="Worldwide (incl. US/Canada)">
+	</datalist> 
+	</div>
 	  </div>
 	<div class="col-md-1"></div>
 	</div>
@@ -201,13 +201,13 @@
 	  <div class="col-md-1"></div>
 	<div class="col-md-4 inputTypeCenter">
 	<div class="form-group">
-     <label for="coverFor">Who would you like cover for?</label>  
-					<select id="coverFor" name="coverFor" v-model="coverFor" class="form-control input-md" required>
-								<option value="" selected="selected">Select</option> 
-								<option value="Just me">Just me!</option> 
-								<option value="My whole family">My whole family</option> 
-					</select>
-					 </div>
+     <label for="coverFor">Who would you like cover for?</label> 
+	 <input type="text" name="coverFor" class="form-control input-md" v-model="coverFor" list="coverFor" autocomplete="off" required>  	
+    <datalist id="coverFor">
+	<option value="Just me">
+	<option value="My whole family">
+	</datalist> 
+	</div>
 	  </div>
 	 
 	   <div class="col-md-4 inputTypeCenter">

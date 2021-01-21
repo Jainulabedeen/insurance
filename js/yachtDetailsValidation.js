@@ -32,7 +32,7 @@ $(function() {
 			required:true,
 		},
 	engineDetails:{
-			required:true,
+			required:true
 		}	
 		
 		

@@ -14,7 +14,7 @@ const vm = new Vue({
                 country: '',
                 products:[],
 				spanData:[],
-                info:'',
+                info:null
 			
 		 
 		 
@@ -44,18 +44,12 @@ for (var i = 0; i < productData.length; i++) {
 
 			}).then((response) => {
 				
-				if(response){
 					window.location.href = 'success.html';
-					this.info=response
-				}
-				else{
-					this.info=response
-					window.location.href = 'error.html';
-				}
-                    console.log('SUCCESS!! '+response);
+				    console.log('SUCCESS!! '+response);
 					
                  }).catch((error) => {
-                       console.log('FAILURE!! '+error);
+                    this.info=error.response.data.errors;
+                     console.log('FAILURE!! '+error);
 					 
                  }).finally(() => {
                     
