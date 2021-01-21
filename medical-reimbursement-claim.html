@@ -191,7 +191,7 @@
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 								<label for="lname">Date of Treatment</label>
-								<input type="text" name="dp1" class="form-control" placeholder="yyyy-mm-dd" v-model="treatDateSelected" autocomplete="off" id="dp1">
+								<input type="text" name="dp1" class="form-control" placeholder="yyyy-mm-dd" v-model="treatDateSelected" autocomplete="off" id="dp1" required>
 								</div>
 								
 							</div>
@@ -437,9 +437,11 @@
 	<script src = "js/vueAppMedicalReimbersmentClaim.js"></script> 
 <script>
 $('#dp1').datepicker({
-format: 'yyyy-mm-dd',
-todayBtn: 'linked'
-});
+            format: "yyyy-mm-dd",
+			autoclose: true,
+			setDate: new Date()
+			
+        });
 	
 </script>	
 	</body>

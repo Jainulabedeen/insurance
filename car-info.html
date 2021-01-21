@@ -513,7 +513,6 @@
 
 <script>
 //document.getElementById("carSubmit").disabled = true;
-
 var obj = JSON.parse(data);
 var carMakeData=[...new Set(obj.map(({UAM_MAKE_DESC})=>UAM_MAKE_DESC))];
 
@@ -542,10 +541,12 @@ document.getElementById("carmodel").innerHTML = carModelOptions;
 }
 }
 $('#dp1').datepicker({
-format: 'yyyy-mm-dd',
-todayBtn: 'linked'
-});
-		
+            format: "yyyy-mm-dd",
+			autoclose: true,
+			setDate: new Date()
+			
+        });
+	
 </script>
 	</body>
 </html>
