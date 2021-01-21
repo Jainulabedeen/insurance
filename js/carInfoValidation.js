@@ -56,7 +56,7 @@ $(function() {
      
 	   var data = date_of_registered.split("-");
 	   var todaySelectedDate=date_of_registered;
-	 
+	 vm.dateSelected=todaySelectedDate;
 	   var today=new Date();
 	   var currentYear=today.getFullYear();
 	   var currentMonth=today.getMonth()+1;
@@ -77,7 +77,7 @@ $(function() {
 		   return this.optional(element) || (true); 
 		   
 	   }
-	      vm.dateSelected=todaySelectedDate;
+	      
 	  // alert(vm.dateSelected);
 	   //alert(todayDate+" "+date_of_registered);
 	  // alert(selectedYear+" "+selectedMonth+" "+selectedDay);
