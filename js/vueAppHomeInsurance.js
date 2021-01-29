@@ -45,6 +45,7 @@ const vm = new Vue({
 				address:this.address
 
 			}).then((response) => {
+				localStorage.clear();
 				window.location.href = 'success.html';
 				    console.log('SUCCESS!! '+response);
 				

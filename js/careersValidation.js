@@ -13,7 +13,6 @@ $(function() {
 		},
 	mobile : {
 		required: true,
-		minlength: 3
 		},
     email: {
         required: true,
@@ -55,6 +54,7 @@ $(function() {
     submitHandler: function(form) {
       //form.submit();
 	    //window.location= "login.html";
+		//vm.formSubmit();
     }
   });
 });

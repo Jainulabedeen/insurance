@@ -166,87 +166,94 @@
 
 </div>
 
+<style>
 
+</style>
 <div class="colorlib-trainers">
 <div class="container" id="app">
-<form class="form-horizontal" id="form1" name="form1" autocomplete="on" action="">
-<div class="col-md-12 animate-box justify-content-center">
+<form class="form-horizontal" id="form1" name="form1">
+
+<div class="col-md-7">
   <fieldset>
-    
     <!-- Form Name -->
     <div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="car">Car Make</label>  
-	<input type="text" name="car" class="form-control input-md" v-model="carMakeSelected" list="car" autocomplete="off" onchange="carModelShow(this.value)" required>  
-     <datalist id="car">  
-	</datalist>  
+	<div class="text-field">
+	<input type="text" name="car" class="form-control input-md" list="car" autocomplete="off" onchange="carModelShow(this.value)" required>  
+	<label class="labelClass" for="car">Car Make</label>  
+	<datalist id="car" class="datalistClass">  
+	</datalist>
+	</div>	
        </div>
 	  </div>
 	 
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="carmodel">Car Model</label> 
-	<input type="text" name="carmodel" class="form-control input-md" v-model="carModelSelected" list="carmodel" autocomplete="off" required>  	
-    <datalist id="carmodel">  
+	<div class="text-field">
+	<input type="text" name="carmodel" class="form-control input-md" list="carmodel" autocomplete="off" required>  	
+    <label class="labelClass" for="carmodel">Car Model</label> 
+	<datalist id="carmodel">  
 	</datalist> 
        </div>
 	  </div>
-	<div class="col-md-1"></div>
+	</div>
+	
 	</div>
 	
 	 <div class="row">
-	  <div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	 <div class="col-md-12">
 	<div class="form-group">
-      <label for="yearofregister">When Did You First Register Your Car</label>  
-	  <input type="text" name="dp1" class="form-control input-md" placeholder="yyyy-mm-dd" v-model="dateSelected" autocomplete="off" id="dp1">
+	<div class="text-field">
+      <input type="text" name="dp1" class="form-control input-md" autocomplete="off" id="dp1">
+	  <label class="labelClass" for="dp1">When Did You First Register Your Car</label>  
 	  </div>
 	  </div>
-	 
-	   <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="valueOfCar" id="textInput">What's the value of your car?</label>
-	     <input type="number" id="valueOfCar" v-model="valueOfCar"  name="valueOfCar"  class="form-control input-md" >
-      </div>
-    </div>
-	  <div class="col-md-1"></div> 
+	  </div>
+	
 	</div>
 	
 	<div class="row">
-	<div class="col-md-1"></div>
-	
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-      <label for="cartype">Car Type</label>  
-	  <input type="text" name="cartype" class="form-control input-md" v-model="carTypeSelected" list="cartype" autocomplete="off" required>  	
-    <datalist id="cartype">  
+	<div class="text-field">
+	     <input type="number" id="valueOfCar" name="valueOfCar"  class="form-control input-md">
+		<label class="labelClass" for="valueOfCar">What's the value of your car?</label>    
+	</div>
+    </div>
+	</div>
+	<div class="col-md-6">
+	<div class="form-group">
+	<div class="text-field">
+	  <input type="text" name="cartype" class="form-control input-md" list="cartype" autocomplete="off" required>  	
+    <label class="labelClass" for="cartype">Car Type</label>  
+	<datalist id="cartype">  
 	<option value="Private">
 	<option value="Commercial">
 	</datalist> 
 	  </div>
 	  </div>  
-	 
-	<div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-    <label for="brand">Is your car brand New?*</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio" v-model="brandChecked" required>&nbsp;Yes
-		<input id="brand" name="brand" value="no" v-model="brandChecked" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-	  <div class="col-md-1"></div>
+	 </div>  
 	</div>
 	
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="yearofmanufacture">Year of Manufacture *</label>  
-	<input type="text" name="yearofmanufacture" class="form-control input-md" v-model="yearofmanufacture" list="yearofmanufacture" autocomplete="off" required>  	
-    <datalist id="yearofmanufacture">  
+	<div class="text-field">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="brand" checked="checked" name="brand" value="yes" type="radio" required>&nbsp;Yes
+		<input id="brand" name="brand" value="no" type="radio">&nbsp;No
+		<label class="labelClass" for="brand">Is your car brand New?*</label>  <br>
+		</div>
+     </div>
+	  </div>
+	  </div>
+	 <div class="col-md-6">
+	<div class="form-group">
+	<div class="text-field">
+	<input type="text" name="yearofmanufacture" class="form-control input-md" list="yearofmanufacture" autocomplete="off" required>  	
+    <label class="labelClass" for="yearofmanufacture">Year of Manufacture</label>  
+	<datalist id="yearofmanufacture">  
 		<option value="2021">
 		<option value="2020">
 		<option value="2019">
@@ -273,12 +280,14 @@
 	</datalist> 
        </div>
 	  </div>
-	
-	
-	<div class="col-md-4 inputTypeCenter">
+	  </div>  
+	</div>
+	<div class="row">
+	    <div class="col-md-6">
 	<div class="form-group">
-	<label for="claim">When Did You Last File Claim?</label> 
-	  <input type="text" name="claim" class="form-control input-md" v-model="claimSelected" list="claim" autocomplete="off" required>  	
+	<div class="text-field">
+	  <input type="text" name="claim" class="form-control input-md" list="claim" autocomplete="off" required>  	
+	  <label class="labelClass" for="claim">When Did You Last File Claim?</label> 
     <datalist id="claim">  
 	<option value="No claims in the past year">
 			<option value="No claims for 2 years">
@@ -290,27 +299,27 @@
 	</datalist> 
        </div>
 	  </div>
-	<div class="col-md-1"></div>
+	  </div>
+	 <div class="col-md-6">
+	<div class="form-group">
+	<div class="text-field">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio" required>&nbsp;Yes
+		<input id="customer" name="customer" value="no" type="radio">&nbsp;No
+		<label class="labelClass" for="customer">Are you an existing ABNIC customer?</label><br>	
+	</div>
+     </div>
+	  </div>
+	</div>
 	</div>
 	
 	<div class="row">
-	<div class="col-md-1"></div>
-	 <div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-    <label for="customer">Are you an existing ABNIC customer? *</label>  <br>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-		&nbsp;&nbsp;&nbsp;&nbsp;<input id="customer" checked="checked" name="customer" value="yes" type="radio" v-model="existingUserChecked" required>&nbsp;Yes
-		<input id="customer" name="customer" value="no" v-model="existingUserChecked" type="radio">&nbsp;No
-		</div>
-     </div>
-	  </div>
-	
-	
-	<div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="carlicense">UAE License Held for?</label> 
-	 <input type="text" name="carlicense" class="form-control input-md" v-model="uaeLicensedSelected" list="carlicense" autocomplete="off" required>  	
-    <datalist id="carlicense">  
+	<div class="text-field">
+	 <input type="text" name="carlicense" class="form-control input-md" list="carlicense" autocomplete="off" required>  	
+    <label class="labelClass" for="carlicense">UAE License Held for?</label> 
+	<datalist id="carlicense">  
 	<option value="less than 6 months">
 			<option value="less than 1 year">
 			<option value="1 year">
@@ -335,40 +344,33 @@
 			<option value="20 years +">
 	</datalist> 	
 			</div>
+			</div>
 	  </div>
-	   <div class="col-md-1"></div>
-	</div>
-	
-	<div class="row">
-	 <div class="col-md-1"></div> 
-	<div class="col-md-4 inputTypeCenter">
-	
+	<div class="col-md-6">
 	<div class="form-group">
-    <label for="license">Has your previous policy expired?*</label>  <br>
+	<div class="text-field">
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
 		&nbsp;&nbsp;&nbsp;&nbsp;<input id="license" checked="checked" name="license" value="yes" type="radio" v-model="plicyExpireChecked"  required>&nbsp;Yes
 		<input id="license" name="license" value="no" v-model="plicyExpireChecked" type="radio">&nbsp;No
-		</div>
+		<label class="labelClass" for="license">Has your previous policy expired?*</label><br>	
+	</div>
      </div>
 	  </div>
-	
-	 <div class="col-md-1"></div> 
 	</div>
-	
-	  
-	 
-
+	</div>
     <!-- Button -->
-	
-  </fieldset>
-</div>
 <div class="row">
 
-	 <div class="col-md-12 inputTypeCenter text-center">
+	 <div class="col-md-12 text-center">
    <div class="form-group" style="display:inline;">       
   <button class="btn btn-info" type="submit" id="carSubmit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
+</div>	
+  </fieldset>
+</div>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
 </div>
 </form>
 

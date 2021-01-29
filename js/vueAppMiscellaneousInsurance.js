@@ -43,7 +43,7 @@ for (var i = 0; i < productData.length; i++) {
 				products:JSON.stringify(this.spanData)
 
 			}).then((response) => {
-				
+				localStorage.clear();
 					window.location.href = 'success.html';
 				    console.log('SUCCESS!! '+response);
 					

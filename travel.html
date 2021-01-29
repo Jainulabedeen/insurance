@@ -170,81 +170,81 @@
 
 <div class="colorlib-trainers" id="app">
 <div class="container">
-<form class="form-horizontal" id="form1" name="form1" autocomplete="on" action="">
-<div class="col-md-12 animate-box justify-content-center" id="app">
+<form class="form-horizontal" id="form1" name="form1" action="">
+<div class="col-md-7" id="app">
   <fieldset>
     
     <!-- Form Name -->
     <div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="coverDays">How many days would you like cover?</label>  
-	<input type="number" id ="coverDays" name="coverDays" v-model="coverDays" class="form-control input-md" placeholder="How many days would you like cover for?" required>  
+	<div class="text-field">
+	<input type="number" id ="coverDays" name="coverDays" v-model="coverDays" class="form-control input-md" required>  
+	<label class="labelClass" for="coverDays">How many days would you like cover?</label>  
 	</div>
-	  </div>
+	 </div>
+	 </div>
 	 
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="region">Which regions do you need cover for?</label>  
+	<div class="text-field">
 	<input type="text" name="region" class="form-control input-md" v-model="region" list="region" autocomplete="off" required>  	
-    <datalist id="region">
+    <label class="labelClass" for="region">Which regions do you need cover for?</label>  
+	<datalist id="region">
 	<option value="Worldwide (excl. US/Canada)">
 	<option value="Worldwide (incl. US/Canada)">
 	</datalist> 
 	</div>
+	</div>
 	  </div>
-	<div class="col-md-1"></div>
 	</div>
 	
 	 <div class="row">
-	  <div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-     <label for="coverFor">Who would you like cover for?</label> 
-	 <input type="text" name="coverFor" class="form-control input-md" v-model="coverFor" list="coverFor" autocomplete="off" required>  	
-    <datalist id="coverFor">
+	<div class="text-field">
+     <input type="text" name="coverFor" class="form-control input-md" v-model="coverFor" list="coverFor" autocomplete="off" required>  	
+    <label class="labelClass" for="coverFor">Who would you like cover for?</label> 
+	<datalist id="coverFor">
 	<option value="Just me">
 	<option value="My whole family">
 	</datalist> 
 	</div>
+	</div>
 	  </div>
 	 
-	   <div class="col-md-4 inputTypeCenter">
+	   <div class="col-md-6">
 	<div class="form-group">
-	<label for="valueOfCar" id="textInput">Details</label>
-					<textarea rows="1" cols="10" id ="details" v-model="details" name="details"  class="form-control input-md" placeholder="Details" required></textarea>  
-					</div>
-	  <div class="col-md-1"></div> 
+	<div class="text-field">
+	<textarea rows="1" cols="10" id ="details" v-model="details" name="details"  class="form-control input-md" required></textarea>  
+	<label class="labelClass" for="valueOfCar" id="textInput">Details</label>
+	</div> 
+	</div>
 	</div>
 	
 	
-	
-	
-	
-	
-	
-	  
-	 
-
-    <!-- Button -->
-	
-  </fieldset>
-</div>
 <div class="row">
 	
-	 <div class="col-md-12 inputTypeCenter text-center">
+	 <div class="col-md-12 text-center">
    <div class="form-group" style="display:inline;">        
   <button class="btn btn-info" type="submit">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
 	
-	</div>
+	</div>	
+    <!-- Button -->
+	
+  </fieldset>
+</div>
+<div class="col-md-5">
+<img src="images/albuhairafront2.jpeg" style="width:100%;height:100%;">
+</div>
 </form>
 
 </div>
 </div>
-
+</div>
 
 
 

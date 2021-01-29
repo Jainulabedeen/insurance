@@ -174,92 +174,90 @@
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box" id="app">
-
+<div class="col-md-7 animate-box" id="app">
     <div class="row">
-	<div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-6">
 	<div class="form-group">
-	<label for="iam">I am</label>  
+	<div class="text-field">
 	<input type="text" name="iam" class="form-control input-md" v-model="iam" list="iam" autocomplete="off" required>  	
+	<label class="labelClass" for="iam">I am</label>  
     <datalist id="iam"> 
 	<option value="landlord">
 	<option value="tenant">	
 	</datalist> 
 		  </div>
 		  </div>
-		
-		<div class="col-md-4 inputTypeCenter">  
+	</div>	
+		<div class="col-md-6">  
 	  <div class="form-group">
-	  <label for="livein">I live in</label> 
+	  <div class="text-field">
 	<input type="text" name="livein" class="form-control input-md" v-model="livein" list="livein" autocomplete="off" required>  	
+	<label class="labelClass" for="livein">I live in</label> 
     <datalist id="livein"> 
 	<option value="apartment">
 	<option value="villa">
 	</datalist> 
 			 </div>
 		 </div>
-		 <div class="col-md-1"></div>
+	</div>	 
 	</div>
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="optionalCover">I'm looking for cover for my</label>
+	<div class="text-field">
 	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-	<input type="checkbox" id="Contents" name="optionalCover" true-value="Contents" v-model="optionalCover1" checked class="contents" required>&nbsp;Contents
-	<input type="checkbox" id="belongings" name="optionalCover" true-value="Personal belongings" v-model="optionalCover2" class="belongings">&nbsp;Personal belongings
-	<span class="contentsItem"><input type="checkbox" id="Building" name="optionalCover" true-value="Building" v-model="optionalCover3" class="buildings">&nbsp;Building</span>
+	<input type="checkbox" id="Contents" name="optionalCover" value="Contents" checked class="contents" required>&nbsp;Contents
+	<input type="checkbox" id="belongings" name="optionalCover" value="Personal belongings" class="belongings">&nbsp;Belongings
+	<span class="contentsItem"><input type="checkbox" id="Building" name="optionalCover" value="Building" class="buildings">&nbsp;Building</span>
+	<label class="labelClass" for="optionalCover">I'm looking for cover for my</label>
 	</div>
 	</div>
 	</div>
-	
-	<div class="col-md-4 inputTypeCenter contentsItem">
+	</div>
+	<div class="col-md-6 contentsItem">
 	<div class="form-group">
-	<label for="contentsaed">Contents(AED)</label> 
-	<input id="contentsaed" name="contentsaed" type="number" v-model="contentsaed" placeholder="Contents(AED)" class="form-control input-md" required>
+	<div class="text-field">
+	<input id="contentsaed" name="contentsaed" type="number" class="form-control input-md" required>
+	<label class="labelClass" for="contentsaed">Contents(AED)</label> 
 	</div>
 	</div>
-	 <div class="col-md-1"></div>
+	</div>
 	 </div>
 	
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter belongingsItem" style="display:none;">
+	<div class="col-md-6 belongingsItem" style="display:none;">
 	<div class="form-group">
-	<label for="belongingsaed">Personal belongings(AED)</label> 
-	<input id="belongingsaed" name="belongingsaed" type="number" v-model="belongingsaed" placeholder="Personal belongings(AED)" class="form-control input-md" required>
+	<div class="text-field">
+	<input id="belongingsaed" name="belongingsaed" type="number" class="form-control input-md" required>
+	<label class="labelClass" for="belongingsaed">Personal belongings(AED)</label> 
 	</div>
 	</div>
+	</div>
+	<div class="col-md-6 buildingItem" style="display:none;">
+	<div class="form-group">
+	<div class="text-field">
+	<input id="buildingaed" name="buildingaed" type="number" class="form-control input-md" required>
+	<label class="labelClass" for="buildingaed">Building(AED)</label> 
+	</div>
+	</div>
+   </div>
 	
-	<div class="col-md-4 inputTypeCenter buildingItem" style="display:none;">
-	<div class="form-group">
-	<label for="buildingaed">Building(AED)</label> 
-	<input id="buildingaed" name="buildingaed" type="number" v-model="buildingaed" placeholder="Building(AED)" class="form-control input-md" required>
-	</div>
-	</div>
-   
-	 <div class="col-md-1"></div>
 	 </div>
-	
-	
 
-
- 
-    <!-- Button -->
 	<div class="row">
-
-	
 	<div class="col-md-12 text-center">
 	<div class="form-group"><br> 
  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
  		
 	</div>
     </div>
-	 <div class="col-md-1"></div>
 	 </div>
 </div>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
+</div>
 </form>
+
 
 </div>
 </div>

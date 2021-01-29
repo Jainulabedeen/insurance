@@ -1006,38 +1006,58 @@ color:black;
 						<h2>Message Us</h2>
 					</div>
 					<div class="col-md-6">
-					<center><p style="color:red;">{{info}}</p></center>
 						<form action="" method="post" id="form1">
-							<div class="row form-group">
-								<div class="col-md-6">
-								<label for="fname">Full Name</label>
-									<input type="text" id="fname" v-model="fname" name="fname" class="form-control"  placeholder="Your Full Name" required>
-								</div>
-								<div class="col-md-6">
-								<label for="lname">Mobile No.</label>
-									<input type="text" id="mobile" v-model="mobile" name="mobile" class="form-control" placeholder="Your Mobile No." required>
-								</div>
-							</div>
-
-							<div class="row form-group">
-								<div class="col-md-6">
-							<label for="email">Email</label> 
-									<input type="email" id="email" v-model="email" name="email" class="form-control"  placeholder="Your email address" required>
-								</div>
-								<div class="col-md-6">
-							<label for="subject">Subject</label>
-									<input type="text" id="subject" v-model="subject" name="subject" class="form-control"  placeholder="Your subject of this message" required>
-								</div>
-							</div>
-
-							<div class="row form-group">
-								<div class="col-md-12">
-								<label for="message">Message</label> 
-									<textarea name="message" id="message" v-model="message" name="message" cols="30"  rows="5" class="form-control" placeholder="Say..." required></textarea>
-								</div>
-							</div>
+						<div class="row">
+						<div class="col-md-6">
 							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id ="fname" name="fname" class="form-control input-md" required>  
+								<label class="labelClass" for="fname">Full Name</label>		
+							</div>
+							</div>
+							</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+							<label class="labelClass" for="mobile">Mobile No. </label>      
+						</div>
+							</div>
+						</div>	
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input id="email" name="email" type="email" class="form-control input-md" required>
+						<label class="labelClass" for="email">Email </label> 
+						</div>
+						</div>	 
+						</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input id="subject" name="subject" type="text" class="form-control input-md" required>
+						<label class="labelClass" for="subject">Subject </label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-12">
+						<div class="form-group">
+						<div class="text-field">
+						<textarea name="message" id="message" name="message" cols="30"  rows="5" class="form-control" required></textarea>
+						<label class="labelClass" for="message">Message </label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+
+							<div class="row text-center">
+								<div class="col-md-12">
 								<input type="submit" value="Send Message" class="btn btn-info">
+								</div>
 							</div>
 						</form>		
 					</div>

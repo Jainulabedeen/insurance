@@ -40,7 +40,7 @@ $(function() {
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
       //form.submit();
-	    vm.submitForm();
+	    //vm.submitForm();
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

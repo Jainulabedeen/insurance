@@ -42,7 +42,7 @@ $(function() {
     submitHandler: function(form) {
       //form.submit();
 	   // window.location= "success.html";
-	    vm.submitForm();
+	   // vm.submitForm();
 	   
     }
   });

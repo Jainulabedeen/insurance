@@ -9,7 +9,7 @@ const vm = new Vue({
                 maritalStatus: '',
                 visa: '',
 				dobSelected:'',
-				gender: '',
+				gender: 'Male',
 				location:'',
                 details:'' ,
                 foptionalCover1:'',
@@ -47,6 +47,7 @@ const vm = new Vue({
 				nationality:this.nationality
 
 			}).then((response) => {
+				localStorage.clear();
 				window.location.href = 'success.html';
 				    console.log('SUCCESS!! '+response);
                  }).catch((error) => {

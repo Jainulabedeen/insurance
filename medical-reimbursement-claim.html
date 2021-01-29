@@ -167,108 +167,153 @@
 					<div class="col-md-9">
 						<h3><b>Medical Reimbursement</b></h3>
 					</div>
-					<div class="col-md-9">
-					<center><p style="color:red;">{{info}}</p></center>
+					<div class="col-md-7">
+					<p>Making a claim on your Budget Direct insurance policy is quick and easy; and we’ll help you every step of the way.</p>
 						<form method="post" id="form1" enctype="multipart/form-data">
 
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="insname">Insured Name</label>
-									<input type="text" id="insname" v-model="insname" name="insname"  class="form-control" placeholder="Insured Name " required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Policy Holder Name</label>
-									<input type="text" id="policyHolderNmae" name="policyHolderNmae" v-model="policyHolderNmae" class="form-control" placeholder="Policy Holder Name" required>
-								</div>
-								
+							<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="insname" name="insname"  class="form-control input-md" required>
+								<label class="labelClass" for="insname">Insured Name</label>		
 							</div>
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="insuranceIdNo">Insurance ID No</label>
-									<input type="text" id="insuranceIdNo" v-model="insuranceIdNo" name="insuranceIdNo"  class="form-control" placeholder="Insurance ID No" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Date of Treatment</label>
-								<input type="text" name="dp1" class="form-control" placeholder="yyyy-mm-dd" v-model="treatDateSelected" autocomplete="off" id="dp1" required>
-								</div>
-								
 							</div>
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="placeOfTreat">Place Of Treatment</label>
-									<select id="placeOfTreat" name="placeOfTreat" v-model="placeOfTreat" class="form-control" required>
-									<option value="">Select Place Of Treatment</option>
-									<option value="United Arab Emirates">United Arab Emirates</option>
-									<option value="Aruba">Aruba</option>
-									<option value="Afghanistan">Afghanistan</option>
-									</select>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Claim amount in AED (Optional)</label>
-									<input type="number" id="claimAmount" name="claimAmount" v-model="claimAmount" class="form-control" placeholder="Claim amount in AED (Optional)" required>
-								</div>
-								
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="policyHolderNmae" name="policyHolderNmae"  class="form-control input-md" required>
+								<label class="labelClass" for="policyHolderNmae">Policy Holder Name</label>		
+							</div>
+							</div>
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="insuranceIdNo" name="insuranceIdNo"  class="form-control input-md" required>
+								<label class="labelClass" for="insuranceIdNo">Insurance ID No</label>		
+							</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="dp1" name="dp1"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="dp1">Date of Treatment</label>		
+							</div>
+							</div>
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" name="placeOfTreat"  class="form-control input-md" list="placeOfTreat" required>
+								<label class="labelClass" for="placeOfTreat">Place Of Treatment</label>	
+								<datalist id="placeOfTreat">
+									<option value="United Arab Emirates"></option>
+									<option value="Aruba"></option>
+									<option value="Afghanistan"></option>
+									</datalist>
+							</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="number" id="claimAmount" name="claimAmount"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="claimAmount">Claim amount in AED (Optional)</label>		
+							</div>
+							</div>
+							</div>
 							</div>
 
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="bankName">Name of Bank</label>
-									<input type="text" id="bankName" name="bankName" v-model="bankName" class="form-control" placeholder="Name of Bank" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="branch">Branch</label>
-									<input type="text" id="branch" name="branch" v-model="branch" class="form-control" placeholder="Name of Branch" required>
-								</div>
-							</div>
-							
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="actNo">Account No.</label>
-									<input type="text" id="actNo" v-model="actNo" name="actNo"  class="form-control" placeholder="Account No." required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">IBAN No</label>
-									<input type="text" id="ibnNo" name="ibnNo" v-model="ibnNo" class="form-control" placeholder="IBAN No" required>
-								</div>
-								
-							</div>
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="mobile">Mobile No.</label>
-									<input type="text" id="mobile" v-model="mobile" name="mobile"  class="form-control" placeholder="Mobile No." required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Emial</label>
-									<input type="email" id="email" name="email" v-model="email" class="form-control" placeholder="Email" required>
-								</div>
-								
-							</div>
-							<div class="row form-group">
-								<div class="col-md-9">
-									<label for="claimFile">Choose File</label>
-									<input type="file" id="files" name="files" ref="files" multiple v-on:change="handleFileUpload()"  class="form-control" placeholder="Claim File" required>
-								</div>
-								
-							</div>
-							
-							<div class="row form-group">
-								<div class="col-md-9">
-								<label for="message">Message</label>
-									<textarea name="message" id="message" v-model="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
-								</div>
-							</div>
+							<div class="row">
+							<div class="col-md-6">
 							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="bankName" name="bankName"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="bankName">Name of Bank</label>		
+							</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="branch" name="branch"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="branch">Branch</label>		
+							</div>
+							</div>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="actNo" name="actNo"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="actNo">Account No.</label>		
+							</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id="ibnNo" name="ibnNo"  class="form-control input-md" autocomplete="off" required>
+								<label class="labelClass" for="ibnNo">IBAN No.</label>		
+							</div>
+							</div>
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+							<label class="labelClass" for="mobile">Mobile No. </label>      
+						</div>
+							</div>
+						</div>	
+						
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id ="email" name="email" class="form-control input-md" required>  
+								<label class="labelClass" for="email">Email</label>		
+							</div>
+							</div>
+							</div>
+						</div>	
+							
+						<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="file" id="resume" name="resume" multiple class="form-control" required>
+						<label class="labelClass" for="resume" style="top:-10px;background-color:white;">Choose File</label> 
+						</div>
+						</div>	 
+						</div>
+							<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<textarea name="message" id="message" name="message" cols="30" rows="1" class="form-control" required></textarea>
+						<label class="labelClass" for="message">Message </label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+							<div class="row text-center">
+								<div class="col-md-12">
 								<input type="submit" value="Send Message" class="btn btn-info">
+								</div>
 							</div>
 						</form>		
 					</div>
-					
+					<div class="col-md-2"></div>
 					<div class="col-md-3">
 									
 									<div class="row" style="height:100%;border-radius:5px;padding-right:20px;">

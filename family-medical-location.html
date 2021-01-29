@@ -174,49 +174,45 @@
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box" id="app">
+<div class="col-md-7" id="app">
 
     <div class="row">
-	<div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-12">
 	<div class="form-group">
-	<label for="location">Preferred hospitals/clinics</label>  
-	  <textarea id ="location" rows="1" cols="10" v-model="location" name="location" class="form-control input-md" placeholder="Preferred Hospital/Clinics" required></textarea>  
+	<div class="text-field">
+	  <textarea id ="location" rows="1" cols="10" v-model="location" name="location" class="form-control input-md" required></textarea>  
+		  <label class="labelClass" for="location">Preferred hospitals/clinics</label>  
 		  </div>
 		  </div>
-		
-		<div class="col-md-4 inputTypeCenter">  
-	  <div class="form-group">
-	  <label for="details">Details</label>  
-	  <textarea id ="details" rows="1" cols="10" name="details" v-model="details" class="form-control input-md" placeholder="Preferred Hospital/Clinics" required></textarea>    
-			 </div>
-		 </div>
-		 <div class="col-md-1"></div>
+	</div>	
 	</div>
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-	<label for="email">Optional covers required</label>
-	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
-	<input type="checkbox" id="dental" name="Dental"  true-value="Dental" v-model="foptionalCover1">&nbsp;Dental
-	<input type="checkbox" id="world" name="world"  true-value="Worldwide" v-model="foptionalCover2">&nbsp;Worldwide
-	<input type="checkbox" id="home" name="home"  true-value="Home Country" v-model="foptionalCover3">&nbsp;Home Country
+		<div class="col-md-6">  
+	  <div class="form-group">
+	  <div class="text-field">
+	  <textarea id ="details" rows="1" cols="10" name="details" v-model="details" class="form-control input-md" required></textarea>    
+		<label class="labelClass" for="details">Details</label>  
 	</div>
-	</div>
+		 </div>
 	</div>
 	
-	 <div class="col-md-1"></div>
+	<div class="col-md-6">
+	<div class="form-group">
+	<div class="text-field">
+	<div class="form-control" style="border-radius:5px;width:100%;height:41px;">
+	<input type="checkbox" id="dental" name="optionalCover" checked true-value="Dental" v-model="foptionalCover1">&nbsp;Dental
+	<input type="checkbox" id="world" name="optionalCover"  true-value="Worldwide" v-model="foptionalCover2">&nbsp;Worldwide
+	<input type="checkbox" id="home" name="optionalCover"  true-value="Home Country" v-model="foptionalCover3">&nbsp;Country
+	<label class="labelClass" for="optionalCover">Optional covers required</label>
+	
+	</div>
+	</div>
+	</div>
+	</div>
 	 </div>
 	
-	
-	
-
-
- 
-    <!-- Button -->
 	<div class="row">
-	<div class="col-md-12 inputTypeCenter text-center">
+	<div class="col-md-12 text-center">
 	<div class="form-group">
 <a href="family-medical-details.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
  
@@ -225,6 +221,9 @@
 	</div>
     </div>
 	</div>
+</div>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
 </div>
 </form>
 

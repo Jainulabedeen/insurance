@@ -31,6 +31,7 @@ const vm = new Vue({
 				detail:this.details
 
 			}).then((response) => {
+				localStorage.clear();
 				window.location.href = 'success.html';
 				    console.log('SUCCESS!! '+response);
                  }).catch((error) => {

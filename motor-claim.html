@@ -167,67 +167,87 @@
 					<div class="col-md-9">
 						<h3><b>Motor Claim</b></h3>
 					</div>
-					<div class="col-md-9" id="app">
-					<center><p style="color:red;">{{info}}</p></center>
-						<form method="post" id="form1" enctype="multipart/form-data">
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="fname">Full Name</label>
-									<input type="text" id="fname" v-model="fname" name="fname"  class="form-control" placeholder="Full Name *" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Mobile No.</label>
-									<input type="text" id="mobile" v-model="mobile" name="mobile" style="" class="form-control" placeholder="Mobile No. *" required>
-								</div>
-								
-							</div>
-							
-
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="email">Email</label>
-									<input type="text" id="email" v-model="email" name="email" style="" class="form-control" placeholder="Email address" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="enquiryType">Motor Claim</label>
-									
-									<input type="text" id="motorClaim" v-model="motorClaim" value="Motor Claim" name="motorClaim" style="" class="form-control" placeholder="Motor Claim" required>
-								</div>
-							</div>
-							
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="email">Policy No.</label>
-									<input type="text" id="policyno" v-model="policyno" name="policyno" style="" class="form-control" placeholder="Policy No." required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="enquiryType">Choose File</label>
-									
-									<input type="file" id="files" name="files" ref="files" multiple v-on:change="handleFileUpload()" class="form-control" required>
-								</div>
-							</div>		
-							
-							<div class="row form-group">
-								<div class="col-md-9">
-								<label for="message">Message</label>
-									<textarea name="message" id="message" v-model="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
-								</div>
-							</div>
+					<div class="col-md-7" id="app">
+					<p>Making a claim on your Budget Direct insurance policy is quick and easy; and we’ll help you every step of the way.</p>
+					<form action="" method="post" id="form1">
+						<div class="row">
+						<div class="col-md-6">
 							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-info">
+							<div class="text-field">
+							<input type="text" id ="fname" name="fname" class="form-control input-md" required>  
+								<label class="labelClass" for="fname">Full Name</label>		
 							</div>
-						</form>	
+							</div>
+							</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+							<label class="labelClass" for="mobile">Mobile No. </label>      
+						</div>
+							</div>
+						</div>	
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id ="email" name="email" class="form-control input-md" required>  
+								<label class="labelClass" for="email">Email</label>		
+							</div>
+							</div>
+							</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" id ="motorClaim" name="motorClaim" class="form-control input-md" required>  
+							<label class="labelClass" for="motorClaim">Motor Claim</label>      
+						</div>
+							</div>
+						</div>	
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input id="policyno" name="policyno" type="policyno" class="form-control input-md" required>
+						<label class="labelClass" for="policyno">Policy No. </label> 
+						</div>
+						</div>	 
+						</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="file" id="resume" name="resume" multiple class="form-control" required>
+						<label class="labelClass" for="resume" style="top:-10px;background-color:white;">Choose File</label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-12">
+						<div class="form-group">
+						<div class="text-field">
+						<textarea name="message" id="message" name="message" cols="30" style="height:100%;" rows="5" class="form-control" required></textarea>
+						<label class="labelClass" for="message">Message </label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+
+							<div class="row text-center">
+								<div class="col-md-12">
+								<input type="submit" value="Send Message" class="btn btn-info">
+								</div>
+							</div>
+						</form>		
 						
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 					<div class="col-md-3">
 									
 									<div class="row" style="height:100%;border-radius:5px;padding-right:20px;">
-									<br>
-									
+								
 									<ul style="list-style:none;">
 									<li><h3>Get in Touch with Us</h3></li>
 									<li><i class="fa fa-phone"></i> &nbsp; Call : +971 6 517 4444</li>

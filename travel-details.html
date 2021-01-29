@@ -175,52 +175,52 @@
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box" id="app">
+<div class="col-md-7" id="app">
 
     <div class="row">
-	<div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-6">
 	<div class="form-group">
-	<label for="fname">First Name *</label>  
-	  <input type="text" id ="fname" name="fname" v-model="fname" class="form-control input-md" placeholder="First Name *" required>  
+	<div class="text-field">
+	  <input type="text" id ="fname" name="fname" v-model="fname" class="form-control input-md" required>  
+		  <label class="labelClass" for="fname">First Name</label>  
 		  </div>
 		  </div>
+		</div>
 		
-		<div class="col-md-4 inputTypeCenter">  
+		<div class="col-md-6">  
 	  <div class="form-group">
-	  <label for="lname">Last Name *</label>  
-	   <input type="text" id ="lname" name="lname" v-model="lname"  class="form-control input-md" placeholder="Last Name *" required>  
+	  <div class="text-field">
+	   <input type="text" id ="lname" name="lname" v-model="lname"  class="form-control input-md" required>  
+		<label class="labelClass" for="lname">Last Name</label>  	 
 			 </div>
 		 </div>
-		 <div class="col-md-1"></div>
+		 </div>
 	</div>
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-12">
 	<div class="form-group">
-	<label for="email">Email *</label> 
-	<input id="email" name="email" type="email" v-model="email" placeholder="Email *" class="form-control input-md" required>
+	<div class="text-field">
+	<input id="email" name="email" type="email" v-model="email" class="form-control input-md" required>
+	<label class="labelClass" for="email">Email</label> 
 	</div>
 	</div>
-	 <div class="col-md-4 inputTypeCenter">
-	<div class="form-group">
-      <label for="mobile">Mobile No. *</label> 
-       <input type="text" id ="mobile" name="mobile" v-model="mobile" class="form-control input-md" maxlength="12" placeholder="+971 Mobile *" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
-        </div>
+	</div>
 	 </div>
-	 <div class="col-md-1"></div>
-	 </div>
-	
-	
-	
 	<div class="row">
-	
-	 <div class="col-md-1"></div>
-	 <div class="col-md-4 inputTypeCenter">
+	 <div class="col-md-6">
 	<div class="form-group">
-	<label for="mobile">Nationality</label> 
+	<div class="text-field">
+       <input type="text" id ="mobile" name="mobile" v-model="mobile" class="form-control input-md" maxlength="12" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+          <label class="labelClass" for="mobile">Mobile No.</label> 
+		</div>
+		</div>
+	 </div>
+	<div class="col-md-6">
+	<div class="form-group">
+	<div class="text-field">	
 	<input type="text" name="nationality" class="form-control input-md" v-model="nationality" list="nationality" autocomplete="off" onchange="carModelShow(this.value)" required>  
-     <datalist id="nationality">  
+	<label class="labelClass" for="mobile">Nationality</label>     
+	<datalist id="nationality">  
 	  <option value="Afghan">
 		<option value="Albanian">
 		<option value="Algerian">
@@ -419,23 +419,24 @@
 		</datalist> 
 	   </div>
 	   </div>
-	    <div class="col-md-4 inputTypeCenter">
+	</div>
+	</div>
+	
+	 
+	<div class="row">
+	<div class="col-md-12">
 	<div class="form-group">
-      <label for="destination">Destination</label> 
-       <input type="text" id ="destination" name="destination" v-model="destination" class="form-control input-md" maxlength="12" placeholder="Destination" required>  
-        </div>
+	<div class="text-field">
+       <input type="text" id ="destination" name="destination" v-model="destination" class="form-control input-md" maxlength="12" required>  
+        <label class="labelClass" for="destination">Destination</label> 
+		</div>
 	 </div>
-	 <div class="col-md-1"></div>
-    
+    </div>
 	</div>
 
-
  
-    <!-- Button -->
-	
-</div>
 <div class="row">
-	<div class="col-md-12 inputTypeCenter text-center">
+	<div class="col-md-12 text-center">
 	<div class="form-group">
 <a href="travel.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
   <button type="submit" id="submitbtn" class="btn btn-info">Submit&nbsp;</button>     
@@ -443,7 +444,11 @@
 	</div>
     </div>
 
-	</div>
+	</div>	
+</div>
+<div class="col-md-5">
+<img src="images/albuhairafront2.jpeg" style="width:100%;height:100%;">
+</div>
 </form>
 
 </div>

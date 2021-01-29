@@ -172,26 +172,26 @@
 <br><br><br>
 <div class="colorlib-trainers" id="app">
 <div class="container">
-<center><p style="color:red;">{{info}}</p></center>
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box" id="app">
+<div class="col-md-7" id="app">
 
     <div class="row">
-	<div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-6">
 	<div class="form-group">
-	<label for="cname">Company Name</label>  
-	  <input type="text" id ="cname" name="cname" v-model="cname" class="form-control input-md" placeholder="Company Name " required>  
+	<div class="text-field">
+	  <input type="text" id ="cname" name="cname" class="form-control input-md" required>  
+	  <label class="labelClass" for="cname">Company Name</label>  
 		  </div>
 		  </div>
-		
-		<div class="col-md-4 inputTypeCenter">  
+	</div>	
+		<div class="col-md-6">  
 	  <div class="form-group">
-	  <label for="details">Brief Details</label>  
-	   <textarea rows="1" cols="10" v-model="details" id ="details" name="details"  class="form-control input-md" placeholder="Brief Details" required></textarea>  
+	  <div class="text-field">
+	   <textarea rows="1" cols="10" id ="details" name="details"  class="form-control input-md" required></textarea>  
+	   <label class="labelClass" for="details">Brief Details</label>  
 			 </div>
 		 </div>
-		 <div class="col-md-1"></div>
+		 </div>
 	</div>
 
 	
@@ -210,9 +210,9 @@
 	
 	 </div>
 	
- 
-    <!-- Button -->
-	
+</div>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
 </div>
 </form>
 

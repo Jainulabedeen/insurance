@@ -167,80 +167,100 @@
 					<div class="col-md-9">
 						<h3><b>Non-Motor Claim</b></h3>
 					</div>
-					<div class="col-md-9">
-					<center><p style="color:red;">{{info}}</p></center>
-						<form action="" method="post" id="form1" enctype="multipart/form-data">
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="fname">Full Name</label>
-									<input type="text" id="fname" name="fname" v-model="fname"  class="form-control" placeholder="Full Name *" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="lname">Mobile No.</label>
-									<input type="text" id="mobile" name="mobile" v-model="mobile" class="form-control" placeholder="Mobile No. *" required>
-								</div>
-								
-							</div>
-							
-
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="email">Email</label>
-									<input type="text" id="email" name="email" v-model="email" class="form-control" placeholder="Email address" required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="insurance">Select Insurance</label>
-									
-									<select id="insurance" name="insurance" v-model="insurance" class="form-control" required>
-									<option value="">Select Insurance</option>
-									<option value="Aviation Insurance">Aviation Insurance</option>
-										<option value="Business Travel Insurance">Business Travel Insurance</option>
-										<option value="Engineering Insurance">Engineering Insurance</option>
-										<option value="Group Life and Personal Accident Insurance">Group Life and Personal Accident Insurance</option>
-										<option value="Group Medical Insurance">Group Medical Insurance</option>
-										<option value="Home Shield Isurance">Home Shield Isurance</option>
-										<option value="Medical Insurance">Medical Insurance</option>
-										<option value="Miscellaneous">Miscellaneous</option>
-										<option value="Personal Accident Insurance">Personal Accident Insurance</option>
-										<option value="Property Insurance">Property Insurance</option>
-										<option value="Travel Insurance">Travel Insurance</option>
-										<option value="Yacht Insurance">Yacht Insurance</option>
-										<option value="Jetski Insurance">Jetski Insurance</option>
-										<option value="Marine Hull">Marine Hull</option>
-										<option value="Maring Cargo">Maring Cargo</option>
-									
-									
-									</select>
-								</div>
-							</div>
-							<div class="row form-group">
-								<div class="col-md-4">
-									<label for="email">Policy No.</label>
-									<input type="text" id="policyno" name="policyno" v-model="policyno" class="form-control" placeholder="Policy No." required>
-								</div>
-								<div class="col-md-1"></div>
-								<div class="col-md-4">
-								<label for="enquiryType">Choose File</label>
-									
-									<input type="file" id="files" name="files" ref="files" multiple v-on:change="handleFileUpload()" class="form-control" required>
-								</div>
-							</div>	
-
-							
-							<div class="row form-group">
-								<div class="col-md-9">
-								<label for="message">Message</label>
-									<textarea name="message" id="message" v-model="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message *" required></textarea>
-								</div>
-							</div>
+					<div class="col-md-7">
+					<p>Making a claim on your Budget Direct insurance policy is quick and easy; and we’ll help you every step of the way.</p>
+					<form action="" method="post" id="form1">
+						<div class="row">
+						<div class="col-md-6">
 							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id ="fname" name="fname" class="form-control input-md" required>  
+								<label class="labelClass" for="fname">Full Name</label>		
+							</div>
+							</div>
+							</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" id ="mobile" name="mobile" class="form-control input-md" maxlength="12" title="Country Code 971 and 9 digit Mobile Number" pattern="[9]{1}[7]{1}[1]{1}[0-9]{9}" required>  
+							<label class="labelClass" for="mobile">Mobile No. </label>      
+						</div>
+							</div>
+						</div>	
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="text-field">
+							<input type="text" id ="email" name="email" class="form-control input-md" required>  
+								<label class="labelClass" for="email">Email</label>		
+							</div>
+							</div>
+							</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="text" name="insurance" class="form-control input-md" list="insurance" required>  
+							<label class="labelClass" for="motorClaim">Select Insurance</label> 
+							<datalist id="insurance">
+										<option value="Aviation Insurance">Aviation Insurance</option>
+										<option value="Business Travel Insurance"></option>
+										<option value="Engineering Insurance"></option>
+										<option value="Group Life and Personal Accident Insurance"></option>
+										<option value="Group Medical Insurance"></option>
+										<option value="Home Shield Isurance"></option>
+										<option value="Medical Insurance"></option>
+										<option value="Miscellaneous"></option>
+										<option value="Personal Accident Insurance"></option>
+										<option value="Property Insurance"></option>
+										<option value="Travel Insurance"></option>
+										<option value="Yacht Insurance"></option>
+										<option value="Jetski Insurance"></option>
+										<option value="Marine Hull"></option>
+										<option value="Maring Cargo"></option>
+									
+							</datalist>
+						</div>
+							</div>
+						</div>	
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input id="policyno" name="policyno" type="policyno" class="form-control input-md" required>
+						<label class="labelClass" for="policyno">Policy No. </label> 
+						</div>
+						</div>	 
+						</div>
+						<div class="col-md-6">
+						<div class="form-group">
+						<div class="text-field">
+						<input type="file" id="resume" name="resume" multiple class="form-control" required>
+						<label class="labelClass" for="resume" style="top:-10px;background-color:white;">Choose File</label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-12">
+						<div class="form-group">
+						<div class="text-field">
+						<textarea name="message" id="message" name="message" cols="30" style="height:100%;" rows="5" class="form-control" required></textarea>
+						<label class="labelClass" for="message">Message </label> 
+						</div>
+						</div>	 
+						</div>
+						</div>
+
+							<div class="row text-center">
+								<div class="col-md-12">
 								<input type="submit" value="Send Message" class="btn btn-info">
+								</div>
 							</div>
 						</form>		
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 					<div class="col-md-3">
 									
 									<div class="row" style="height:100%;border-radius:5px;padding-right:20px;">

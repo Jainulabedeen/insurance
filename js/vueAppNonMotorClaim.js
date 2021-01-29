@@ -41,6 +41,7 @@ const vm = new Vue({
 						}
 					
                 }).then((response) => {
+					localStorage.clear();
 					window.location.href = 'motor-claim-success.html';
 				    console.log('SUCCESS!! '+response);
 					

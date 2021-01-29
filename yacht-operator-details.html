@@ -172,68 +172,64 @@
 <br><br><br>
 <div class="colorlib-trainers" id="app">
 <div class="container">
-<center><p style="color:red;">{{info}}</p></center>
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box" id="app">
+<div class="col-md-7" id="app">
 
     <div class="row">
-	<div class="col-md-1"></div>
- <div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="claimExperience">Claims experience</label> 
-	<textarea rows="1" cols="10" id ="claimExperience" name="claimExperience" v-model="claimExperience" class="form-control input-md" placeholder="Claims experience" required></textarea>  
-       
+	<div class="text-field">
+	<textarea rows="1" cols="10" id ="claimExperience" name="claimExperience" class="form-control input-md" required></textarea>  
+	<label class="labelClass" for="claimExperience">Claims experience</label> 
+       </div>
 	   </div>
 	   </div>
 		
-		<div class="col-md-4 inputTypeCenter">  
+		<div class="col-md-6">  
 	  <div class="form-group">
-	  <label for="sumInsured">Sum insured</label>  
-	   <input type="number" id ="sumInsured" name="sumInsured" v-model="sumInsured"  class="form-control input-md" placeholder="Sum Insured" required>  
+	  <div class="text-field">
+	   <input type="number" id ="sumInsured" name="sumInsured"  class="form-control input-md" required>  
+	   <label class="labelClass" for="sumInsured">Sum insured</label>  
 			 </div>
 		 </div>
-		 <div class="col-md-1"></div>
+	</div>
 	</div>
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="email">Use</label> 
-	<input id="use" name="use" type="text" v-model="use" placeholder="Use" class="form-control input-md" required>
+	<div class="text-field">
+	<input id="use" name="use" type="text" class="form-control input-md" required>
+	<label class="labelClass" for="email">Use</label> 
 	</div>
 	</div>
-		 <div class="col-md-4 inputTypeCenter">
+	</div>
+	<div class="col-md-6">
 	<div class="form-group">
-      <label for="mobile">Operator's experience</label> 
-       <input type="text" id ="operatorExperience" name="operatorExperience" v-model="operatorExperience" class="form-control input-md" placeholder="Operator's experience" required>  
+	<div class="text-field">
+	<input type="text" id ="operatorExperience" name="operatorExperience" class="form-control input-md" required>  
+	      <label class="labelClass" for="mobile">Operator's experience</label> 
         </div>
 	 </div>
-	
-	
-	<div class="col-md-1"></div>
+	</div>
 	</div>
 	
 	<div class="row">
-	
-	
-	
-	   <div class="col-md-12 inputTypeCenter text-center">
+	   <div class="col-md-12 text-center">
 	<div class="form-group">
 	<br>
 <a href="yacht-details.html" class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;Previous</a>     
- 
  <button type="submit" id="submitbtn" class="btn btn-info">Submit</button>     
- 		
 	</div>
     </div>
-	<div class="col-md-1"></div>
     </div>
 </div>	
     <!-- Button -->
-	
-</div>
-</form>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
+</div>	
 
+</form>
+</div>
 </div>
 
 

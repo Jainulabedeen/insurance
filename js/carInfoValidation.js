@@ -40,6 +40,7 @@ $(function() {
         errorPlacement: function(error, element) {
             if(element.parent('.input-group').length) {
                 error.insertAfter(element.parent());
+			
             } else {
                 error.insertAfter(element);
             }
@@ -47,7 +48,7 @@ $(function() {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-     form.submit();
+     //form.submit();
 	    window.location= "driver-info.html";
     }
 	 
@@ -56,7 +57,7 @@ $(function() {
      
 	   var data = date_of_registered.split("-");
 	   var todaySelectedDate=date_of_registered;
-	 vm.dateSelected=todaySelectedDate;
+	// vm.dateSelected=todaySelectedDate;
 	   var today=new Date();
 	   var currentYear=today.getFullYear();
 	   var currentMonth=today.getMonth()+1;

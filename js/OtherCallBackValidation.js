@@ -65,7 +65,7 @@ $(function() {
       //form.submit();
 	   //window.location= "success.html";
 	   
-	    vm.submitForm();
+	  //  vm.submitForm();
     }
   });
     $.validator.addMethod("mobile", function (phone_number, element) {

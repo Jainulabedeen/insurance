@@ -173,26 +173,28 @@
 <div class="container">
 
 <form class="form-horizontal" id="form1" method="post">
-<div class="col-md-12 animate-box">
+<div class="col-md-7">
 
     <div class="row">
-	<div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-6">
 	<div class="form-group">
-	<label for="boatType">Select your boat's type</label>
-	<input type="text" name="boatType" class="form-control input-md" v-model="boatType" list="boatType" autocomplete="off" required>  	
+	<div class="text-field">
+	<input type="text" name="boatType" class="form-control input-md" list="boatType" autocomplete="off" required>  	
+	<label class="labelClass" for="boatType">Select your boat's type</label>
     <datalist id="boatType">
 	<option value="sailboat">
 	 <option value="motorboat">	
 	</datalist> 	
 	 	  </div>
 		  </div>
+		  </div>
 	
-		<div class="col-md-4 inputTypeCenter">  
+		<div class="col-md-6">  
 	  <div class="form-group">
-	 <label for="mobile">Nationality</label> 
-	<input type="text" name="nationality" class="form-control input-md" v-model="nationality" list="nationality" autocomplete="off" onchange="carModelShow(this.value)" required>  
-     <datalist id="nationality">  
+	  <div class="text-field">
+	<input type="text" name="nationality" class="form-control input-md" list="nationality" autocomplete="off" onchange="carModelShow(this.value)" required>  
+     <label class="labelClass" for="mobile">Nationality</label> 
+	 <datalist id="nationality">  
 	  <option value="Afghan">
 		<option value="Albanian">
 		<option value="Algerian">
@@ -392,16 +394,16 @@
 	</datalist>  
     		 </div>
 		 </div>
-	<div class="col-md-1"></div>	 
+		 </div> 
 	</div>
 	
 	<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-4 inputTypeCenter">
+	<div class="col-md-6">
 	<div class="form-group">
-	<label for="manufacturer">What's the name of the manufacturing company of your boat?</label> 
-	<input type="text" name="manufacturer" class="form-control input-md" v-model="manufacturer" list="manufacturer" autocomplete="off" required>  	
-    <datalist id="manufacturer">
+	<div class="text-field">
+	<input type="text" name="manufacturer" class="form-control input-md" list="manufacturer" autocomplete="off" required>  	
+    <label class="labelClass" for="manufacturer">What's the name of the manufacturing company?</label> 
+	<datalist id="manufacturer">
 		<option value="ABBATE TULLIO">
 		<option value="ACM">
 		<option value="ADRIA">
@@ -751,11 +753,13 @@
 	
 	</div>
 	</div>
-	 <div class="col-md-4 inputTypeCenter">
+	</div>
+	 <div class="col-md-6">
 	<div class="form-group">
-      <label for="yearOfManufacturer">In which year was it manufactured?</label> 
-	   <input type="text" name="yearOfManufacturer" class="form-control input-md" v-model="yearOfManufacturer" list="yearOfManufacturer" autocomplete="off" required>  	
-    <datalist id="yearOfManufacturer">	  
+	<div class="text-field">
+	   <input type="text" name="yearOfManufacturer" class="form-control input-md" list="yearOfManufacturer" autocomplete="off" required>  	
+    <label class="labelClass" for="yearOfManufacturer">In which year was it manufactured?</label> 
+	<datalist id="yearOfManufacturer">	  
 			<option value="2021">
 			<option value="2020">
 			<option value="2019">
@@ -794,46 +798,43 @@
 	</datalist> 	    
 	   </div>
 	 </div>
-	<div class="col-md-1"></div>
+	</div>
 	</div>
 	 <div class="row">
-	 <div class="col-md-1"></div>
-  <div class="col-md-4 inputTypeCenter">
+  <div class="col-md-6">
 	<div class="form-group">
-	<label for="engineType"> What is the engine type?</label>  
-	 <input type="text" name="engineType" class="form-control input-md" v-model="engineType" list="engineType" autocomplete="off" required>  	
+	<div class="text-field">
+	 <input type="text" name="engineType" class="form-control input-md" list="engineType" autocomplete="off" required>  	
+	 <label class="labelClass" for="engineType"> What is the engine type?</label>  
     <datalist id="engineType">
 	 <option value="Inboard Engine">
 	  <option value="Outboard Engine">
 	</datalist> 	 
 		  </div>
 		  </div>
-		<div class="col-md-4 inputTypeCenter">  
+	</div>	  
+		<div class="col-md-6">  
 	  <div class="form-group">
-	  <label for="lengthBoat">What is the length of your Boat</label>  
-	   <input type="text" id ="lengthBoat" name="lengthBoat" v-model="lengthBoat" class="form-control input-md" placeholder="What is the length of your Boat" required>  
+	  <div class="text-field">
+	   <input type="text" id ="lengthBoat" name="lengthBoat" class="form-control input-md" required>  
+	   <label class="labelClass" for="lengthBoat">What is the length of your Boat</label>  
 			 </div>
 		 </div>
-	<div class="col-md-1"></div>	 
+		 </div>
 	</div>
-	 
-	
-	
-    <!-- Button -->
 	<div class="row">
-	
 	 <div class="col-md-12 text-center">
 	<div class="form-group">
-	<br>
-  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     
-		
+  <button type="submit" id="submitbtn" class="btn btn-info">Next&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>     	
 	</div>
     </div>
-	<div class="col-md-1"></div>
 	</div>
 	
 	
 	
+</div>
+<div class="col-md-5">
+<img src="images/abnic-website.jpg" style="width:100%;height:100%;">
 </div>
 </form>
 
