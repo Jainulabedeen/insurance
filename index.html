@@ -29,6 +29,8 @@
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/design.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 <style>
@@ -56,7 +58,6 @@ color:white;
  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 .insuranceLink:hover {
- color:black;
  background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  
@@ -67,8 +68,6 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
 .insuranceLink.active {
   background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
- 
-  color:black;
   border-bottom:5px solid white;
   border-radius:5px;
   height:40px;
@@ -249,8 +248,8 @@ margin-left:124px;
 			<div class="col-md-4" id="personalBusinessInsuranceLink">
 			
 			<div class="row" id="insuranceLink">
-			<button id="personalBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')"><span>Personal</span></button>
-			<button id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')"><span>Business</span></button>
+			<a id="personalBtn" class="insuranceLink active" onclick="openSummary(event, 'personal')" style="color:white;">Personal</a>
+			<a id="businessBtn" class="insuranceLink" onclick="openSummary(event, 'business')" style="color:white;">Business</a>
 			</div>
 		
 			<div class="personalBusinessInsuranceDesign">
@@ -498,158 +497,136 @@ margin-left:124px;
 					</div>
 						</div>
 						</div>
+				
 				</div>
 					<br><br><br><br>
-						<div class="colorlib-trainers">
-						<div class="container">
-						
-				<div class="row">
-				
-	<center>
-	<h3>  <b style="color:#2E9AC5;"> Why Choose Al Buhaira National Insurance Company (ABNIC)?</b></h3>
-    
-	</center>
-	 
-	<section data-why-choose="" class="oic-font-Montserrat oic-hidden xl:oic-block oic-bg-white">
-	        <section class="oic-container oic-mb-0 lg:oic-mb-3 oic-mx-auto ">
-                <section class="ellipseContainer ellipses">
-                    <header class="oic-text-center">
-                 
-                        <p class="oic-font-Merriweather oic-text-gray-300" style="color:#2E9AC5;">
-                    
-                             <img src="images/albuhairafront2.jpeg" style="background-position:center;margin:10px;width:100%;height:100%;">
-							
-						</p>
-						
-                    </header>
-
-                            <p class="chips oic-absolute type1 type1 chip1 position oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:40px;padding:15px 5px;">
-                               <br>
-                                <label for="text" class="oic-text-white"><b>Awarded by Insurance Authority 2020</b></label>
-                            </p>
-                            <p class="chips oic-absolute type1 type2 chip2 position oic-bg-white oic-border-1 oic-border-green-100" style="font-size:30px;">
-                                <label for="head" class="oic-text-green-100"></label>
-                                <label for="text"><b>Hassle-free Claim process</b> </label>
-                            </p>
-                            <p class="chips oic-absolute type1 type1 chip3 position oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:30px;padding:15px 5px;">
-                                <label for="head" class="oic-text-white"><br></label>
-                                <label for="text" class="oic-text-white"><b>Valuing your trust since 1978</b></label>
-                            </p>
-                            <p class="chips oic-absolute type1 type2 chip4 position oic-bg-white oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                <label for="head" class="oic-text-green-100"></label>
-                                <label for="text"><b>Highly liquidity, financial resilience & strong capital </b></label>
-                            </p>
-                            <p class="chips oic-absolute type1 type1 chip5 position oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                <label for="head" class="oic-text-white"></label>
-                                <label for="text" class="oic-text-white"><b>Affordable premiums with a wide range of coverage</b></label>
-                            </p>
-                            <p class="chips oic-absolute type1 type2 chip6 position oic-bg-white oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                <label for="head" class="oic-text-green-100"></label><br>
-                                <label for="text"><b>Renew your ABNIC policy. We reward loyalty</b></label>
-                            </p>
-                                    </section>
-            </section>
-        </section>
-		</div>
-		</div>
-		</div>
-		<br>
-		<div class="colorlib-trainers">
-			<div class="container">
-			
-				<div class="row">
-		<section data-why-choose="" class="oic-font-Montserrat xl:oic-hidden oic-bg-white mobile">
-            <section class="oic-container oic-mb-0 lg:oic-mb-3 oic-mx-auto ">
-                <section class="ellipses">
-                    <header class="oic-text-center oic-px-6">
-                        <p class="oic-font-Merriweather oic-text-gray-300" style="color:#2E9AC5;">
-                    
-                             <img src="images/albuhairafront2.jpeg" style="background-position:center;margin:10px;width:100%;height:100%;">
-							
-						</p>
-                    </header>
-                    <section class="swiper-container swiper-container-initialized swiper-container-horizontal" data-slides="1,1">
-                        <section class="swiper-wrapper oic-py-7" style="transition-duration: 0ms; transform: translate3d(-900px, 0px, 0px);"><section class="swiper-slide oic-flex oic-justify-center swiper-slide-duplicate" data-swiper-slide-index="5" style="width: 440px; margin-right: 10px;">
-                                        <p class="chips type2 chip6 oic-bg-white oic-border-1 oic-border-green-100">
-                                           
-                                        </p>
-                                    </section>
-
-                                    <section class="swiper-slide oic-flex oic-justify-center swiper-slide-prev" data-swiper-slide-index="0" >
-                                        <p class="chips type1 chip1 oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:40px;padding:75px 5px;">
-										
-                                <label for="text" class="oic-text-white"><b>Awarded by Insurance Authority 2020</b></label>
-                                            
-                                        </p>
-                                    </section>
-                                    <section class="swiper-slide oic-flex oic-justify-center swiper-slide-active" data-swiper-slide-index="1" style="font-size:30px;">
-                                        <p class="chips type2 chip2 oic-bg-white oic-border-1 oic-border-green-100">
-										 <label for="head" class="oic-text-green-100"></label>
-                                <label for="text"><b>Hassle-free Claim process</b> </label>
-                                          
-                                        </p>
-                                    </section>
-                                    <section class="swiper-slide oic-flex oic-justify-center swiper-slide-next" data-swiper-slide-index="2" >
-                                        <p class="chips type1 chip3 oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:30px;padding:10px 5px;">
-										 <label for="head" class="oic-text-white"><br></label>
-                                <label for="text" class="oic-text-white"><b>Valuing your trust since 1978</b></label>
-                                            
-                                        </p>
-                                    </section>
-                                    <section class="swiper-slide oic-flex oic-justify-center" data-swiper-slide-index="3" >
-                                        <p class="chips type2 chip4 oic-bg-white oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                           <label for="head" class="oic-text-green-100"></label>
-                                <label for="text"><b>Highly liquidity, financial resilience & strong capital  </b></label>
-                                        </p>
-                                    </section>
-                                    <section class="swiper-slide oic-flex oic-justify-center" data-swiper-slide-index="4" >
-                                        <p class="chips type1 chip5 oic-bg-green-100 oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                            <label for="head" class="oic-text-white"></label>
-                                <label for="text" class="oic-text-white"><b>Affordable premiums with a wide range of coverage</b></label>
-                                        </p>
-                                    </section>
-                                    <section class="swiper-slide oic-flex oic-justify-center" data-swiper-slide-index="5" >
-                                        <p class="chips type2 chip6 oic-bg-white oic-border-1 oic-border-green-100" style="font-size:30px;padding:-1px 5px;">
-                                            <label for="head" class="oic-text-green-100"></label><br>
-                                <label for="text"><b>Renew your ABNIC policy. We reward loyalty</b></label>
-                                        </p>
-                                    </section>
-                        <section class="swiper-slide oic-flex oic-justify-center swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 440px; margin-right: 10px;">
-                                        <p class="chips type1 chip1 oic-bg-green-100 oic-border-1 oic-border-green-100">
-                                            <label for="head" class="oic-text-white"><br></label>
-                                           
-                                        </p>
-                                    </section></section>
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></section>
-                </section>
-            </section>
-        </section>
-		</div>
+	
+	
+	<div class="colorlib-trainers">
+	<div class="container">	
+	<div class="row">
+	<div class="container-fluid whyTataSection sectionSeparator">
+	<h2 class="heading text-center h2-heading headingBmargin">Why Al Buhaira National Insurance?</h2>
+	<section class="whyTataBox mDisplayNone whyTataImage">
+	<article>&nbsp;</article>
+	<section class="w-100 h-100 d-flex justify-content-between">
+	<div class="whyTataItems whyTataItem0Position">
+	<section class="circleItem">
+	<img src="images/Group_1497_cf38de5cfc.svg">
+	</section>
+	<aside class="boldContentClass2" style="color:#264a9f">Awarded by Insurance Authority 2020
+	</aside>
+	</div>
+	<div class="whyTataItems whyTataItem1Position">
+	<section class="circleItem">
+	<img src="images/Group_1366_2766986325.svg">
+	</section>
+	<aside class="boldContentClass2" style="color:#264a9f">Hassle-free Claim process
+	</aside>
+	</div>
+	<div class="whyTataItems whyTataItem2Position">
+	<section class="circleItem">
+	<img src="images/Group_4134_4e0aedee05.svg">
+	</section>
+	<aside class="boldContentClass2" style="color:#264a9f">Valuing your trust since 1978
+	</aside>
+	</div>
+	<div class="whyTataItems whyTataItem3Position">
+	<section class="circleItem">
+	<img src="images/Group_3624_d8635bfcef.svg">
+	</section>
+	<aside class="boldContentClass2" style="color:#264a9f">Highly liquidity, financial resilience & strong capital
+	</aside>
+	</div>
+	<div class="whyTataItems whyTataItem4Position">
+	<section class="circleItem">
+	<img src="images/Group_3623_60bfbdb020.svg"></section>
+	<aside class="boldContentClass2" style="color:#264a9f">Affordable premiums with a wide range of coverage
+	</aside>
+	</div>
+	<div class="whyTataItems whyTataItem5Position">
+	<section class="circleItem">
+	<img src="images/Group_3651_5537ce339f.svg" alt="network.png"></section>
+	<aside class="boldContentClass2" style="color:#264a9f">Renew your ABNIC policy. We reward loyalty
+	</aside>
+	</div>
+	</section>
+	</section>
+	<div class="dDisplayNone">
+	<div class="row">
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_1497_cf38de5cfc.svg" alt="network.png"></div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Awarded by Insurance Authority 2020</div>
+	</div>
+	</div>
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_1366_2766986325.svg">
+	</div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Hassle-free Claim process</div>
+	</div>
+	</div>
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_4134_4e0aedee05.svg"></div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Valuing your trust since 1978</div>
+	</div>
+	</div>
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_3624_d8635bfcef.svg"></div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Highly liquidity, financial resilience & strong capital</div>
+	</div>
+	</div>
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_3623_60bfbdb020.svg" alt="network.png"></div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Affordable premiums with a wide range of coverage</div>
+	</div>
+	</div>
+	<div class="col-6 flexCenter mbottomPaddingWhy" style="position:relative">
+	<div class="circleItem">
+	<img src="images/Group_3651_5537ce339f.svg" alt="network.png"></div>
+	<div class="contentPosition">
+	<div class="boldContentClass2" style="color:#264a9f">Renew your ABNIC policy. We reward loyalty</div>
+	</div>
+	</div>
+	</div>
+	<div class="row dDisplayNone">
+	<div class="col-12" align="center">
+	<img src="images/Group 4120.svg" alt="4w_m_landing_page.svg">
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
 		</div>
 		</div>
 	
-
-<br>
-
-
 <div class="colorlib-trainers">
 			<div class="container">
 			<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
+					<div class="col-md-12 colorlib-heading center-heading text-center">
 						<a href="news.html" style="color:black;"><u><h3>News & Media</h3></u></a>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 animate-box">
-						<div class="trainers-entry" style="height:520px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;">
+					<div class="col-md-4">
+						<div class="trainers-entry">
 							<div class="trainer-img">
 							<img src="images/first.jfif" style="border-radius:5px;" width="100%" height="100%">
 							</div>
 							<div class="desc" style="padding:20px;">
 							<a href="news.html" style="color:black;"><br>
-								<h4>Al Buhaira National Insurance Co. records increase in Underwriting Profit and Net Profit in 2017.</h4>
-								<p>Al Buhaira National Insurance Co. (ABNIC) one of the leading National Insurance Co. in the UAE announces its 2017 financial results</p>
+								<h4>Al Buhaira National Insurance Co. records increase in Underwriting Profit</h4>
+								<p style="font-size:13px;">Al Buhaira National Insurance Co. (ABNIC) one of the leading National Insurance Co. in the UAE announces its 2017 financial results</p>
 								
 								</a>
   <!-- Modal -->  
@@ -660,8 +637,8 @@ margin-left:124px;
 					
 					
 
-					<div class="col-md-4 animate-box">
-						<div class="trainers-entry" style="height:520px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;">
+					<div class="col-md-4">
+						<div class="trainers-entry">
 							<div class="trainer-img">
 							<img src="images/second.jfif" style="border-radius:5px;" width="100%" height="100%">
 							</div>
@@ -670,7 +647,7 @@ margin-left:124px;
 							<div class="desc" style="padding:20px;">
 							<a href="news.html" style="color:black;"><br>
 								<h4>ABNIC Posts AED 35 Million Net Profit in the Second Quarter – 2017</h4>
-								<p>Al-Buhaira National Insurance Co. (ABNIC) succeeded in achieving healthy technical results for the period ending 30/6/2017</p>
+								<p style="font-size:13px;">Al-Buhaira National Insurance Co. (ABNIC) succeeded in achieving healthy technical results for the period ending 30/6/2017</p>
 								
 								</a>
 								</div>
@@ -678,8 +655,8 @@ margin-left:124px;
 					</div>
 					
 
-					<div class="col-md-4 animate-box">
-						<div class="trainers-entry" style="height:520px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;border-radius:5px;">
+					<div class="col-md-4">
+						<div class="trainers-entry">
 							<div class="trainer-img">
 							<img src="images/third.jfif" style="border-radius:5px;" width="100%" height="100%">
 							</div>
@@ -687,7 +664,7 @@ margin-left:124px;
 							
 								<a href="news.html" style="color:black;"><br>
 								<h4>Al Buhaira Insurance wins the Best Marine Insurance Company Award</h4>
-								<p>Al Buhaira National Insurance Company (ABNIC) has been awarded as the ‘Best Marine Insurance Provider – UAE’ at the 8th Shiptek International Maritime Awards.</p>
+								<p style="font-size:13px;">Al Buhaira National Insurance Company (ABNIC) has been awarded as the ‘Best Marine Insurance Provider</p>
 														
 							</a>
 							</div>
@@ -716,20 +693,22 @@ border-radius:5px;
  
 
 </style>
-							<div class="container" style="height:100%;">  
+							<div class="container">  
 						<h1 style="color:black;text-align:center;">What our customers think</h1>  
-						<!--<p style="text-align:center;"><u><a href="#myCustomer" data-toggle="modal" style="color:black;">Read All Reviews</a></u></p>-->
-						<p style="text-align:center;"><u><a href="https://www.google.com/search?sxsrf=ALeKk03yNbf2rQK8XoJSDpSHyphcCejdCg%3A1609931310185&ei=Lpr1X7XfCs-e4-EP9v6VqA0&q=al+buhaira+insurance&gs_ssp=eJzj4tVP1zc0TEoqLywySTY2YLRSNagwTjVNM01KNk40sDRJMjYytDKosDBIMjRISzOxMDWwMDVLNfISScxRSCrNSMwsSlTIzCsuLUrMS04FADezFqg&oq=albuhaira+in&gs_lcp=CgZwc3ktYWIQAxgBMgoIIxCxAhDJAxAnMgoILhDHARCvARAKMgIIADIECAAQCjIKCC4QxwEQrwEQCjIECAAQCjIKCC4QxwEQrwEQCjIECAAQCjIECAAQCjIKCC4QxwEQrwEQCjoECCMQJzoHCAAQyQMQQzoECAAQQzoFCAAQkQI6BwgAELEDEEM6CAguEMcBEKMCOgoIABCxAxCDARBDOgcILhAUEIcCOgQILhBDOgcILhCxAxBDOgUIABCxAzoFCC4QsQM6DQguELEDEMkDEAoQkwI6BAguEAo6BwgAEMkDEAo6BwgAEBQQhwI6CggAEMkDEBQQhwJQzgpYvk9gwHFoAHABeACAAfIDiAHMLJIBBDQtMTKYAQCgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab#lrd=0x3e5f5bc3a094b321:0x80b10ff4850856e2,1,,," target="_blank" style="color:black;">Read All Reviews</a></u></p>
-					
 						<div id="myCarousel" class="carousel slide" data-ride="carousel">  
 							<!-- Indicators -->  
-							<ol class="carousel-indicators" style="bottom:-10px;">
+							<ol class="carousel-indicators" style="bottom:-5px;">
 							
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>  
 							<li data-target="#myCarousel" data-slide-to="1"></li>  
 							<li data-target="#myCarousel" data-slide-to="2"></li>  
 							<li data-target="#myCarousel" data-slide-to="3"></li>  
 							<li data-target="#myCarousel" data-slide-to="4"></li>  
+							<li data-target="#myCarousel" data-slide-to="5"></li>  
+							<li data-target="#myCarousel" data-slide-to="6"></li>  
+							<li data-target="#myCarousel" data-slide-to="7"></li>  
+							<li data-target="#myCarousel" data-slide-to="8"></li>  
+							
 							</ol>  
 						
 							<!-- Wrapper for slides -->  
@@ -739,8 +718,62 @@ border-radius:5px;
 						<div class="col-md-12">
 						<div class="row">
 						<div class="col-md-3">
-						<img src="images/women.svg" style="margin-top:3%;margin-bottom:3%;">
-						<p style="display:inline-block;padding:10px;">
+						<br>
+						<img src="images/unnamed_2.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;asir Siddiqui
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p style="color:white;font-size:15px;text-align:left;">
+						"Mr Nadeem a wonderful person and top personality in UAE insurance industry so humble and great Human being Allah gives you success in Life and stay blessed"</p>
+						</div>
+						</div>
+						</div>
+						</div>  
+						
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+						<img src="images/unnamed.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;AGHIL SHAMON
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p style="color:white;font-size:15px;text-align:left;">
+						"Best insurance company in UAE for the vehicle insurance (I dont have any experience with them in any other types of insurances)
+						Proper and professional responds from the staffs and they were releasing the claim amounts with out any unnecessary delays."</p>
+						</div>
+						</div>
+						</div>
+						</div>  
+							
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+						<img src="images/unnamed_3.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
 						&nbsp;Antonina Kolyada
 						<span><br>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
@@ -752,59 +785,9 @@ border-radius:5px;
 						</p>
 						</div>
 						<div class="col-md-8">
-						<br><br>
+						<br>
 						<p style="color:white;font-size:15px;text-align:left;">
-						"I had good experience with the company. I fixed my car after small accident. Everything was organized and fast. Muhamed Jarad was very helpful. Thank you."</p>
-						</div>
-						</div>
-						</div>
-						</div>  
-						
-						<div class="item container" style="height:100%;">  
-						<div class="col-md-12">
-						<div class="row">
-						<div class="col-md-3">
-						<img src="images/man.svg" style="margin-top:3%;margin-bottom:3%;">
-						<p style="display:inline-block;padding:10px;">
-						&nbsp;Raouf Alshaer
-						<span><br>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star" style="color:black;"></span>
-						</span>
-						</p>
-						</div>
-						<div class="col-md-8">
-						<br><br>
-						<p style="color:white;font-size:15px;text-align:left;">
-						"This insurance company is one of the best, good rates and good service."</p>
-						</div>
-						</div>
-						</div>
-						</div>  
-							
-						<div class="item container" style="height:100%;">  
-						<div class="col-md-12">
-						<div class="row">
-						<div class="col-md-3">
-						<img src="images/man.svg" style="margin-top:3%;margin-bottom:3%;">
-						<p style="display:inline-block;padding:10px;">
-						&nbsp;ISLAM AZOZ
-						<span><br>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star" style="color:black;"></span>
-						</span>
-						</p>
-						</div>
-						<div class="col-md-8">
-						<br><br>
-						<p style="color:white;font-size:15px;text-align:left;">
-						"The best service ever so happy with them"</p>
+						"I had good experience with the company. I fixed my car after small accident.  Everything was organized and fast. Muhamed  Jarad was very helpful.  Thank you."</p>
 						</div>
 						</div>
 						</div>
@@ -814,9 +797,10 @@ border-radius:5px;
 						<div class="col-md-12">
 						<div class="row">
 						<div class="col-md-3">
-						<img src="images/man.svg" style="margin-top:3%;margin-bottom:3%;">
-						<p style="display:inline-block;padding:10px;">
-						&nbsp;Gohar Khan 
+						<br>
+						<img src="images/unnamed_4.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;Ayman M. Mohmd
 						<span><br>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
@@ -827,9 +811,9 @@ border-radius:5px;
 						</p>
 						</div>
 						<div class="col-md-8">
-						<br><br>
+						<br>
 						<p style="color:white;font-size:15px;text-align:left;">
-						"Great company dealing with them for the last 14years"</p>
+						"Excellent service with solid insurance experience, they will listen to the customers and make them satisfied and happy"</p>
 						</div>
 						</div>
 						</div>
@@ -839,27 +823,134 @@ border-radius:5px;
 						<div class="col-md-12">
 						<div class="row">
 						<div class="col-md-3">
-						<img src="images/man.svg" style="margin-top:3%;margin-bottom:3%;">
-						<p style="display:inline-block;padding:10px;">
-						&nbsp;Kashif Baloch
+						<br>
+						<img src="images/unnamed_5.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;Tinto Thomas
 
 						<span><br>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
 						<span class="fa fa-star checked" style="color:yellow;"></span>
-						<span class="fa fa-star" style="color:black;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
 						</span>
 						</p>
 						</div>
 						<div class="col-md-8">
-						<br><br>
+						<br>
 						<p style="color:white;font-size:15px;text-align:left;">
-						"Very easy to claim ur accidents"</p>
+						"Very fast and superb service , special thanks to Mr.Abdhul Aslam the best customer care and very easy claim process. Always take full cover insurance for your vehicle ,it's my advice."</p>
 						</div>
 						</div>
 						</div>
 						</div> 
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+						<img src="images/unnamed_6.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;Hassan Nasereddin
+
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p style="color:white;font-size:15px;text-align:left;">
+						"The leading and top insurance companies on Sharjah and on the top list of UAE insurance provided in all sectors , cars، properties , medical , etc."</p>
+						</div>
+						</div>
+						</div>
+						</div> 
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+						<img src="images/unnamed_7.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;Jazeer Jamal
+
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p style="color:white;font-size:15px;text-align:left;">
+						"Excellent company with very personal customer service."</p>
+						</div>
+						</div>
+						</div>
+						</div> 
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-4">
+						<br>
+						<img src="images/unnamed_8.png" style="margin-top:3%;margin-bottom:3%;">
+						<p style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;Teacher physics مدرس فيزياء
+
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p dir="rtl" lang="ar" style="color:white;font-size:20px;text-align:left;">
+						"اونين جدا انا لدي اكثر من السيارات وقمت بالتامين لديهم متعاون جدا"</p>
+						</div>
+						</div>
+						</div>
+						</div> 
+						<div class="item container" style="height:100%;">  
+						<div class="col-md-12">
+						<div class="row">
+						<div class="col-md-4">
+						<br>
+						<img src="images/unnamed_9.png" style="margin-top:3%;margin-bottom:3%;">
+						<p dir="rtl" lang="ar" style="display:inline-block;padding:10px;font-size:14px;">
+						&nbsp;عبدالعزيز محمد بن هويدن الكتبي
+
+						<span><br>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						<span class="fa fa-star checked" style="color:yellow;"></span>
+						</span>
+						</p>
+						</div>
+						<div class="col-md-8">
+						<br>
+						<p dir="rtl" lang="ar" style="color:white;font-size:20px;text-align:left;">
+						"ممتازه لجميع التامينات"</p>
+						</div>
+						</div>
+						</div>
+						</div> 
+							
+						
   
 						</div>
 							<!-- Left and right controls -->  
@@ -870,7 +961,7 @@ border-radius:5px;
 						
 						
 
-
+<br>
 
 		
 	
@@ -937,11 +1028,10 @@ border-radius:5px;
 							<li></li><br>
 							<li><h5>Follow Us</b></li>
 							<li><a href="https://www.facebook.com/Al-Buhaira-National-Insurance-Company-105668041161302/?ref=nf&hc_ref=ARSvOhz974ovDZXQmN5IW03TNRewcmZ12o7GAU-KTZsQWki65BS2QRrs0n3ASMlCB20"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>
-							<a href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
+							<a href="https://twitter.com/albuhairauae"><i class="fa fa-twitter" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        
 							<a href="https://www.instagram.com/albuhaira_insurance/"><i class="fa fa-instagram" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>      
 							<a href="https://www.linkedin.com/company/al-buhaira-national-insurance-co./?viewAsMember=true"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>       
-							<a href="javascript:void(0);"><i class="fa fa-youtube" aria-hidden="true" style="font-size:15px;padding:5px;"></i></a>        </li>
-
+							
 							
 						</ul>
 						</p>
@@ -956,7 +1046,7 @@ border-radius:5px;
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-<small class="block">&copy; 2021 Albuhaira National Insurance Company. All Rights Reserved. &nbsp; | 
+<small class="block">Al Buhaira National Insurance Company. All Rights Reserved. &copy; 2021 &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="terms-and-condition.html">Terms & Conditions</a> &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="site-map.html">Site Map</a> &nbsp; | 
 <a style="padding-left:10px;text-decoration:none;" class="NewLink" href="privacy-and-policy.html">Privacy Policy </a>
@@ -998,7 +1088,7 @@ border-radius:5px;
 	<script src="js/angular.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/main2.js"></script>
-
+	
 	<script>
 function openSummary(evt, insuranceName) {
   var i, summary,insuranceLink;

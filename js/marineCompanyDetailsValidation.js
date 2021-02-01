@@ -8,12 +8,10 @@ $(function() {
       // of an input field. Validation rules are defined
       // on the right side
     cname : {
-		required: true,
 		
 		},
 	details : {
-		required: true,
-		
+	
 		},
     email: {
         required: true,

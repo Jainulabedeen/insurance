@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</nav>
-		<br><br><br><br><br><br><br>
+		<br><br><br><br><br><br>
 <style>
 .contactLink{
  background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
@@ -226,7 +226,7 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
   background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
  
-  color:black;
+  color:white;
   border-bottom:5px solid white;
   border-radius:5px;
   height:40px;
@@ -250,44 +250,6 @@ margin-top:600px;
 .branches{
 background-color:#2E9AC5;
 }
-.nav-tabs {
-    border-bottom:none;
-
-}
-.nav-tabs > li > a {
-	    border-radius: 5px 5px 5px 5px;
-}
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 25px 5px 0;
-    list-style: none;
-    font-size: 15px;
-    text-align: left;
-    background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
- background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
- 
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
-}
-.dropdown-menu > li >a{
-	color:white;
-}
-.dropdown-menu > li >a:hover{
- background-color:white;
-color:black;
-}
-
 
 </style>	
 		<div class="colorlib-contact">
@@ -295,8 +257,8 @@ color:black;
 			<div class="row row-pb-md">
 			<div class="col-md-12 animate-box">
 			
-			<h1><b>Contact Us</b></h1>
-			<h3><b>Head office and Branches</b></h3>
+			<h3><b>Contact Us</b></h3>
+			<h4><b>Head office and Branches</b></h4>
 			<p>Keep in touch around the hour, throughout the week.</p>
 			<p>All our branches are open from 8 am to 5 pm (Sunday – Thursday). Due to the ongoing Covid-19 situation, you are requested to avoid visiting our branches and stay at home. We suggest that you use our various digital services for all transactional needs during this time.</p>
 			</div>
@@ -353,96 +315,34 @@ color:black;
 			
 			<div class="row contactMe" id="branches" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-12">
+			<div class="row">
+			<div class="col-md-4">
+			<div class="form-group">
+			<div class="text-field">
+			<label class="labelClass" for="city" style="top:-10px;background-color:white;">Select City</label>  	
+			<select name="city" id="citySelect" class="form-control input-md branchCitySelect">
+			<option value="" disabled selected="selected">Select City</option>
+			</select>
+			</div>	
+			</div>
+			</div>
+	 
+			<div class="col-md-4">
+			<div class="form-group">
+			<div class="text-field">
+			<label class="labelClass" for="branch" style="top:-10px;background-color:white;">Select Branch</label> 
+			<select name="branch" id="branchSelect" class="form-control input-md branchCitySelect">
+			<option value="" disabled selected="selected">Select Branch</option>
+			</select>
+			</div>
+			</div>
+			</div>
 			
-			
-				<ul class="nav nav-tabs">  
-				<li class="active" >
-				<a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Sharjah &nbsp;<i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a>
-				<ul class="dropdown-menu">  
-					<li><a href="#alhosn" onclick="openBranches(event, 'claimDept')">Rolla Branch(Al Hosan) Sharjah(Motor Claims Department)</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'uwDept')">Rolla Branch (Al hosan) Sharjah(Motor UW Department)</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'lifeDept')">Rolla Branch (Al hosan) Sharjah(Life and Medical Department)</a></li>                          
-				</ul>  
-				</li> 
-				<li>
-				<a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Dubai <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'dubaiBr')" href="#dubai">Dubai Branch</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'burDubai')" href="#dubai">Bur Dubai Sheikh Zayed Road Branch</a></li>  
-				</ul>  
-				</li>  
-				
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Abu Dhabi <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'abudhabiBr')" href="#dubai">Abu Dhabi Branch</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'mahaviBr')" href="#dubai">Mahawi, Abu Dhabi</a></li> 
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'mussafahBr')" href="#dubai">Mussafah, Abu Dhabi</a></li> 
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'murrorBr')" href="#dubai">Abu Dhabi Muroor</a></li> 
-					
-				</ul>  
-				</li>  
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Alain <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'alainBr')" href="#dubai">Al Ain Branch</a></li>  
-					
-				</ul>  
-				</li> 
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Ajman <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'ajmanBr')" href="#dubai">Ajman Branch</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'ajmanTraffic')" href="#dubai">Ajman Traffic</a></li> 
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'speedTraffic')" href="#dubai">Ajman SPEED Traffic</a></li> 
-						
-				</ul>  
-				
-				</li> 
-				</ul> 	
-				<br>
-				<ul class="nav nav-tabs">  
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Fujairah <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'fujairahBr')" href="#dubai">Fujairah Branch</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'fujairahTraffic')" href="#dubai">Fujairah Traffic</a></li> 
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'fujairahTrafficKalba')" href="#dubai">Fujairah Traffic Kalba</a></li> 
-						
-				</ul>  
-				
-				</li> 
-				
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Khorfakkan <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'KhorfakkanBr')" href="#dubai">Khorfakkan Branch</a></li>  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'KhorfakkanTraffic')" href="#dubai">Khorfakkan Traffic</a></li> 
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'KhorfakkanTasjeel')" href="#dubai">Khorfakkan Tasjeel</a></li> 
-						
-				</ul>  
-				</li> 
-				
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Hatta <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'hattaBr')" href="#dubai">Hatta</a></li>  
-				</ul>  
-				</li>  
-				
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Kalba <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'KalbaBr')" href="#dubai">Kalba (Khatam Al Malaha)</a></li>  
-				</ul>  
-				</li>  
-				
-				<li><a class="tabLink btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Al Dhaid <i class="fa fa-caret-down" style="color:white;font-size:15px"></i></a></a>
-				<ul class="dropdown-menu">  
-					<li><a href="javascript:void(0);" onclick="openBranches(event, 'dhaidBr')" href="#dubai">Al Dhaid (Tasheel)</a></li>  
-				</ul>  
-				
-				</li> 
-				</ul> 	
-				
-
+			</div>	
 			</div>
 			
 			
-			<div class="row meBranch" id="claimDept" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Rolla Branch Al Hosan Sharjah Motor Claims Department" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -464,7 +364,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="uwDept" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Rolla Branch Al hosan Sharjah Motor UW Department" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -486,7 +386,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="lifeDept" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Rolla Branch Al hosan Sharjah Life and Medical Department" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -508,7 +408,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="dubaiBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Dubai Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -531,7 +431,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="burDubai" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Bur Dubai Sheikh Zayed Road Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -554,7 +454,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="abudhabiBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Abu Dhabi Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -577,7 +477,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="mahaviBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Mahawi Abu Dhabi" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -605,7 +505,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="mussafahBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Mussafah Abu Dhabi" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -635,7 +535,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="murrorBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Abu Dhabi Muroor" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -665,7 +565,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="alainBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Al Ain Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -687,7 +587,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="ajmanBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Ajman Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -709,7 +609,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="ajmanTraffic" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Ajman Traffic" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -735,7 +635,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="speedTraffic" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Ajman SPEED Traffic" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -760,7 +660,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="fujairahBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Fujairah Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -784,7 +684,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="fujairahTraffic" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Fujairah Traffic" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -809,7 +709,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="fujairahTrafficKalba" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Fujairah Traffic Kalba" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -833,7 +733,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="KhorfakkanBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Khorfakkan Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -857,7 +757,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="KhorfakkanTraffic" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Khorfakkan Traffic" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -881,7 +781,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="KhorfakkanTasjeel" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Khorfakkan Tasjeel" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -907,12 +807,12 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="hattaBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Hatta Branch" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
 				<br>
-				<li><h3>Hatta</h3></li>
+				<li><h3>Hatta Branch</h3></li>
 				<li><a href="tel://0508917217"><i class="fa fa-phone"></i>&nbsp;Call : +Mr. Hamza, 050-8917217</a></li>
 				
 				<li><a href="mailto:HamzaG@albuhaira.com"><i class="icon-envelope"></i>&nbsp;Email :HamzaG@albuhaira.com</a></li>
@@ -931,7 +831,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="KalbaBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Kalba Khatam Al Malaha" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -955,7 +855,7 @@ color:black;
 			</div>
 			</div>
 			
-			<div class="row meBranch" id="dhaidBr" style="display:none;height:100px;margin-top:20px;">
+			<div class="row meBranch" id="Al Dhaid Tasheel" style="display:none;height:100px;margin-top:20px;">
 			<div class="col-md-4" style="height:625px;padding:10px;">
 			<br>						
 				<ul style="list-style:none;line-height:25px;">
@@ -1047,7 +947,7 @@ color:black;
 						<div class="col-md-12">
 						<div class="form-group">
 						<div class="text-field">
-						<textarea name="message" id="message" name="message" cols="30"  rows="5" class="form-control" required></textarea>
+						<textarea name="message" style="height:100%;" id="message" name="message" cols="30"  rows="5" class="form-control" required></textarea>
 						<label class="labelClass" for="message">Message </label> 
 						</div>
 						</div>	 
@@ -1225,6 +1125,36 @@ color:black;
 	<script src = "js/vueAppContact.js"></script>  
 	
 <script>
+var branchObject = {
+"Sharjah": ["Rolla Branch Al Hosan Sharjah Motor Claims Department","Rolla Branch Al hosan Sharjah Motor UW Department","Rolla Branch Al hosan Sharjah Life and Medical Department"],
+"Dubai": ["Dubai Branch","Bur Dubai Sheikh Zayed Road Branch"],
+"AbuDhabi":["Abu Dhabi Branch","Mahawi Abu Dhabi","Mussafah Abu Dhabi","Abu Dhabi Muroor"],
+"Alain": ["Al Ain Branch"],
+"Ajman": ["Ajman Branch","Ajman Traffic","Ajman SPEED Traffic"],
+"Fujairah":["Fujairah Branch","Fujairah Traffic","Fujairah Traffic Kalba"],
+"Hatta": ["Hatta Branch"],
+"Kalba": ["Kalba Khatam Al Malaha"],
+"Khorfakkan":["Khorfakkan Branch","Khorfakkan Traffic","Khorfakkan Tasjeel"],
+"AlDhaid": ["Al Dhaid Tasheel"]
+};
+var citySelect = document.getElementById("citySelect");
+for(var city in branchObject) {
+citySelect.options[citySelect.options.length] = new Option(city, city);
+}
+
+citySelect.onchange = function () {
+branchSelect.length = 1;
+var branch = branchObject[citySelect.value];
+for (var i = 0; i < branch.length; i++) {
+branchSelect.options[branchSelect.options.length] = new Option(branch[i], branch[i]);
+}
+}
+branchSelect.onchange = function () {
+//alert(branchSelect.value);
+var idData="#"+branchSelect.value;
+ openBranches(event,branchSelect.value);
+}
+
 function openContact(evt, contactName) {
   var i, contactMe,contactLink;
   contactMe = document.getElementsByClassName("contactMe");
