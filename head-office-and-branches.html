@@ -320,7 +320,7 @@ background-color:#2E9AC5;
 			<div class="form-group">
 			<div class="text-field">
 			<label class="labelClass" for="city" style="top:-10px;background-color:white;">Select City</label>  	
-			<select name="city" id="citySelect" class="form-control input-md branchCitySelect">
+			<select name="city" id="citySelect" class="form-control input-md branchCitySelect" onchange="showBranch(this.value)">
 			<option value="" disabled selected="selected">Select City</option>
 			</select>
 			</div>	
@@ -331,7 +331,7 @@ background-color:#2E9AC5;
 			<div class="form-group">
 			<div class="text-field">
 			<label class="labelClass" for="branch" style="top:-10px;background-color:white;">Select Branch</label> 
-			<select name="branch" id="branchSelect" class="form-control input-md branchCitySelect">
+			<select name="branch" id="branchSelect" class="form-control input-md branchCitySelect" onchange="openBranches(event,this.value)">
 			<option value="" disabled selected="selected">Select Branch</option>
 			</select>
 			</div>
@@ -1126,22 +1126,34 @@ background-color:#2E9AC5;
 	
 <script>
 var branchObject = {
-"Sharjah": ["Rolla Branch Al Hosan Sharjah Motor Claims Department","Rolla Branch Al hosan Sharjah Motor UW Department","Rolla Branch Al hosan Sharjah Life and Medical Department"],
-"Dubai": ["Dubai Branch","Bur Dubai Sheikh Zayed Road Branch"],
-"AbuDhabi":["Abu Dhabi Branch","Mahawi Abu Dhabi","Mussafah Abu Dhabi","Abu Dhabi Muroor"],
-"Alain": ["Al Ain Branch"],
-"Ajman": ["Ajman Branch","Ajman Traffic","Ajman SPEED Traffic"],
-"Fujairah":["Fujairah Branch","Fujairah Traffic","Fujairah Traffic Kalba"],
-"Hatta": ["Hatta Branch"],
-"Kalba": ["Kalba Khatam Al Malaha"],
-"Khorfakkan":["Khorfakkan Branch","Khorfakkan Traffic","Khorfakkan Tasjeel"],
-"AlDhaid": ["Al Dhaid Tasheel"]
+"Sharjah": ["Select Branch","Rolla Branch Al Hosan Sharjah Motor Claims Department","Rolla Branch Al hosan Sharjah Motor UW Department","Rolla Branch Al hosan Sharjah Life and Medical Department"],
+"Dubai": ["Select Branch","Dubai Branch","Bur Dubai Sheikh Zayed Road Branch"],
+"AbuDhabi":["Select Branch","Abu Dhabi Branch","Mahawi Abu Dhabi","Mussafah Abu Dhabi","Abu Dhabi Muroor"],
+"Alain": ["Select Branch","Al Ain Branch"],
+"Ajman": ["Select Branch","Ajman Branch","Ajman Traffic","Ajman SPEED Traffic"],
+"Fujairah":["Select Branch","Fujairah Branch","Fujairah Traffic","Fujairah Traffic Kalba"],
+"Hatta": ["Select Branch","Hatta Branch"],
+"Kalba": ["Select Branch","Kalba Khatam Al Malaha"],
+"Khorfakkan":["Select Branch","Khorfakkan Branch","Khorfakkan Traffic","Khorfakkan Tasjeel"],
+"AlDhaid": ["Select Branch","Al Dhaid Tasheel"]
 };
 var citySelect = document.getElementById("citySelect");
 for(var city in branchObject) {
 citySelect.options[citySelect.options.length] = new Option(city, city);
 }
 
+function showBranch(value){
+//alert(branchObject[value]);
+var branchOptions = "";
+//var branch = branchObject[citySelect.value];
+var branch = branchObject[value];
+for (var i = 0; i < branch.length; i++) {
+branchOptions+="<option value='"+branch[i]+"'>"+branch[i]+"</option>";
+//branchSelect.options[branchSelect.options.length] = new Option(branch[i], branch[i]);
+}
+document.getElementById("branchSelect").innerHTML = branchOptions;
+}
+/*
 citySelect.onchange = function () {
 branchSelect.length = 1;
 var branch = branchObject[citySelect.value];
@@ -1151,10 +1163,10 @@ branchSelect.options[branchSelect.options.length] = new Option(branch[i], branch
 }
 branchSelect.onchange = function () {
 //alert(branchSelect.value);
-var idData="#"+branchSelect.value;
+//var idData="#"+branchSelect.value;
  openBranches(event,branchSelect.value);
 }
-
+*/
 function openContact(evt, contactName) {
   var i, contactMe,contactLink;
   contactMe = document.getElementsByClassName("contactMe");

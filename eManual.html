@@ -159,13 +159,14 @@
 		
 <div class="colorlib-trainers">
 <div class="container" id="app">
+<div class="col-md-12">
 <form class="form-horizontal" id="form1" name="form1">
 
   
     
     <!-- Form Name -->
     <div class="row">
-	<div class="col-md-3 inputTypeCenter">
+	<div class="col-md-3">
 	<div class="form-group">
 	<div class="text-field">
 	<input type="text" name="selectNetwork" class="form-control input-md" list="selectNetwork" autocomplete="off" required>  
@@ -183,7 +184,7 @@
        </div>
 	  </div>
 	 </div>
-	<div class="col-md-3 inputTypeCenter">
+	<div class="col-md-3">
 	<div class="form-group">
 	<div class="text-field">
 	<input type="text" name="speciality" class="form-control input-md" list="speciality" autocomplete="off" required>  	
@@ -214,7 +215,7 @@
        </div>
 	  </div>
 	  </div>
-	<div class="col-md-3 inputTypeCenter">
+	<div class="col-md-3">
 	<div class="form-group"><div class="text-field">
 	<input type="text" name="emirates" class="form-control input-md" list="emirates" autocomplete="off" required>  	
 	<label class="labelClass" for="emirates">Select Emirate</label> 
@@ -232,9 +233,7 @@
        </div>
 	  </div>
 	</div>
-	</div>
-	    <div class="row">
-	<div class="col-md-3 inputTypeCenter">
+	<div class="col-md-3">
 	<div class="form-group"><div class="text-field">
 	<input type="text" name="providerType" class="form-control input-md"  list="providerType" autocomplete="off" onchange="carModelShow(this.value)" required>  
 	<label class="labelClass" for="providerType">Provider Type</label>  
@@ -250,52 +249,61 @@
        </div>
 	  </div>
 	 </div>
-	<div class="col-md-3 inputTypeCenter">
+	
+	</div>
+	    <div class="row">
+	<div class="col-md-3">
 	<div class="form-group">
 	<div class="text-field">
-	<input type="text" name="searchByDoctorClinic" id="searchByDoctorClinic" class="form-control input-md"required>  	
+	<input type="text" name="searchByDoctorClinic" id="searchByDoctorClinic" class="form-control input-md" required>  	
 	<label class="labelClass" for="searchByDoctorClinic">Search by Doctor or Clinic</label> 
 	</div>
        </div>
 	  </div>
 	  
-	<div class="col-md-3 inputTypeCenter">
-	<div class="form-group"><br>
-	<button class="btn btn-info" type="submit" id="carSubmit">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button><datalist id="carmodel">  
+	<div class="col-md-3">
+	<div class="form-group">
+	<button class="btn btn-info" style="margin-top:12px;" type="submit" id="carSubmit">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button><datalist id="carmodel">  
 	</datalist> 
        </div>
 	  </div>
 	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+	<div class="text-field">
+	<label class="labelClass" style="top:-10px;background-color:white;" for="searchByDoctorClinic">Entries</label> 
+		<select class="form-control input-md">
+		<option value="10">10</option>
+		<option value="10">10</option>
+		<option value="10">10</option>
+		<option value="10">10</option>
+		<option value="10">10</option>
+		</select> 
+		</div>
+		</div>
+		</div>
+	<div class="col-md-3">
+	<div class="form-group">
+	<div class="text-field">
+	<input type="search" name="search" id="search" class="form-control input-md">
+	<label class="labelClass" for="search">Search</label> 	
+	</div>
+	</div>
+	</div>
 	  
+	<div class="col-md-6">
+	<div class="form-group">
+	<button class="btn btn-info" style="margin-top:12px;float:right;" type="submit" id="print">Print &nbsp;<i class="fa fa-print" aria-hidden="true"></i></button><datalist id="carmodel">  
+	</datalist> 
+       </div>
+	  </div>
+	</div>  
 
 </form>
-<br>
 <div class="col-md-12">
-<div class="row">
-<div class="col-md-12">
-<button class="btn btn-info" style="float:right;margin-right:30px;">Print &nbsp;<i class="fa fa-print" aria-hidden="true"></i></button>
-</div>
-</div>
-
-<br>
-<div class="row">
-<div class="col-md-6">
-Show <select style="border-radius:3px;">
-<option value="10">10</option>
-<option value="10">10</option>
-<option value="10">10</option>
-<option value="10">10</option>
-<option value="10">10</option>
-</select> Entries
-</div>
-<div class="col-md-3"></div>
-<div class="col-md-3">
-Search <input type="text" name="search" id="search" style="height:30px;border-radius:5px;">
-</div>
-</div>
 <br><br>
 <div class="row">
-<div class="col-md-12">
 <table class="table table-hover table-striped table-bordered">
 <tr><th>Sr.</th><th>Network</th><th>Emirate</th><th>Speciality</th><th>Doctor</th><th>Clinic</th><th>Tel-No.</th><th>Location</th></tr>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
@@ -307,7 +315,6 @@ Search <input type="text" name="search" id="search" style="height:30px;border-ra
 </div>
 </div>
 </div>
-
 </div>
 </div>
 		
