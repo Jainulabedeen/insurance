@@ -27,6 +27,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/design.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -233,6 +236,9 @@
        </div>
 	  </div>
 	</div>
+	
+	</div>
+	    <div class="row">
 	<div class="col-md-3">
 	<div class="form-group"><div class="text-field">
 	<input type="text" name="providerType" class="form-control input-md"  list="providerType" autocomplete="off" onchange="carModelShow(this.value)" required>  
@@ -249,9 +255,7 @@
        </div>
 	  </div>
 	 </div>
-	
-	</div>
-	    <div class="row">
+		
 	<div class="col-md-3">
 	<div class="form-group">
 	<div class="text-field">
@@ -263,17 +267,17 @@
 	  
 	<div class="col-md-3">
 	<div class="form-group">
-	<button class="btn btn-info" style="margin-top:12px;" type="submit" id="carSubmit">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button><datalist id="carmodel">  
+	<button class="btn btn-info" style="margin-top:10px;height:42px;" type="submit" id="carSubmit">Search&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button><datalist id="carmodel">  
 	</datalist> 
        </div>
 	  </div>
 	</div>
+	<hr>
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-1">
 			<div class="form-group">
 	<div class="text-field">
-	<label class="labelClass" style="top:-10px;background-color:white;" for="searchByDoctorClinic">Entries</label> 
-		<select class="form-control input-md">
+		<select style="height:41px;width:100%;border-radius:5px;padding:10px;">
 		<option value="10">10</option>
 		<option value="10">10</option>
 		<option value="10">10</option>
@@ -286,33 +290,44 @@
 	<div class="col-md-3">
 	<div class="form-group">
 	<div class="text-field">
-	<input type="search" name="search" id="search" class="form-control input-md">
-	<label class="labelClass" for="search">Search</label> 	
+	<input type="text" name="search" id="search" style="height:41px;border-radius:5px;width:80%;" placeholder="Search...">
 	</div>
 	</div>
 	</div>
 	  
-	<div class="col-md-6">
+	<div class="col-md-8">
 	<div class="form-group">
-	<button class="btn btn-info" style="margin-top:12px;float:right;" type="submit" id="print">Print &nbsp;<i class="fa fa-print" aria-hidden="true"></i></button><datalist id="carmodel">  
+	<button class="btn btn-info" style="margin-top:15px;float:right;height:42px;" type="button" id="print">Print &nbsp;<i class="fa fa-print" aria-hidden="true"></i></button><datalist id="carmodel">  
 	</datalist> 
        </div>
 	  </div>
 	</div>  
-
+<hr>
 </form>
-<div class="col-md-12">
+<style>
+table{
+ width:100%;
+ }
+ th,td{
+ width:12%;
+ text-align:center;
+ }
+thead{
+color:white;
+background-color:#61aae4f2;
+} 
+</style>
 <br><br>
 <div class="row">
-<table class="table table-hover table-striped table-bordered">
-<tr><th>Sr.</th><th>Network</th><th>Emirate</th><th>Speciality</th><th>Doctor</th><th>Clinic</th><th>Tel-No.</th><th>Location</th></tr>
+<table class="table table-hover table-striped table-bordered table-responsive">
+<thead>
+<tr><th>Sr.</th><th>Network</th><th>Emirate</th><th>Speciality</th><th>Doctor</th><th>Clinic</th><th>Tel-No.</th><th>Location</th></tr></thead>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
 <tr><td>1</td><td>Comprehensive Plus</td><td>Abu dhabi</td><td></td><td></td><td>Gulf DIAGNOSTIC Center HOSPITAL</td><td>024177222</td><td>Al khaleej Al Rabi ST</td></tr>
 </table>
-</div>
 </div>
 </div>
 </div>

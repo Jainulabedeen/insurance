@@ -1875,8 +1875,7 @@ input[type="text"] {
 .btn-default:hover, .btn-default:focus, .btn-default:active {
  border-color: white !important; 
 color:white !important;
-background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
-background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
+background-color:#61aae4f2;
 border-radius:5px;
 -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
 box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
