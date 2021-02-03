@@ -1666,9 +1666,7 @@ input[type="text"] {
     width: 50px;
     height: 50px;
     display: table;
-   background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
-    background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
- 
+   background-color:#61aae4f2;
     color: #fff;
     text-align: center;
     -webkit-border-radius: 50%;
@@ -1848,8 +1846,7 @@ input[type="text"] {
       color: #fff; }
 
 .btn-info {
- background: transparent -webkit-linear-gradient(174deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
-    background: transparent linear-gradient(276deg,rgba(13,53,148,.898039),#35d3e1) 0 0 no-repeat padding-box;
+	background-color:#61aae4f2;
     border-radius:5px;
   color:white;
   border: 1px solid white; 
@@ -1869,9 +1866,8 @@ input[type="text"] {
    
     border-color: white !important; 
 	color:white !important;
-	 background: transparent linear-gradient(276deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
- background: transparent -webkit-linear-gradient(174deg,rgba(48,169,205,.898039),#35d3e1) 0 0 no-repeat padding-box;
-border-radius:5px;
+	background-color:#1578c7f2;
+	border-radius:5px;
  -webkit-box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
   box-shadow: 3.5px 3.5px 6px rgba(25,93,255,.4), -3.5px -3.5px 6px #fff;
 }	
